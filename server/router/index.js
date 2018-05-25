@@ -1,6 +1,10 @@
 const router = require('koa-router')()
 const axios = require('axios')
+const rp =  require('request-promise')
+const cheerio =  require('cheerio')
 const doubanAPI = 'http://api.douban.com/v2/movie/'
+const fs = require('fs')
+const path = require('path')
 
 const sleep = async time => await new Promise( resolve => {
   setTimeout( () => {
@@ -83,6 +87,44 @@ router.get('/api/film/comingsoon', async (ctx, next) => {
     success: true,
     data: films
   }
+})
+// 读取本地爬取电影详细信息添加到数据空中
+router.get('/api/coming', async (ctx, next) => {
+  const filmDetail = require('../../comingMovie.json')
+  const filmTrailer = require('../../comingMovieTrailer.json')
+  const filmTrailerDetail = require('../../comingMovieTrailerDetail.json')
+
+  /*filmDetail.forEach(async (item) => {
+    const film = await Film
+      .findOne({id: item.id})
+      .exec()
+    if (film) {
+      film.releaseDate = item.releaseDate
+      film.runtime = item.runtime
+      film.postPic = item.postPic
+      film.save()
+    }
+  })*/
+  /*filmTrailer.forEach(async (item) => {
+    const film = await Film
+      .findOne({id: item.id})
+      .exec()
+    if (film) {
+      film.trailerUri = item.trailerUri
+      film.trailerPoster = item.trailerPoster
+      film.save()
+    }
+  })*/
+  filmTrailerDetail.forEach(async (item) => {
+    const film = await Film
+      .findOne({id: item.id})
+      .exec()
+    if (film) {
+      film.trailerArray = item.trailerArray
+      film.save()
+    }
+  })
+  ctx.body = filmTrailerDetail
 })
 
 module.exports = router

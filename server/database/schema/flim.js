@@ -30,6 +30,12 @@ const FilmSchema = new Schema({
   original_title: String,
   summary: String,
   directors: Array,
+  releaseDate: Array,
+  runtime: String,
+  postPic: String,
+  trailerPoster: String,
+  trailerUri: Array,
+  trailerArray: Array,
   meta: {
     createdAt: {
       type: String
