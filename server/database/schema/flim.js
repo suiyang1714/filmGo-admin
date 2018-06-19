@@ -26,6 +26,7 @@ const FilmSchema = new Schema({
       }
     }
   ],
+  aka: Array,
   casts: Array,
   original_title: String,
   summary: String,

@@ -21,6 +21,7 @@
     "koa-router": "^7.4.0",
     "koa-session": "^5.8.1",
     "koa2-cors": "^2.0.5",
+    "moment": "^2.22.1",
     "mongoose": "^5.1.1",
     "nuxt": "latest",
     "request": "^2.87.0",

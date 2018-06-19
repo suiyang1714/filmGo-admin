@@ -22,11 +22,24 @@ const getComingMovie = async (uri) => {
     $('#info span[property="v:runtime"]').each(function () {
         runtime.push($(this).html())
     })
+    let casts = []
+    $('.celebrities-list .celebrity').each(function () {
+      const actor = $(this).find('.avatar').attr('style')
+      const id = $(this).find('a').attr('href')
+      if (actor) {
+        casts.push({
+          actorImg: actor.match(/background-image: url\((\S*)\)/)[1],
+          id: id.match(/\/celebrity\/(\S*)\//)[1]
+        })
+      }
+    })
+
     const movie = {
         releaseDate: releaseDate,
         runtime: runtime,
         postPic: $('#mainpic img').attr('src'),
-        id: uri.match(/\/subject\/(\S*)\//)[1]
+        id: uri.match(/\/subject\/(\S*)\//)[1],
+        actorAddMsg: casts
     }
     return movie
 }
@@ -44,7 +57,7 @@ const runMovieDetail = async () => {
     $('.article tbody tr a').each(function (index) {
         comingMoviesLink.push($(this).attr('href'))
     })
-    for(let i = 0; i < 50; i++) {
+    for(let i = 0; i < comingMoviesLink.length; i++) {
         const movie = await getComingMovie(comingMoviesLink[i])
         comingMovies.push(movie)
         console.log(`这是第${i+1}个电影，它的基本信息是${movie}`)
@@ -55,7 +68,7 @@ const runMovieDetail = async () => {
 }
 // runMovieDetail()
 
-/* 电影预告片和花絮列表 */
+/* 电影预告片列表->预告片的详细uil、封面 */
 const getMovieTrailer = async (uri) => {
   const options = {
     uri: `${uri}/trailer`,
@@ -64,10 +77,10 @@ const getMovieTrailer = async (uri) => {
 
   const $ = await rp(options)
   let trailerUri = []
-  let trailerPoster
+  let trailerPoster = []
   $('.article a.pr-video').each(function () {
     trailerUri.push($(this).attr('href'))
-    trailerPoster = $(this).find('img').attr('src')
+    trailerPoster.push($(this).find('img').attr('src'))
   })
   const trailer = {
     trailerUri: trailerUri,
@@ -79,7 +92,7 @@ const getMovieTrailer = async (uri) => {
 const runMovieTrailer = async () => {
   let comingMoviesLink = require('./comingMovieUri')
   let Trailer = []
-  for(let i = 0; i < 50 ; i++) {
+  for(let i = 0; i < comingMoviesLink.length ; i++) {
     const trailer = await getMovieTrailer(comingMoviesLink[i])
     Trailer.push(trailer)
     console.log(`这是第${i+1}个电影的预告片`)
@@ -88,7 +101,7 @@ const runMovieTrailer = async () => {
   fs.writeFileSync('./comingMovieTrailer.json', JSON.stringify(Trailer, null, 2), 'utf8')
 }
 // runMovieTrailer()
-/* 电影预告详细信息获取 */
+/* 电影预告详细信息获取->videolink、title、发布日期 */
 const getMovieTrailerDetail = async (array) => {
   let trailerArray = await Promise.all(array.trailerUri.map(async item => {
     if (item.length !== 0) {
@@ -112,7 +125,7 @@ const getMovieTrailerDetail = async (array) => {
 const runMovieTrailerDetail = async () => {
   let comingTrailerLink = require('./comingMovieTrailer')
   let Trailer = []
-  for(let i = 0; i < 50 ; i++) {
+  for(let i = 0; i < comingTrailerLink.length ; i++) {
     const trailer = await getMovieTrailerDetail(comingTrailerLink[i])
     Trailer.push(trailer)
     console.log(`这是第${i+1}个电影的预告片`)
@@ -120,4 +133,35 @@ const runMovieTrailerDetail = async () => {
   }
   fs.writeFileSync('./comingMovieTrailerDetail.json', JSON.stringify(Trailer, null, 2), 'utf8')
 }
-runMovieTrailerDetail()
+// runMovieTrailerDetail()
+
+/* 获取电影的剧照、海报 */
+const getMoviePhotos = async (uri) => {
+  const options = {
+    uri: `${uri}/all_photos`,
+    transform: body => cheerio.load(body,{decodeEntities: false})
+  }
+
+  const $ = await rp(options)
+  let stagePhotos = []
+  $('.article .pic-col5 li a').each(function () {
+    stagePhotos.push($(this).find('img').attr('src'))
+  })
+  const trailer = {
+    stagePhotos: stagePhotos,
+    id: uri.match(/\/subject\/(\S*)\//)[1]
+  }
+  return trailer
+}
+const runMoviePhoto = async () => {
+  let comingMoviesLink = require('./comingMovieUri')
+  let stagePhotos = []
+  for(let i = 0; i < comingMoviesLink.length ; i++) {
+    const photo = await getMoviePhotos(comingMoviesLink[i])
+    stagePhotos.push(photo)
+    console.log(`这是第${i+1}个电影的剧照`)
+    await sleep(20)
+  }
+  fs.writeFileSync('./comingMovieStagePhotos.json', JSON.stringify(stagePhotos, null, 2), 'utf8')
+}
+module.exports = { runMovieDetail, runMovieTrailer, runMovieTrailerDetail, runMoviePhoto }
