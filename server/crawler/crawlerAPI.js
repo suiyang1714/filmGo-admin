@@ -1,8 +1,8 @@
 const rp =  require('request-promise')
-const cheerio =  require('cheerio')
+const cheerio =  require('cheerio') // Node.js版本的jquery
 const fs = require('fs')
-const iconv = require('iconv-lite')
-const request = require("request");
+const iconv = require('iconv-lite') // 文件编码转换
+const request = require("request")
 const proxyIP = require('../middleware/request')
 const sleep = async time => await new Promise( resolve => {
     setTimeout( () => {
@@ -20,19 +20,19 @@ const proxyConfig = {
 }
 
 /*
-* getComingMovie
-*
+* 1. 即将上映电影 url 爬取 runMovieDetail
+* 2. 即将上映电影缺失信息爬取 getComingMovie
 * 根据 url 爬取电影的 poster、上映日期、片长、制作国家等信息
 * */
-const getComingMovie = async ({movieUri, restartCount = 0} = {}) => {
+const getComingMovie = async ({movieUrl, restartCount = 0} = {}) => {
   const options = {
     method: 'GET',
-    uri: movieUri.uri,
+    uri: movieUrl.url,
     encoding: "utf-8"
   }
   // 代理地址
   const random = Math.floor(Math.random() * proxy.length)
-  console.log(`随机数为${random}`)
+  // console.log(`随机数为${random}`)
   options.proxy = `http://${proxyConfig.user}:${proxyConfig.password}@${proxy[random]}:${proxyConfig.port}`;
 
   // request 请求
@@ -43,7 +43,8 @@ const getComingMovie = async ({movieUri, restartCount = 0} = {}) => {
         if (error) throw error;
          $ = cheerio.load(body,{decodeEntities: false})
       } catch (e) {
-        console.error(e);
+        console.log(`爬取《${movieUrl.title}》失败，准备重新开始爬取\n错误日志${e}\n重启次数为${restartCount}`)
+        // console.error(e);
       }
       if ($) {
         let releaseDate = []
@@ -71,28 +72,32 @@ const getComingMovie = async ({movieUri, restartCount = 0} = {}) => {
           releaseDate: releaseDate,
           runtime: runtime,
           postPic: $('#mainpic img').attr('src'),
-          id: uri.match(/\/subject\/(\S*)\//)[1],
+          id: movieUrl.url.match(/\/subject\/(\S*)\//)[1],
           actorAddMsg: casts,
-          like: movieUri.like
+          like: movieUrl.like
         }
 
         resolve(movie)
       } else {
-        console.log(`《${movieUri.title}》电影爬取失败，重新爬取`)
+        /*
+        *  需要限制重启次数，目前只能重启 4 次
+        *  超过 4 次将发送邮件通知
+        * */
         restartCount++
-        const movie = await getComingMovie({movieUri: movieUri, restartCount: restartCount})
-        console.log(`电影 《${movie.movieName}》 重新爬取成功`)
-        resolve(movie)
+        if (restartCount < 5) {
+          await sleep(2) // 重新请求间歇 2s
+          const movie = await getComingMovie({movieUrl: movieUrl, restartCount: restartCount})
+          resolve(movie)
+        } else {
+          console.log(`目前重启次数为${restartCount}, 重复次数过多，不可抗拒因素，将发起邮件通知`)
+          resolve(`爬取失败，重启次数为${restartCount}`)
+        }
       }
     })
   })
+  if (typeof movieMsg === "object") console.log(`电影 《${movieMsg.movieName}》 爬取成功`)
   return movieMsg
 }
-/*
-* runMovieDetail
-*
-* 爬取豆瓣即将上映电影的poster、上映日期、片长、制作国家等信息
-* */
 const runMovieDetail = async ({restartCount = 0} = {}) => {
   let $
   let comingMoviesLink = []
@@ -100,7 +105,7 @@ const runMovieDetail = async ({restartCount = 0} = {}) => {
 
   const options = {
       uri: 'https://movie.douban.com/coming',
-      transform: body => cheerio.load(body,{decodeEntities: false})
+      transform: body => cheerio.load(body, {decodeEntities: false})
   }
 
   try {
@@ -118,6 +123,7 @@ const runMovieDetail = async ({restartCount = 0} = {}) => {
     } else {
       console.log(`目前重启次数为${restartCount}, 重复次数过多，不可抗拒因素，将发起邮件通知`)
     }
+    return
   }
 
   $('.article tbody tr').each(function (index) {
@@ -133,7 +139,7 @@ const runMovieDetail = async ({restartCount = 0} = {}) => {
 
   // 爬取豆瓣即将上映电影的poster、上映日期、片长
   for(let i = 0; i < comingMoviesLink.length; i++) {
-    const movie = await getComingMovie({movieUri: comingMoviesLink[i]})
+    const movie = await getComingMovie({movieUrl: comingMoviesLink[i]})
     comingMovies.push(movie)
     console.log(`这是第${i+1}个电影，《${movie.movieName}》`)
 
@@ -142,20 +148,25 @@ const runMovieDetail = async ({restartCount = 0} = {}) => {
     // 更新即将上映电影的 poster、上映日期、片长 到本地
     fs.writeFileSync('./comingMovie.json', JSON.stringify(comingMovies, null, 2), 'utf8')
   }
+  console.log(`电影基本信息全部爬取成功, 共计${comingMoviesLink.length}`)
 }
 
-
-/* 电影预告片列表->预告片的详细uil、封面 */
-const getMovieTrailer = async (uri) => {
+/*
+* 1.电影预告片列表 runMovieTrailer()
+* 2.预告片的详细uil、封面 getMovieTrailer()
+* */
+const getMovieTrailer = async ({movieUrl, restartCount = 0} = {}) => {
   const options = {
     method: 'GET',
-    uri: `${uri}trailer`,
+    uri: `${movieUrl.url}trailer`,
     encoding: "utf-8"
   }
+
   // 代理地址
   const random = Math.floor(Math.random() * proxy.length)
-  console.log(`随机数为${random}`)
-  options.proxy = `http://${proxyConfig.user}:${proxyConfig.password}@${proxy[random]}:${proxyConfig.port}`;
+  // console.log(`随机数为${random}`)
+  options.proxy = `http://${proxyConfig.user}:${proxyConfig.password}@${proxy[random]}:${proxyConfig.port}`
+
   // request 请求
   const movieMsg = await new Promise( resolve => {
     request(options, async function (error, response, body) {
@@ -165,6 +176,7 @@ const getMovieTrailer = async (uri) => {
         $ = cheerio.load(body, {decodeEntities: false})
 
       } catch (e) {
+        console.log(`爬取《${movieUrl.title}》失败，准备重新开始爬取\n错误日志${e}\n重启次数为${restartCount}`)
         console.error(e);
       }
 
@@ -179,35 +191,105 @@ const getMovieTrailer = async (uri) => {
           movieName: $("#content>h1").text(),
           trailerUri: trailerUri,
           trailerPoster: trailerPoster,
-          id: uri.match(/\/subject\/(\S*)\//)[1]
+          id: movieUrl.url.match(/\/subject\/(\S*)\//)[1]
         }
         resolve(trailer)
       } else {
-        console.log(`${uri} 电影预告片爬取失败，重新爬取`)
-        const trailer = await getComingMovie(uri)
-        console.log(`电影 《${movie.movieName}》 预告片重新爬取成功`)
-        resolve(trailer)
+        /*
+        *  需要限制重启次数，目前只能重启 4 次
+        *  超过 4 次将发送邮件通知
+        * */
+        restartCount++
+        if (restartCount < 5) {
+          await sleep(2) // 重新请求间歇 2s
+          const trailer = await getMovieTrailer({movieUrl: movieUrl, restartCount: restartCount})
+          resolve(trailer)
+        } else {
+          console.log(`目前重启次数为${restartCount}, 重复次数过多，不可抗拒因素，将发起邮件通知`)
+          resolve(`爬取失败，重启次数为${restartCount}`)
+        }
       }
     })
   })
+  if (typeof movieMsg === "object") console.log(`电影 《${movieMsg.movieName}》 爬取成功`)
   return movieMsg
 }
 const runMovieTrailer = async () => {
-  let comingMoviesLink = require('./comingMovieUri')
+  let comingMoviesLink = require('./comingMovieUri') // 全部电影的 url
   let Trailer = []
+
   for(let i = 0; i < comingMoviesLink.length ; i++) {
-    const trailer = await getMovieTrailer(comingMoviesLink[i])
+    const trailer = await getMovieTrailer({movieUrl: comingMoviesLink[i]})
     Trailer.push(trailer)
     console.log(`这是第${i+1}个电影的预告片列表, ${trailer.movieName}`)
-    await sleep(1)
+
+    await sleep(2) // 间歇 2s
+    fs.writeFileSync('./comingMovieTrailer.json', JSON.stringify(Trailer, null, 2), 'utf8')
   }
-  fs.writeFileSync('./comingMovieTrailer.json', JSON.stringify(Trailer, null, 2), 'utf8')
+  console.log(`电影预告片列表全部爬取成功, 共计${comingMoviesLink.length}`)
 }
 
-/* 电影预告详细信息获取->videolink、title、发布日期 */
-const getMovieTrailerDetail = async (array) => {
-  let trailerArray = await Promise.all(array.trailerUri.map(async item => {
-    if (item.length !== 0) {
+/*
+* 1.电影预告详细信息获取 runMovieTrailerDetail
+* 2.videolink、title、发布日期 getMovieTrailerDetail
+* 3.请求失败重新请求 toRequest
+* */
+const toRequest = async ({trailerUrl, restartCount = 1} = {}) => {
+  const options = {
+    method: 'GET',
+    uri: `${trailerUrl}`,
+    encoding: "utf-8"
+  }
+  // 代理地址
+  const random = Math.floor(Math.random() * proxy.length)
+  // console.log(`随机数为${random}`)
+  options.proxy = `http://${proxyConfig.user}:${proxyConfig.password}@${proxy[random]}:${proxyConfig.port}`;
+
+  // request 请求
+  const movieMsg =  await new Promise( resolve => {
+    request(options, async function (error, response, body) {
+      let $
+      try {
+        $ = cheerio.load(body,{decodeEntities: false})
+
+      } catch (e) {
+        console.log(`爬取《${trailerUrl}》失败，准备重新开始爬取\n错误日志${e}\n重启次数为${restartCount}`)
+        // console.error(e);
+      }
+
+      if ($) {
+        console.log(`电影 《${trailerUrl}》 重新爬取成功,重启次数为${restartCount}`)
+        resolve({
+          trailerMP4: $('#movie_player source').attr('src'),
+          trailerTitle: $('h1').text(),
+          trailerDate: $('.trailer-info>span').html()
+        })
+      } else {
+        /*
+        *  需要限制重启次数，目前只能重启 4 次
+        *  超过 4 次将发送邮件通知
+        * */
+        restartCount++
+        if (restartCount < 5) {
+          await sleep(2) // 重新请求间歇 2s
+          const trailer = await toRequest({trailerUrl: trailerUrl, restartCount: restartCount})
+          resolve(trailer)
+        } else {
+          console.log(`目前重启次数为${restartCount-1}, 重复次数过多，不可抗拒因素，将发起邮件通知`)
+          resolve(`爬取失败，重启次数为${restartCount}`)
+        }
+      }
+    })
+  })
+  if (typeof movieMsg === "object") console.log(`电影 《${trailerUrl}》 重新爬取成功,重启次数为${restartCount}。`)
+  return movieMsg
+}
+
+const getMovieTrailerDetail = async (trailer) => {
+  // 判断有无预告片
+  let trailerArray = []
+  if(trailer.length !== 0) {
+    trailerArray = await Promise.all(trailer.trailerUri.map(async item => {
       const options = {
         method: 'GET',
         uri: `${item}`,
@@ -215,7 +297,7 @@ const getMovieTrailerDetail = async (array) => {
       }
       // 代理地址
       const random = Math.floor(Math.random() * proxy.length)
-      console.log(`随机数为${random}`)
+      // console.log(`随机数为${random}`)
       options.proxy = `http://${proxyConfig.user}:${proxyConfig.password}@${proxy[random]}:${proxyConfig.port}`;
 
       // request 请求
@@ -223,11 +305,11 @@ const getMovieTrailerDetail = async (array) => {
         request(options, async function (error, response, body) {
           let $
           try {
-            if (error) throw error;
             $ = cheerio.load(body,{decodeEntities: false})
 
           } catch (e) {
-            console.error(e);
+            console.log(`爬取《${trailer.movieName}》失败，准备重新开始爬取\n错误日志${e}`)
+            // console.error(e);
           }
 
           if ($) {
@@ -237,44 +319,55 @@ const getMovieTrailerDetail = async (array) => {
               trailerDate: $('.trailer-info>span').html()
             })
           } else {
-            console.log(`${uri} 电影预告详细信息爬取失败，重新爬取`)
-            const trailer = await getComingMovie(uri)
-            console.log(`电影 《${trailer.trailerTitle}》 详细信息重新爬取成功`)
+            /*
+            *  需要限制重启次数，目前只能重启 4 次
+            *  超过 4 次将发送邮件通知
+            * */
+            await sleep(2) // 重新请求间歇 2s
+            const trailer = await toRequest({trailerUrl: item})
             resolve(trailer)
           }
         })
       })
       return movieMsg
-    }
-  }))
+    }))
+  }
   return {
     trailerArray,
-    id: array.id
+    id: trailer.id,
+    trailerTitle: trailer.movieName
   }
 }
 const runMovieTrailerDetail = async () => {
   let comingTrailerLink = require('./comingMovieTrailer')
   let Trailer = []
+
   for(let i = 0; i < comingTrailerLink.length ; i++) {
     const trailer = await getMovieTrailerDetail(comingTrailerLink[i])
     Trailer.push(trailer)
-    console.log(`这是第${i+1}个电影的预告详细信息, ${trailer.trailerTitle}`)
-    await sleep(1)
-    fs.writeFileSync('./comingMovieTrailerDetail.json', JSON.stringify(Trailer, null, 2), 'utf8')
-  }
-}
-// runMovieTrailerDetail()
 
-/* 获取电影的剧照、海报 */
-const getMoviePhotos = async (uri) => {
+    console.log(`这是第${i+1}个电影的预告详细信息, 《${trailer.trailerTitle}》`)
+
+    fs.writeFileSync('./comingMovieTrailerDetail.json', JSON.stringify(Trailer, null, 2), 'utf8')
+    await sleep(2) // 间歇
+  }
+  console.log(`电影预告详细全部爬取成功, 共计${comingTrailerLink.length}`)
+}
+
+/*
+* 获取电影的剧照、海报
+* runMoviePhotos
+* getMoviePhotos
+* */
+const getMoviePhotos = async ({ movieUrl, restartCount = 0} = {}) => {
   const options = {
     method: 'GET',
-    uri: `${uri}/all_photos`,
+    uri: `${movieUrl.url}/all_photos`,
     encoding: "utf-8"
   }
   // 代理地址
   const random = Math.floor(Math.random() * proxy.length)
-  console.log(`随机数为${random}`)
+  // console.log(`随机数为${random}`)
   options.proxy = `http://${proxyConfig.user}:${proxyConfig.password}@${proxy[random]}:${proxyConfig.port}`;
 
   // request 请求
@@ -286,7 +379,8 @@ const getMoviePhotos = async (uri) => {
         $ = cheerio.load(body,{decodeEntities: false})
 
       } catch (e) {
-        console.error(e);
+        console.log(`爬取《${movieUrl.title}》失败，准备重新开始爬取\n错误日志${e}`)
+        // console.error(e);
       }
       if ($) {
         let stagePhotos = []
@@ -297,27 +391,40 @@ const getMoviePhotos = async (uri) => {
         resolve({
           movieName: $("#content>h1").text(),
           stagePhotos: stagePhotos,
-          id: uri.match(/\/subject\/(\S*)\//)[1]
+          id: movieUrl.url.match(/\/subject\/(\S*)\//)[1]
         })
       } else {
-        console.log(`${uri} 电影剧照爬取失败，重新爬取`)
-        const trailer = await getComingMovie(uri)
-        console.log(`电影 《${trailer.movieName}》 详细信息重新爬取成功`)
-        resolve(trailer)
+        /*
+        *  需要限制重启次数，目前只能重启 4 次
+        *  超过 4 次将发送邮件通知
+        * */
+        restartCount++
+        if (restartCount < 5) {
+          await sleep(2) // 间歇 2s
+          const photo = await getMoviePhotos({movieUrl: movieUrl, restartCount: restartCount})
+          resolve(photo)
+        } else {
+          console.log(`目前重启次数为${restartCount-1}, 重复次数过多，不可抗拒因素，将发起邮件通知`)
+          resolve(`爬取失败，重启次数为${restartCount-1}`)
+        }
       }
     })
   })
+  if (typeof movieMsg === "object") console.log(`电影 《${movieUrl.title}》 重新爬取成功,重启次数为${restartCount}。`)
   return movieMsg
 }
-const runMoviePhoto = async () => {
+const runMoviePhotos = async () => {
   let comingMoviesLink = require('./comingMovieUri')
   let stagePhotos = []
+
   for(let i = 0; i < comingMoviesLink.length ; i++) {
-    const photo = await getMoviePhotos(comingMoviesLink[i])
+    const photo = await getMoviePhotos({movieUrl: comingMoviesLink[i]})
     stagePhotos.push(photo)
+
     console.log(`这是第${i+1}个电影的剧照, ${photo.movieName}`)
-    await sleep(1)
     fs.writeFileSync('./comingMovieStagePhotos.json', JSON.stringify(stagePhotos, null, 2), 'utf8')
+    await sleep(2) // 间歇 2s
   }
+  console.log(`电影剧照全部爬取完成, 共计${comingMoviesLink.length}`)
 }
-module.exports = { runMovieDetail, runMovieTrailer, runMovieTrailerDetail, runMoviePhoto }
+module.exports = { runMovieDetail, runMovieTrailer, runMovieTrailerDetail, runMoviePhotos }

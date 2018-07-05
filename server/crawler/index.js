@@ -238,8 +238,9 @@ const updateMovie = async () => {
   await movieFile.runMovieDetail()
   await movieFile.runMovieTrailer()
   await movieFile.runMovieTrailerDetail()
-  await movieFile.runMoviePhoto()
+  await movieFile.runMoviePhotos()
   await fetchFilms()
   await crawlerDetail()
 }
+
 module.exports = updateMovie
