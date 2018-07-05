@@ -1,5 +1,6 @@
 import Koa from 'koa'
 import { Nuxt, Builder } from 'nuxt'
+import schedule from 'node-schedule'
 // after end
 
 import session from 'koa-session'
@@ -9,6 +10,9 @@ import cors from 'koa2-cors'
 const filmApi = require('./router')
 const mongodb = require('./database/database')
 const bodyParser = require('koa-bodyparser')
+
+const crawler = require('./crawler/index')
+const nodemailer = require('./middleware/nodemail')
 
 async function start () {
   const app = new Koa()
@@ -58,6 +62,28 @@ async function start () {
     rolling: false /** (boolean) Force a session identifier cookie to be set on every response. The expiration is reset to the original maxAge, resetting the expiration countdown. default is false **/
   }
   app.use(session(CONFIG, app))
+
+  // 定时爬虫
+  const scheduleRecurrenceRule = () => {
+
+    let rule = new schedule.RecurrenceRule();
+    // rule.dayOfWeek = 2;
+    // rule.month = 3;
+    // rule.dayOfMonth = 1;
+    // rule.hour = 1;
+    // rule.minute = 42;
+    // rule.second = 0;
+    rule.hour = 1;
+
+    schedule.scheduleJob(rule, function(){
+      nodemailer()
+      console.log('scheduleRecurrenceRule:' + new Date());
+      crawler()
+    });
+
+  }
+
+  scheduleRecurrenceRule()
 
   // routes
   app.use(filmApi.routes(), filmApi.allowedMethods())

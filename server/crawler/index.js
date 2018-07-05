@@ -1,6 +1,16 @@
 const movieFile = require('./crawlerAPI')
 const axios = require('axios')
 const doubanAPI = 'http://api.douban.com/v2/movie/'
+const request = require('request')
+
+const proxy = ['180.76.188.115','180.76.138.181','180.76.239.106','180.76.166.103','180.76.181.205','180.76.234.215','180.76.106.163','180.76.184.179','180.76.244.38','180.76.113.79','180.76.169.176','180.76.169.122','180.76.106.208','180.76.178.83','180.76.147.196','180.76.112.206',
+  '180.76.233.125','180.76.186.99','180.76.51.74','180.76.234.146','180.76.153.183','180.76.155.233','180.76.57.252','180.76.120.42','180.76.103.107','180.76.58.216','180.76.112.24','180.76.108.218','180.76.98.218','180.76.168.148','180.76.109.38','180.76.249.53',
+  '180.76.59.173','180.76.145.181','180.76.99.7','180.76.59.64','180.76.51.56','180.76.57.82','180.76.233.53','180.76.156.144']
+const proxyConfig = {
+  port: "443",
+  user: "martindu",
+  password: "fy1812!!"
+}
 
 const sleep = async time => await new Promise( resolve => {
   setTimeout( () => {
@@ -11,32 +21,85 @@ const sleep = async time => await new Promise( resolve => {
 const Film = require('../database/schema/flim')
 const Genre = require('../database/schema/genre')
 
-const fetchFilms = async () => {
-  let films = await axios.get(`${doubanAPI}coming_soon?count=100`)
+const fetchSingleFilm = async (filmId) => {
+  const options = {
+    method: 'GET',
+    uri: `${doubanAPI}subject/${filmId}`,
+    timeout: 4000,
+  }
+  // 代理地址
+  const random = Math.floor(Math.random() * proxy.length)
+  console.log(`随机数为${random}`)
+  options.proxy = `http://${proxyConfig.user}:${proxyConfig.password}@${proxy[random]}:${proxyConfig.port}`;
 
-  for(let i = 0 ; i < films.data.subjects.length ; i++) {
-    let filmData = await Film
-      .findOne({id: films.data.subjects[i].id})
-      .exec()
-    if (!filmData) {
-      const film = await axios.get(`${doubanAPI}subject/${films.data.subjects[i].id}`)
-      const filmObject = film.data
-      console.log(`第${i+1}个电影:"${film.data.title}"`)
-      filmData = new Film({
-        title: film.data.title,
-        rating: film.data.rating,
-        year: film.data.year,
-        id: film.data.id,
-        summary: film.data.summary,
-        casts: film.data.casts,
-        original_title: film.data.original_title,
-        directors: film.data.directors,
-        images: film.data.images,
-        countries: film.data.countries,
-        aka: film.aka
+  // const film = request(options)
+  const film = await new Promise(resolve => {
+    request(options, (error, response, body) => {
+      try {
+        if (error) throw error
+
+        resolve(JSON.parse(body))
+      } catch (e) {
+        console.log(`单个电影 API 请求失败，准备重新请求ing`)
+        fetchSingleFilm(filmId)
+        // console.log(e)
+      }
+    })
+  })
+
+  return film
+}
+
+const fetchFilms = async () => {
+  let films
+  try {
+    const options = {
+      method: 'GET',
+      uri: `${doubanAPI}coming_soon?count=100`
+    }
+    // 代理地址
+    const random = Math.floor(Math.random() * proxy.length)
+    console.log(`随机数为${random}`)
+    options.proxy = `http://${proxyConfig.user}:${proxyConfig.password}@${proxy[random]}:${proxyConfig.port}`;
+
+    films = await new Promise(resolve => {
+      request(options, (error, response, body) => {
+        resolve(JSON.parse(body))
       })
+    })
+  } catch (e) {
+    console.log(`即将上映电影列表API，请求失败，准备重新请求ing`)
+    fetchFilms()
+    // console.log(e)
+  }
+
+  for(let i = 0 ; i < films.length ; i++) {
+    let filmData = await Film
+      .findOne({id: films.subjects[i].id})
+      .exec()
+
+    if (!filmData) {
+      // 请求电影信息
+      const film = await fetchSingleFilm(films.subjects[i].id)
+
+      const filmObject = film
+      console.log(`第${i+1}个电影:"${film.title}"`)
+      filmData = new Film({
+        title: filmObject.title,
+        rating: filmObject.rating,
+        year: filmObject.year,
+        id: filmObject.id,
+        summary: filmObject.summary,
+        casts: filmObject.casts,
+        original_title: filmObject.original_title,
+        directors: filmObject.directors,
+        images: filmObject.images,
+        countries: filmObject.countries,
+        aka: filmObject.aka
+      })
+
       // 查询该标签：有 => 返回 tagId || 无 => 新建该标签，返回 tagId
-      await Promise.all(film.data.genres.map(async (item, index) => {
+      await Promise.all(film.genres.map(async (item, index) => {
         const genreId = await fetchGenre(item, filmData._id)
         filmData.genres[index] = {
           name: item,
@@ -44,12 +107,33 @@ const fetchFilms = async () => {
         }
         return genreId
       }))
-      filmData.save()
-      // await sleep(2)
+      await filmData.save()
+      await sleep(2)
+
     } else {
-      console.log('该电影已存在')
+      // 请求电影信息
+      const film = await fetchSingleFilm(films.subjects[i].id)
+
+      const filmObject = film
+
+      filmData.title = filmObject.title
+      filmData.rating = filmObject.rating
+      filmData.year = filmObject.year
+      filmData.id = filmObject.id
+      filmData.summary = filmObject.summary
+      filmData.casts = filmObject.casts,
+      filmData.original_title = filmObject.original_title
+      filmData.directors = filmObject.directors
+      filmData.images = filmObject.images
+      filmData.countries = filmObject.countries
+      filmData.aka = filmObject.aka
+
+      await filmData.save()
+      console.log(`第${i+1}个电影:"${film.title}"更新完毕`)
+      await sleep(2)
     }
   }
+  console.log(`电影更新完毕`)
 }
 // 查询类型方法
 const fetchGenre = (genre, filmId) => {
@@ -78,70 +162,84 @@ const fetchGenre = (genre, filmId) => {
 
 // 读取本地爬取电影详细信息添加到数据空中
 const crawlerDetail = async (ctx, next) => {
-  const filmDetail = require('../../comingMovie.json')
-  const filmTrailer = require('../../comingMovieTrailer.json')
-  const filmTrailerDetail = require('../../comingMovieTrailerDetail.json')
+  const filmDetail = require('./comingMovie.json')
+  const filmTrailer = require('./comingMovieTrailer.json')
+  const filmTrailerDetail = require('./comingMovieTrailerDetail.json')
 
   // 添加爬取的上映日期、播放时长、电影封面
-  await Promise((resolve, reject) => {
-    filmDetail.forEach(async (item) => {
-      const film = await Film
-        .findOne({id: item.id})
+  await new Promise(async (resolve, reject) => {
+    for(let i = 0 ; i < filmDetail.length ; i++) {
+      let film = await Film
+        .findOne({id: filmDetail[i].id})
         .exec()
-      if (film) {
-        film.releaseDate = item.releaseDate
-        film.runtime = item.runtime
-        film.postPic = item.postPic
-        item.actorAddMsg.forEach(itemI => {
-          film.casts.forEach(itemV => {
-            if (itemI.id === itemV.id) {
-              itemV.avatars = itemI.actorImg
-            }
-          })
-        })
-        film.save()
-      }
-    })
 
+      if (film) {
+        film.releaseDate = filmDetail[i].releaseDate // 更新上时间
+        film.runtime = filmDetail[i].runtime  // 更新电影时长
+        film.postPic = filmDetail[i].postPic  // 更新电影poster
+
+
+        // 更新导演、主演照片
+        for(let j= 0 ; j < filmDetail[i].actorAddMsg.length ; j++) {
+          for(let k= 0 ; k < film.directors.length ; k++) {
+            if (film.directors[k].id === filmDetail[i].actorAddMsg[j].id) {
+              let item = film.directors[k]
+              item.avatars = filmDetail[i].actorAddMsg[j].actorImg
+              film.directors.splice(k, 1, item)
+            }
+          }
+          for(let l= 0 ; l < film.casts.length ; l++) {
+            if (film.casts[l].id === filmDetail[i].actorAddMsg[j].id) {
+              let item = film.casts[l]
+              item.avatars = filmDetail[i].actorAddMsg[j].actorImg
+              film.casts.splice(l, 1, item)
+            }
+          }
+        }
+
+        await film.save()
+      }
+    }
+    console.log(`电影缺失上映日期、播放时长、电影封面信息补充完毕`)
     return resolve()
   })
   // 添加爬取的预告片封面
-  await Promise((resolve, reject) => {
-    filmTrailer.forEach(async (item) => {
+  await new Promise(async (resolve, reject) => {
+    for(let i = 0 ; i < filmTrailer.length ; i++) {
       const film = await Film
-        .findOne({id: item.id})
+        .findOne({id: filmTrailer[i].id})
         .exec()
+
       if (film) {
-        // film.trailerUri = item.trailerUri
-        film.trailerPoster = item.trailerPoster
+        film.trailerPoster = filmTrailer[i].trailerPoster
         film.save()
       }
-    })
+    }
 
     return resolve()
   })
-  await Promise((resolve, reject) => {
-    filmTrailerDetail.forEach(async (item) => {
+  await new Promise(async (resolve, reject) => {
+
+    for(let i = 0 ; i < filmTrailerDetail.length ; i++) {
       const film = await Film
-        .findOne({id: item.id})
+        .findOne({id: filmTrailerDetail[i].id})
         .exec()
+
       if (film) {
-        film.trailerArray = item.trailerArray
+        film.trailerArray = filmTrailerDetail[i].trailerArray
         film.save()
       }
-    })
-
+    }
     return resolve()
   })
 }
 /* 定时更新内容 */
 const updateMovie = async () => {
-  // await movieFile.runMovieDetail()
-  // await movieFile.runMovieTrailer()
-  // await sleep(600000)
-  // await movieFile.runMovieTrailerDetail()
-  // await movieFile.runMoviePhoto()
-  // await fetchFilms()
-  // await crawlerDetail()
+  await movieFile.runMovieDetail()
+  await movieFile.runMovieTrailer()
+  await movieFile.runMovieTrailerDetail()
+  await movieFile.runMoviePhoto()
+  await fetchFilms()
+  await crawlerDetail()
 }
-updateMovie()
+module.exports = updateMovie

@@ -37,6 +37,7 @@ const FilmSchema = new Schema({
   trailerPoster: String,
   trailerUri: Array,
   trailerArray: Array,
+  like: String,
   meta: {
     createdAt: {
       type: String
