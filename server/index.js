@@ -73,7 +73,9 @@ async function start () {
     // rule.hour = 1;
     // rule.minute = 42;
     // rule.second = 0;
-    rule.hour = 1;
+    rule.hour = 1
+    rule.minute = 1
+    rule.second = 1
 
     schedule.scheduleJob(rule, function(){
       nodemailer()
@@ -82,9 +84,9 @@ async function start () {
     });
 
   }
-
   scheduleRecurrenceRule()
 
+  crawler()
   // routes
   app.use(filmApi.routes(), filmApi.allowedMethods())
 

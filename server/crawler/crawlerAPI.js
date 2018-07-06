@@ -1,9 +1,9 @@
 const rp =  require('request-promise')
 const cheerio =  require('cheerio') // Node.js版本的jquery
 const fs = require('fs')
-const iconv = require('iconv-lite') // 文件编码转换
+// const iconv = require('iconv-lite') // 文件编码转换
 const request = require("request")
-const proxyIP = require('../middleware/request')
+// const proxyIP = require('../middleware/request')
 const sleep = async time => await new Promise( resolve => {
     setTimeout( () => {
         return resolve(console.log(`等待${time}s`))
@@ -108,8 +108,8 @@ const runMovieDetail = async ({restartCount = 0} = {}) => {
       transform: body => cheerio.load(body, {decodeEntities: false})
   }
 
+  $ = await rp(options)
   try {
-    $ = await rp(options)
   } catch (e) {
     console.log(`爬取 https://movie.douban.com/coming 网站失败，准备重新开始爬取 = 。=\\n具体错误信息${e}`)
     /*
@@ -134,6 +134,7 @@ const runMovieDetail = async ({restartCount = 0} = {}) => {
       })
   })
 
+  console.log(`总共爬取了 ${comingMoviesLink.length} 个电影 url`)
   // 更新当前新电影列表 url 到本地
   fs.writeFileSync('./comingMovieUri.json', JSON.stringify(comingMoviesLink, null, 2), 'utf8')
 
@@ -143,11 +144,12 @@ const runMovieDetail = async ({restartCount = 0} = {}) => {
     comingMovies.push(movie)
     console.log(`这是第${i+1}个电影，《${movie.movieName}》`)
 
-    await sleep(2) // 间歇 2s
-
     // 更新即将上映电影的 poster、上映日期、片长 到本地
     fs.writeFileSync('./comingMovie.json', JSON.stringify(comingMovies, null, 2), 'utf8')
+
+    await sleep(2) // 间歇 2s
   }
+
   console.log(`电影基本信息全部爬取成功, 共计${comingMoviesLink.length}`)
 }
 
@@ -215,7 +217,7 @@ const getMovieTrailer = async ({movieUrl, restartCount = 0} = {}) => {
   return movieMsg
 }
 const runMovieTrailer = async () => {
-  let comingMoviesLink = require('./comingMovieUri') // 全部电影的 url
+  let comingMoviesLink = require('../../comingMovieUri') // 全部电影的 url
   let Trailer = []
 
   for(let i = 0; i < comingMoviesLink.length ; i++) {
@@ -339,7 +341,7 @@ const getMovieTrailerDetail = async (trailer) => {
   }
 }
 const runMovieTrailerDetail = async () => {
-  let comingTrailerLink = require('./comingMovieTrailer')
+  let comingTrailerLink = require('../../comingMovieTrailer')
   let Trailer = []
 
   for(let i = 0; i < comingTrailerLink.length ; i++) {
@@ -349,7 +351,7 @@ const runMovieTrailerDetail = async () => {
     console.log(`这是第${i+1}个电影的预告详细信息, 《${trailer.trailerTitle}》`)
 
     fs.writeFileSync('./comingMovieTrailerDetail.json', JSON.stringify(Trailer, null, 2), 'utf8')
-    await sleep(2) // 间歇
+    await sleep(2) // 间歇 2s
   }
   console.log(`电影预告详细全部爬取成功, 共计${comingTrailerLink.length}`)
 }
@@ -414,7 +416,7 @@ const getMoviePhotos = async ({ movieUrl, restartCount = 0} = {}) => {
   return movieMsg
 }
 const runMoviePhotos = async () => {
-  let comingMoviesLink = require('./comingMovieUri')
+  let comingMoviesLink = require('../../comingMovieUri')
   let stagePhotos = []
 
   for(let i = 0; i < comingMoviesLink.length ; i++) {
@@ -423,7 +425,7 @@ const runMoviePhotos = async () => {
 
     console.log(`这是第${i+1}个电影的剧照, ${photo.movieName}`)
     fs.writeFileSync('./comingMovieStagePhotos.json', JSON.stringify(stagePhotos, null, 2), 'utf8')
-    await sleep(2) // 间歇 2s
+    // await sleep(2) // 间歇 2s
   }
   console.log(`电影剧照全部爬取完成, 共计${comingMoviesLink.length}`)
 }

@@ -24,12 +24,11 @@ const Genre = require('../database/schema/genre')
 const fetchSingleFilm = async (filmId) => {
   const options = {
     method: 'GET',
-    uri: `${doubanAPI}subject/${filmId}`,
-    timeout: 4000,
+    uri: `${doubanAPI}subject/${filmId}`
   }
   // 代理地址
   const random = Math.floor(Math.random() * proxy.length)
-  console.log(`随机数为${random}`)
+  // console.log(`随机数为${random}`)
   options.proxy = `http://${proxyConfig.user}:${proxyConfig.password}@${proxy[random]}:${proxyConfig.port}`;
 
   // const film = request(options)
@@ -59,11 +58,12 @@ const fetchFilms = async () => {
     }
     // 代理地址
     const random = Math.floor(Math.random() * proxy.length)
-    console.log(`随机数为${random}`)
+    // console.log(`随机数为${random}`)
     options.proxy = `http://${proxyConfig.user}:${proxyConfig.password}@${proxy[random]}:${proxyConfig.port}`;
 
     films = await new Promise(resolve => {
       request(options, (error, response, body) => {
+        console.log(body)
         resolve(JSON.parse(body))
       })
     })
@@ -73,11 +73,10 @@ const fetchFilms = async () => {
     // console.log(e)
   }
 
-  for(let i = 0 ; i < films.length ; i++) {
+  for(let i = 0 ; i < films.subjects.length ; i++) {
     let filmData = await Film
       .findOne({id: films.subjects[i].id})
       .exec()
-
     if (!filmData) {
       // 请求电影信息
       const film = await fetchSingleFilm(films.subjects[i].id)
@@ -108,7 +107,7 @@ const fetchFilms = async () => {
         return genreId
       }))
       await filmData.save()
-      await sleep(2)
+      await sleep(2) // 间歇 2s
 
     } else {
       // 请求电影信息
@@ -130,7 +129,7 @@ const fetchFilms = async () => {
 
       await filmData.save()
       console.log(`第${i+1}个电影:"${film.title}"更新完毕`)
-      await sleep(2)
+      await sleep(2) // 间歇 2s
     }
   }
   console.log(`电影更新完毕`)
@@ -162,9 +161,9 @@ const fetchGenre = (genre, filmId) => {
 
 // 读取本地爬取电影详细信息添加到数据空中
 const crawlerDetail = async (ctx, next) => {
-  const filmDetail = require('./comingMovie.json')
-  const filmTrailer = require('./comingMovieTrailer.json')
-  const filmTrailerDetail = require('./comingMovieTrailerDetail.json')
+  const filmDetail = require('../../comingMovie.json')
+  const filmTrailer = require('../../comingMovieTrailer.json')
+  const filmTrailerDetail = require('../../comingMovieTrailerDetail.json')
 
   // 添加爬取的上映日期、播放时长、电影封面
   await new Promise(async (resolve, reject) => {
@@ -177,7 +176,7 @@ const crawlerDetail = async (ctx, next) => {
         film.releaseDate = filmDetail[i].releaseDate // 更新上时间
         film.runtime = filmDetail[i].runtime  // 更新电影时长
         film.postPic = filmDetail[i].postPic  // 更新电影poster
-
+        if (!film.like) film.like = filmDetail[i].like
 
         // 更新导演、主演照片
         for(let j= 0 ; j < filmDetail[i].actorAddMsg.length ; j++) {
@@ -203,7 +202,7 @@ const crawlerDetail = async (ctx, next) => {
     console.log(`电影缺失上映日期、播放时长、电影封面信息补充完毕`)
     return resolve()
   })
-  // 添加爬取的预告片封面
+  /*// 添加爬取的预告片封面
   await new Promise(async (resolve, reject) => {
     for(let i = 0 ; i < filmTrailer.length ; i++) {
       const film = await Film
@@ -216,8 +215,11 @@ const crawlerDetail = async (ctx, next) => {
       }
     }
 
+    console.log(`电影封面补充完毕`)
     return resolve()
   })
+
+  // 预告片详情
   await new Promise(async (resolve, reject) => {
 
     for(let i = 0 ; i < filmTrailerDetail.length ; i++) {
@@ -230,17 +232,21 @@ const crawlerDetail = async (ctx, next) => {
         film.save()
       }
     }
+
+    console.log(`电影预告片详情补充完毕`)
     return resolve()
-  })
+  })*/
 }
 /* 定时更新内容 */
 const updateMovie = async () => {
-  await movieFile.runMovieDetail()
-  await movieFile.runMovieTrailer()
-  await movieFile.runMovieTrailerDetail()
-  await movieFile.runMoviePhotos()
-  await fetchFilms()
+  console.time("sort");
+  // await movieFile.runMovieDetail()
+  // await movieFile.runMovieTrailer()
+  // await movieFile.runMovieTrailerDetail()
+  // await movieFile.runMoviePhotos()
+  // await fetchFilms()
   await crawlerDetail()
+  console.timeEnd("sort");
 }
 
 module.exports = updateMovie
