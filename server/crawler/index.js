@@ -202,7 +202,7 @@ const crawlerDetail = async (ctx, next) => {
     console.log(`电影缺失上映日期、播放时长、电影封面信息补充完毕`)
     return resolve()
   })
-  /*// 添加爬取的预告片封面
+  // 添加爬取的预告片封面
   await new Promise(async (resolve, reject) => {
     for(let i = 0 ; i < filmTrailer.length ; i++) {
       const film = await Film
@@ -235,16 +235,16 @@ const crawlerDetail = async (ctx, next) => {
 
     console.log(`电影预告片详情补充完毕`)
     return resolve()
-  })*/
+  })
 }
 /* 定时更新内容 */
 const updateMovie = async () => {
   console.time("sort");
-  // await movieFile.runMovieDetail()
-  // await movieFile.runMovieTrailer()
-  // await movieFile.runMovieTrailerDetail()
-  // await movieFile.runMoviePhotos()
-  // await fetchFilms()
+  await movieFile.runMovieDetail()
+  await movieFile.runMovieTrailer()
+  await movieFile.runMovieTrailerDetail()
+  await movieFile.runMoviePhotos()
+  await fetchFilms()
   await crawlerDetail()
   console.timeEnd("sort");
 }
