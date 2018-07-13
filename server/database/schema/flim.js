@@ -11,10 +11,8 @@ const FilmSchema = new Schema({
     type: Number,
     default: 0
   },
-  rating: Object,
   abstract: String,
   year: String,
-  images: Object,
   id: String,
   countries: Array,
   genres: [
@@ -35,7 +33,6 @@ const FilmSchema = new Schema({
   runtime: String,
   postPic: String,
   trailerPoster: String,
-  trailerUri: Array,
   trailerArray: Array,
   like: String,
   meta: {
