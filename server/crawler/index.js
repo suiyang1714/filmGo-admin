@@ -2,6 +2,7 @@ const movieFile = require('./crawlerAPI')
 const axios = require('axios')
 const doubanAPI = 'http://api.douban.com/v2/movie/'
 const request = require('request')
+const qiniuFn = require('../middleware/qiniu')
 
 const proxy = ['180.76.188.115','180.76.138.181','180.76.239.106','180.76.166.103','180.76.181.205','180.76.234.215','180.76.106.163','180.76.184.179','180.76.244.38','180.76.113.79','180.76.169.176','180.76.169.122','180.76.106.208','180.76.178.83','180.76.147.196','180.76.112.206',
   '180.76.233.125','180.76.186.99','180.76.51.74','180.76.234.146','180.76.153.183','180.76.155.233','180.76.57.252','180.76.120.42','180.76.103.107','180.76.58.216','180.76.112.24','180.76.108.218','180.76.98.218','180.76.168.148','180.76.109.38','180.76.249.53',
@@ -166,7 +167,7 @@ const crawlerDetail = async (ctx, next) => {
   const filmTrailerDetail = require('../../comingMovieTrailerDetail.json')
 
   // 添加爬取的上映日期、播放时长、电影封面
-  await new Promise(async (resolve, reject) => {
+  /*await new Promise(async (resolve, reject) => {
     for(let i = 0 ; i < filmDetail.length ; i++) {
       let film = await Film
         .findOne({id: filmDetail[i].id})
@@ -175,22 +176,22 @@ const crawlerDetail = async (ctx, next) => {
       if (film) {
         film.releaseDate = filmDetail[i].releaseDate // 更新上时间
         film.runtime = filmDetail[i].runtime  // 更新电影时长
-        film.postPic = filmDetail[i].postPic  // 更新电影poster
+        film.postPic = filmDetail[i].movieName+'封面图'  // 更新电影poster
         if (!film.like) film.like = filmDetail[i].like
-
         // 更新导演、主演照片
+
         for(let j= 0 ; j < filmDetail[i].actorAddMsg.length ; j++) {
           for(let k= 0 ; k < film.directors.length ; k++) {
             if (film.directors[k].id === filmDetail[i].actorAddMsg[j].id) {
               let item = film.directors[k]
-              item.avatars = filmDetail[i].actorAddMsg[j].actorImg
+              item.avatars = filmDetail[i].actorAddMsg[j].id+'castImg.jpg'
               film.directors.splice(k, 1, item)
             }
           }
           for(let l= 0 ; l < film.casts.length ; l++) {
             if (film.casts[l].id === filmDetail[i].actorAddMsg[j].id) {
               let item = film.casts[l]
-              item.avatars = filmDetail[i].actorAddMsg[j].actorImg
+              item.avatars = filmDetail[i].actorAddMsg[j].id+'castImg.jpg'
               film.casts.splice(l, 1, item)
             }
           }
@@ -201,9 +202,9 @@ const crawlerDetail = async (ctx, next) => {
     }
     console.log(`电影缺失上映日期、播放时长、电影封面信息补充完毕`)
     return resolve()
-  })
+  })*/
   // 添加爬取的预告片封面
-  await new Promise(async (resolve, reject) => {
+  /*await new Promise(async (resolve, reject) => {
     for(let i = 0 ; i < filmTrailer.length ; i++) {
       const film = await Film
         .findOne({id: filmTrailer[i].id})
@@ -217,7 +218,7 @@ const crawlerDetail = async (ctx, next) => {
 
     console.log(`电影封面补充完毕`)
     return resolve()
-  })
+  })*/
 
   // 预告片详情
   await new Promise(async (resolve, reject) => {
@@ -228,7 +229,15 @@ const crawlerDetail = async (ctx, next) => {
         .exec()
 
       if (film) {
-        film.trailerArray = filmTrailerDetail[i].trailerArray
+        for (let j = 0; j < filmTrailerDetail[i].trailerArray.length; j++) {
+          film.trailerArray.push({
+            trailerMP4: `${filmTrailerDetail[i].id}${j}视频`,
+            trailerTitle: `${filmTrailerDetail[i].trailerArray[j].trailerTitle}`,
+            trailerDate: `${filmTrailerDetail[i].trailerArray[j].trailerDate}`,
+            trailerPoster: `${filmTrailerDetail[i].id}${j}封面图`,
+          })
+        }
+
         film.save()
       }
     }
@@ -237,6 +246,28 @@ const crawlerDetail = async (ctx, next) => {
     return resolve()
   })
 }
+
+const uploadQiniuFile = async () => {
+  const filmDetail = require('../../comingMovie.json')
+  const filmTrailerDetail = require('../../comingMovieTrailerDetail.json')
+
+  for(let i = 0 ; i < filmDetail.length ; i++) {
+    // 上传电影封面照
+    qiniuFn.uploadQiniuFile(filmDetail[i].postPic, `${filmDetail[i].movieName}封面图`)
+    for (let j = 0; j < filmDetail[i].actorAddMsg.length; j++) {
+      // 上传电影主演照片
+      qiniuFn.uploadQiniuFile(filmDetail[i].actorAddMsg[j].actorImg, `${filmDetail[i].actorAddMsg[j].id}castImg.jpg`)
+    }
+  }
+
+  for(let i = 0 ; i < filmTrailerDetail.length ; i++) {
+    for (let j = 0; j < filmTrailerDetail[i].trailerArray.length; j++) {
+      qiniuFn.uploadQiniuFile(filmTrailerDetail[i].trailerArray[j].trailerPoster, `${filmTrailerDetail[i].id}${j}封面图`)
+      // qiniuFn.uploadQiniuFile(filmTrailerDetail[i].trailerArray[j].trailerMP4, `${filmTrailerDetail[i].id}${j}视频`)
+    }
+  }
+}
+
 /* 定时更新内容 */
 const updateMovie = async () => {
   console.time("sort");
@@ -246,7 +277,8 @@ const updateMovie = async () => {
   await movieFile.runMoviePhotos()
   await fetchFilms()
   await crawlerDetail()
+  await uploadQiniuFile()
   console.timeEnd("sort");
 }
-
+uploadQiniuFile()
 module.exports = updateMovie

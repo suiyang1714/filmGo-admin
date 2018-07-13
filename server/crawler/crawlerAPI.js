@@ -236,7 +236,7 @@ const runMovieTrailer = async () => {
 * 2.videolink、title、发布日期 getMovieTrailerDetail
 * 3.请求失败重新请求 toRequest
 * */
-const toRequest = async ({trailerUrl, restartCount = 1} = {}) => {
+const toRequest = async ({trailerUrl, trailerPoster, restartCount = 1} = {}) => {
   const options = {
     method: 'GET',
     uri: `${trailerUrl}`,
@@ -264,7 +264,8 @@ const toRequest = async ({trailerUrl, restartCount = 1} = {}) => {
         resolve({
           trailerMP4: $('#movie_player source').attr('src'),
           trailerTitle: $('h1').text(),
-          trailerDate: $('.trailer-info>span').html()
+          trailerDate: $('.trailer-info>span').html(),
+          trailerPoster: trailerPoster
         })
       } else {
         /*
@@ -291,7 +292,7 @@ const getMovieTrailerDetail = async (trailer) => {
   // 判断有无预告片
   let trailerArray = []
   if(trailer.length !== 0) {
-    trailerArray = await Promise.all(trailer.trailerUri.map(async item => {
+    trailerArray = await Promise.all(trailer.trailerUri.map(async (item, index) => {
       const options = {
         method: 'GET',
         uri: `${item}`,
@@ -318,7 +319,8 @@ const getMovieTrailerDetail = async (trailer) => {
             resolve({
               trailerMP4: $('#movie_player source').attr('src'),
               trailerTitle: $('h1').text(),
-              trailerDate: $('.trailer-info>span').html()
+              trailerDate: $('.trailer-info>span').html(),
+              trailerPoster: trailer.trailerPoster[index]
             })
           } else {
             /*
@@ -326,7 +328,7 @@ const getMovieTrailerDetail = async (trailer) => {
             *  超过 4 次将发送邮件通知
             * */
             await sleep(2) // 重新请求间歇 2s
-            const trailer = await toRequest({trailerUrl: item})
+            const trailer = await toRequest({trailerUrl: item, trailerPoster: trailer.trailerPoster[index]})
             resolve(trailer)
           }
         })
