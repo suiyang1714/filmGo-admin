@@ -1,259 +1,53 @@
 [
   {
-    "trailerArray": [],
-    "id": "30261979",
-    "trailerTitle": "左滩 视频"
-  },
-  {
     "trailerArray": [
       {
-        "trailerMP4": "http://vt1.doubanio.com/201807111901/f1a908c1454cb9e94f3580cbe5d73614/view/movie/M/402330222.mp4",
-        "trailerTitle": "红盾先锋\n    预告片 (中文字幕)",
-        "trailerDate": "2018-07-03",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2526898674.jpg?1530607391"
+        "trailerMP4": "http://vt1.doubanio.com/201807131351/ba21eb5b6bdb259b3dc355b0e3f8d763/view/movie/M/402330378.mp4",
+        "trailerTitle": "小悟空\n    预告片：终极版 (中文字幕)",
+        "trailerDate": "2018-07-06",
+        "trailerPoster": "https://img1.doubanio.com/img/trailer/medium/2527165369.jpg?1530867333",
+        "trailerId": "b9a2b270866011e890bd731ab430f780"
+      },
+      {
+        "trailerMP4": "http://vt1.doubanio.com/201807131351/1449877425c68b05919f13d7ff046368/view/movie/M/402330436.mp4",
+        "trailerTitle": "小悟空\n    先行版 (中文字幕)",
+        "trailerDate": "2018-07-09",
+        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2527466865.jpg?1531127965",
+        "trailerId": "b99df780866011e890bd731ab430f780"
+      },
+      {
+        "trailerMP4": "http://vt1.doubanio.com/201807131351/91010616508e36f8377d04475358243f/view/movie/M/402330661.mp4",
+        "trailerTitle": "小悟空\n    片段1 (中文字幕)",
+        "trailerDate": "2018-07-13",
+        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2527813610.jpg?1531456758",
+        "trailerId": "b99d0d20866011e890bd731ab430f780"
+      },
+      {
+        "trailerMP4": "http://vt1.doubanio.com/201807131351/19662c4c183b43cb727d04b50ac5fa4c/view/movie/M/402330523.mp4",
+        "trailerTitle": "小悟空\n    片段2 (中文字幕)",
+        "trailerDate": "2018-07-11",
+        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2527640782.jpg?1531295366",
+        "trailerId": "b9a04170866011e890bd731ab430f780"
       }
     ],
-    "id": "26614101",
-    "trailerTitle": "红盾先锋 视频"
-  },
-  {
-    "trailerArray": [],
-    "id": "27053277",
-    "trailerTitle": "格桑花开的时候 视频"
-  },
-  {
-    "trailerArray": [
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111901/88daf170bcb58f32d92349ce291d1290/view/movie/M/402330091.mp4",
-        "trailerTitle": "邪不压正\n    预告片1：终极版 (中文字幕)",
-        "trailerDate": "2018-06-29",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2526489612.jpg?1530244322"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111901/af0c3aabb9747f67f9fdda11f50fdd1b/view/movie/M/402320465.mp4",
-        "trailerTitle": "邪不压正\n    预告片2：剧情版 (中文字幕)",
-        "trailerDate": "2018-06-14",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2525013534.jpg?1528992466"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111901/9d01daa22669aa82200653b981899d34/view/movie/M/402310013.mp4",
-        "trailerTitle": "邪不压正\n    预告片3：定档版 (中文字幕)",
-        "trailerDate": "2018-05-16",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2522243802.jpg?"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111901/a97a8d5fe37ba694c0504f02ba8a7123/view/movie/M/302270161.mp4",
-        "trailerTitle": "邪不压正\n    先行版 (中文字幕)",
-        "trailerDate": "2018-02-05",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2512738841.jpg?"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111901/14fb561bb50cf98280f1a1a4dc254ca9/view/movie/M/402310761.mp4",
-        "trailerTitle": "邪不压正\n    其它预告片：脚不沾地版 (中文字幕)",
-        "trailerDate": "2018-06-01",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2523696800.jpg?"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111901/2be1b85444ee158d6a5daeb51c570e1e/view/movie/M/402330038.mp4",
-        "trailerTitle": "邪不压正\n    花絮1：京片儿小课堂特辑 (中文字幕)",
-        "trailerDate": "2018-06-28",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2526407382.jpg?1530242324"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111901/e650dff4102ab7086bec29b1345f3aae/view/movie/M/402320450.mp4",
-        "trailerTitle": "邪不压正\n    花絮2：“廖是真有料”特辑 (中文字幕)",
-        "trailerDate": "2018-06-14",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2524962313.jpg?1528951170"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111901/c062ba9a23077ef39d6398f128ba088b/view/movie/M/402320265.mp4",
-        "trailerTitle": "邪不压正\n    花絮3：先生们特辑 (中文字幕)",
-        "trailerDate": "2018-06-12",
-        "trailerPoster": "https://img1.doubanio.com/img/trailer/medium/2524657999.jpg?"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111901/261b0095e6e1da2b0340225dfcdae1af/view/movie/M/402320248.mp4",
-        "trailerTitle": "邪不压正\n    花絮4：姜文“吓哭”彭于晏 (中文字幕)",
-        "trailerDate": "2018-06-11",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2524609792.jpg?1528707165"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111901/aa3d0b216a9f0381d5d967a1c54fb56f/view/movie/M/402310335.mp4",
-        "trailerTitle": "邪不压正\n    花絮5 (中文字幕)",
-        "trailerDate": "2018-05-22",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2522823603.jpg?"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111901/04270d3e328695e6a28fcc8806ea7c46/view/movie/M/402330289.mp4",
-        "trailerTitle": "邪不压正\n    其它花絮3：上海电影节特辑 (中文字幕)",
-        "trailerDate": "2018-07-04",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2526988612.jpg?1530696697"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111901/af12b9f494ac23e59c7cb97fcdcffbdb/view/movie/M/402310861.mp4",
-        "trailerTitle": "邪不压正\n    其它花絮4：GQ特辑",
-        "trailerDate": "2018-06-04",
-        "trailerPoster": "https://img1.doubanio.com/img/trailer/medium/2523962317.jpg?"
-      }
-    ],
-    "id": "26366496",
-    "trailerTitle": "邪不压正 视频"
-  },
-  {
-    "trailerArray": [
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111901/b91cc1c1fa5ebb422d7a2bf11897ce4f/view/movie/M/402320634.mp4",
-        "trailerTitle": "阿修罗\n    预告片2：对决版 (中文字幕)",
-        "trailerDate": "2018-06-20",
-        "trailerPoster": "https://img1.doubanio.com/img/trailer/medium/2525592709.jpg?"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111901/3d3fdeb2aa6eefc9b0d464d881dd7941/view/movie/M/402310632.mp4",
-        "trailerTitle": "阿修罗\n    预告片3：正义之战版 (中文字幕)",
-        "trailerDate": "2018-05-29",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2523447386.jpg?"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111901/f200c298d218854d8238aaf90c9911bb/view/movie/M/302280924.mp4",
-        "trailerTitle": "阿修罗\n    预告片4：救世重生版 (中文字幕)",
-        "trailerDate": "2018-03-21",
-        "trailerPoster": "https://img1.doubanio.com/img/trailer/medium/2516928467.jpg?"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111901/f1ff502f94157b53265330df193c9b8d/view/movie/M/302260282.mp4",
-        "trailerTitle": "阿修罗\n    先行版：欲海寻人版 (中文字幕)",
-        "trailerDate": "2018-01-17",
-        "trailerPoster": "https://img1.doubanio.com/img/trailer/medium/2510889309.jpg?"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111901/9cfca207a05c581cc3c3226ec3599a10/view/movie/M/402330182.mp4",
-        "trailerTitle": "阿修罗\n    花絮2：揭秘三头特辑 (中文字幕)",
-        "trailerDate": "2018-07-02",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2526779365.jpg?1530511845"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111901/269a6cac96cdd07f24af84fe03b4898b/view/movie/M/402330105.mp4",
-        "trailerTitle": "阿修罗\n    花絮3 (中文字幕)",
-        "trailerDate": "2018-06-29",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2526493784.jpg?1530258754"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111901/3a987240cb74d456f00e98d6046daf9c/view/movie/M/402320862.mp4",
-        "trailerTitle": "阿修罗\n    花絮4：服装造型师奈拉特辑 (中文字幕)",
-        "trailerDate": "2018-06-25",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2526150634.jpg?"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111901/b601361040bc23858baee6ff9db32749/view/movie/M/402320509.mp4",
-        "trailerTitle": "阿修罗\n    花絮5：幕后特辑 (中文字幕)",
-        "trailerDate": "2018-06-15",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2525052874.jpg?"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111901/d4d5d8e530ebf82bcd1abcbbd9a2edd5/view/movie/M/402300455.mp4",
-        "trailerTitle": "阿修罗\n    花絮6：正义联盟特辑 (中文字幕)",
-        "trailerDate": "2018-05-03",
-        "trailerPoster": "https://img1.doubanio.com/img/trailer/medium/2521047068.jpg?"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111901/e2be8463a52369908fcd0ba7462088d8/view/movie/M/302280116.mp4",
-        "trailerTitle": "阿修罗\n    花絮7：华蕊特辑 (中文字幕)",
-        "trailerDate": "2018-03-05",
-        "trailerPoster": "https://img1.doubanio.com/img/trailer/medium/2515430747.jpg?"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111901/2bae761455ae3f19c51740cf778ebde8/view/movie/M/402330041.mp4",
-        "trailerTitle": "阿修罗\n    MV：邓紫棋献唱主题曲《爱如意》 (中文字幕)",
-        "trailerDate": "2018-06-28",
-        "trailerPoster": "https://img1.doubanio.com/img/trailer/medium/2526407977.jpg?1530170168"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111901/ff980f84fd829cb9c0a910f202708602/view/movie/M/402320462.mp4",
-        "trailerTitle": "阿修罗\n    其它花絮2 (中文字幕)",
-        "trailerDate": "2018-06-14",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2524986642.jpg?"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111901/6b03afcd81aaeb3a638eb4d3a700859a/view/movie/M/302250457.mp4",
-        "trailerTitle": "阿修罗\n    其它花絮3：吴磊生日祝福特辑 (中文字幕)",
-        "trailerDate": "2017-12-26",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2508730944.jpg?"
-      }
-    ],
-    "id": "26746958",
-    "trailerTitle": "阿修罗 视频"
-  },
-  {
-    "trailerArray": [
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111901/6665732b745305e6d462c2bf67c2294d/view/movie/M/402330187.mp4",
-        "trailerTitle": "海龙屯\n    预告片",
-        "trailerDate": "2018-07-02",
-        "trailerPoster": "https://img1.doubanio.com/img/trailer/medium/2526782268.jpg?1530514561"
-      }
-    ],
-    "id": "27114204",
-    "trailerTitle": "海龙屯 视频"
-  },
-  {
-    "trailerArray": [
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111901/5dbcaff6efd2a7dc7d9f3633794445d1/view/movie/M/402300179.mp4",
-        "trailerTitle": "铁笼\n    预告片 (中文字幕)",
-        "trailerDate": "2018-04-24",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2520207116.jpg?"
-      }
-    ],
-    "id": "30203509",
-    "trailerTitle": "铁笼 视频"
-  },
-  {
-    "trailerArray": [],
-    "id": "27194322",
-    "trailerTitle": "美丽童年 视频"
-  },
-  {
-    "trailerArray": [
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111901/0ba3e6667e247f443225c63658dbd091/view/movie/M/402320855.mp4",
-        "trailerTitle": "天佑之爱\n    预告片1 (中文字幕)",
-        "trailerDate": "2018-06-25",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2526146236.jpg?"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111901/8cb52b3ab75b5e45be7d998f88ca2b04/view/movie/M/402320854.mp4",
-        "trailerTitle": "天佑之爱\n    预告片2 (中文字幕)",
-        "trailerDate": "2018-06-25",
-        "trailerPoster": "https://img1.doubanio.com/img/trailer/medium/2526145227.jpg?"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111901/5f874c578af67d1b847371adafc6d818/view/movie/M/402320853.mp4",
-        "trailerTitle": "天佑之爱\n    预告片3 (中文字幕)",
-        "trailerDate": "2018-06-25",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2526145132.jpg?"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111901/7956d39eb4d3fea08f127e896cc339cd/view/movie/M/402320852.mp4",
-        "trailerTitle": "天佑之爱\n    其它花絮 (中文字幕)",
-        "trailerDate": "2018-06-25",
-        "trailerPoster": "https://img1.doubanio.com/img/trailer/medium/2526144947.jpg?1529918519"
-      }
-    ],
-    "id": "30249257",
-    "trailerTitle": "天佑之爱 视频"
-  },
-  {
-    "trailerArray": [],
     "id": "30227725",
     "trailerTitle": "小悟空 视频"
   },
   {
     "trailerArray": [
       {
-        "trailerMP4": "http://vt1.doubanio.com/201807111901/1f8b6095076e658243c1bc585009bdb3/view/movie/M/402330051.mp4",
-        "trailerTitle": "八只鸡\n    预告片：残酷童年版 (中文字幕)",
+        "trailerMP4": "http://vt1.doubanio.com/201807131351/dbd000a6a3f93c115841b0dc3aa9f4eb/view/movie/M/402330654.mp4",
+        "trailerTitle": "八只鸡\n    预告片1：温情版 (中文字幕)",
+        "trailerDate": "2018-07-13",
+        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2527812922.jpg?1531457156",
+        "trailerId": "baf54a20866011e890bd731ab430f780"
+      },
+      {
+        "trailerMP4": "http://vt1.doubanio.com/201807131351/bd1c41b072e7efc8fdc80185e36665e2/view/movie/M/402330051.mp4",
+        "trailerTitle": "八只鸡\n    预告片2：残酷童年版 (中文字幕)",
         "trailerDate": "2018-06-28",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2526427410.jpg?"
+        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2526427410.jpg?",
+        "trailerId": "bafbd9d0866011e890bd731ab430f780"
       }
     ],
     "id": "30252555",
@@ -262,129 +56,200 @@
   {
     "trailerArray": [
       {
-        "trailerMP4": "http://vt1.doubanio.com/201807111901/efd9fc5d8234d3f33ee955cada77c57b/view/movie/M/402330219.mp4",
+        "trailerMP4": "http://vt1.doubanio.com/201807131351/ff727643d46af7e2abf5f871846bb28f/view/movie/M/402330464.mp4",
+        "trailerTitle": "摩天营救\n    中国预告片1：终极版 (中文字幕)",
+        "trailerDate": "2018-07-10",
+        "trailerPoster": "https://img1.doubanio.com/img/trailer/medium/2527544359.jpg?1531203302",
+        "trailerId": "bc8c64e0866011e890bd731ab430f780"
+      },
+      {
+        "trailerMP4": "http://vt1.doubanio.com/201807131351/c2cc896d9a3388a2a7fd34d2569f1032/view/movie/M/402330438.mp4",
+        "trailerTitle": "摩天营救\n    中国预告片2：赴汤蹈火版 (中文字幕)",
+        "trailerDate": "2018-07-09",
+        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2527466982.jpg?1531127783",
+        "trailerId": "bca2d310866011e890bd731ab430f780"
+      },
+      {
+        "trailerMP4": "http://vt1.doubanio.com/201807131351/cce72489ca060889481a84f3298d4050/view/movie/M/402330219.mp4",
         "trailerTitle": "摩天营救\n    台湾预告片3 (中文字幕)",
         "trailerDate": "2018-07-03",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2526895711.jpg?1530607580"
+        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2526895711.jpg?1530607580",
+        "trailerId": "bcab3780866011e890bd731ab430f780"
       },
       {
-        "trailerMP4": "http://vt1.doubanio.com/201807111901/dd47cbc401a1b8d245c8ab0b5a808384/view/movie/M/402330019.mp4",
+        "trailerMP4": "http://vt1.doubanio.com/201807131351/f7a31f4880876d4519a73a1e51deac5e/view/movie/M/402330019.mp4",
         "trailerTitle": "摩天营救\n    台湾预告片4 (中文字幕)",
         "trailerDate": "2018-06-28",
-        "trailerPoster": "https://img1.doubanio.com/img/trailer/medium/2526382108.jpg?1530611584"
+        "trailerPoster": "https://img1.doubanio.com/img/trailer/medium/2526382108.jpg?1530611584",
+        "trailerId": "bc8dc470866011e890bd731ab430f780"
       },
       {
-        "trailerMP4": "http://vt1.doubanio.com/201807111901/0c55bdf8e6e023d2fed04894bdf5da10/view/movie/M/402320978.mp4",
+        "trailerMP4": "http://vt1.doubanio.com/201807131351/627ff9c015a95cf57864c5ea953ebaf2/view/movie/M/402320978.mp4",
         "trailerTitle": "摩天营救\n    中国预告片5：定档版 (中文字幕)",
         "trailerDate": "2018-06-27",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2526313250.jpg?1530076834"
+        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2526313250.jpg?1530076834",
+        "trailerId": "bcac9710866011e890bd731ab430f780"
       },
       {
-        "trailerMP4": "http://vt1.doubanio.com/201807111901/c996ad42f377d3c546460db5f767a5b0/view/movie/M/402320339.mp4",
+        "trailerMP4": "http://vt1.doubanio.com/201807131351/f126d09e8609c931a3d03103bba35f20/view/movie/M/402320339.mp4",
         "trailerTitle": "摩天营救\n    台湾预告片6 (中文字幕)",
         "trailerDate": "2018-06-13",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2524750333.jpg?1528958544"
+        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2524750333.jpg?1528958544",
+        "trailerId": "bca7dc20866011e890bd731ab430f780"
       },
       {
-        "trailerMP4": "http://vt1.doubanio.com/201807111901/2634ab3c032fafc297aaae54d606b024/view/movie/M/402310885.mp4",
+        "trailerMP4": "http://vt1.doubanio.com/201807131351/2cc343d86019e475b91c282b8ab71463/view/movie/M/402310885.mp4",
         "trailerTitle": "摩天营救\n    台湾预告片7 (中文字幕)",
         "trailerDate": "2018-06-04",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2523980900.jpg?"
+        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2523980900.jpg?",
+        "trailerId": "bc867170866011e890bd731ab430f780"
       },
       {
-        "trailerMP4": "http://vt1.doubanio.com/201807111901/9956b1a5980e033d8949220ea25d4cff/view/movie/M/402310474.mp4",
+        "trailerMP4": "http://vt1.doubanio.com/201807131351/2e6ec532996be75777d5f35d45359a1d/view/movie/M/402310474.mp4",
         "trailerTitle": "摩天营救\n    香港预告片8 (中文字幕)",
         "trailerDate": "2018-05-24",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2522972990.jpg?"
+        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2522972990.jpg?",
+        "trailerId": "bca914a0866011e890bd731ab430f780"
       },
       {
-        "trailerMP4": "http://vt1.doubanio.com/201807111901/756ab8af365f693641ed5af40e676c3e/view/movie/M/402310427.mp4",
+        "trailerMP4": "http://vt1.doubanio.com/201807131351/2fc050b5128fd07f5aed2311e73e6b0d/view/movie/M/402310427.mp4",
         "trailerTitle": "摩天营救\n    台湾预告片9 (中文字幕)",
         "trailerDate": "2018-05-24",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2522930690.jpg?"
+        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2522930690.jpg?",
+        "trailerId": "bcad8170866011e890bd731ab430f780"
       },
       {
-        "trailerMP4": "http://vt1.doubanio.com/201807111901/6e176871c539a2aa8b9fa4925a4249ec/view/movie/M/402310426.mp4",
+        "trailerMP4": "http://vt1.doubanio.com/201807131351/70de3986d2731028ea5d24ef4d976d51/view/movie/M/402310426.mp4",
         "trailerTitle": "摩天营救\n    香港预告片10 (中文字幕)",
         "trailerDate": "2018-05-24",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2522930576.jpg?"
+        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2522930576.jpg?",
+        "trailerId": "bc884630866011e890bd731ab430f780"
       },
       {
-        "trailerMP4": "http://vt1.doubanio.com/201807111901/9597a200c1ff3fd4d97a171039d23de1/view/movie/M/302270160.mp4",
+        "trailerMP4": "http://vt1.doubanio.com/201807131351/5e6846ca09753520f2feb2258c38ad29/view/movie/M/302270160.mp4",
         "trailerTitle": "摩天营救\n    中国预告片11 (中文字幕)",
         "trailerDate": "2018-02-05",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2512722254.jpg?"
+        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2512722254.jpg?",
+        "trailerId": "bcb34dd0866011e890bd731ab430f780"
       },
       {
-        "trailerMP4": "http://vt1.doubanio.com/201807111901/92a1138b32c0c730047ce92e15c368c9/view/movie/M/402330113.mp4",
+        "trailerMP4": "http://vt1.doubanio.com/201807131351/16408f3c8d50fcae137595574947067d/view/movie/M/402330113.mp4",
         "trailerTitle": "摩天营救\n    电视版1 (中文字幕)",
         "trailerDate": "2018-06-29",
-        "trailerPoster": "https://img1.doubanio.com/img/trailer/medium/2526510949.jpg?1530517860"
+        "trailerPoster": "https://img1.doubanio.com/img/trailer/medium/2526510949.jpg?1530517860",
+        "trailerId": "bc831610866011e890bd731ab430f780"
       },
       {
-        "trailerMP4": "http://vt1.doubanio.com/201807111901/33d404ff58a8072acf7f7362b2982085/view/movie/M/402320696.mp4",
+        "trailerMP4": "http://vt1.doubanio.com/201807131351/c8a3b573d4ce320eee170eab436d5954/view/movie/M/402320696.mp4",
         "trailerTitle": "摩天营救\n    电视版2 (中文字幕)",
         "trailerDate": "2018-06-21",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2525740613.jpg?1529554835"
+        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2525740613.jpg?1529554835",
+        "trailerId": "bc8eaed0866011e890bd731ab430f780"
       },
       {
-        "trailerMP4": "http://vt1.doubanio.com/201807111901/ee6d383730389cd587138e42bf6dcf68/view/movie/M/402320471.mp4",
+        "trailerMP4": "http://vt1.doubanio.com/201807131351/5fbcea5bdb8deaad589ca5e11f0ad015/view/movie/M/402320471.mp4",
         "trailerTitle": "摩天营救\n    电视版3 (中文字幕)",
         "trailerDate": "2018-06-15",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2525015715.jpg?1529047084"
+        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2525015715.jpg?1529047084",
+        "trailerId": "bc856000866011e890bd731ab430f780"
       },
       {
-        "trailerMP4": "http://vt1.doubanio.com/201807111901/bb43c747f5db24f2ef678240c4342fdf/view/movie/M/302270127.mp4",
+        "trailerMP4": "http://vt1.doubanio.com/201807131351/56be10035560eb6366c98425f094faeb/view/movie/M/302270127.mp4",
         "trailerTitle": "摩天营救\n    电视版4：超级碗版",
         "trailerDate": "2018-02-05",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2512712482.jpg?"
+        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2512712482.jpg?",
+        "trailerId": "bca3bd70866011e890bd731ab430f780"
       },
       {
-        "trailerMP4": "http://vt1.doubanio.com/201807111901/daf5c1364cfd04cc9d2a5a1aac04b823/view/movie/M/402330149.mp4",
+        "trailerMP4": "http://vt1.doubanio.com/201807131351/a255615e832a0c4a26288d0ffc3b9968/view/movie/M/402330149.mp4",
         "trailerTitle": "摩天营救\n    其它预告片1",
         "trailerDate": "2018-06-30",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2526564593.jpg?1530515167"
+        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2526564593.jpg?1530515167",
+        "trailerId": "bc976160866011e890bd731ab430f780"
       },
       {
-        "trailerMP4": "http://vt1.doubanio.com/201807111901/d65f001efaba9a814ec0ffbafddc36d7/view/movie/M/402320871.mp4",
+        "trailerMP4": "http://vt1.doubanio.com/201807131351/01b9c83b7f8412bbcba802059621b8dc/view/movie/M/402320871.mp4",
         "trailerTitle": "摩天营救\n    其它预告片2 (中文字幕)",
         "trailerDate": "2018-06-25",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2526163516.jpg?1529989460"
+        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2526163516.jpg?1529989460",
+        "trailerId": "bca6a3a0866011e890bd731ab430f780"
       },
       {
-        "trailerMP4": "http://vt1.doubanio.com/201807111901/f2f03a22ff76c4f4a3bbd7eedc799fd2/view/movie/M/402330282.mp4",
-        "trailerTitle": "摩天营救\n    花絮4：珍珠塔特辑 (中文字幕)",
+        "trailerMP4": "http://vt1.doubanio.com/201807131351/c4c57934009f729cf00b6b78131b0b41/view/movie/M/402330657.mp4",
+        "trailerTitle": "摩天营救\n    花絮1：制作特辑 (中文字幕)",
+        "trailerDate": "2018-07-13",
+        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2527813412.jpg?1531457069",
+        "trailerId": "bca4a7d0866011e890bd731ab430f780"
+      },
+      {
+        "trailerMP4": "http://vt1.doubanio.com/201807131351/5ee58f44d23e6acc8204020e4414de49/view/movie/M/402330522.mp4",
+        "trailerTitle": "摩天营救\n    花絮2：内芙·坎贝尔特辑 (中文字幕)",
+        "trailerDate": "2018-07-11",
+        "trailerPoster": "https://img1.doubanio.com/img/trailer/medium/2527640678.jpg?1531295705",
+        "trailerId": "bc956590866011e890bd731ab430f780"
+      },
+      {
+        "trailerMP4": "http://vt1.doubanio.com/201807131351/25ae249de66a66f362642f6556f43dce/view/movie/M/402330435.mp4",
+        "trailerTitle": "摩天营救\n    花絮3：昆凌特辑 (中文字幕)",
+        "trailerDate": "2018-07-09",
+        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2527466733.jpg?1531127997",
+        "trailerId": "bd0369a0866011e890bd731ab430f780"
+      },
+      {
+        "trailerMP4": "http://vt1.doubanio.com/201807131351/21cd47221dae50a677b4ce969c053dd7/view/movie/M/402330360.mp4",
+        "trailerTitle": "摩天营救\n    花絮4：英雄逆袭特辑 (中文字幕)",
+        "trailerDate": "2018-07-06",
+        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2527141796.jpg?1530855477",
+        "trailerId": "bc9df110866011e890bd731ab430f780"
+      },
+      {
+        "trailerMP4": "http://vt1.doubanio.com/201807131351/465b5068f4108ffd616d9deb11cb6c47/view/movie/M/402330282.mp4",
+        "trailerTitle": "摩天营救\n    花絮5：珍珠塔特辑 (中文字幕)",
         "trailerDate": "2018-07-04",
-        "trailerPoster": "https://img1.doubanio.com/img/trailer/medium/2526986549.jpg?1530699121"
+        "trailerPoster": "https://img1.doubanio.com/img/trailer/medium/2526986549.jpg?1530699121",
+        "trailerId": "bc98c0f0866011e890bd731ab430f780"
       },
       {
-        "trailerTitle": "",
-        "trailerDate": null,
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2526795343.jpg?1530520019"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111901/2cf6367dec466e31f1f98994b2cdb760/view/movie/M/402330163.mp4",
-        "trailerTitle": "摩天营救\n    花絮5 (中文字幕)",
-        "trailerDate": "2018-07-01",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2526690711.jpg?"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111901/2a576c4b10b158bbaf5fee1c580444df/view/movie/M/402330101.mp4",
+        "trailerMP4": "http://vt1.doubanio.com/201807131351/e848c809d2915e3aa9c94a186587ab05/view/movie/M/402330163.mp4",
         "trailerTitle": "摩天营救\n    花絮6 (中文字幕)",
+        "trailerDate": "2018-07-01",
+        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2526690711.jpg?",
+        "trailerId": "bc92f490866011e890bd731ab430f780"
+      },
+      {
+        "trailerMP4": "http://vt1.doubanio.com/201807131351/72b4f4b27d76ef82b9af8d2ed11789d5/view/movie/M/402330101.mp4",
+        "trailerTitle": "摩天营救\n    花絮7 (中文字幕)",
         "trailerDate": "2018-06-29",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2526492715.jpg?1530260796"
+        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2526492715.jpg?1530260796",
+        "trailerId": "bca1e8b0866011e890bd731ab430f780"
       },
       {
-        "trailerMP4": "http://vt1.doubanio.com/201807111901/0feb8c1e2fdc3ba3a046fe88e08e1e86/view/movie/M/402310760.mp4",
-        "trailerTitle": "摩天营救\n    花絮7：儿童节特辑 (中文字幕)",
+        "trailerMP4": "http://vt1.doubanio.com/201807131351/8a059b05f05e56af25e82b88361de313/view/movie/M/402310760.mp4",
+        "trailerTitle": "摩天营救\n    花絮8：儿童节特辑 (中文字幕)",
         "trailerDate": "2018-06-01",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2523696406.jpg?"
+        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2523696406.jpg?",
+        "trailerId": "bc9c6a70866011e890bd731ab430f780"
       },
       {
-        "trailerMP4": "http://vt1.doubanio.com/201807111901/4d9cf8197a6822f087718931d287143f/view/movie/M/402330324.mp4",
+        "trailerMP4": "http://vt1.doubanio.com/201807131351/d03bd51f71da22dc8bcf1abbef804b29/view/movie/M/402330535.mp4",
+        "trailerTitle": "摩天营救\n    其它花絮1 (中文字幕)",
+        "trailerDate": "2018-07-11",
+        "trailerPoster": "https://img1.doubanio.com/img/trailer/medium/2527648927.jpg?1531298883",
+        "trailerId": "bc9f77b0866011e890bd731ab430f780"
+      },
+      {
+        "trailerMP4": "http://vt1.doubanio.com/201807131351/b6eb64b73d3a32082fc0724a73d95928/view/movie/M/402330505.mp4",
+        "trailerTitle": "摩天营救\n    其它花絮2 (中文字幕)",
+        "trailerDate": "2018-07-11",
+        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2527602883.jpg?1531301035",
+        "trailerId": "bc8a4200866011e890bd731ab430f780"
+      },
+      {
+        "trailerMP4": "http://vt1.doubanio.com/201807131351/7ecfbbc5fd5d4970f00251153bbbc7ac/view/movie/M/402330324.mp4",
         "trailerTitle": "摩天营救\n    其它花絮3：北京首映礼特辑 (中文字幕)",
         "trailerDate": "2018-07-05",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2527054623.jpg?1530769444"
+        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2527054623.jpg?1530769444",
+        "trailerId": "bc90f8c0866011e890bd731ab430f780"
       }
     ],
     "id": "26804147",
@@ -393,37 +258,25 @@
   {
     "trailerArray": [
       {
-        "trailerTitle": "",
-        "trailerDate": null,
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2526889354.jpg?1530607812"
+        "trailerMP4": "http://vt1.doubanio.com/201807131351/f196610aa9164c395f97446be2d82a4e/view/movie/M/402330434.mp4",
+        "trailerTitle": "北方一片苍茫\n    预告片1：终极版 (中文字幕)",
+        "trailerDate": "2018-07-09",
+        "trailerPoster": "https://img1.doubanio.com/img/trailer/medium/2527466658.jpg?1531128076",
+        "trailerId": "be58e780866011e890bd731ab430f780"
       },
       {
-        "trailerTitle": "",
-        "trailerDate": null,
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2526426961.jpg?1530260293"
-      },
-      {
-        "trailerTitle": "",
-        "trailerDate": null,
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2526426921.jpg?1530260266"
-      }
-    ],
-    "id": "30146756",
-    "trailerTitle": "风语咒 视频"
-  },
-  {
-    "trailerArray": [
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111901/377d186173c31ff7281805afcf32ba85/view/movie/M/302260937.mp4",
-        "trailerTitle": "北方一片苍茫\n    预告片3：国际版",
-        "trailerDate": "2018-01-31",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2512265734.jpg?"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111901/9cce9e43ef6ab600b15a5906ef971656/view/movie/M/402300359.mp4",
+        "trailerMP4": "http://vt1.doubanio.com/201807131351/041b1ba14c978b6afefd27174166b1c2/view/movie/M/402300359.mp4",
         "trailerTitle": "北方一片苍茫\n    预告片2：鹿特丹版",
         "trailerDate": "2018-04-28",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2520568176.jpg?"
+        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2520568176.jpg?",
+        "trailerId": "be553e00866011e890bd731ab430f780"
+      },
+      {
+        "trailerMP4": "http://vt1.doubanio.com/201807131351/2395f5a56b7162e4a62ae86c1b87587f/view/movie/M/302260937.mp4",
+        "trailerTitle": "北方一片苍茫\n    预告片3：国际版",
+        "trailerDate": "2018-01-31",
+        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2512265734.jpg?",
+        "trailerId": "be5e8cd0866011e890bd731ab430f780"
       }
     ],
     "id": "27079318",
@@ -432,40 +285,46 @@
   {
     "trailerArray": [
       {
-        "trailerMP4": "http://vt1.doubanio.com/201807111901/eb9678e9f0aa3f187d71a9ddab75f87d/view/movie/M/302230574.mp4",
+        "trailerMP4": "http://vt1.doubanio.com/201807131351/9193c6404ecd4950321fbfcc74ba1240/view/movie/M/302230574.mp4",
         "trailerTitle": "淘气大侦探\n    台湾预告片 (中文字幕)",
         "trailerDate": "2017-11-08",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2504375164.jpg?"
+        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2504375164.jpg?",
+        "trailerId": "bfc03fb0866011e890bd731ab430f780"
       },
       {
-        "trailerMP4": "http://vt1.doubanio.com/201807111901/449183c4cc996892003745d31bdf662b/view/movie/M/402320837.mp4",
+        "trailerMP4": "http://vt1.doubanio.com/201807131351/73dd74a27764ac1635e8d5f6e853681b/view/movie/M/402320837.mp4",
         "trailerTitle": "淘气大侦探\n    中国先行版 (中文字幕)",
         "trailerDate": "2018-06-25",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2526136936.jpg?1529910534"
+        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2526136936.jpg?1529910534",
+        "trailerId": "bfbb5db0866011e890bd731ab430f780"
       },
       {
-        "trailerMP4": "http://vt1.doubanio.com/201807111901/af9df869128c3a7eaffe5f59820deaa2/view/movie/M/302270921.mp4",
+        "trailerMP4": "http://vt1.doubanio.com/201807131351/5581a285ce7fea011a3f03841ab1bd0d/view/movie/M/302270921.mp4",
         "trailerTitle": "淘气大侦探\n    电视版1",
         "trailerDate": "2018-02-28",
-        "trailerPoster": "https://img1.doubanio.com/img/trailer/medium/2514894909.jpg?"
+        "trailerPoster": "https://img1.doubanio.com/img/trailer/medium/2514894909.jpg?",
+        "trailerId": "bfdb8fe0866011e890bd731ab430f780"
       },
       {
-        "trailerMP4": "http://vt1.doubanio.com/201807111901/1256ab79cb45bccee8ccb94ef092be17/view/movie/M/302270922.mp4",
+        "trailerMP4": "http://vt1.doubanio.com/201807131351/f0d0feb837465bb024d585965ea96531/view/movie/M/302270922.mp4",
         "trailerTitle": "淘气大侦探\n    电视版2",
         "trailerDate": "2018-02-28",
-        "trailerPoster": "https://img1.doubanio.com/img/trailer/medium/2514894958.jpg?"
+        "trailerPoster": "https://img1.doubanio.com/img/trailer/medium/2514894958.jpg?",
+        "trailerId": "bfb62d90866011e890bd731ab430f780"
       },
       {
-        "trailerMP4": "http://vt1.doubanio.com/201807111901/e22de4ce197b69f8f50e3a29047d3564/view/movie/M/302280762.mp4",
+        "trailerMP4": "http://vt1.doubanio.com/201807131351/a013542c7004cbf37fa1deeebc3a085a/view/movie/M/302280762.mp4",
         "trailerTitle": "淘气大侦探\n    片段",
         "trailerDate": "2018-03-17",
-        "trailerPoster": "https://img1.doubanio.com/img/trailer/medium/2516505468.jpg?"
+        "trailerPoster": "https://img1.doubanio.com/img/trailer/medium/2516505468.jpg?",
+        "trailerId": "bfbf7c60866011e890bd731ab430f780"
       },
       {
-        "trailerMP4": "http://vt1.doubanio.com/201807111901/5405bec70ad0a5da9b4b00310ce5bd0e/view/movie/M/302280312.mp4",
+        "trailerMP4": "http://vt1.doubanio.com/201807131351/28c18461aa12adc41b979e660b958e6d/view/movie/M/302280312.mp4",
         "trailerTitle": "淘气大侦探\n    花絮：动画制作 (中文字幕)",
         "trailerDate": "2018-03-08",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2515703990.jpg?"
+        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2515703990.jpg?",
+        "trailerId": "bfba7350866011e890bd731ab430f780"
       }
     ],
     "id": "26660063",
@@ -474,16 +333,18 @@
   {
     "trailerArray": [
       {
-        "trailerMP4": "http://vt1.doubanio.com/201807111901/265baea631f379b6e200a80089e42f96/view/movie/M/301720324.mp4",
+        "trailerMP4": "http://vt1.doubanio.com/201807131351/530c2e9b15b00334f49e098819842482/view/movie/M/301720324.mp4",
         "trailerTitle": "玛雅蜜蜂历险记\n    预告片1",
         "trailerDate": "2015-03-05",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2230990335.jpg?"
+        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2230990335.jpg?",
+        "trailerId": "c1329460866011e890bd731ab430f780"
       },
       {
-        "trailerMP4": "http://vt1.doubanio.com/201807111901/64306f1e1fbf1a3f1660b148098f3cdb/view/movie/M/301620001.mp4",
+        "trailerMP4": "http://vt1.doubanio.com/201807131351/716e42394c65725974cd56f1210f6dfb/view/movie/M/301620001.mp4",
         "trailerTitle": "玛雅蜜蜂历险记\n    德国预告片2",
         "trailerDate": "2014-08-29",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2198023743.jpg?"
+        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2198023743.jpg?",
+        "trailerId": "c13664f0866011e890bd731ab430f780"
       }
     ],
     "id": "25881500",
@@ -492,22 +353,73 @@
   {
     "trailerArray": [
       {
-        "trailerMP4": "http://vt1.doubanio.com/201807111901/69647cdda8c31554bcfd6a881f7fd4ca/view/movie/M/402320918.mp4",
+        "trailerMP4": "http://vt1.doubanio.com/201807131351/dd9f830229bfb666bda3065823af5e2f/view/movie/M/402330040.mp4",
+        "trailerTitle": "汪星卧底\n    中国预告片1：定档版 (中文字幕)",
+        "trailerDate": "2018-06-28",
+        "trailerPoster": "https://img1.doubanio.com/img/trailer/medium/2526407588.jpg?1530170199",
+        "trailerId": "c28d9080866011e890bd731ab430f780"
+      },
+      {
+        "trailerMP4": "http://vt1.doubanio.com/201807131351/99f9ca5af20dca153548e95fcad87d6d/view/movie/M/302280324.mp4",
+        "trailerTitle": "汪星卧底\n    预告片2",
+        "trailerDate": "2018-03-09",
+        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2515743422.jpg?",
+        "trailerId": "c297c9b0866011e890bd731ab430f780"
+      },
+      {
+        "trailerMP4": "http://vt1.doubanio.com/201807131351/6c0188b2420caf727bb04b47acd0de9f/view/movie/M/302260112.mp4",
+        "trailerTitle": "汪星卧底\n    预告片3",
+        "trailerDate": "2018-01-13",
+        "trailerPoster": "https://img1.doubanio.com/img/trailer/medium/2510465859.jpg?",
+        "trailerId": "c28e2cc0866011e890bd731ab430f780"
+      },
+      {
+        "trailerMP4": "http://vt1.doubanio.com/201807131351/dc4fbfa9bca7e1f9b2aaadd4508a43af/view/movie/M/402330285.mp4",
+        "trailerTitle": "汪星卧底\n    其它花絮：采访特辑 (中文字幕)",
+        "trailerDate": "2018-07-04",
+        "trailerPoster": "https://img1.doubanio.com/img/trailer/medium/2526986777.jpg?1530699005",
+        "trailerId": "c2888770866011e890bd731ab430f780"
+      }
+    ],
+    "id": "26930056",
+    "trailerTitle": "汪星卧底 视频"
+  },
+  {
+    "trailerArray": [
+      {
+        "trailerMP4": "http://vt1.doubanio.com/201807131351/4cee39a93cfe6ff6917a133ced8ed7e6/view/movie/M/402330466.mp4",
+        "trailerTitle": "兄弟班\n    预告片1：终极版 (中文字幕)",
+        "trailerDate": "2018-07-10",
+        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2527544581.jpg?1531203245",
+        "trailerId": "c3eece30866011e890bd731ab430f780"
+      },
+      {
+        "trailerMP4": "http://vt1.doubanio.com/201807131351/73560ff9e44efa469bb751655a59c944/view/movie/M/402320918.mp4",
         "trailerTitle": "兄弟班\n    预告片2：前朋友版 (中文字幕)",
         "trailerDate": "2018-06-26",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2526216606.jpg?1529987939"
+        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2526216606.jpg?1529987939",
+        "trailerId": "c3efb890866011e890bd731ab430f780"
       },
       {
-        "trailerMP4": "http://vt1.doubanio.com/201807111901/42f53b770b13c54d45c1581f6a642213/view/movie/M/402320602.mp4",
+        "trailerMP4": "http://vt1.doubanio.com/201807131351/d0f61e51926890a5fc7b1cd78f0570d2/view/movie/M/402320602.mp4",
         "trailerTitle": "兄弟班\n    预告片3 (中文字幕)",
         "trailerDate": "2018-06-19",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2525526202.jpg?1529993717"
+        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2525526202.jpg?1529993717",
+        "trailerId": "c3e77b30866011e890bd731ab430f780"
       },
       {
-        "trailerMP4": "http://vt1.doubanio.com/201807111901/9a1c00a47a0c63906a2e702deeac8aad/view/movie/M/402320317.mp4",
+        "trailerMP4": "http://vt1.doubanio.com/201807131351/191b14d292510a3ea0e7ae2ee0f312fa/view/movie/M/402320317.mp4",
         "trailerTitle": "兄弟班\n    内地预告片4 (中文字幕)",
         "trailerDate": "2018-06-12",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2524715061.jpg?1528795585"
+        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2524715061.jpg?",
+        "trailerId": "c3f33b00866011e890bd731ab430f780"
+      },
+      {
+        "trailerMP4": "http://vt1.doubanio.com/201807131351/f57047281c4633d584094d653d7e61a3/view/movie/M/402330366.mp4",
+        "trailerTitle": "兄弟班\n    MV：推广曲《千载不变》 (中文字幕)",
+        "trailerDate": "2018-07-06",
+        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2527142402.jpg?1530853640",
+        "trailerId": "c3f3fe50866011e890bd731ab430f780"
       }
     ],
     "id": "26988003",
@@ -516,49 +428,15 @@
   {
     "trailerArray": [
       {
-        "trailerMP4": "http://vt1.doubanio.com/201807111901/e371ddb7d53feaff86dbc80abd231e86/view/movie/M/302280258.mp4",
+        "trailerMP4": "http://vt1.doubanio.com/201807131351/33294c904c633721dcffe918798ff006/view/movie/M/302280258.mp4",
         "trailerTitle": "午夜幽灵\n    先行版 (中文字幕)",
         "trailerDate": "2018-03-07",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2515614481.jpg?"
+        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2515614481.jpg?",
+        "trailerId": "c549ca50866011e890bd731ab430f780"
       }
     ],
     "id": "30128986",
     "trailerTitle": "午夜幽灵 视频"
-  },
-  {
-    "trailerArray": [
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111901/596f3f3f685361999040f4f5efd4e62e/view/movie/M/402330040.mp4",
-        "trailerTitle": "汪星卧底\n    中国预告片1：定档版 (中文字幕)",
-        "trailerDate": "2018-06-28",
-        "trailerPoster": "https://img1.doubanio.com/img/trailer/medium/2526407588.jpg?1530170199"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111901/66accae78bb1de019cca5283c69f74b0/view/movie/M/302280324.mp4",
-        "trailerTitle": "汪星卧底\n    预告片2",
-        "trailerDate": "2018-03-09",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2515743422.jpg?"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111901/9abcccce193af5527abc24cbb98f50af/view/movie/M/302260112.mp4",
-        "trailerTitle": "汪星卧底\n    预告片3",
-        "trailerDate": "2018-01-13",
-        "trailerPoster": "https://img1.doubanio.com/img/trailer/medium/2510465859.jpg?"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111901/92d6d95f97d9fc9e354a6d311ebc3a6f/view/movie/M/402330285.mp4",
-        "trailerTitle": "汪星卧底\n    其它花絮：采访特辑 (中文字幕)",
-        "trailerDate": "2018-07-04",
-        "trailerPoster": "https://img1.doubanio.com/img/trailer/medium/2526986777.jpg?1530699005"
-      }
-    ],
-    "id": "26930056",
-    "trailerTitle": "汪星卧底 视频"
-  },
-  {
-    "trailerArray": [],
-    "id": "30176525",
-    "trailerTitle": "深海历险记 视频"
   },
   {
     "trailerArray": [],
@@ -573,58 +451,129 @@
   {
     "trailerArray": [
       {
-        "trailerMP4": "http://vt1.doubanio.com/201807111901/5d30252a0b9af185c76cb193a6f44c52/view/movie/M/402330325.mp4",
+        "trailerMP4": "http://vt1.doubanio.com/201807131351/9d4264b73e8603ba69b8e1f4be549e64/view/movie/M/402310755.mp4",
+        "trailerTitle": "神奇马戏团之动物饼干\n    中国预告片1：魔力版 (中文字幕)",
+        "trailerDate": "2018-06-01",
+        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2523696073.jpg?",
+        "trailerId": "c90e7370866011e890bd731ab430f780"
+      },
+      {
+        "trailerMP4": "http://vt1.doubanio.com/201807131351/4e0a687b2818e5cbeb40d0418e3baa7d/view/movie/M/402300450.mp4",
+        "trailerTitle": "神奇马戏团之动物饼干\n    预告片2：定档版 (中文字幕)",
+        "trailerDate": "2018-05-03",
+        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2521045753.jpg?",
+        "trailerId": "c90a54c0866011e890bd731ab430f780"
+      },
+      {
+        "trailerMP4": "http://vt1.doubanio.com/201807131351/51950fcf465de4909ef47d564872bf52/view/movie/M/402330524.mp4",
+        "trailerTitle": "神奇马戏团之动物饼干\n    花絮：配音特辑 (中文字幕)",
+        "trailerDate": "2018-07-11",
+        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2527641056.jpg?1531292460",
+        "trailerId": "c90599d0866011e890bd731ab430f780"
+      },
+      {
+        "trailerMP4": "http://vt1.doubanio.com/201807131351/cca3e37e1b3e48f4e8eb87fb81b878b7/view/movie/M/402330662.mp4",
+        "trailerTitle": "神奇马戏团之动物饼干\n    MV1：周笔畅献唱中文主题曲《闪亮的魔法》 (中文字幕)",
+        "trailerDate": "2018-07-13",
+        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2527814211.jpg?1531456833",
+        "trailerId": "c90c9eb0866011e890bd731ab430f780"
+      },
+      {
+        "trailerMP4": "http://vt1.doubanio.com/201807131351/b8d83ce05e72d01afe77ca679130e2c3/view/movie/M/402320680.mp4",
+        "trailerTitle": "神奇马戏团之动物饼干\n    MV2：宣传曲《嗷嗷嗷》 (中文字幕)",
+        "trailerDate": "2018-06-21",
+        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2525717146.jpg?1529902562",
+        "trailerId": "c90831e0866011e890bd731ab430f780"
+      }
+    ],
+    "id": "26253783",
+    "trailerTitle": "神奇马戏团之动物饼干 视频"
+  },
+  {
+    "trailerArray": [
+      {
+        "trailerMP4": "http://vt1.doubanio.com/201807131351/ec6feb26813a5fd1f62aede56a8bf19d/view/movie/M/402330325.mp4",
         "trailerTitle": "狄仁杰之四大天王\n    预告片1：背水一战版 (中文字幕)",
         "trailerDate": "2018-07-05",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2527054753.jpg?"
+        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2527054753.jpg?",
+        "trailerId": "ca8c87f0866011e890bd731ab430f780"
       },
       {
-        "trailerMP4": "http://vt1.doubanio.com/201807111901/05c56fb1f9573824f064917ae341a05b/view/movie/M/402320838.mp4",
+        "trailerMP4": "http://vt1.doubanio.com/201807131351/fe06833df792b7ceb9cf0022dbc191af/view/movie/M/402320838.mp4",
         "trailerTitle": "狄仁杰之四大天王\n    预告片2：天王现身版 (中文字幕)",
         "trailerDate": "2018-06-25",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2526137676.jpg?1529911031"
+        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2526137676.jpg?1529911031",
+        "trailerId": "ca7d6cc0866011e890bd731ab430f780"
       },
       {
-        "trailerMP4": "http://vt1.doubanio.com/201807111901/a7a023db8cf59b555ca28e0f7b4dfeb6/view/movie/M/302210792.mp4",
+        "trailerMP4": "http://vt1.doubanio.com/201807131351/205b387b262a00fdee686c403ccef43f/view/movie/M/302210792.mp4",
         "trailerTitle": "狄仁杰之四大天王\n    预告片3：真相不白版 (中文字幕)",
         "trailerDate": "2017-09-22",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2499767152.jpg?"
+        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2499767152.jpg?",
+        "trailerId": "cad79ab0866011e890bd731ab430f780"
       },
       {
-        "trailerMP4": "http://vt1.doubanio.com/201807111901/0c67015a629ccc01c1f01ea3ce7001d1/view/movie/M/402300245.mp4",
+        "trailerMP4": "http://vt1.doubanio.com/201807131351/587ec732e618ff30edd3b303124f0a5b/view/movie/M/402300245.mp4",
         "trailerTitle": "狄仁杰之四大天王\n    先行版 (中文字幕)",
         "trailerDate": "2018-04-25",
-        "trailerPoster": "https://img1.doubanio.com/img/trailer/medium/2520334127.jpg?"
+        "trailerPoster": "https://img1.doubanio.com/img/trailer/medium/2520334127.jpg?",
+        "trailerId": "ca897ab0866011e890bd731ab430f780"
       },
       {
-        "trailerMP4": "http://vt1.doubanio.com/201807111901/03f92aa92157a6ff8e14d17d98c726d5/view/movie/M/402320616.mp4",
+        "trailerMP4": "http://vt1.doubanio.com/201807131351/ecac20b5d1288c7b924d9a2c95d2dcba/view/movie/M/402320616.mp4",
         "trailerTitle": "狄仁杰之四大天王\n    其它预告片：大唐神器亢龙锏 (中文字幕)",
         "trailerDate": "2018-06-20",
-        "trailerPoster": "https://img1.doubanio.com/img/trailer/medium/2525590378.jpg?"
+        "trailerPoster": "https://img1.doubanio.com/img/trailer/medium/2525590378.jpg?",
+        "trailerId": "ca79ea50866011e890bd731ab430f780"
       },
       {
-        "trailerMP4": "http://vt1.doubanio.com/201807111901/f6d504e1eeabf510e93e51017d95342c/view/movie/M/402330067.mp4",
-        "trailerTitle": "狄仁杰之四大天王\n    花絮3 (中文字幕)",
+        "trailerMP4": "http://vt1.doubanio.com/201807131351/5be99a3447c6e5e72a6d52f72db094a7/view/movie/M/402330597.mp4",
+        "trailerTitle": "狄仁杰之四大天王\n    花絮1 (中文字幕)",
+        "trailerDate": "2018-07-12",
+        "trailerPoster": "https://img1.doubanio.com/img/trailer/medium/2527752127.jpg?1531392242",
+        "trailerId": "ca6e5190866011e890bd731ab430f780"
+      },
+      {
+        "trailerMP4": "http://vt1.doubanio.com/201807131351/784cf78c787de3b8d8b97c54f0e470a8/view/movie/M/402330527.mp4",
+        "trailerTitle": "狄仁杰之四大天王\n    花絮2：九亿少女的梦特辑 (中文字幕)",
+        "trailerDate": "2018-07-11",
+        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2527641751.jpg?1531291872",
+        "trailerId": "ca6fd830866011e890bd731ab430f780"
+      },
+      {
+        "trailerMP4": "http://vt1.doubanio.com/201807131351/a7f933a03bb33e09245a959682e5d3b8/view/movie/M/402330362.mp4",
+        "trailerTitle": "狄仁杰之四大天王\n    花絮3：争气朋克少女特辑 (中文字幕)",
+        "trailerDate": "2018-07-06",
+        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2527141912.jpg?",
+        "trailerId": "ca755670866011e890bd731ab430f780"
+      },
+      {
+        "trailerMP4": "http://vt1.doubanio.com/201807131351/eda2a55ed1449ba71b659cd9acf81b14/view/movie/M/402330067.mp4",
+        "trailerTitle": "狄仁杰之四大天王\n    花絮4 (中文字幕)",
         "trailerDate": "2018-06-28",
-        "trailerPoster": "https://img1.doubanio.com/img/trailer/medium/2526441668.jpg?"
+        "trailerPoster": "https://img1.doubanio.com/img/trailer/medium/2526441668.jpg?",
+        "trailerId": "ca772b30866011e890bd731ab430f780"
       },
       {
-        "trailerMP4": "http://vt1.doubanio.com/201807111901/f771ee48aa009af40836d494ed0b2575/view/movie/M/402320984.mp4",
-        "trailerTitle": "狄仁杰之四大天王\n    花絮4：武则天特辑 (中文字幕)",
+        "trailerMP4": "http://vt1.doubanio.com/201807131351/815c6ee74608f0d530408fd04c896465/view/movie/M/402320984.mp4",
+        "trailerTitle": "狄仁杰之四大天王\n    花絮5：武则天特辑 (中文字幕)",
         "trailerDate": "2018-06-27",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2526314013.jpg?"
+        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2526314013.jpg?",
+        "trailerId": "ca72e570866011e890bd731ab430f780"
       },
       {
-        "trailerMP4": "http://vt1.doubanio.com/201807111901/dbb506eb7440e44c64fa7f7eea01686c/view/movie/M/402310450.mp4",
-        "trailerTitle": "狄仁杰之四大天王\n    花絮5：神探回归特辑 (中文字幕)",
+        "trailerMP4": "http://vt1.doubanio.com/201807131351/a06555a9b2ca70b3169cc5ad3935e3fc/view/movie/M/402310450.mp4",
+        "trailerTitle": "狄仁杰之四大天王\n    花絮6：神探回归特辑 (中文字幕)",
         "trailerDate": "2018-05-24",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2522954430.jpg?"
+        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2522954430.jpg?",
+        "trailerId": "ca811640866011e890bd731ab430f780"
       },
       {
-        "trailerMP4": "http://vt1.doubanio.com/201807111901/32fe838512bed870cb58ab3474bc0ae5/view/movie/M/402320624.mp4",
+        "trailerMP4": "http://vt1.doubanio.com/201807131351/5c22f8c4331f2b71f790ea0713048d97/view/movie/M/402320624.mp4",
         "trailerTitle": "狄仁杰之四大天王\n    其它花絮： IMAX推荐特辑 (中文字幕)",
         "trailerDate": "2018-06-20",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2525591834.jpg?"
+        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2525591834.jpg?",
+        "trailerId": "ca7185e0866011e890bd731ab430f780"
       }
     ],
     "id": "25882296",
@@ -633,34 +582,46 @@
   {
     "trailerArray": [
       {
-        "trailerMP4": "http://vt1.doubanio.com/201807111901/e786dbb1f902e7b8c41b40b5a9ad4693/view/movie/M/402320859.mp4",
+        "trailerMP4": "http://vt1.doubanio.com/201807131351/d3fea5ce8eb9120c5f93ee3279edb759/view/movie/M/402330361.mp4",
+        "trailerTitle": "西虹市首富\n    预告片1：百变首富版 (中文字幕)",
+        "trailerDate": "2018-07-06",
+        "trailerPoster": "https://img1.doubanio.com/img/trailer/medium/2527141847.jpg?",
+        "trailerId": "cc424e40866011e890bd731ab430f780"
+      },
+      {
+        "trailerMP4": "http://vt1.doubanio.com/201807131351/307da36d7260a9d5d4ad43b6f7940403/view/movie/M/402320859.mp4",
         "trailerTitle": "西虹市首富\n    预告片2：主创推荐版 (中文字幕)",
         "trailerDate": "2018-06-25",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2526149462.jpg?1529918217"
+        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2526149462.jpg?1529918217",
+        "trailerId": "cc453470866011e890bd731ab430f780"
       },
       {
-        "trailerMP4": "http://vt1.doubanio.com/201807111901/4d0463d46071c78355fc78ad8b12e79d/view/movie/M/402320030.mp4",
+        "trailerMP4": "http://vt1.doubanio.com/201807131351/19cbf12b0dffbb7e2087102a920bcf06/view/movie/M/402320030.mp4",
         "trailerTitle": "西虹市首富\n    预告片3：特笑版 (中文字幕)",
         "trailerDate": "2018-06-06",
-        "trailerPoster": "https://img1.doubanio.com/img/trailer/medium/2524221309.jpg?1528356230"
+        "trailerPoster": "https://img1.doubanio.com/img/trailer/medium/2524221309.jpg?",
+        "trailerId": "cc5a9130866011e890bd731ab430f780"
       },
       {
-        "trailerMP4": "http://vt1.doubanio.com/201807111901/38c25deef8fc6b966dde10dea0f77133/view/movie/M/402310173.mp4",
+        "trailerMP4": "http://vt1.doubanio.com/201807131351/9cdcde4a7b4da4f76aa79f1a8ad302eb/view/movie/M/402310173.mp4",
         "trailerTitle": "西虹市首富\n    预告片4：特笑大片",
         "trailerDate": "2018-05-18",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2522456574.jpg?"
+        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2522456574.jpg?",
+        "trailerId": "cc586e50866011e890bd731ab430f780"
       },
       {
-        "trailerMP4": "http://vt1.doubanio.com/201807111901/bdc9a63977830ce3d131668fc3b366df/view/movie/M/402330327.mp4",
+        "trailerMP4": "http://vt1.doubanio.com/201807131351/3f3449e8d5d14c970e510daa4dd2af8e/view/movie/M/402330327.mp4",
         "trailerTitle": "西虹市首富\n    其它预告片 (中文字幕)",
         "trailerDate": "2018-07-05",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2527062942.jpg?1530774020"
+        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2527062942.jpg?1530774020",
+        "trailerId": "cc4338a0866011e890bd731ab430f780"
       },
       {
-        "trailerMP4": "http://vt1.doubanio.com/201807111901/95f583408e3e990f0e38c8df18dbe5a3/view/movie/M/402320506.mp4",
+        "trailerMP4": "http://vt1.doubanio.com/201807131351/5188c570694893f1dd9d599553b04f4c/view/movie/M/402320506.mp4",
         "trailerTitle": "西虹市首富\n    花絮：魔音特辑 (中文字幕)",
         "trailerDate": "2018-06-15",
-        "trailerPoster": "https://img1.doubanio.com/img/trailer/medium/2525046609.jpg?"
+        "trailerPoster": "https://img1.doubanio.com/img/trailer/medium/2525046609.jpg?",
+        "trailerId": "cc442300866011e890bd731ab430f780"
       }
     ],
     "id": "27605698",
@@ -669,1558 +630,42 @@
   {
     "trailerArray": [
       {
-        "trailerMP4": "http://vt1.doubanio.com/201807111901/bf9b5ba67220528a145f05477c6aa88b/view/movie/M/402310757.mp4",
+        "trailerMP4": "http://vt1.doubanio.com/201807131351/a896ed448ca394fceeecf9a3f2728b36/view/movie/M/402310757.mp4",
         "trailerTitle": "昨日青空\n    预告片1 (中文字幕)",
         "trailerDate": "2018-06-01",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2523696213.jpg?"
+        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2523696213.jpg?",
+        "trailerId": "cdc3be20866011e890bd731ab430f780"
       },
       {
-        "trailerMP4": "http://vt1.doubanio.com/201807111901/721f213c27b4f26e0a569a5c8239809f/view/movie/M/302200018.mp4",
+        "trailerMP4": "http://vt1.doubanio.com/201807131351/0746a5e42af6442906b595098ed7517c/view/movie/M/302200018.mp4",
         "trailerTitle": "昨日青空\n    预告片2 (中文字幕)",
         "trailerDate": "2017-08-03",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2494953073.jpg?"
+        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2494953073.jpg?",
+        "trailerId": "cdbc4410866011e890bd731ab430f780"
       },
       {
-        "trailerMP4": "http://vt1.doubanio.com/201807111901/7a48afd916d0dc005eddd0deb0b99a43/view/movie/M/402330179.mp4",
+        "trailerMP4": "http://vt1.doubanio.com/201807131351/523d21711d63a0b21d842d03f4272afc/view/movie/M/402330179.mp4",
         "trailerTitle": "昨日青空\n    MV1：青春告白曲《来不及勇敢》 (中文字幕)",
         "trailerDate": "2018-07-02",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2526778622.jpg?1530511790"
+        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2526778622.jpg?1530511790",
+        "trailerId": "cdb42dc0866011e890bd731ab430f780"
       },
       {
-        "trailerMP4": "http://vt1.doubanio.com/201807111901/76493f1442e9380f03a4e7e558d63ffa/view/movie/M/402330106.mp4",
+        "trailerMP4": "http://vt1.doubanio.com/201807131351/059c77958ab6d12f3b4d69c73c7e09b3/view/movie/M/402330106.mp4",
         "trailerTitle": "昨日青空\n    MV2：毕业曲《再见昨天》 (中文字幕)",
         "trailerDate": "2018-06-29",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2526493695.jpg?1530257976"
+        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2526493695.jpg?1530257976",
+        "trailerId": "cdb6ece0866011e890bd731ab430f780"
       },
       {
-        "trailerMP4": "http://vt1.doubanio.com/201807111901/b116445c1f76dcb3b847c99b07245565/view/movie/M/402310929.mp4",
+        "trailerMP4": "http://vt1.doubanio.com/201807131351/298ddff9223cfdf3d746355e5c058bb7/view/movie/M/402310929.mp4",
         "trailerTitle": "昨日青空\n    MV3：青春毕业曲《再见昨天》 (中文字幕)",
         "trailerDate": "2018-06-05",
-        "trailerPoster": "https://img1.doubanio.com/img/trailer/medium/2524048767.jpg?"
+        "trailerPoster": "https://img1.doubanio.com/img/trailer/medium/2524048767.jpg?",
+        "trailerId": "cdaf4bc0866011e890bd731ab430f780"
       }
     ],
     "id": "26290410",
     "trailerTitle": "昨日青空 视频"
-  },
-  {
-    "trailerArray": [
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111901/348a3ad6803c9f56387ab95303fc0890/view/movie/M/402310755.mp4",
-        "trailerTitle": "神奇马戏团之动物饼干\n    中国预告片1：魔力版 (中文字幕)",
-        "trailerDate": "2018-06-01",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2523696073.jpg?"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111901/cb05adf68b35d21c8062fc0b2bde35d5/view/movie/M/402300450.mp4",
-        "trailerTitle": "神奇马戏团之动物饼干\n    预告片2：定档版 (中文字幕)",
-        "trailerDate": "2018-05-03",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2521045753.jpg?"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111901/bd537e7d6b34eb47a727e9bf5b5dedc0/view/movie/M/402320680.mp4",
-        "trailerTitle": "神奇马戏团之动物饼干\n    MV：宣传曲《嗷嗷嗷》 (中文字幕)",
-        "trailerDate": "2018-06-21",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2525717146.jpg?1529902562"
-      }
-    ],
-    "id": "26253783",
-    "trailerTitle": "神奇马戏团之动物饼干 视频"
-  },
-  {
-    "trailerArray": [],
-    "id": "30263334",
-    "trailerTitle": "解剖室灵异事件之男生宿舍 视频"
-  },
-  {
-    "trailerArray": [],
-    "id": "26754880",
-    "trailerTitle": "萌学园：寻找盘古 视频"
-  },
-  {
-    "trailerArray": [
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111902/07c2155ff5b144320f0c2b2a3b5315d3/view/movie/M/402310669.mp4",
-        "trailerTitle": "解码游戏\n    预告片：大神现世版 (中文字幕)",
-        "trailerDate": "2018-05-30",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2523517744.jpg?"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111902/cae474fa57341d4e83a006a0d6d8a726/view/movie/M/402330284.mp4",
-        "trailerTitle": "解码游戏\n    花絮2：李媛特辑 (中文字幕)",
-        "trailerDate": "2018-07-04",
-        "trailerPoster": "https://img1.doubanio.com/img/trailer/medium/2526986589.jpg?1530699078"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111902/4d66bf83745fa58b98e0be2662e5187f/view/movie/M/402320981.mp4",
-        "trailerTitle": "解码游戏\n    花絮3：男友力大pk特辑 (中文字幕)",
-        "trailerDate": "2018-06-27",
-        "trailerPoster": "https://img1.doubanio.com/img/trailer/medium/2526313658.jpg?1530076772"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111902/4271b642524b4c5bec2f1852ff7655ea/view/movie/M/402320683.mp4",
-        "trailerTitle": "解码游戏\n    MV：同名主题曲 (中文字幕)",
-        "trailerDate": "2018-06-21",
-        "trailerPoster": "https://img1.doubanio.com/img/trailer/medium/2525717198.jpg?1529902495"
-      }
-    ],
-    "id": "26767512",
-    "trailerTitle": "解码游戏 视频"
-  },
-  {
-    "trailerArray": [
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111902/8890a93685236d551e15c54908a85a2b/view/movie/M/402320186.mp4",
-        "trailerTitle": "神秘世界历险记4\n    预告片1：风波将起版 (中文字幕)",
-        "trailerDate": "2018-06-08",
-        "trailerPoster": "https://img1.doubanio.com/img/trailer/medium/2524335499.jpg?1528456458"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111902/dfe7277c23905a0b97878bf9ff53573f/view/movie/M/402320185.mp4",
-        "trailerTitle": "神秘世界历险记4\n    预告片2：角色版 (中文字幕)",
-        "trailerDate": "2018-06-08",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2524335425.jpg?1528456487"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111902/2ee2fc756e1b34d1bb9bb815e8c7d77a/view/movie/M/402320183.mp4",
-        "trailerTitle": "神秘世界历险记4\n    预告片3：六一快乐版 (中文字幕)",
-        "trailerDate": "2018-06-08",
-        "trailerPoster": "https://img1.doubanio.com/img/trailer/medium/2524334799.jpg?1528456540"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111902/92ce3a0dc84b69826ce359350cbd0079/view/movie/M/402320184.mp4",
-        "trailerTitle": "神秘世界历险记4\n    花絮：幕后特辑 (中文字幕)",
-        "trailerDate": "2018-06-08",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2524335305.jpg?"
-      }
-    ],
-    "id": "30208005",
-    "trailerTitle": "神秘世界历险记4 视频"
-  },
-  {
-    "trailerArray": [
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111902/e705729f46f67676b6f7255676f7c1d8/view/movie/M/402320715.mp4",
-        "trailerTitle": "肆式青春\n    预告片1",
-        "trailerDate": "2018-06-22",
-        "trailerPoster": "https://img1.doubanio.com/img/trailer/medium/2525800819.jpg?"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111902/2313b66842609b53d3c8505259224662/view/movie/M/402310622.mp4",
-        "trailerTitle": "肆式青春\n    中国预告片2 (中文字幕)",
-        "trailerDate": "2018-05-29",
-        "trailerPoster": "https://img1.doubanio.com/img/trailer/medium/2523441488.jpg?"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111902/1fcdc2893f9789c34ac82235d01b8b70/view/movie/M/402310517.mp4",
-        "trailerTitle": "肆式青春\n    预告片3",
-        "trailerDate": "2018-05-25",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2523039223.jpg?"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111902/27b5df05a4cc81187c64af4ca9675e89/view/movie/M/402280991.mp4",
-        "trailerTitle": "肆式青春\n    预告片4 (中文字幕)",
-        "trailerDate": "2018-03-22",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2517027092.jpg?"
-      }
-    ],
-    "id": "30156898",
-    "trailerTitle": "肆式青春 视频"
-  },
-  {
-    "trailerArray": [
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111902/91f9fd466170fc40ab3b3940b9e4b4bf/view/movie/M/402300863.mp4",
-        "trailerTitle": "一出好戏\n    预告片：欢迎光临版 (中文字幕)",
-        "trailerDate": "2018-05-11",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2521811714.jpg?"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111902/8dbbcde01dea6966db8dceca4d6a3960/view/movie/M/402300067.mp4",
-        "trailerTitle": "一出好戏\n    其它预告片1：档期解锁 (中文字幕)",
-        "trailerDate": "2018-04-20",
-        "trailerPoster": "https://img1.doubanio.com/img/trailer/medium/2519821728.jpg?"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111902/f99634059ecfade11850ef5a8b118493/view/movie/M/302270730.mp4",
-        "trailerTitle": "一出好戏\n    其它预告片2：孙红雷狗年送祝福 (中文字幕)",
-        "trailerDate": "2018-02-22",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2514261002.jpg?"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111902/6485540778162f1c501187d4a463baca/view/movie/M/402310717.mp4",
-        "trailerTitle": "一出好戏\n    花絮：幕后特辑 (中文字幕)",
-        "trailerDate": "2018-05-31",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2523607806.jpg?"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111902/726da7a3662463bbac78b086f46d930b/view/movie/M/302260838.mp4",
-        "trailerTitle": "一出好戏\n    其它花絮：黄渤特辑 (中文字幕)",
-        "trailerDate": "2018-01-30",
-        "trailerPoster": "https://img1.doubanio.com/img/trailer/medium/2512140439.jpg?"
-      }
-    ],
-    "id": "26985127",
-    "trailerTitle": "一出好戏 视频"
-  },
-  {
-    "trailerArray": [
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111902/1ee962536d68967cdd706dddba0ae2f4/view/movie/M/402320102.mp4",
-        "trailerTitle": "爱情公寓\n    MV：主题曲《我的未来式》 (中文字幕)",
-        "trailerDate": "2018-06-07",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2524231956.jpg?1528357458"
-      }
-    ],
-    "id": "24852545",
-    "trailerTitle": "爱情公寓 视频"
-  },
-  {
-    "trailerArray": [
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111902/040f61bb3125d78820b9eecff2909426/view/movie/M/402320560.mp4",
-        "trailerTitle": "巨齿鲨\n    中国预告片1：深海争锋版 (中文字幕)",
-        "trailerDate": "2018-06-18",
-        "trailerPoster": "https://img1.doubanio.com/img/trailer/medium/2525296817.jpg?"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111902/05a4c14b40e527a4067d2fc1cb74154f/view/movie/M/402310860.mp4",
-        "trailerTitle": "巨齿鲨\n    预告片2：绝命巨鲨版",
-        "trailerDate": "2018-06-04",
-        "trailerPoster": "https://img1.doubanio.com/img/trailer/medium/2523962188.jpg?"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111902/3415016f8460e6e3d5e12b6998935794/view/movie/M/402310859.mp4",
-        "trailerTitle": "巨齿鲨\n    预告片3：巨浪淘鲨版",
-        "trailerDate": "2018-06-04",
-        "trailerPoster": "https://img1.doubanio.com/img/trailer/medium/2523962107.jpg?"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111902/6de194fccee44f7a56468711825fe5b9/view/movie/M/402290674.mp4",
-        "trailerTitle": "巨齿鲨\n    中国预告片4：深海降临版 (中文字幕)",
-        "trailerDate": "2018-04-11",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2518953365.jpg?"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111902/db7a2214addc245a9f7261f8f3d9ff84/view/movie/M/402290631.mp4",
-        "trailerTitle": "巨齿鲨\n    台湾预告片5 (中文字幕)",
-        "trailerDate": "2018-04-10",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2518855241.jpg?"
-      }
-    ],
-    "id": "26426194",
-    "trailerTitle": "巨齿鲨 视频"
-  },
-  {
-    "trailerArray": [
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111902/1ed8dd43cd4b136e0e90b1fb9421bbba/view/movie/M/402320632.mp4",
-        "trailerTitle": "美食大冒险之英雄烩\n    预告片2：国际版 (中文字幕)",
-        "trailerDate": "2018-06-20",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2525592313.jpg?1529902857"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111902/7a96ff9067db7e709dd1899d07d7c103/view/movie/M/402310753.mp4",
-        "trailerTitle": "美食大冒险之英雄烩\n    预告片3：定档版 (中文字幕)",
-        "trailerDate": "2018-06-01",
-        "trailerPoster": "https://img1.doubanio.com/img/trailer/medium/2523695739.jpg?"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111902/611567a8bb9d442d07721f18321793f4/view/movie/M/402290860.mp4",
-        "trailerTitle": "美食大冒险之英雄烩\n    预告片4 (中文字幕)",
-        "trailerDate": "2018-04-16",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2519463473.jpg?"
-      }
-    ],
-    "id": "26290398",
-    "trailerTitle": "美食大冒险之英雄烩 视频"
-  },
-  {
-    "trailerArray": [],
-    "id": "30125089",
-    "trailerTitle": "勇者闯魔城 视频"
-  },
-  {
-    "trailerArray": [
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111902/c7da4edc851a3c4d6b70501dac4c617a/view/movie/M/402320626.mp4",
-        "trailerTitle": "大轰炸\n    预告片1：对抗版 (中文字幕)",
-        "trailerDate": "2018-06-20",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2525591935.jpg?1529903005"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111902/fa9743694eb6587087e7454d62b49525/view/movie/M/402310094.mp4",
-        "trailerTitle": "大轰炸\n    预告片2：不屈版 (中文字幕)",
-        "trailerDate": "2018-05-17",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2522332973.jpg?"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111902/cfdd2e034bff3d0d67be321365d127d0/view/movie/M/402320633.mp4",
-        "trailerTitle": "大轰炸\n    花絮2：品质特辑 (中文字幕)",
-        "trailerDate": "2018-06-20",
-        "trailerPoster": "https://img1.doubanio.com/img/trailer/medium/2525592869.jpg?1529902824"
-      }
-    ],
-    "id": "26331700",
-    "trailerTitle": "大轰炸 视频"
-  },
-  {
-    "trailerArray": [
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111902/473dc06be22423463fe7a3daefc7d521/view/movie/M/402290343.mp4",
-        "trailerTitle": "如影随心\n    预告片 (中文字幕)",
-        "trailerDate": "2018-04-02",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2518071792.jpg?"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111902/9c44ee1ad74031ccc58779fe2a65e4d3/view/movie/M/402330185.mp4",
-        "trailerTitle": "如影随心\n    MV：主题曲《两个人一个人》 (中文字幕)",
-        "trailerDate": "2018-07-02",
-        "trailerPoster": "https://img1.doubanio.com/img/trailer/medium/2526780629.jpg?1530512588"
-      }
-    ],
-    "id": "26871669",
-    "trailerTitle": "如影随心 视频"
-  },
-  {
-    "trailerArray": [
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111902/9e95c3f11202e775edcfb216cfa50a66/view/movie/M/302280408.mp4",
-        "trailerTitle": "快把我哥带走\n    预告片1：“贱”笑版 (中文字幕)",
-        "trailerDate": "2018-03-12",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2516067315.jpg?"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111902/c772af70e629f1fc81504ed2a684352a/view/movie/M/402320449.mp4",
-        "trailerTitle": "快把我哥带走\n    预告片2 (中文字幕)",
-        "trailerDate": "2018-06-14",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2524962262.jpg?"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111902/330347a8b1cb389938dc28b7472bb972/view/movie/M/402330175.mp4",
-        "trailerTitle": "快把我哥带走\n    其它预告片1 (中文字幕)",
-        "trailerDate": "2018-07-02",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2526777801.jpg?1530512211"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111902/657bd898dddb2036be6c2f7a9f2d537b/view/movie/M/402330174.mp4",
-        "trailerTitle": "快把我哥带走\n    其它预告片2 (中文字幕)",
-        "trailerDate": "2018-07-02",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2526777252.jpg?"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111902/292d866ff301df9b4e222052cb8f4402/view/movie/M/402330097.mp4",
-        "trailerTitle": "快把我哥带走\n    其它预告片3 (中文字幕)",
-        "trailerDate": "2018-06-29",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2526492295.jpg?1530260716"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111902/de3f523dbcc01374e010817be986a3ee/view/movie/M/402330037.mp4",
-        "trailerTitle": "快把我哥带走\n    其它预告片4 (中文字幕)",
-        "trailerDate": "2018-06-28",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2526407241.jpg?1530242478"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111902/988b638651de060677038039e0adda15/view/movie/M/402320552.mp4",
-        "trailerTitle": "快把我哥带走\n    其它预告片5：耍贱合集 (中文字幕)",
-        "trailerDate": "2018-06-16",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2525143961.jpg?"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111902/abff17ae0dc9325e85b6b97a74d945da/view/movie/M/402330288.mp4",
-        "trailerTitle": "快把我哥带走\n    片段：游戏黑洞 (中文字幕)",
-        "trailerDate": "2018-07-04",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2526987283.jpg?1530696817"
-      }
-    ],
-    "id": "30122633",
-    "trailerTitle": "快把我哥带走 视频"
-  },
-  {
-    "trailerArray": [
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111902/cdec2ef9c3dfd3874f2d052bee5448b7/view/movie/M/402320839.mp4",
-        "trailerTitle": "未来机器城\n    预告片：定档版 (中文字幕)",
-        "trailerDate": "2018-06-25",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2526137673.jpg?1529910998"
-      }
-    ],
-    "id": "27200988",
-    "trailerTitle": "未来机器城 视频"
-  },
-  {
-    "trailerArray": [
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111902/4f79fca96789a307bd81a40384986a28/view/movie/M/402320746.mp4",
-        "trailerTitle": "大师兄\n    香港预告片 (中文字幕)",
-        "trailerDate": "2018-06-22",
-        "trailerPoster": "https://img1.doubanio.com/img/trailer/medium/2525832878.jpg?1529923579"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111902/cda55db77b9e5fc11861e51c23c2bd3a/view/movie/M/402320814.mp4",
-        "trailerTitle": "大师兄\n    内地先行版 (中文字幕)",
-        "trailerDate": "2018-06-25",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2526121745.jpg?1529901332"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111902/29545fd42cea78e4f54fcf3dfba3ebab/view/movie/M/402330181.mp4",
-        "trailerTitle": "大师兄\n    其它预告片：朝阳群众有话说 (中文字幕)",
-        "trailerDate": "2018-07-02",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2526779084.jpg?1530511648"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111902/20a402a3e0ab8aef04b35295a73b4635/view/movie/M/402330323.mp4",
-        "trailerTitle": "大师兄\n    花絮：甄子丹特辑 (中文字幕)",
-        "trailerDate": "2018-07-05",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2527053943.jpg?"
-      }
-    ],
-    "id": "27201353",
-    "trailerTitle": "大师兄 视频"
-  },
-  {
-    "trailerArray": [
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111902/12d71868f6002a8d52dff472b88270a3/view/movie/M/402320753.mp4",
-        "trailerTitle": "最后的棒棒\n    先行版",
-        "trailerDate": "2018-06-22",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2525865391.jpg?1529667145"
-      }
-    ],
-    "id": "30254589",
-    "trailerTitle": "最后的棒棒 视频"
-  },
-  {
-    "trailerArray": [],
-    "id": "30246086",
-    "trailerTitle": "他是一只狗 视频"
-  },
-  {
-    "trailerArray": [],
-    "id": "24743257",
-    "trailerTitle": "冷恋时代 视频"
-  },
-  {
-    "trailerArray": [
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111902/7f50ddb2c19ced1071b0d15294b85df9/view/movie/M/402310593.mp4",
-        "trailerTitle": "大三儿\n    先行版 (中文字幕)",
-        "trailerDate": "2018-05-29",
-        "trailerPoster": "https://img1.doubanio.com/img/trailer/medium/2523431559.jpg?"
-      }
-    ],
-    "id": "27119292",
-    "trailerTitle": "大三儿 视频"
-  },
-  {
-    "trailerArray": [
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111902/c73de7af014a0611da958a7144bd7401/view/movie/M/402310603.mp4",
-        "trailerTitle": "反贪风暴3\n    内地先行版 (中文字幕)",
-        "trailerDate": "2018-05-29",
-        "trailerPoster": "https://img1.doubanio.com/img/trailer/medium/2523439239.jpg?"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111902/3063b91731535cee14d674ca2361c5b7/view/movie/M/402330043.mp4",
-        "trailerTitle": "反贪风暴3\n    花絮 (中文字幕)",
-        "trailerDate": "2018-06-28",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2526407834.jpg?1530170051"
-      }
-    ],
-    "id": "26996640",
-    "trailerTitle": "反贪风暴3 视频"
-  },
-  {
-    "trailerArray": [
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111902/a08a03a7c73d906687d622a18c99055c/view/movie/M/402310602.mp4",
-        "trailerTitle": "七袋米\n    中国预告片1 (中文字幕)",
-        "trailerDate": "2018-05-29",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2523437292.jpg?"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111902/883d04439b0552dae29b52c4f1f87691/view/movie/M/402310600.mp4",
-        "trailerTitle": "七袋米\n    中国预告片2：催泪版 (中文字幕)",
-        "trailerDate": "2018-05-29",
-        "trailerPoster": "https://img1.doubanio.com/img/trailer/medium/2523437129.jpg?"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111902/2cad96bba13b5af5915af8d270900b88/view/movie/M/402310601.mp4",
-        "trailerTitle": "七袋米\n    MV：主题曲《四月》 (中文字幕)",
-        "trailerDate": "2018-05-29",
-        "trailerPoster": "https://img1.doubanio.com/img/trailer/medium/2523437007.jpg?"
-      }
-    ],
-    "id": "26881698",
-    "trailerTitle": "七袋米 视频"
-  },
-  {
-    "trailerArray": [],
-    "id": "30199575",
-    "trailerTitle": "让我怎么相信你 视频"
-  },
-  {
-    "trailerArray": [],
-    "id": "26954268",
-    "trailerTitle": "道高一丈 视频"
-  },
-  {
-    "trailerArray": [
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111902/e02c616f6b2816286e653f41eca827e4/view/movie/M/402330283.mp4",
-        "trailerTitle": "有五个姐姐的我就注定要单身了啊\n    预告片：定档版 (中文字幕)",
-        "trailerDate": "2018-07-04",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2526986491.jpg?1530699098"
-      }
-    ],
-    "id": "26730542",
-    "trailerTitle": "有五个姐姐的我就注定要单身了啊 视频"
-  },
-  {
-    "trailerArray": [],
-    "id": "30237381",
-    "trailerTitle": "惊慌失色之诡寓 视频"
-  },
-  {
-    "trailerArray": [
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111902/106cb7ef5b8bef7fdaee4d91dbb82ef6/view/movie/M/402330281.mp4",
-        "trailerTitle": "天下第一镖局\n    预告片：定档版 (中文字幕)",
-        "trailerDate": "2018-07-04",
-        "trailerPoster": "https://img1.doubanio.com/img/trailer/medium/2526986088.jpg?1530699144"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111902/2c7c583e5ff151e1ac49861fbdc46c39/view/movie/M/402310921.mp4",
-        "trailerTitle": "天下第一镖局\n    先行版 (中文字幕)",
-        "trailerDate": "2018-06-05",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2524048176.jpg?"
-      }
-    ],
-    "id": "27107604",
-    "trailerTitle": "天下第一镖局 视频"
-  },
-  {
-    "trailerArray": [],
-    "id": "30236775",
-    "trailerTitle": "旅行吧！井底之蛙 视频"
-  },
-  {
-    "trailerArray": [
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111903/696522c4b10e862126a1d1368f12dc9a/view/movie/M/402310244.mp4",
-        "trailerTitle": "蚁人2：黄蜂女现身\n    台湾预告片1 (中文字幕)",
-        "trailerDate": "2018-05-21",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2522690761.jpg?"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111903/aa6756e80dcadd97b228a098d22fed58/view/movie/M/402310243.mp4",
-        "trailerTitle": "蚁人2：黄蜂女现身\n    台湾预告片2 (中文字幕)",
-        "trailerDate": "2018-05-21",
-        "trailerPoster": "https://img1.doubanio.com/img/trailer/medium/2522690659.jpg?"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111903/c203acf4651f30cbd915b3f8e6a434b5/view/movie/M/402300391.mp4",
-        "trailerTitle": "蚁人2：黄蜂女现身\n    预告片3",
-        "trailerDate": "2018-05-02",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2520904160.jpg?"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111903/c2de7a797ad4b4d701932c4859e146fc/view/movie/M/402300390.mp4",
-        "trailerTitle": "蚁人2：黄蜂女现身\n    中国预告片4 (中文字幕)",
-        "trailerDate": "2018-05-01",
-        "trailerPoster": "https://img1.doubanio.com/img/trailer/medium/2520897188.jpg?"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111903/121edf13db074429dbab466d7fb26f93/view/movie/M/402300388.mp4",
-        "trailerTitle": "蚁人2：黄蜂女现身\n    台湾预告片5 (中文字幕)",
-        "trailerDate": "2018-05-01",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2520895522.jpg?"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111903/73ba3b0aac223caed01e3cbdfd83e37d/view/movie/M/402300384.mp4",
-        "trailerTitle": "蚁人2：黄蜂女现身\n    先行版1",
-        "trailerDate": "2018-05-01",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2520829861.jpg?"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111903/47c84cbe1bfcd3b69c799ec7e657f857/view/movie/M/302260958.mp4",
-        "trailerTitle": "蚁人2：黄蜂女现身\n    中国先行版2 (中文字幕)",
-        "trailerDate": "2018-02-01",
-        "trailerPoster": "https://img1.doubanio.com/img/trailer/medium/2512327887.jpg?"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111903/3f7e859b4be8346a236e5832deae36bc/view/movie/M/302260876.mp4",
-        "trailerTitle": "蚁人2：黄蜂女现身\n    台湾先行版3 (中文字幕)",
-        "trailerDate": "2018-01-30",
-        "trailerPoster": "https://img1.doubanio.com/img/trailer/medium/2512190538.jpg?"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111903/53f889f08bc7a800be3064a34b2eeb99/view/movie/M/302190971.mp4",
-        "trailerTitle": "蚁人2：黄蜂女现身\n    先行版4：Now in Production",
-        "trailerDate": "2017-08-02",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2494800564.jpg?"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111903/3940ee8604806b4f0fa335119d196a3a/view/movie/M/402320762.mp4",
-        "trailerTitle": "蚁人2：黄蜂女现身\n    电视版1 (中文字幕)",
-        "trailerDate": "2018-06-22",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2525870676.jpg?"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111903/fe9412fadb26e5a00fda04fc067bf133/view/movie/M/402320096.mp4",
-        "trailerTitle": "蚁人2：黄蜂女现身\n    电视版2 (中文字幕)",
-        "trailerDate": "2018-06-07",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2524226591.jpg?1528366208"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111903/7f4e444b28bb514d2b3ce89f57bebd35/view/movie/M/402310888.mp4",
-        "trailerTitle": "蚁人2：黄蜂女现身\n    电视版3 (中文字幕)",
-        "trailerDate": "2018-06-04",
-        "trailerPoster": "https://img1.doubanio.com/img/trailer/medium/2523992127.jpg?"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111903/9b07f59b21e23e203985b1e8ad5b2bd8/view/movie/M/402310774.mp4",
-        "trailerTitle": "蚁人2：黄蜂女现身\n    电视版4 (中文字幕)",
-        "trailerDate": "2018-06-01",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2523699590.jpg?"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111903/47b3237abff5a950adfccd733e1ee1dc/view/movie/M/402320608.mp4",
-        "trailerTitle": "蚁人2：黄蜂女现身\n    其它预告片1 (中文字幕)",
-        "trailerDate": "2018-06-19",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2525548656.jpg?1529993659"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111903/da3bfc6f67c3b6a1469d577844b8ae3c/view/movie/M/402310380.mp4",
-        "trailerTitle": "蚁人2：黄蜂女现身\n    其它预告片2 (中文字幕)",
-        "trailerDate": "2018-05-23",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2522889172.jpg?"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111903/5559481ac2df27d6488c5474815ceae1/view/movie/M/402330195.mp4",
-        "trailerTitle": "蚁人2：黄蜂女现身\n    花絮1 (中文字幕)",
-        "trailerDate": "2018-07-02",
-        "trailerPoster": "https://img1.doubanio.com/img/trailer/medium/2526795217.jpg?1530520165"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111903/0195faece712ccc69b7a1afc8018dce7/view/movie/M/402330197.mp4",
-        "trailerTitle": "蚁人2：黄蜂女现身\n    花絮2 (中文字幕)",
-        "trailerDate": "2018-07-02",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2526795871.jpg?1530520144"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111903/2266797e19ab3112329118d68eca84f7/view/movie/M/402320566.mp4",
-        "trailerTitle": "蚁人2：黄蜂女现身\n    其它花絮1 (中文字幕)",
-        "trailerDate": "2018-06-18",
-        "trailerPoster": "https://img1.doubanio.com/img/trailer/medium/2525357509.jpg?1529990934"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111903/5d214acfa626deeacb5c52fa05ea6e2d/view/movie/M/402320567.mp4",
-        "trailerTitle": "蚁人2：黄蜂女现身\n    其它花絮2 (中文字幕)",
-        "trailerDate": "2018-06-18",
-        "trailerPoster": "https://img1.doubanio.com/img/trailer/medium/2525357787.jpg?1529990963"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111903/d082db7cf82770974c4a20dc712b3f2a/view/movie/M/402320460.mp4",
-        "trailerTitle": "蚁人2：黄蜂女现身\n    其它花絮3 (中文字幕)",
-        "trailerDate": "2018-06-14",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2524978631.jpg?1528966183"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111903/2f096f3be8da09e2387f20cfd88b2082/view/movie/M/402320048.mp4",
-        "trailerTitle": "蚁人2：黄蜂女现身\n    其它花絮4 (中文字幕)",
-        "trailerDate": "2018-06-06",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2524154671.jpg?1528340863"
-      }
-    ],
-    "id": "26636712",
-    "trailerTitle": "蚁人2：黄蜂女现身 视频"
-  },
-  {
-    "trailerArray": [
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111903/78e1f18a55248521afbcb2e19ed32adb/view/movie/M/302240983.mp4",
-        "trailerTitle": "我，花样女王\n    台湾预告片1 (中文字幕)",
-        "trailerDate": "2017-12-12",
-        "trailerPoster": "https://img1.doubanio.com/img/trailer/medium/2507488558.jpg?"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111903/406a08e213fa2c3bd7aa5280dca48b24/view/movie/M/302230359.mp4",
-        "trailerTitle": "我，花样女王\n    预告片2：限制级",
-        "trailerDate": "2017-11-02",
-        "trailerPoster": "https://img1.doubanio.com/img/trailer/medium/2503800758.jpg?"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111903/80f0c3d327787740985b5a3682b78a4d/view/movie/M/302240643.mp4",
-        "trailerTitle": "我，花样女王\n    香港先行版 (中文字幕)",
-        "trailerDate": "2017-12-05",
-        "trailerPoster": "https://img1.doubanio.com/img/trailer/medium/2506804809.jpg?"
-      }
-    ],
-    "id": "26756049",
-    "trailerTitle": "我，花样女王 视频"
-  },
-  {
-    "trailerArray": [
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111903/155d81828202cda80c067763ee1b3543/view/movie/M/402310259.mp4",
-        "trailerTitle": "碟中谍6：全面瓦解\n    香港预告片1 (中文字幕)",
-        "trailerDate": "2018-05-21",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2522725463.jpg?1528734001"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111903/f5e181ef8902de6bc4da22af363caa8a/view/movie/M/402310252.mp4",
-        "trailerTitle": "碟中谍6：全面瓦解\n    中国预告片2 (中文字幕)",
-        "trailerDate": "2018-05-21",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2522708331.jpg?"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111903/2416722254646182845aa01aa9976ef4/view/movie/M/402310247.mp4",
-        "trailerTitle": "碟中谍6：全面瓦解\n    台湾预告片3 (中文字幕)",
-        "trailerDate": "2018-05-21",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2522708104.jpg?"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111903/c9b391a6d9427929ca1920a2df3d4e0f/view/movie/M/402310045.mp4",
-        "trailerTitle": "碟中谍6：全面瓦解\n    预告片4",
-        "trailerDate": "2018-05-16",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2522268915.jpg?"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111903/f43e61dd20bbfdff65c3e783efd37aa4/view/movie/M/302270152.mp4",
-        "trailerTitle": "碟中谍6：全面瓦解\n    中国预告片5 (中文字幕)",
-        "trailerDate": "2018-02-05",
-        "trailerPoster": "https://img1.doubanio.com/img/trailer/medium/2512745509.jpg?"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111903/6f76c71f025c72cc9dfb23af67b65ea4/view/movie/M/402320695.mp4",
-        "trailerTitle": "碟中谍6：全面瓦解\n    电视版1 (中文字幕)",
-        "trailerDate": "2018-06-21",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2525740012.jpg?1529554444"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111903/046624d5519d22d3d72f2a63a089461d/view/movie/M/402320287.mp4",
-        "trailerTitle": "碟中谍6：全面瓦解\n    电视版2 (中文字幕)",
-        "trailerDate": "2018-06-12",
-        "trailerPoster": "https://img1.doubanio.com/img/trailer/medium/2524688249.jpg?"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111903/61fa498a52c755801b176f4c62be9b65/view/movie/M/402320349.mp4",
-        "trailerTitle": "碟中谍6：全面瓦解\n    电视版3 (中文字幕)",
-        "trailerDate": "2018-06-12",
-        "trailerPoster": "https://img1.doubanio.com/img/trailer/medium/2524812967.jpg?1528959304"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111903/eff6b3c76630a2900c6338408941da9b/view/movie/M/302270139.mp4",
-        "trailerTitle": "碟中谍6：全面瓦解\n    电视版4：超级碗版 (中文字幕)",
-        "trailerDate": "2018-02-05",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2512712810.jpg?"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111903/9c10c837a900def58c508a52c6b5dcdc/view/movie/M/402330171.mp4",
-        "trailerTitle": "碟中谍6：全面瓦解\n    花絮2 (中文字幕)",
-        "trailerDate": "2018-07-02",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2526770385.jpg?1530512303"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111903/58056def8c190b878115c431fe41f39d/view/movie/M/402330063.mp4",
-        "trailerTitle": "碟中谍6：全面瓦解\n    花絮3 (中文字幕)",
-        "trailerDate": "2018-06-28",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2526438961.jpg?1530611145"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111903/159fa0a4f383a57ff6c3668cf046dfe6/view/movie/M/402310865.mp4",
-        "trailerTitle": "碟中谍6：全面瓦解\n    花絮4 (中文字幕)",
-        "trailerDate": "2018-06-04",
-        "trailerPoster": "https://img1.doubanio.com/img/trailer/medium/2523962699.jpg?"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111903/1fe7a2feda82e3798babda2831101eba/view/movie/M/302270314.mp4",
-        "trailerTitle": "碟中谍6：全面瓦解\n    花絮5：真刀实枪特辑 (中文字幕)",
-        "trailerDate": "2018-02-08",
-        "trailerPoster": "https://img1.doubanio.com/img/trailer/medium/2512990789.jpg?"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111903/9c73a99063592ef4f3743737acb16937/view/movie/M/302260928.mp4",
-        "trailerTitle": "碟中谍6：全面瓦解\n    其它花絮：诺顿秀特辑 (中文字幕)",
-        "trailerDate": "2018-01-31",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2512246703.jpg?"
-      }
-    ],
-    "id": "26336252",
-    "trailerTitle": "碟中谍6：全面瓦解 视频"
-  },
-  {
-    "trailerArray": [
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111903/3cbddf800baaf6df8bca7aa30457b1fc/view/movie/M/402300144.mp4",
-        "trailerTitle": "镰仓物语\n    香港预告片1 (中文字幕)",
-        "trailerDate": "2018-04-23",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2520132966.jpg?"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111903/1229509891a63a0e8de99aaf951f6da0/view/movie/M/302180731.mp4",
-        "trailerTitle": "镰仓物语\n    日本预告片2",
-        "trailerDate": "2017-07-04",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2480586560.jpg?"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111903/7f5f794898b005d720cec90a1cc4871f/view/movie/M/302240151.mp4",
-        "trailerTitle": "镰仓物语\n    电视版1",
-        "trailerDate": "2017-11-22",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2505617813.jpg?"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111903/dccab365fa91d732e72b2ae533e16e9c/view/movie/M/302240147.mp4",
-        "trailerTitle": "镰仓物语\n    电视版2",
-        "trailerDate": "2017-11-22",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2505617052.jpg?"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111903/95af18be1f44dc6198a431dcf71ce4ac/view/movie/M/302240149.mp4",
-        "trailerTitle": "镰仓物语\n    电视版3",
-        "trailerDate": "2017-11-22",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2505617406.jpg?"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111903/bee4b2935412fbd3f2bedeb37cb5cf2d/view/movie/M/402300819.mp4",
-        "trailerTitle": "镰仓物语\n    花絮1",
-        "trailerDate": "2018-05-10",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2521733372.jpg?"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111903/d44ae84ad3557722cdc95926d886ef97/view/movie/M/402300697.mp4",
-        "trailerTitle": "镰仓物语\n    花絮2",
-        "trailerDate": "2018-05-09",
-        "trailerPoster": "https://img1.doubanio.com/img/trailer/medium/2521614649.jpg?"
-      }
-    ],
-    "id": "26916229",
-    "trailerTitle": "镰仓物语 视频"
-  },
-  {
-    "trailerArray": [
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111903/6f111dfca744911f7143b34cc008d4de/view/movie/M/402310782.mp4",
-        "trailerTitle": "影\n    预告片：当局不迷版 (中文字幕)",
-        "trailerDate": "2018-06-01",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2523705700.jpg?"
-      }
-    ],
-    "id": "4864908",
-    "trailerTitle": "影 视频"
-  },
-  {
-    "trailerArray": [
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111903/a9bdda1944f849e499c37e838947314c/view/movie/M/402310509.mp4",
-        "trailerTitle": "边境杀手2：边境战士\n    预告片1",
-        "trailerDate": "2018-05-25",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2523018626.jpg?"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111903/9907c72eb191af8319796768703a4bce/view/movie/M/302280839.mp4",
-        "trailerTitle": "边境杀手2：边境战士\n    预告片2",
-        "trailerDate": "2018-03-20",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2516829974.jpg?"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111903/985f336769354d0fa06ddcda67b0a45d/view/movie/M/302270424.mp4",
-        "trailerTitle": "边境杀手2：边境战士\n    台湾预告片3 (中文字幕)",
-        "trailerDate": "2018-02-11",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2513246682.jpg?"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111903/370e2554978586c63251f5a652a249a2/view/movie/M/302250252.mp4",
-        "trailerTitle": "边境杀手2：边境战士\n    先行版",
-        "trailerDate": "2017-12-20",
-        "trailerPoster": "https://img1.doubanio.com/img/trailer/medium/2508146897.jpg?"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111903/d04b288664b96f6458eb17f44a9d1b69/view/movie/M/402330085.mp4",
-        "trailerTitle": "边境杀手2：边境战士\n    片段1",
-        "trailerDate": "2018-06-29",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2526470693.jpg?1530521090"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111903/45f570cf6209d051e993069f17623ac6/view/movie/M/402320439.mp4",
-        "trailerTitle": "边境杀手2：边境战士\n    片段2",
-        "trailerDate": "2018-06-14",
-        "trailerPoster": "https://img1.doubanio.com/img/trailer/medium/2524960739.jpg?1528954329"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111903/f051c95ad5217c34c2779c26e9122dc9/view/movie/M/402320443.mp4",
-        "trailerTitle": "边境杀手2：边境战士\n    片段3",
-        "trailerDate": "2018-06-14",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2524961022.jpg?"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111903/581ed39fb95c4f0f1a3329bbc95c5724/view/movie/M/402310996.mp4",
-        "trailerTitle": "边境杀手2：边境战士\n    片段4",
-        "trailerDate": "2018-06-06",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2524107984.jpg?"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111903/ecf76bc40edd7549676e67002ba3678c/view/movie/M/402310792.mp4",
-        "trailerTitle": "边境杀手2：边境战士\n    片段5",
-        "trailerDate": "2018-06-02",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2523735623.jpg?"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111903/4a5958d4cbf248da8152b1431bf541b1/view/movie/M/402320713.mp4",
-        "trailerTitle": "边境杀手2：边境战士\n    花絮1",
-        "trailerDate": "2018-06-22",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2525801255.jpg?1529990491"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111903/5bca54adc1ceaea3b8280e4adc190cca/view/movie/M/402320425.mp4",
-        "trailerTitle": "边境杀手2：边境战士\n    花絮2",
-        "trailerDate": "2018-06-14",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2524940124.jpg?1528956797"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111903/e20b390ec549b76a2cfbae94eb936efa/view/movie/M/402320410.mp4",
-        "trailerTitle": "边境杀手2：边境战士\n    花絮3",
-        "trailerDate": "2018-06-14",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2524931093.jpg?"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111903/72d144aab3190bb53666695ab04114fa/view/movie/M/402320411.mp4",
-        "trailerTitle": "边境杀手2：边境战士\n    花絮4",
-        "trailerDate": "2018-06-14",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2524931201.jpg?1528957737"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111903/b8651ad4352327708d9f797fc6254855/view/movie/M/402330012.mp4",
-        "trailerTitle": "边境杀手2：边境战士\n    其它花絮",
-        "trailerDate": "2018-06-28",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2526381946.jpg?"
-      }
-    ],
-    "id": "26627736",
-    "trailerTitle": "边境杀手2：边境战士 视频"
-  },
-  {
-    "trailerArray": [
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111903/130d15a5a48d018f99838c5c2adbcaed/view/movie/M/402310720.mp4",
-        "trailerTitle": "营救汪星人\n    预告片1：国际版 (中文字幕)",
-        "trailerDate": "2018-05-31",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2523608745.jpg?"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111903/b1e6d4947c1e31d1d1ef1f07755d4528/view/movie/M/402300452.mp4",
-        "trailerTitle": "营救汪星人\n    预告片2：三妹博美版 (中文字幕)",
-        "trailerDate": "2018-05-03",
-        "trailerPoster": "https://img1.doubanio.com/img/trailer/medium/2521045788.jpg?"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111903/6c2c74c9fc79a9959db25042ebb593df/view/movie/M/302260985.mp4",
-        "trailerTitle": "营救汪星人\n    预告片3：休想上映版 (中文字幕)",
-        "trailerDate": "2018-02-01",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2512353485.jpg?"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111903/1972cc846b0d9c5baa244987402114ee/view/movie/M/302240021.mp4",
-        "trailerTitle": "营救汪星人\n    预告片4：哈士奇版 (中文字幕)",
-        "trailerDate": "2017-11-17",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2505200235.jpg?"
-      }
-    ],
-    "id": "26930565",
-    "trailerTitle": "营救汪星人 视频"
-  },
-  {
-    "trailerArray": [
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111903/397bd9bc91f2731e88d2456d930e78d0/view/movie/M/402310886.mp4",
-        "trailerTitle": "找到你\n    先行版 (中文字幕)",
-        "trailerDate": "2018-06-04",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2523989295.jpg?"
-      }
-    ],
-    "id": "27140071",
-    "trailerTitle": "找到你 视频"
-  },
-  {
-    "trailerArray": [
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111903/355d88cdf424b2971b22f3b99246a712/view/movie/M/302070856.mp4",
-        "trailerTitle": "断片之险途夺宝\n    先行版 (中文字幕)",
-        "trailerDate": "2016-11-27",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2400698056.jpg?"
-      }
-    ],
-    "id": "26882457",
-    "trailerTitle": "断片之险途夺宝 视频"
-  },
-  {
-    "trailerArray": [
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111903/af163358f59454cf0897515f51f37060/view/movie/M/402310098.mp4",
-        "trailerTitle": "新乌龙院之笑闹江湖\n    预告片：唤醒版 (中文字幕)",
-        "trailerDate": "2018-05-17",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2522333392.jpg?"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111903/bf94e23158b4814ebd19ba8c92b3916e/view/movie/M/402320099.mp4",
-        "trailerTitle": "新乌龙院之笑闹江湖\n    先行版 (中文字幕)",
-        "trailerDate": "2018-06-07",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2524231042.jpg?1528357536"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111903/812a4d14b307edba535f4c31d76ec557/view/movie/M/402320682.mp4",
-        "trailerTitle": "新乌龙院之笑闹江湖\n    花絮1：坏人特辑 (中文字幕)",
-        "trailerDate": "2018-06-21",
-        "trailerPoster": "https://img1.doubanio.com/img/trailer/medium/2525717177.jpg?1529902516"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111903/941ef6dacb2f4d038fd0d6b1790c9133/view/movie/M/402320362.mp4",
-        "trailerTitle": "新乌龙院之笑闹江湖\n    花絮2 (中文字幕)",
-        "trailerDate": "2018-06-13",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2524828712.jpg?1528871154"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111903/231ab2eb606ca222d245b16e0473907d/view/movie/M/402320170.mp4",
-        "trailerTitle": "新乌龙院之笑闹江湖\n    花絮3：乌龙天团特辑 (中文字幕)",
-        "trailerDate": "2018-06-08",
-        "trailerPoster": "https://img1.doubanio.com/img/trailer/medium/2524312589.jpg?1528437545"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111903/ab9691eadc4f129121e81a3f7c28c74b/view/movie/M/402310599.mp4",
-        "trailerTitle": "新乌龙院之笑闹江湖\n    花絮4：新笑林小子特辑 (中文字幕)",
-        "trailerDate": "2018-05-29",
-        "trailerPoster": "https://img1.doubanio.com/img/trailer/medium/2523436517.jpg?"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111903/f8fadf80cc40e9ea445df5f07cd227f3/view/movie/M/402310486.mp4",
-        "trailerTitle": "新乌龙院之笑闹江湖\n    花絮5：郝劭文回归特辑 (中文字幕)",
-        "trailerDate": "2018-05-24",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2522981766.jpg?"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111903/722e2654eb568a35ffa9afb0aaaf186a/view/movie/M/402310341.mp4",
-        "trailerTitle": "新乌龙院之笑闹江湖\n    花絮6：催笑重聚特辑 (中文字幕)",
-        "trailerDate": "2018-05-22",
-        "trailerPoster": "https://img1.doubanio.com/img/trailer/medium/2522824057.jpg?"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111903/74c51fe7a700719a9bf5735c76b66c43/view/movie/M/402320818.mp4",
-        "trailerTitle": "新乌龙院之笑闹江湖\n    MV：宣传曲《摆乌龙》 (中文字幕)",
-        "trailerDate": "2018-06-25",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2526122443.jpg?1529902166"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111903/9b5aa6ebcc83c27bc97bebae4f1add30/view/movie/M/402330102.mp4",
-        "trailerTitle": "新乌龙院之笑闹江湖\n    其它花絮 (中文字幕)",
-        "trailerDate": "2018-06-29",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2526492732.jpg?1530260767"
-      }
-    ],
-    "id": "26309969",
-    "trailerTitle": "新乌龙院之笑闹江湖 视频"
-  },
-  {
-    "trailerArray": [
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111903/988484207b68bd9dd667b741994a7324/view/movie/M/302270157.mp4",
-        "trailerTitle": "墨多多谜境冒险\n    预告片：定档版 (中文字幕)",
-        "trailerDate": "2018-02-05",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2512721635.jpg?"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111903/b8100d33780e471c3abfb32422499cbe/view/movie/M/402320448.mp4",
-        "trailerTitle": "墨多多谜境冒险\n    MV：主题曲《每当想起你》 (中文字幕)",
-        "trailerDate": "2018-06-14",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2524962295.jpg?1528951346"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111903/be1f96b9963218da96269d293b5f217c/view/movie/M/402310325.mp4",
-        "trailerTitle": "墨多多谜境冒险\n    其它花絮 (中文字幕)",
-        "trailerDate": "2018-05-22",
-        "trailerPoster": "https://img1.doubanio.com/img/trailer/medium/2522822477.jpg?"
-      }
-    ],
-    "id": "26790960",
-    "trailerTitle": "墨多多谜境冒险 视频"
-  },
-  {
-    "trailerArray": [
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111903/c46ea08d1bb4121ab2a3ae4b85bfab25/view/movie/M/402280988.mp4",
-        "trailerTitle": "沉默的证人\n    先行版1 (中文字幕)",
-        "trailerDate": "2018-03-22",
-        "trailerPoster": "https://img1.doubanio.com/img/trailer/medium/2517025368.jpg?"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111903/f07e809ff7e997f7c1f45bd7f00fe5ad/view/movie/M/302280608.mp4",
-        "trailerTitle": "沉默的证人\n    先行版2 (中文字幕)",
-        "trailerDate": "2018-03-14",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2516310364.jpg?"
-      }
-    ],
-    "id": "26816090",
-    "trailerTitle": "沉默的证人 视频"
-  },
-  {
-    "trailerArray": [],
-    "id": "26425062",
-    "trailerTitle": "武林怪兽 视频"
-  },
-  {
-    "trailerArray": [
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111903/0f86e7257a207ed27d4165a02864851f/view/movie/M/302270304.mp4",
-        "trailerTitle": "真相漩涡\n    预告片",
-        "trailerDate": "2018-02-08",
-        "trailerPoster": "https://img1.doubanio.com/img/trailer/medium/2512964688.jpg?"
-      }
-    ],
-    "id": "26792540",
-    "trailerTitle": "真相漩涡 视频"
-  },
-  {
-    "trailerArray": [
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111903/8b3ea0250124569a29bcdfd41ba5f18b/view/movie/M/302060474.mp4",
-        "trailerTitle": "苏丹\n    国际版预告片",
-        "trailerDate": "2016-10-31",
-        "trailerPoster": "https://img1.doubanio.com/img/trailer/medium/2393895989.jpg?"
-      }
-    ],
-    "id": "26728641",
-    "trailerTitle": "苏丹 视频"
-  },
-  {
-    "trailerArray": [
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111903/636480153fb3927d97c1fe6c1cc2c6b5/view/movie/M/302270270.mp4",
-        "trailerTitle": "跨越8年的新娘\n    香港预告片1 (中文字幕)",
-        "trailerDate": "2018-02-07",
-        "trailerPoster": "https://img1.doubanio.com/img/trailer/medium/2512894167.jpg?"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111903/4c1c3d4212b7398299ce841ebc792503/view/movie/M/302210477.mp4",
-        "trailerTitle": "跨越8年的新娘\n    日本预告片2",
-        "trailerDate": "2017-09-14",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2499034181.jpg?"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111903/ca4956c2d6d3273e517971042ebad3f6/view/movie/M/302180159.mp4",
-        "trailerTitle": "跨越8年的新娘\n    日本先行版",
-        "trailerDate": "2017-06-15",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2462903840.jpg?"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111903/1a1eb9ead7c0196509ec34e5dafde929/view/movie/M/402330287.mp4",
-        "trailerTitle": "跨越8年的新娘\n    其它预告片 (中文字幕)",
-        "trailerDate": "2018-07-04",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2526987120.jpg?"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111903/e78e871eb3501fdbb699bcf2fe2e4755/view/movie/M/302230752.mp4",
-        "trailerTitle": "跨越8年的新娘\n    MV",
-        "trailerDate": "2017-11-13",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2504782560.jpg?"
-      }
-    ],
-    "id": "26929835",
-    "trailerTitle": "跨越8年的新娘 视频"
-  },
-  {
-    "trailerArray": [
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111903/abec969bad1a10792583acea0a2d4bd6/view/movie/M/402310023.mp4",
-        "trailerTitle": "李宗伟：败者为王\n    预告片 (中文字幕)",
-        "trailerDate": "2018-05-16",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2522263431.jpg?"
-      }
-    ],
-    "id": "27195119",
-    "trailerTitle": "李宗伟：败者为王 视频"
-  },
-  {
-    "trailerArray": [],
-    "id": "27192660",
-    "trailerTitle": "黑脸大包公之西夏风云 视频"
-  },
-  {
-    "trailerArray": [],
-    "id": "27661975",
-    "trailerTitle": "幸福魔咒 视频"
-  },
-  {
-    "trailerArray": [
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111903/d1aa5bef034beb45b81aebd4cfade56e/view/movie/M/302280917.mp4",
-        "trailerTitle": "阿里巴巴三根金发\n    先行版 (中文字幕)",
-        "trailerDate": "2018-03-21",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2516916816.jpg?"
-      }
-    ],
-    "id": "30176069",
-    "trailerTitle": "阿里巴巴三根金发 视频"
-  },
-  {
-    "trailerArray": [],
-    "id": "30263969",
-    "trailerTitle": "纯真年代 视频"
-  },
-  {
-    "trailerArray": [],
-    "id": "30259493",
-    "trailerTitle": "黑暗深处之惊魂夜 视频"
-  },
-  {
-    "trailerArray": [
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111903/3e3eacd1688f3ddf59d1fc96500cb7ac/view/movie/M/402320615.mp4",
-        "trailerTitle": "恩师\n    预告片 (中文字幕)",
-        "trailerDate": "2018-06-20",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2525590426.jpg?"
-      }
-    ],
-    "id": "30215191",
-    "trailerTitle": "恩师 视频"
-  },
-  {
-    "trailerArray": [
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111903/9630f6c3c98f98fe981821ce278927f0/view/movie/M/402320053.mp4",
-        "trailerTitle": "勇敢往事\n    预告片1：终极版 (中文字幕)",
-        "trailerDate": "2018-06-06",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2524174602.jpg?"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111903/7cf5f5658a420263d36a8885def44f72/view/movie/M/402300307.mp4",
-        "trailerTitle": "勇敢往事\n    预告片2 (中文字幕)",
-        "trailerDate": "2018-04-27",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2520458605.jpg?"
-      }
-    ],
-    "id": "27191430",
-    "trailerTitle": "勇敢往事 视频"
-  },
-  {
-    "trailerArray": [
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111903/53db45881a90b93b2e91d711109af110/view/movie/M/402310448.mp4",
-        "trailerTitle": "江湖儿女\n    预告片：定档版 (中文字幕)",
-        "trailerDate": "2018-05-24",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2522954125.jpg?"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111903/32f9561f1d8616623a4bbb9ef6bce312/view/movie/M/402300586.mp4",
-        "trailerTitle": "江湖儿女\n    片段1",
-        "trailerDate": "2018-05-07",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2521476011.jpg?"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111903/7114740ce3c1d173598a2f8d38f679e6/view/movie/M/402300578.mp4",
-        "trailerTitle": "江湖儿女\n    片段2",
-        "trailerDate": "2018-05-07",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2521453294.jpg?"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111903/ce2eeca9f6b92afc528e51ecb7cce4fa/view/movie/M/402310401.mp4",
-        "trailerTitle": "江湖儿女\n    其它花絮：戛纳特辑 (中文字幕)",
-        "trailerDate": "2018-05-23",
-        "trailerPoster": "https://img1.doubanio.com/img/trailer/medium/2522902718.jpg?"
-      }
-    ],
-    "id": "26972258",
-    "trailerTitle": "江湖儿女 视频"
-  },
-  {
-    "trailerArray": [
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111903/21cd328c4574477e58f34533d0701e8c/view/movie/M/402320747.mp4",
-        "trailerTitle": "一生有你\n    先行版：“一生相念”毕业季先导预告",
-        "trailerDate": "2018-06-22",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2525832840.jpg?1529641379"
-      }
-    ],
-    "id": "26263417",
-    "trailerTitle": "一生有你 视频"
-  },
-  {
-    "trailerArray": [],
-    "id": "30227727",
-    "trailerTitle": "禹神传之寻找神力 视频"
-  },
-  {
-    "trailerArray": [],
-    "id": "27092785",
-    "trailerTitle": "李茶的姑妈 视频"
-  },
-  {
-    "trailerArray": [
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111904/a4f692443dadd9ecdfa0a60a540c221f/view/movie/M/402310147.mp4",
-        "trailerTitle": "无双\n    内地预告片：定档版 (中文字幕)",
-        "trailerDate": "2018-05-18",
-        "trailerPoster": "https://img1.doubanio.com/img/trailer/medium/2522415949.jpg?"
-      }
-    ],
-    "id": "26425063",
-    "trailerTitle": "无双 视频"
-  },
-  {
-    "trailerArray": [
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111904/8fdebaa0219e38d2f8489567c1fa66a9/view/movie/M/402310365.mp4",
-        "trailerTitle": "云南虫谷\n    预告片：定档版 (中文字幕)",
-        "trailerDate": "2018-05-23",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2522871302.jpg?"
-      }
-    ],
-    "id": "26744597",
-    "trailerTitle": "云南虫谷 视频"
-  },
-  {
-    "trailerArray": [
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111904/48d77b8f7f378dd9dc032f89b48788b6/view/movie/M/402320917.mp4",
-        "trailerTitle": "胖子行动队\n    预告片：定档版 (中文字幕)",
-        "trailerDate": "2018-06-26",
-        "trailerPoster": "https://img1.doubanio.com/img/trailer/medium/2526216537.jpg?1529987861"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111904/52a7a6e9758a6ddf41ae785ffc1bc10a/view/movie/M/302210816.mp4",
-        "trailerTitle": "胖子行动队\n    其它花絮：包贝尔作品混剪 (中文字幕)",
-        "trailerDate": "2017-09-22",
-        "trailerPoster": "https://img1.doubanio.com/img/trailer/medium/2499810809.jpg?"
-      }
-    ],
-    "id": "27149818",
-    "trailerTitle": "胖子行动队 视频"
-  },
-  {
-    "trailerArray": [],
-    "id": "26911450",
-    "trailerTitle": "山2 视频"
-  },
-  {
-    "trailerArray": [
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111904/29850550f435c4eee7da7c63371ccbb1/view/movie/M/302250121.mp4",
-        "trailerTitle": "护垫侠\n    印度预告片",
-        "trailerDate": "2017-12-15",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2507744714.jpg?"
-      }
-    ],
-    "id": "27198855",
-    "trailerTitle": "护垫侠 视频"
-  },
-  {
-    "trailerArray": [
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111904/884863d69bd866cabaaf7f4a1cfa7213/view/movie/M/402300243.mp4",
-        "trailerTitle": "阳台上\n    预告片：“侬叫啥”版 (中文字幕)",
-        "trailerDate": "2018-04-25",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2520330164.jpg?"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111904/56ae0e46d65350406396dbf9202ae247/view/movie/M/402300535.mp4",
-        "trailerTitle": "阳台上\n    花絮：张猛导演特辑 (中文字幕)",
-        "trailerDate": "2018-05-04",
-        "trailerPoster": "https://img1.doubanio.com/img/trailer/medium/2521140229.jpg?"
-      }
-    ],
-    "id": "27135473",
-    "trailerTitle": "阳台上 视频"
-  },
-  {
-    "trailerArray": [
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111904/79f075a59edd97e7ec796f5b7f25c872/view/movie/M/402300573.mp4",
-        "trailerTitle": "苦行僧的非凡旅程\n    台湾预告片 (中文字幕)",
-        "trailerDate": "2018-05-07",
-        "trailerPoster": "https://img1.doubanio.com/img/trailer/medium/2521437489.jpg?"
-      }
-    ],
-    "id": "26715965",
-    "trailerTitle": "苦行僧的非凡旅程 视频"
-  },
-  {
-    "trailerArray": [
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111904/1efc3de4128c0814c82b0c36b59d0a6d/view/movie/M/302270313.mp4",
-        "trailerTitle": "大闹西游\n    先行版 (中文字幕)",
-        "trailerDate": "2018-02-08",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2512989005.jpg?"
-      }
-    ],
-    "id": "30142649",
-    "trailerTitle": "大闹西游 视频"
-  },
-  {
-    "trailerArray": [],
-    "id": "26935283",
-    "trailerTitle": "阴阳师 视频"
-  },
-  {
-    "trailerArray": [
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111904/2b00ed739959e94890c6a5eefd3a4c4a/view/movie/M/402320914.mp4",
-        "trailerTitle": "阿凡提之奇缘历险\n    其它花絮 (中文字幕)",
-        "trailerDate": "2018-06-26",
-        "trailerPoster": "https://img1.doubanio.com/img/trailer/medium/2526216067.jpg?"
-      }
-    ],
-    "id": "30208004",
-    "trailerTitle": "阿凡提之奇缘历险 视频"
-  },
-  {
-    "trailerArray": [],
-    "id": "27620911",
-    "trailerTitle": "灵魂的救赎 视频"
-  },
-  {
-    "trailerArray": [],
-    "id": "27008394",
-    "trailerTitle": "功夫联盟 视频"
-  },
-  {
-    "trailerArray": [
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111904/05d06426b3a425282151190dffbb9db7/view/movie/M/402310583.mp4",
-        "trailerTitle": "过往的梦\n    预告片 (中文字幕)",
-        "trailerDate": "2018-05-29",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2523425713.jpg?"
-      }
-    ],
-    "id": "27107609",
-    "trailerTitle": "过往的梦 视频"
-  },
-  {
-    "trailerArray": [
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111904/d45aa90564bdbf4f2aa400d488d62f64/view/movie/M/402300209.mp4",
-        "trailerTitle": "银魂2\n    电视版",
-        "trailerDate": "2018-04-25",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2520260415.jpg?"
-      }
-    ],
-    "id": "27199577",
-    "trailerTitle": "银魂2 视频"
-  },
-  {
-    "trailerArray": [],
-    "id": "27663881",
-    "trailerTitle": "燃点 视频"
-  },
-  {
-    "trailerArray": [],
-    "id": "26961483",
-    "trailerTitle": "碟仙实录 视频"
-  },
-  {
-    "trailerArray": [],
-    "id": "27155276",
-    "trailerTitle": "素人特工 视频"
-  },
-  {
-    "trailerArray": [],
-    "id": "27179414",
-    "trailerTitle": "人间·喜剧 视频"
-  },
-  {
-    "trailerArray": [
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111904/619a242c61ce74d0ff84a712acc10866/view/movie/M/302240924.mp4",
-        "trailerTitle": "阿丽塔：战斗天使\n    中国先行版1 (中文字幕)",
-        "trailerDate": "2017-12-11",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2507372272.jpg?"
-      },
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111904/aad19c22614ffb9baee0864e12fe27d8/view/movie/M/302240871.mp4",
-        "trailerTitle": "阿丽塔：战斗天使\n    香港先行版2 (中文字幕)",
-        "trailerDate": "2017-12-09",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2507188313.jpg?"
-      }
-    ],
-    "id": "1652592",
-    "trailerTitle": "阿丽塔：战斗天使 视频"
-  },
-  {
-    "trailerArray": [
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111904/2a43436eab3d10340484168974a29ad7/view/movie/M/402310024.mp4",
-        "trailerTitle": "动物特工局\n    预告片 (中文字幕)",
-        "trailerDate": "2018-05-16",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2522264636.jpg?"
-      }
-    ],
-    "id": "30217371",
-    "trailerTitle": "动物特工局 视频"
-  },
-  {
-    "trailerArray": [
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111904/8a1983a84e0e26de7d6912f9549b54c5/view/movie/M/302190724.mp4",
-        "trailerTitle": "疯狂的外星人\n    其它花絮：宁浩“疯狂”混剪 (中文字幕)",
-        "trailerDate": "2017-07-26",
-        "trailerPoster": "https://img3.doubanio.com/img/trailer/medium/2494105655.jpg?"
-      }
-    ],
-    "id": "25986662",
-    "trailerTitle": "疯狂的外星人 视频"
-  },
-  {
-    "trailerArray": [],
-    "id": "27065898",
-    "trailerTitle": "神探蒲松龄之兰若仙踪 视频"
-  },
-  {
-    "trailerArray": [],
-    "id": "26277338",
-    "trailerTitle": "八仙之各显神通 视频"
-  },
-  {
-    "trailerArray": [],
-    "id": "30187577",
-    "trailerTitle": "误入江湖 视频"
-  },
-  {
-    "trailerArray": [],
-    "id": "30170448",
-    "trailerTitle": "迦百农 视频"
-  },
-  {
-    "trailerArray": [],
-    "id": "24743117",
-    "trailerTitle": "画皮Ⅲ 视频"
-  },
-  {
-    "trailerArray": [
-      {
-        "trailerMP4": "http://vt1.doubanio.com/201807111905/0db8684167e3bd60b114a4f89b5bfafb/view/movie/M/402310174.mp4",
-        "trailerTitle": "八仙过海\n    先行版",
-        "trailerDate": "2018-05-18",
-        "trailerPoster": "https://img1.doubanio.com/img/trailer/medium/2522459307.jpg?"
-      }
-    ],
-    "id": "30226052",
-    "trailerTitle": "八仙过海 视频"
-  },
-  {
-    "trailerArray": [],
-    "id": "26986120",
-    "trailerTitle": "摸金校尉之九幽将军 视频"
-  },
-  {
-    "trailerArray": [],
-    "id": "30264504",
-    "trailerTitle": "异界 视频"
-  },
-  {
-    "trailerArray": [],
-    "id": "27619748",
-    "trailerTitle": "唐人街探案3 视频"
-  },
-  {
-    "trailerArray": [],
-    "id": "26986136",
-    "trailerTitle": "黑色假面 视频"
   }
 ]

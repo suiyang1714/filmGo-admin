@@ -84,6 +84,7 @@ async function start () {
     });
 
   }
+  // crawler()
   scheduleRecurrenceRule()
   // routes
   app.use(filmApi.routes(), filmApi.allowedMethods())

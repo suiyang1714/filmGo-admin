@@ -4,6 +4,8 @@ const fs = require('fs')
 // const iconv = require('iconv-lite') // 文件编码转换
 const request = require("request")
 // const proxyIP = require('../middleware/request')
+const uuid = require('node-uuid');
+
 const sleep = async time => await new Promise( resolve => {
     setTimeout( () => {
         return resolve(console.log(`等待${time}s`))
@@ -139,7 +141,8 @@ const runMovieDetail = async ({restartCount = 0} = {}) => {
   fs.writeFileSync('./comingMovieUri.json', JSON.stringify(comingMoviesLink, null, 2), 'utf8')
 
   // 爬取豆瓣即将上映电影的poster、上映日期、片长
-  for(let i = 0; i < comingMoviesLink.length; i++) {
+  // for(let i = 0; i < comingMoviesLink.length; i++) {
+  for(let i = 0; i < 10; i++) {
     const movie = await getComingMovie({movieUrl: comingMoviesLink[i]})
     comingMovies.push(movie)
     console.log(`这是第${i+1}个电影，《${movie.movieName}》`)
@@ -220,7 +223,8 @@ const runMovieTrailer = async () => {
   let comingMoviesLink = require('../../comingMovieUri') // 全部电影的 url
   let Trailer = []
 
-  for(let i = 0; i < comingMoviesLink.length ; i++) {
+  // for(let i = 0; i < comingMoviesLink.length ; i++) {
+  for(let i = 0; i < 10 ; i++) {
     const trailer = await getMovieTrailer({movieUrl: comingMoviesLink[i]})
     Trailer.push(trailer)
     console.log(`这是第${i+1}个电影的预告片列表, ${trailer.movieName}`)
@@ -261,11 +265,13 @@ const toRequest = async ({trailerUrl, trailerPoster, restartCount = 1} = {}) => 
 
       if ($) {
         console.log(`电影 《${trailerUrl}》 重新爬取成功,重启次数为${restartCount}`)
+
         resolve({
           trailerMP4: $('#movie_player source').attr('src'),
           trailerTitle: $('h1').text(),
           trailerDate: $('.trailer-info>span').html(),
-          trailerPoster: trailerPoster
+          trailerPoster: trailerPoster,
+          trailerId: uuid.v1().replace(/-/g, "")
         })
       } else {
         /*
@@ -320,7 +326,8 @@ const getMovieTrailerDetail = async (trailer) => {
               trailerMP4: $('#movie_player source').attr('src'),
               trailerTitle: $('h1').text(),
               trailerDate: $('.trailer-info>span').html(),
-              trailerPoster: trailer.trailerPoster[index]
+              trailerPoster: trailer.trailerPoster[index],
+              trailerId: uuid.v1().replace(/-/g, "")
             })
           } else {
             /*
@@ -421,7 +428,8 @@ const runMoviePhotos = async () => {
   let comingMoviesLink = require('../../comingMovieUri')
   let stagePhotos = []
 
-  for(let i = 0; i < comingMoviesLink.length ; i++) {
+  // for(let i = 0; i < comingMoviesLink.length ; i++) {
+  for(let i = 0; i < 10 ; i++) {
     const photo = await getMoviePhotos({movieUrl: comingMoviesLink[i]})
     stagePhotos.push(photo)
 

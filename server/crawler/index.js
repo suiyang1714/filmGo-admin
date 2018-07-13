@@ -55,7 +55,8 @@ const fetchFilms = async () => {
   try {
     const options = {
       method: 'GET',
-      uri: `${doubanAPI}coming_soon?count=100`
+      // uri: `${doubanAPI}coming_soon?count=100`
+      uri: `${doubanAPI}coming_soon?count=10`
     }
     // 代理地址
     const random = Math.floor(Math.random() * proxy.length)
@@ -167,7 +168,7 @@ const crawlerDetail = async (ctx, next) => {
   const filmTrailerDetail = require('../../comingMovieTrailerDetail.json')
 
   // 添加爬取的上映日期、播放时长、电影封面
-  /*await new Promise(async (resolve, reject) => {
+  await new Promise(async (resolve, reject) => {
     for(let i = 0 ; i < filmDetail.length ; i++) {
       let film = await Film
         .findOne({id: filmDetail[i].id})
@@ -202,7 +203,7 @@ const crawlerDetail = async (ctx, next) => {
     }
     console.log(`电影缺失上映日期、播放时长、电影封面信息补充完毕`)
     return resolve()
-  })*/
+  })
   // 添加爬取的预告片封面
   /*await new Promise(async (resolve, reject) => {
     for(let i = 0 ; i < filmTrailer.length ; i++) {
@@ -231,10 +232,11 @@ const crawlerDetail = async (ctx, next) => {
       if (film) {
         for (let j = 0; j < filmTrailerDetail[i].trailerArray.length; j++) {
           film.trailerArray.push({
-            trailerMP4: `${filmTrailerDetail[i].id}${j}视频`,
+            trailerMP4: `${filmTrailerDetail[i].trailerArray[j].trailerId}视频`,
             trailerTitle: `${filmTrailerDetail[i].trailerArray[j].trailerTitle}`,
             trailerDate: `${filmTrailerDetail[i].trailerArray[j].trailerDate}`,
-            trailerPoster: `${filmTrailerDetail[i].id}${j}封面图`,
+            trailerPoster: `${filmTrailerDetail[i].trailerArray[j].trailerId}封面图`,
+            trailerId: filmTrailerDetail[i].trailerArray[j].trailerId
           })
         }
 
@@ -262,8 +264,8 @@ const uploadQiniuFile = async () => {
 
   for(let i = 0 ; i < filmTrailerDetail.length ; i++) {
     for (let j = 0; j < filmTrailerDetail[i].trailerArray.length; j++) {
-      qiniuFn.uploadQiniuFile(filmTrailerDetail[i].trailerArray[j].trailerPoster, `${filmTrailerDetail[i].id}${j}封面图`)
-      // qiniuFn.uploadQiniuFile(filmTrailerDetail[i].trailerArray[j].trailerMP4, `${filmTrailerDetail[i].id}${j}视频`)
+      qiniuFn.uploadQiniuFile(filmTrailerDetail[i].trailerArray[j].trailerPoster, `${filmTrailerDetail[i].trailerArray[j].trailerId}封面图`)
+      qiniuFn.uploadQiniuFile(filmTrailerDetail[i].trailerArray[j].trailerMP4, `${filmTrailerDetail[i].trailerArray[j].trailerId}视频`)
     }
   }
 }
@@ -280,5 +282,4 @@ const updateMovie = async () => {
   await uploadQiniuFile()
   console.timeEnd("sort");
 }
-uploadQiniuFile()
 module.exports = updateMovie

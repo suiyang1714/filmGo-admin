@@ -39,16 +39,16 @@ router.get('/api/film/id', async (ctx, next) => {
   }
 })
 router.get('/api/film/poster/id', async (ctx, next) => {
-  const id = ctx.query.id
-  if (!id) {
+  const { filmId } = ctx.query
+  if (!filmId) {
     let errMsg = {
       localhost: ctx.url,
-      errorMsg: `id 为空`
+      errorMsg: `filmId 为空`
     }
     ctx.error(10000, errMsg)
   }
   const film = await Film
-    .findOne({id: id}, '')
+    .findOne({id: filmId}, 'title releaseDate trailerArray like')
     .exec()
 
   ctx.body = {
