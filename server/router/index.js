@@ -48,7 +48,7 @@ router.get('/api/film/poster/id', async (ctx, next) => {
     ctx.error(10000, errMsg)
   }
   const film = await Film
-    .findOne({id: filmId}, 'title releaseDate trailerArray like')
+    .findOne({id: filmId}, 'title releaseDate trailerArray like id')
     .exec()
 
   ctx.body = {

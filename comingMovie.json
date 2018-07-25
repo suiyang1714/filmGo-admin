@@ -1,343 +1,191 @@
 [
   {
-    "movieName": "小悟空",
+    "movieName": "女校怪谈",
     "releaseDate": [
-      "2018-07-14(中国大陆)"
+      "2018-07-26(中国大陆)"
     ],
     "runtime": [
-      "85分钟"
+      "95分钟"
     ],
-    "postPic": "https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2526767688.jpg",
-    "id": "30227725",
+    "postPic": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2520950573.jpg",
+    "id": "30210203",
     "actorAddMsg": [
       {
         "actorImg": "https://img3.doubanio.com/f/movie/8dd0c794499fe925ae2ae89ee30cd225750457b4/pics/movie/celebrity-default-medium.png",
-        "id": "1396597"
+        "id": "1397901"
+      },
+      {
+        "actorImg": "https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p1502335874.25.jpg",
+        "id": "1378788"
       },
       {
         "actorImg": "https://img3.doubanio.com/f/movie/8dd0c794499fe925ae2ae89ee30cd225750457b4/pics/movie/celebrity-default-medium.png",
-        "id": "1396598"
+        "id": "1375551"
       },
       {
         "actorImg": "https://img3.doubanio.com/f/movie/8dd0c794499fe925ae2ae89ee30cd225750457b4/pics/movie/celebrity-default-medium.png",
-        "id": "1051611"
+        "id": "1397902"
+      },
+      {
+        "actorImg": "https://img3.doubanio.com/f/movie/14960825e118267b5857fc0ae9f306ef8c74da8f/pics/movie/has_douban@2x.png",
+        "id": "1384366"
+      },
+      {
+        "actorImg": "https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/pg081FoOH988cel_avatar_uploaded1525283611.15.jpg",
+        "id": "1392266"
       }
     ],
-    "like": "160"
+    "like": "138"
   },
   {
-    "movieName": "八只鸡",
+    "movieName": "狄仁杰之四大天王",
     "releaseDate": [
-      "2018-07-19(中国大陆)"
+      "2018-07-27(中国大陆)"
+    ],
+    "runtime": [
+      "132分钟"
+    ],
+    "postPic": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2526405034.jpg",
+    "id": "25882296",
+    "actorAddMsg": [
+      {
+        "actorImg": "https://img1.doubanio.com/view/celebrity/s_ratio_celebrity/public/p1393840734.39.jpg",
+        "id": "1007152"
+      },
+      {
+        "actorImg": "https://img1.doubanio.com/view/celebrity/s_ratio_celebrity/public/p30529.jpg",
+        "id": "1274608"
+      },
+      {
+        "actorImg": "https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p36925.jpg",
+        "id": "1275721"
+      },
+      {
+        "actorImg": "https://img1.doubanio.com/view/celebrity/s_ratio_celebrity/public/p1398676888.79.jpg",
+        "id": "1314535"
+      },
+      {
+        "actorImg": "https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p21006.jpg",
+        "id": "1259866"
+      },
+      {
+        "actorImg": "https://img1.doubanio.com/view/celebrity/s_ratio_celebrity/public/p1411832447.57.jpg",
+        "id": "1036905"
+      }
+    ],
+    "like": "47747"
+  },
+  {
+    "movieName": "西虹市首富",
+    "releaseDate": [
+      "2018-07-27(中国大陆)"
+    ],
+    "runtime": [
+      "118分钟"
+    ],
+    "postPic": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2525046210.jpg",
+    "id": "27605698",
+    "actorAddMsg": [
+      {
+        "actorImg": "https://img1.doubanio.com/view/celebrity/s_ratio_celebrity/public/p1437030925.47.jpg",
+        "id": "1350410"
+      },
+      {
+        "actorImg": "https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p1437031053.5.jpg",
+        "id": "1350409"
+      },
+      {
+        "actorImg": "https://img1.doubanio.com/view/celebrity/s_ratio_celebrity/public/p1356510694.28.jpg",
+        "id": "1325700"
+      },
+      {
+        "actorImg": "https://img1.doubanio.com/view/celebrity/s_ratio_celebrity/public/p1446281965.79.jpg",
+        "id": "1341903"
+      },
+      {
+        "actorImg": "https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p1413261818.41.jpg",
+        "id": "1322777"
+      },
+      {
+        "actorImg": "https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p11764.jpg",
+        "id": "1275270"
+      }
+    ],
+    "like": "42164"
+  },
+  {
+    "movieName": "萌学园：寻找盘古",
+    "releaseDate": [
+      "2018-07-28(中国大陆)",
+      "2016-06-24(台湾)"
     ],
     "runtime": [],
-    "postPic": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2525715533.jpg",
-    "id": "30252555",
+    "postPic": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2528103085.jpg",
+    "id": "26754880",
     "actorAddMsg": [
       {
-        "actorImg": "https://img1.doubanio.com/view/celebrity/s_ratio_celebrity/public/p1529912784.88.jpg",
-        "id": "1396214"
+        "actorImg": "https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p1531291826.35.jpg",
+        "id": "1358340"
       },
       {
-        "actorImg": "https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p1529912770.04.jpg",
-        "id": "1396215"
+        "actorImg": "https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p1531291798.12.jpg",
+        "id": "1396991"
+      },
+      {
+        "actorImg": "https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p1531295899.63.jpg",
+        "id": "1396992"
+      },
+      {
+        "actorImg": "https://img1.doubanio.com/view/celebrity/s_ratio_celebrity/public/p1531295883.97.jpg",
+        "id": "1378013"
+      },
+      {
+        "actorImg": "https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p1531296062.51.jpg",
+        "id": "1396993"
+      },
+      {
+        "actorImg": "https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p1531295946.96.jpg",
+        "id": "1396994"
       }
     ],
-    "like": "424"
+    "like": "2623"
   },
   {
-    "movieName": "摩天营救 Skyscraper",
+    "movieName": "文朝荣",
     "releaseDate": [
-      "2018-07-20(中国大陆)",
-      "2018-07-13(美国)"
+      "2018-07-28(中国大陆)"
     ],
     "runtime": [
-      "102分钟"
+      "99分钟"
     ],
-    "postPic": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2527484082.jpg",
-    "id": "26804147",
-    "actorAddMsg": [
-      {
-        "actorImg": "https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p1377869988.64.jpg",
-        "id": "1005149"
-      },
-      {
-        "actorImg": "https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p196.jpg",
-        "id": "1044707"
-      },
-      {
-        "actorImg": "https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p13115.jpg",
-        "id": "1027828"
-      },
-      {
-        "actorImg": "https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p1377231469.53.jpg",
-        "id": "1045049"
-      },
-      {
-        "actorImg": "https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p1417086901.1.jpg",
-        "id": "1049775"
-      },
-      {
-        "actorImg": "https://img3.doubanio.com/f/movie/8dd0c794499fe925ae2ae89ee30cd225750457b4/pics/movie/celebrity-default-medium.png",
-        "id": "1393148"
-      }
-    ],
-    "like": "5850"
-  },
-  {
-    "movieName": "北方一片苍茫",
-    "releaseDate": [
-      "2018-07-20(中国大陆)",
-      "2017-07-23(FIRST青年影展)"
-    ],
-    "runtime": [
-      "105分钟"
-    ],
-    "postPic": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2527454845.jpg",
-    "id": "27079318",
-    "actorAddMsg": [
-      {
-        "actorImg": "https://img3.doubanio.com/f/movie/14960825e118267b5857fc0ae9f306ef8c74da8f/pics/movie/has_douban@2x.png",
-        "id": "1376541"
-      },
-      {
-        "actorImg": "https://img3.doubanio.com/f/movie/14960825e118267b5857fc0ae9f306ef8c74da8f/pics/movie/has_douban@2x.png",
-        "id": "1377028"
-      },
-      {
-        "actorImg": "https://img3.doubanio.com/f/movie/8dd0c794499fe925ae2ae89ee30cd225750457b4/pics/movie/celebrity-default-medium.png",
-        "id": "1396941"
-      },
-      {
-        "actorImg": "https://img3.doubanio.com/f/movie/8dd0c794499fe925ae2ae89ee30cd225750457b4/pics/movie/celebrity-default-medium.png",
-        "id": "1378150"
-      }
-    ],
-    "like": "3219"
-  },
-  {
-    "movieName": "淘气大侦探 Sherlock Gnomes",
-    "releaseDate": [
-      "2018-07-20(中国大陆)",
-      "2018-03-23(美国)",
-      "2018-05-11(英国)"
-    ],
-    "runtime": [
-      "86分钟"
-    ],
-    "postPic": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2527551382.jpg",
-    "id": "26660063",
-    "actorAddMsg": [
-      {
-        "actorImg": "https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p34350.jpg",
-        "id": "1298420"
-      },
-      {
-        "actorImg": "https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p93.jpg",
-        "id": "1006958"
-      },
-      {
-        "actorImg": "https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p21481.jpg",
-        "id": "1041022"
-      },
-      {
-        "actorImg": "https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p562.jpg",
-        "id": "1054456"
-      },
-      {
-        "actorImg": "https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p9322.jpg",
-        "id": "1010581"
-      },
-      {
-        "actorImg": "https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p16450.jpg",
-        "id": "1014134"
-      }
-    ],
-    "like": "923"
-  },
-  {
-    "movieName": "玛雅蜜蜂历险记 Maya the Bee Movie",
-    "releaseDate": [
-      "2018-07-20(中国大陆)",
-      "2014-09-11(德国)"
-    ],
-    "runtime": [
-      "78分钟(法国)"
-    ],
-    "postPic": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2234785674.jpg",
-    "id": "25881500",
+    "postPic": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2526266295.jpg",
+    "id": "30252429",
     "actorAddMsg": [
       {
         "actorImg": "https://img3.doubanio.com/f/movie/8dd0c794499fe925ae2ae89ee30cd225750457b4/pics/movie/celebrity-default-medium.png",
-        "id": "1298221"
+        "id": "1350551"
       },
       {
-        "actorImg": "https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p1354128837.83.jpg",
-        "id": "1248592"
+        "actorImg": "https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p37725.jpg",
+        "id": "1274819"
       },
       {
-        "actorImg": "https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p1417086901.1.jpg",
-        "id": "1049775"
+        "actorImg": "https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p1473681732.03.jpg",
+        "id": "1327430"
       },
       {
-        "actorImg": "https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p1404.jpg",
-        "id": "1013865"
+        "actorImg": "https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p1472458756.3.jpg",
+        "id": "1361663"
       },
       {
-        "actorImg": "https://img1.doubanio.com/view/celebrity/s_ratio_celebrity/public/p33207.jpg",
-        "id": "1048191"
+        "actorImg": "https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p1352300084.72.jpg",
+        "id": "1324158"
       },
       {
-        "actorImg": "https://img1.doubanio.com/view/celebrity/s_ratio_celebrity/public/p21519.jpg",
-        "id": "1161151"
+        "actorImg": "https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p1471963335.01.jpg",
+        "id": "1361312"
       }
     ],
-    "like": "665"
-  },
-  {
-    "movieName": "汪星卧底 Show Dogs",
-    "releaseDate": [
-      "2018-07-20(中国大陆)",
-      "2018-05-18(美国)"
-    ],
-    "runtime": [
-      "92分钟"
-    ],
-    "postPic": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2526399205.jpg",
-    "id": "26930056",
-    "actorAddMsg": [
-      {
-        "actorImg": "https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p5860.jpg",
-        "id": "1036533"
-      },
-      {
-        "actorImg": "https://img1.doubanio.com/view/celebrity/s_ratio_celebrity/public/p7197.jpg",
-        "id": "1044709"
-      },
-      {
-        "actorImg": "https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p1373705281.63.jpg",
-        "id": "1049714"
-      },
-      {
-        "actorImg": "https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p26071.jpg",
-        "id": "1040517"
-      },
-      {
-        "actorImg": "https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p22552.jpg",
-        "id": "1000096"
-      },
-      {
-        "actorImg": "https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p1976.jpg",
-        "id": "1006980"
-      }
-    ],
-    "like": "368"
-  },
-  {
-    "movieName": "兄弟班",
-    "releaseDate": [
-      "2018-07-20(中国大陆)",
-      "2018-07-19(香港)"
-    ],
-    "runtime": [
-      "102分钟"
-    ],
-    "postPic": "https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2527543528.jpg",
-    "id": "26988003",
-    "actorAddMsg": [
-      {
-        "actorImg": "https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p1921.jpg",
-        "id": "1028948"
-      },
-      {
-        "actorImg": "https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p1485327861.41.jpg",
-        "id": "1275972"
-      },
-      {
-        "actorImg": "https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p1401776151.3.jpg",
-        "id": "1340458"
-      },
-      {
-        "actorImg": "https://img1.doubanio.com/view/celebrity/s_ratio_celebrity/public/p1416749516.7.jpg",
-        "id": "1337843"
-      },
-      {
-        "actorImg": "https://img3.doubanio.com/f/movie/8dd0c794499fe925ae2ae89ee30cd225750457b4/pics/movie/celebrity-default-medium.png",
-        "id": "1392320"
-      },
-      {
-        "actorImg": "https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p35235.jpg",
-        "id": "1316133"
-      }
-    ],
-    "like": "360"
-  },
-  {
-    "movieName": "午夜幽灵",
-    "releaseDate": [
-      "2018-07-20(中国大陆)"
-    ],
-    "runtime": [
-      "81分钟"
-    ],
-    "postPic": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2516906655.jpg",
-    "id": "30128986",
-    "actorAddMsg": [
-      {
-        "actorImg": "https://img1.doubanio.com/view/celebrity/s_ratio_celebrity/public/p1499243527.29.jpg",
-        "id": "1376582"
-      },
-      {
-        "actorImg": "https://img1.doubanio.com/view/celebrity/s_ratio_celebrity/public/p1394899519.58.jpg",
-        "id": "1275029"
-      },
-      {
-        "actorImg": "https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p1522810252.53.jpg",
-        "id": "1391102"
-      },
-      {
-        "actorImg": "https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p1522810175.11.jpg",
-        "id": "1337900"
-      },
-      {
-        "actorImg": "https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p1495528480.16.jpg",
-        "id": "1374307"
-      },
-      {
-        "actorImg": "https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p1527750676.4.jpg",
-        "id": "1349852"
-      }
-    ],
-    "like": "300"
-  },
-  {
-    "movieName": "闺蜜的战争",
-    "releaseDate": [
-      "2018-07-20(中国大陆)"
-    ],
-    "runtime": [
-      "93分钟"
-    ],
-    "postPic": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2526892933.jpg",
-    "id": "30262110",
-    "actorAddMsg": [
-      {
-        "actorImg": "https://img3.doubanio.com/f/movie/8dd0c794499fe925ae2ae89ee30cd225750457b4/pics/movie/celebrity-default-medium.png",
-        "id": "1381901"
-      },
-      {
-        "actorImg": "https://img3.doubanio.com/f/movie/8dd0c794499fe925ae2ae89ee30cd225750457b4/pics/movie/celebrity-default-medium.png",
-        "id": "1396594"
-      },
-      {
-        "actorImg": "https://img3.doubanio.com/f/movie/8dd0c794499fe925ae2ae89ee30cd225750457b4/pics/movie/celebrity-default-medium.png",
-        "id": "1396595"
-      },
-      {
-        "actorImg": "https://img3.doubanio.com/f/movie/8dd0c794499fe925ae2ae89ee30cd225750457b4/pics/movie/celebrity-default-medium.png",
-        "id": "1396596"
-      }
-    ],
-    "like": "27"
+    "like": "26"
   }
 ]

@@ -56,7 +56,7 @@ const fetchFilms = async () => {
     const options = {
       method: 'GET',
       // uri: `${doubanAPI}coming_soon?count=100`
-      uri: `${doubanAPI}coming_soon?count=10`
+      uri: `${doubanAPI}coming_soon?count=5`
     }
     // 代理地址
     const random = Math.floor(Math.random() * proxy.length)
@@ -164,62 +164,68 @@ const fetchGenre = (genre, filmId) => {
 // 读取本地爬取电影详细信息添加到数据空中
 const crawlerDetail = async (ctx, next) => {
   const filmDetail = require('../../comingMovie.json')
-  const filmTrailer = require('../../comingMovieTrailer.json')
+  const filmStagePhotos = require('../../comingMovieStagePhotos.json')
   const filmTrailerDetail = require('../../comingMovieTrailerDetail.json')
 
   // 添加爬取的上映日期、播放时长、电影封面
   await new Promise(async (resolve, reject) => {
-    for(let i = 0 ; i < filmDetail.length ; i++) {
-      let film = await Film
-        .findOne({id: filmDetail[i].id})
-        .exec()
+    try {
+      for(let i = 0 ; i < filmDetail.length ; i++) {
+        let film = await Film
+          .findOne({id: filmDetail[i].id})
+          .exec()
 
-      if (film) {
-        film.releaseDate = filmDetail[i].releaseDate // 更新上时间
-        film.runtime = filmDetail[i].runtime  // 更新电影时长
-        film.postPic = filmDetail[i].movieName+'封面图'  // 更新电影poster
-        if (!film.like) film.like = filmDetail[i].like
-        // 更新导演、主演照片
+        if (film) {
+          film.releaseDate = filmDetail[i].releaseDate // 更新上时间
+          film.runtime = filmDetail[i].runtime  // 更新电影时长
+          film.postPic = filmDetail[i].movieName+'封面图'  // 更新电影poster
+          if (!film.like) film.like = filmDetail[i].like
+          // 更新导演、主演照片
 
-        for(let j= 0 ; j < filmDetail[i].actorAddMsg.length ; j++) {
-          for(let k= 0 ; k < film.directors.length ; k++) {
-            if (film.directors[k].id === filmDetail[i].actorAddMsg[j].id) {
-              let item = film.directors[k]
-              item.avatars = filmDetail[i].actorAddMsg[j].id+'castImg.jpg'
-              film.directors.splice(k, 1, item)
+          for(let j= 0 ; j < filmDetail[i].actorAddMsg.length ; j++) {
+            for(let k= 0 ; k < film.directors.length ; k++) {
+              if (film.directors[k].id === filmDetail[i].actorAddMsg[j].id) {
+                let item = film.directors[k]
+                item.avatars = filmDetail[i].actorAddMsg[j].id+'castImg.jpg'
+                film.directors.splice(k, 1, item)
+              }
+            }
+            for(let l= 0 ; l < film.casts.length ; l++) {
+              if (film.casts[l].id === filmDetail[i].actorAddMsg[j].id) {
+                let item = film.casts[l]
+                item.avatars = filmDetail[i].actorAddMsg[j].id+'castImg.jpg'
+                film.casts.splice(l, 1, item)
+              }
             }
           }
-          for(let l= 0 ; l < film.casts.length ; l++) {
-            if (film.casts[l].id === filmDetail[i].actorAddMsg[j].id) {
-              let item = film.casts[l]
-              item.avatars = filmDetail[i].actorAddMsg[j].id+'castImg.jpg'
-              film.casts.splice(l, 1, item)
-            }
-          }
+
+          await film.save()
         }
-
-        await film.save()
       }
+    } catch (e) {
+      console.log(e)
     }
     console.log(`电影缺失上映日期、播放时长、电影封面信息补充完毕`)
     return resolve()
   })
-  // 添加爬取的预告片封面
-  /*await new Promise(async (resolve, reject) => {
-    for(let i = 0 ; i < filmTrailer.length ; i++) {
+  // 添加爬取的电影剧照
+  await new Promise(async (resolve, reject) => {
+    for(let i = 0 ; i < filmStagePhotos.length ; i++) {
       const film = await Film
-        .findOne({id: filmTrailer[i].id})
+        .findOne({id: filmStagePhotos[i].id})
         .exec()
 
       if (film) {
-        film.trailerPoster = filmTrailer[i].trailerPoster
-        film.save()
+        for( let j = 0 ; j < filmStagePhotos[i].stagePhotos.length ; j++) {
+          film.filmStagePhotos.push(`${filmStagePhotos[i].id}${j}stagePhotoImg.jpg`)
+        }
+        await film.save()
       }
     }
 
-    console.log(`电影封面补充完毕`)
+    console.log(`电影剧照补充完毕`)
     return resolve()
-  })*/
+  })
 
   // 预告片详情
   await new Promise(async (resolve, reject) => {
@@ -230,17 +236,20 @@ const crawlerDetail = async (ctx, next) => {
         .exec()
 
       if (film) {
-        for (let j = 0; j < filmTrailerDetail[i].trailerArray.length; j++) {
-          film.trailerArray.push({
-            trailerMP4: `${filmTrailerDetail[i].trailerArray[j].trailerId}视频`,
-            trailerTitle: `${filmTrailerDetail[i].trailerArray[j].trailerTitle}`,
-            trailerDate: `${filmTrailerDetail[i].trailerArray[j].trailerDate}`,
-            trailerPoster: `${filmTrailerDetail[i].trailerArray[j].trailerId}封面图`,
-            trailerId: filmTrailerDetail[i].trailerArray[j].trailerId
-          })
+        try {
+          for (let j = 0; j < filmTrailerDetail[i].trailerArray.length; j++) {
+            film.trailerArray.push({
+              trailerMP4: `${filmTrailerDetail[i].trailerArray[j].trailerId}视频`,
+              trailerTitle: `${filmTrailerDetail[i].trailerArray[j].trailerTitle}`,
+              trailerDate: `${filmTrailerDetail[i].trailerArray[j].trailerDate}`,
+              trailerPoster: `${filmTrailerDetail[i].trailerArray[j].trailerId}封面图`,
+              trailerId: filmTrailerDetail[i].trailerArray[j].trailerId
+            })
+          }
+        } catch (e) {
+          console.log(e)
         }
-
-        film.save()
+        await film.save()
       }
     }
 
@@ -250,8 +259,9 @@ const crawlerDetail = async (ctx, next) => {
 }
 
 const uploadQiniuFile = async () => {
-  const filmDetail = require('../../comingMovie.json')
-  const filmTrailerDetail = require('../../comingMovieTrailerDetail.json')
+  const filmDetail = require('../../comingMovie.json')  // 电影封面、演职人员照片
+  const filmStagePhotos = require('../../comingMovieStagePhotos.json') // 剧照
+  const filmTrailerDetail = require('../../comingMovieTrailerDetail.json') // 预告片
 
   for(let i = 0 ; i < filmDetail.length ; i++) {
     // 上传电影封面照
@@ -262,14 +272,30 @@ const uploadQiniuFile = async () => {
     }
   }
 
+  for(let i = 0 ; i < filmStagePhotos.length ; i++) {
+    // 剧照
+    try {
+      for (let j = 0; j < filmStagePhotos[i].stagePhotos.length; j++) {
+        await qiniuFn.uploadQiniuFile(filmStagePhotos[i].stagePhotos[j], `${filmStagePhotos[i].id}${j}stagePhotoImg.jpg`) // 缩略图
+        await qiniuFn.uploadQiniuFile(filmStagePhotos[i].stagePhotos[j].replace(/sqxs/, 'l'), `${filmStagePhotos[i].id}${j}stagePhotoImgBig.jpg`) // 大图
+      }
+    } catch (e) {
+      console.log(e)
+    }
+  }
+
+
   for(let i = 0 ; i < filmTrailerDetail.length ; i++) {
-    for (let j = 0; j < filmTrailerDetail[i].trailerArray.length; j++) {
-      qiniuFn.uploadQiniuFile(filmTrailerDetail[i].trailerArray[j].trailerPoster, `${filmTrailerDetail[i].trailerArray[j].trailerId}封面图`)
-      qiniuFn.uploadQiniuFile(filmTrailerDetail[i].trailerArray[j].trailerMP4, `${filmTrailerDetail[i].trailerArray[j].trailerId}视频`)
+    try {
+      for (let j = 0; j < filmTrailerDetail[i].trailerArray.length; j++) {
+        await qiniuFn.uploadQiniuFile(filmTrailerDetail[i].trailerArray[j].trailerPoster, `${filmTrailerDetail[i].trailerArray[j].trailerId}封面图`)
+        await qiniuFn.uploadQiniuFile(filmTrailerDetail[i].trailerArray[j].trailerMP4, `${filmTrailerDetail[i].trailerArray[j].trailerId}视频`)
+      }
+    } catch (e) {
+      console.log(e)
     }
   }
 }
-
 /* 定时更新内容 */
 const updateMovie = async () => {
   console.time("sort");

@@ -65,7 +65,7 @@ module.exports =
 /******/ 	__webpack_require__.p = "/";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 41);
+/******/ 	return __webpack_require__(__webpack_require__.s = 42);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -78,7 +78,7 @@ module.exports = require("mongoose");
 /* 1 */
 /***/ function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(39);
+module.exports = __webpack_require__(40);
 
 
 /***/ },
@@ -99,10 +99,8 @@ var FilmSchema = new Schema({
     type: Number,
     default: 0
   },
-  rating: Object,
   abstract: String,
   year: String,
-  images: Object,
   id: String,
   countries: Array,
   genres: [{
@@ -121,9 +119,9 @@ var FilmSchema = new Schema({
   runtime: String,
   postPic: String,
   trailerPoster: String,
-  trailerUri: Array,
   trailerArray: Array,
   like: String,
+  filmStagePhotos: Array,
   meta: {
     createdAt: {
       type: String
@@ -194,7 +192,7 @@ module.exports = require("request");
 /***/ function(module, exports, __webpack_require__) {
 
 var mongoose = __webpack_require__(0);
-var bcrypt = __webpack_require__(31);
+var bcrypt = __webpack_require__(32);
 
 var SALT_WORK_FACTOR = 10;
 var MAX_LOGIN_ATTEMPTS = 5;
@@ -441,25 +439,25 @@ module.exports = MinaUser;
 /* 10 */
 /***/ function(module, exports) {
 
-module.exports = [{"movieName":"小悟空","releaseDate":["2018-07-14(中国大陆)"],"runtime":["85分钟"],"postPic":"https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2526767688.jpg","id":"30227725","actorAddMsg":[{"actorImg":"https://img3.doubanio.com/f/movie/8dd0c794499fe925ae2ae89ee30cd225750457b4/pics/movie/celebrity-default-medium.png","id":"1396597"},{"actorImg":"https://img3.doubanio.com/f/movie/8dd0c794499fe925ae2ae89ee30cd225750457b4/pics/movie/celebrity-default-medium.png","id":"1396598"},{"actorImg":"https://img3.doubanio.com/f/movie/8dd0c794499fe925ae2ae89ee30cd225750457b4/pics/movie/celebrity-default-medium.png","id":"1051611"}],"like":"160"},{"movieName":"八只鸡","releaseDate":["2018-07-19(中国大陆)"],"runtime":[],"postPic":"https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2525715533.jpg","id":"30252555","actorAddMsg":[{"actorImg":"https://img1.doubanio.com/view/celebrity/s_ratio_celebrity/public/p1529912784.88.jpg","id":"1396214"},{"actorImg":"https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p1529912770.04.jpg","id":"1396215"}],"like":"424"},{"movieName":"摩天营救 Skyscraper","releaseDate":["2018-07-20(中国大陆)","2018-07-13(美国)"],"runtime":["102分钟"],"postPic":"https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2527484082.jpg","id":"26804147","actorAddMsg":[{"actorImg":"https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p1377869988.64.jpg","id":"1005149"},{"actorImg":"https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p196.jpg","id":"1044707"},{"actorImg":"https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p13115.jpg","id":"1027828"},{"actorImg":"https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p1377231469.53.jpg","id":"1045049"},{"actorImg":"https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p1417086901.1.jpg","id":"1049775"},{"actorImg":"https://img3.doubanio.com/f/movie/8dd0c794499fe925ae2ae89ee30cd225750457b4/pics/movie/celebrity-default-medium.png","id":"1393148"}],"like":"5850"},{"movieName":"北方一片苍茫","releaseDate":["2018-07-20(中国大陆)","2017-07-23(FIRST青年影展)"],"runtime":["105分钟"],"postPic":"https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2527454845.jpg","id":"27079318","actorAddMsg":[{"actorImg":"https://img3.doubanio.com/f/movie/14960825e118267b5857fc0ae9f306ef8c74da8f/pics/movie/has_douban@2x.png","id":"1376541"},{"actorImg":"https://img3.doubanio.com/f/movie/14960825e118267b5857fc0ae9f306ef8c74da8f/pics/movie/has_douban@2x.png","id":"1377028"},{"actorImg":"https://img3.doubanio.com/f/movie/8dd0c794499fe925ae2ae89ee30cd225750457b4/pics/movie/celebrity-default-medium.png","id":"1396941"},{"actorImg":"https://img3.doubanio.com/f/movie/8dd0c794499fe925ae2ae89ee30cd225750457b4/pics/movie/celebrity-default-medium.png","id":"1378150"}],"like":"3219"},{"movieName":"淘气大侦探 Sherlock Gnomes","releaseDate":["2018-07-20(中国大陆)","2018-03-23(美国)","2018-05-11(英国)"],"runtime":["86分钟"],"postPic":"https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2527551382.jpg","id":"26660063","actorAddMsg":[{"actorImg":"https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p34350.jpg","id":"1298420"},{"actorImg":"https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p93.jpg","id":"1006958"},{"actorImg":"https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p21481.jpg","id":"1041022"},{"actorImg":"https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p562.jpg","id":"1054456"},{"actorImg":"https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p9322.jpg","id":"1010581"},{"actorImg":"https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p16450.jpg","id":"1014134"}],"like":"923"},{"movieName":"玛雅蜜蜂历险记 Maya the Bee Movie","releaseDate":["2018-07-20(中国大陆)","2014-09-11(德国)"],"runtime":["78分钟(法国)"],"postPic":"https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2234785674.jpg","id":"25881500","actorAddMsg":[{"actorImg":"https://img3.doubanio.com/f/movie/8dd0c794499fe925ae2ae89ee30cd225750457b4/pics/movie/celebrity-default-medium.png","id":"1298221"},{"actorImg":"https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p1354128837.83.jpg","id":"1248592"},{"actorImg":"https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p1417086901.1.jpg","id":"1049775"},{"actorImg":"https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p1404.jpg","id":"1013865"},{"actorImg":"https://img1.doubanio.com/view/celebrity/s_ratio_celebrity/public/p33207.jpg","id":"1048191"},{"actorImg":"https://img1.doubanio.com/view/celebrity/s_ratio_celebrity/public/p21519.jpg","id":"1161151"}],"like":"665"},{"movieName":"汪星卧底 Show Dogs","releaseDate":["2018-07-20(中国大陆)","2018-05-18(美国)"],"runtime":["92分钟"],"postPic":"https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2526399205.jpg","id":"26930056","actorAddMsg":[{"actorImg":"https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p5860.jpg","id":"1036533"},{"actorImg":"https://img1.doubanio.com/view/celebrity/s_ratio_celebrity/public/p7197.jpg","id":"1044709"},{"actorImg":"https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p1373705281.63.jpg","id":"1049714"},{"actorImg":"https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p26071.jpg","id":"1040517"},{"actorImg":"https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p22552.jpg","id":"1000096"},{"actorImg":"https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p1976.jpg","id":"1006980"}],"like":"368"},{"movieName":"兄弟班","releaseDate":["2018-07-20(中国大陆)","2018-07-19(香港)"],"runtime":["102分钟"],"postPic":"https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2527543528.jpg","id":"26988003","actorAddMsg":[{"actorImg":"https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p1921.jpg","id":"1028948"},{"actorImg":"https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p1485327861.41.jpg","id":"1275972"},{"actorImg":"https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p1401776151.3.jpg","id":"1340458"},{"actorImg":"https://img1.doubanio.com/view/celebrity/s_ratio_celebrity/public/p1416749516.7.jpg","id":"1337843"},{"actorImg":"https://img3.doubanio.com/f/movie/8dd0c794499fe925ae2ae89ee30cd225750457b4/pics/movie/celebrity-default-medium.png","id":"1392320"},{"actorImg":"https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p35235.jpg","id":"1316133"}],"like":"360"},{"movieName":"午夜幽灵","releaseDate":["2018-07-20(中国大陆)"],"runtime":["81分钟"],"postPic":"https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2516906655.jpg","id":"30128986","actorAddMsg":[{"actorImg":"https://img1.doubanio.com/view/celebrity/s_ratio_celebrity/public/p1499243527.29.jpg","id":"1376582"},{"actorImg":"https://img1.doubanio.com/view/celebrity/s_ratio_celebrity/public/p1394899519.58.jpg","id":"1275029"},{"actorImg":"https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p1522810252.53.jpg","id":"1391102"},{"actorImg":"https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p1522810175.11.jpg","id":"1337900"},{"actorImg":"https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p1495528480.16.jpg","id":"1374307"},{"actorImg":"https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p1527750676.4.jpg","id":"1349852"}],"like":"300"},{"movieName":"闺蜜的战争","releaseDate":["2018-07-20(中国大陆)"],"runtime":["93分钟"],"postPic":"https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2526892933.jpg","id":"30262110","actorAddMsg":[{"actorImg":"https://img3.doubanio.com/f/movie/8dd0c794499fe925ae2ae89ee30cd225750457b4/pics/movie/celebrity-default-medium.png","id":"1381901"},{"actorImg":"https://img3.doubanio.com/f/movie/8dd0c794499fe925ae2ae89ee30cd225750457b4/pics/movie/celebrity-default-medium.png","id":"1396594"},{"actorImg":"https://img3.doubanio.com/f/movie/8dd0c794499fe925ae2ae89ee30cd225750457b4/pics/movie/celebrity-default-medium.png","id":"1396595"},{"actorImg":"https://img3.doubanio.com/f/movie/8dd0c794499fe925ae2ae89ee30cd225750457b4/pics/movie/celebrity-default-medium.png","id":"1396596"}],"like":"27"}]
+module.exports = [{"movieName":"女校怪谈","releaseDate":["2018-07-26(中国大陆)"],"runtime":["95分钟"],"postPic":"https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2520950573.jpg","id":"30210203","actorAddMsg":[{"actorImg":"https://img3.doubanio.com/f/movie/8dd0c794499fe925ae2ae89ee30cd225750457b4/pics/movie/celebrity-default-medium.png","id":"1397901"},{"actorImg":"https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p1502335874.25.jpg","id":"1378788"},{"actorImg":"https://img3.doubanio.com/f/movie/8dd0c794499fe925ae2ae89ee30cd225750457b4/pics/movie/celebrity-default-medium.png","id":"1375551"},{"actorImg":"https://img3.doubanio.com/f/movie/8dd0c794499fe925ae2ae89ee30cd225750457b4/pics/movie/celebrity-default-medium.png","id":"1397902"},{"actorImg":"https://img3.doubanio.com/f/movie/14960825e118267b5857fc0ae9f306ef8c74da8f/pics/movie/has_douban@2x.png","id":"1384366"},{"actorImg":"https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/pg081FoOH988cel_avatar_uploaded1525283611.15.jpg","id":"1392266"}],"like":"138"},{"movieName":"狄仁杰之四大天王","releaseDate":["2018-07-27(中国大陆)"],"runtime":["132分钟"],"postPic":"https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2526405034.jpg","id":"25882296","actorAddMsg":[{"actorImg":"https://img1.doubanio.com/view/celebrity/s_ratio_celebrity/public/p1393840734.39.jpg","id":"1007152"},{"actorImg":"https://img1.doubanio.com/view/celebrity/s_ratio_celebrity/public/p30529.jpg","id":"1274608"},{"actorImg":"https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p36925.jpg","id":"1275721"},{"actorImg":"https://img1.doubanio.com/view/celebrity/s_ratio_celebrity/public/p1398676888.79.jpg","id":"1314535"},{"actorImg":"https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p21006.jpg","id":"1259866"},{"actorImg":"https://img1.doubanio.com/view/celebrity/s_ratio_celebrity/public/p1411832447.57.jpg","id":"1036905"}],"like":"47741"},{"movieName":"西虹市首富","releaseDate":["2018-07-27(中国大陆)"],"runtime":["118分钟"],"postPic":"https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2525046210.jpg","id":"27605698","actorAddMsg":[{"actorImg":"https://img1.doubanio.com/view/celebrity/s_ratio_celebrity/public/p1437030925.47.jpg","id":"1350410"},{"actorImg":"https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p1437031053.5.jpg","id":"1350409"},{"actorImg":"https://img1.doubanio.com/view/celebrity/s_ratio_celebrity/public/p1356510694.28.jpg","id":"1325700"},{"actorImg":"https://img1.doubanio.com/view/celebrity/s_ratio_celebrity/public/p1446281965.79.jpg","id":"1341903"},{"actorImg":"https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p1413261818.41.jpg","id":"1322777"},{"actorImg":"https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p11764.jpg","id":"1275270"}],"like":"42151"},{"movieName":"萌学园：寻找盘古","releaseDate":["2018-07-28(中国大陆)","2016-06-24(台湾)"],"runtime":[],"postPic":"https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2528103085.jpg","id":"26754880","actorAddMsg":[{"actorImg":"https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p1531291826.35.jpg","id":"1358340"},{"actorImg":"https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p1531291798.12.jpg","id":"1396991"},{"actorImg":"https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p1531295899.63.jpg","id":"1396992"},{"actorImg":"https://img1.doubanio.com/view/celebrity/s_ratio_celebrity/public/p1531295883.97.jpg","id":"1378013"},{"actorImg":"https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p1531296062.51.jpg","id":"1396993"},{"actorImg":"https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p1531295946.96.jpg","id":"1396994"}],"like":"2623"},{"movieName":"文朝荣","releaseDate":["2018-07-28(中国大陆)"],"runtime":["99分钟"],"postPic":"https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2526266295.jpg","id":"30252429","actorAddMsg":[{"actorImg":"https://img3.doubanio.com/f/movie/8dd0c794499fe925ae2ae89ee30cd225750457b4/pics/movie/celebrity-default-medium.png","id":"1350551"},{"actorImg":"https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p37725.jpg","id":"1274819"},{"actorImg":"https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p1473681732.03.jpg","id":"1327430"},{"actorImg":"https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p1472458756.3.jpg","id":"1361663"},{"actorImg":"https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p1352300084.72.jpg","id":"1324158"},{"actorImg":"https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p1471963335.01.jpg","id":"1361312"}],"like":"26"}]
 
 /***/ },
 /* 11 */
 /***/ function(module, exports) {
 
-module.exports = [{"movieName":"小悟空 视频","trailerUri":["https://movie.douban.com/trailer/233378/#content","https://movie.douban.com/trailer/233436/#content","https://movie.douban.com/trailer/233661/#content","https://movie.douban.com/trailer/233523/#content"],"trailerPoster":["https://img1.doubanio.com/img/trailer/medium/2527165369.jpg?1530867333","https://img3.doubanio.com/img/trailer/medium/2527466865.jpg?1531127965","https://img3.doubanio.com/img/trailer/medium/2527813610.jpg?1531456758","https://img3.doubanio.com/img/trailer/medium/2527640782.jpg?1531295366"],"id":"30227725"},{"movieName":"八只鸡 视频","trailerUri":["https://movie.douban.com/trailer/233654/#content","https://movie.douban.com/trailer/233051/#content"],"trailerPoster":["https://img3.doubanio.com/img/trailer/medium/2527812922.jpg?1531457156","https://img3.doubanio.com/img/trailer/medium/2526427410.jpg?"],"id":"30252555"},{"movieName":"摩天营救 视频","trailerUri":["https://movie.douban.com/trailer/233464/#content","https://movie.douban.com/trailer/233438/#content","https://movie.douban.com/trailer/233219/#content","https://movie.douban.com/trailer/233019/#content","https://movie.douban.com/trailer/232978/#content","https://movie.douban.com/trailer/232339/#content","https://movie.douban.com/trailer/231885/#content","https://movie.douban.com/trailer/231474/#content","https://movie.douban.com/trailer/231427/#content","https://movie.douban.com/trailer/231426/#content","https://movie.douban.com/trailer/227160/#content","https://movie.douban.com/trailer/233113/#content","https://movie.douban.com/trailer/232696/#content","https://movie.douban.com/trailer/232471/#content","https://movie.douban.com/trailer/227127/#content","https://movie.douban.com/trailer/233149/#content","https://movie.douban.com/trailer/232871/#content","https://movie.douban.com/trailer/233657/#content","https://movie.douban.com/trailer/233522/#content","https://movie.douban.com/trailer/233435/#content","https://movie.douban.com/trailer/233360/#content","https://movie.douban.com/trailer/233282/#content","https://movie.douban.com/trailer/233163/#content","https://movie.douban.com/trailer/233101/#content","https://movie.douban.com/trailer/231760/#content","https://movie.douban.com/trailer/233535/#content","https://movie.douban.com/trailer/233505/#content","https://movie.douban.com/trailer/233324/#content"],"trailerPoster":["https://img1.doubanio.com/img/trailer/medium/2527544359.jpg?1531203302","https://img3.doubanio.com/img/trailer/medium/2527466982.jpg?1531127783","https://img3.doubanio.com/img/trailer/medium/2526895711.jpg?1530607580","https://img1.doubanio.com/img/trailer/medium/2526382108.jpg?1530611584","https://img3.doubanio.com/img/trailer/medium/2526313250.jpg?1530076834","https://img3.doubanio.com/img/trailer/medium/2524750333.jpg?1528958544","https://img3.doubanio.com/img/trailer/medium/2523980900.jpg?","https://img3.doubanio.com/img/trailer/medium/2522972990.jpg?","https://img3.doubanio.com/img/trailer/medium/2522930690.jpg?","https://img3.doubanio.com/img/trailer/medium/2522930576.jpg?","https://img3.doubanio.com/img/trailer/medium/2512722254.jpg?","https://img1.doubanio.com/img/trailer/medium/2526510949.jpg?1530517860","https://img3.doubanio.com/img/trailer/medium/2525740613.jpg?1529554835","https://img3.doubanio.com/img/trailer/medium/2525015715.jpg?1529047084","https://img3.doubanio.com/img/trailer/medium/2512712482.jpg?","https://img3.doubanio.com/img/trailer/medium/2526564593.jpg?1530515167","https://img3.doubanio.com/img/trailer/medium/2526163516.jpg?1529989460","https://img3.doubanio.com/img/trailer/medium/2527813412.jpg?1531457069","https://img1.doubanio.com/img/trailer/medium/2527640678.jpg?1531295705","https://img3.doubanio.com/img/trailer/medium/2527466733.jpg?1531127997","https://img3.doubanio.com/img/trailer/medium/2527141796.jpg?1530855477","https://img1.doubanio.com/img/trailer/medium/2526986549.jpg?1530699121","https://img3.doubanio.com/img/trailer/medium/2526690711.jpg?","https://img3.doubanio.com/img/trailer/medium/2526492715.jpg?1530260796","https://img3.doubanio.com/img/trailer/medium/2523696406.jpg?","https://img1.doubanio.com/img/trailer/medium/2527648927.jpg?1531298883","https://img3.doubanio.com/img/trailer/medium/2527602883.jpg?1531301035","https://img3.doubanio.com/img/trailer/medium/2527054623.jpg?1530769444"],"id":"26804147"},{"movieName":"北方一片苍茫 视频","trailerUri":["https://movie.douban.com/trailer/233434/#content","https://movie.douban.com/trailer/230359/#content","https://movie.douban.com/trailer/226937/#content"],"trailerPoster":["https://img1.doubanio.com/img/trailer/medium/2527466658.jpg?1531128076","https://img3.doubanio.com/img/trailer/medium/2520568176.jpg?","https://img3.doubanio.com/img/trailer/medium/2512265734.jpg?"],"id":"27079318"},{"movieName":"淘气大侦探 视频","trailerUri":["https://movie.douban.com/trailer/223574/#content","https://movie.douban.com/trailer/232837/#content","https://movie.douban.com/trailer/227921/#content","https://movie.douban.com/trailer/227922/#content","https://movie.douban.com/trailer/228762/#content","https://movie.douban.com/trailer/228312/#content"],"trailerPoster":["https://img3.doubanio.com/img/trailer/medium/2504375164.jpg?","https://img3.doubanio.com/img/trailer/medium/2526136936.jpg?1529910534","https://img1.doubanio.com/img/trailer/medium/2514894909.jpg?","https://img1.doubanio.com/img/trailer/medium/2514894958.jpg?","https://img1.doubanio.com/img/trailer/medium/2516505468.jpg?","https://img3.doubanio.com/img/trailer/medium/2515703990.jpg?"],"id":"26660063"},{"movieName":"玛雅蜜蜂历险记 视频","trailerUri":["https://movie.douban.com/trailer/172324/#content","https://movie.douban.com/trailer/162001/#content"],"trailerPoster":["https://img3.doubanio.com/img/trailer/medium/2230990335.jpg?","https://img3.doubanio.com/img/trailer/medium/2198023743.jpg?"],"id":"25881500"},{"movieName":"汪星卧底 视频","trailerUri":["https://movie.douban.com/trailer/233040/#content","https://movie.douban.com/trailer/228324/#content","https://movie.douban.com/trailer/226112/#content","https://movie.douban.com/trailer/233285/#content"],"trailerPoster":["https://img1.doubanio.com/img/trailer/medium/2526407588.jpg?1530170199","https://img3.doubanio.com/img/trailer/medium/2515743422.jpg?","https://img1.doubanio.com/img/trailer/medium/2510465859.jpg?","https://img1.doubanio.com/img/trailer/medium/2526986777.jpg?1530699005"],"id":"26930056"},{"movieName":"兄弟班 视频","trailerUri":["https://movie.douban.com/trailer/233466/#content","https://movie.douban.com/trailer/232918/#content","https://movie.douban.com/trailer/232602/#content","https://movie.douban.com/trailer/232317/#content","https://movie.douban.com/trailer/233366/#content"],"trailerPoster":["https://img3.doubanio.com/img/trailer/medium/2527544581.jpg?1531203245","https://img3.doubanio.com/img/trailer/medium/2526216606.jpg?1529987939","https://img3.doubanio.com/img/trailer/medium/2525526202.jpg?1529993717","https://img3.doubanio.com/img/trailer/medium/2524715061.jpg?","https://img3.doubanio.com/img/trailer/medium/2527142402.jpg?1530853640"],"id":"26988003"},{"movieName":"午夜幽灵 视频","trailerUri":["https://movie.douban.com/trailer/228258/#content"],"trailerPoster":["https://img3.doubanio.com/img/trailer/medium/2515614481.jpg?"],"id":"30128986"},{"movieName":"闺蜜的战争 视频","trailerUri":[],"trailerPoster":[],"id":"30262110"}]
+module.exports = [{"movieName":"女校怪谈的全部图片","stagePhotos":["https://img3.doubanio.com/view/photo/sqxs/public/p2520950573.jpg"],"id":"30210203"},{"movieName":"狄仁杰之四大天王的全部图片","stagePhotos":["https://img1.doubanio.com/view/photo/sqxs/public/p2520330709.jpg","https://img1.doubanio.com/view/photo/sqxs/public/p2524047958.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2526310125.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2527054211.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2520330695.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2526131562.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2528241705.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2528183192.jpg","https://img1.doubanio.com/view/photo/sqxs/public/p2527054217.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2526405005.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2526310132.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2524047932.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2520330693.jpg","https://img1.doubanio.com/view/photo/sqxs/public/p2520311629.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2528210042.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2528210001.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2527141620.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2526440821.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2526440820.jpg","https://img1.doubanio.com/view/photo/sqxs/public/p2526405017.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2526405000.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2526310134.jpg","https://img1.doubanio.com/view/photo/sqxs/public/p2526310129.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2526131581.jpg","https://img1.doubanio.com/view/photo/sqxs/public/p2524309309.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2524309302.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2524309294.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2523602560.jpg","https://img1.doubanio.com/view/photo/sqxs/public/p2523602549.jpg","https://img1.doubanio.com/view/photo/sqxs/public/p2520330717.jpg","https://img1.doubanio.com/view/photo/sqxs/public/p2528481387.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2528481381.jpg","https://img1.doubanio.com/view/photo/sqxs/public/p2528481378.jpg","https://img1.doubanio.com/view/photo/sqxs/public/p2528481377.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2528481373.jpg","https://img1.doubanio.com/view/photo/sqxs/public/p2528481368.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2528210045.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2528210016.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2528209985.jpg","https://img3.doubanio.com/f/shire/0e1ad843c96c088061deb614851822692426c700/pics/morepic.png","https://img3.doubanio.com/view/photo/sqxs/public/p2516747361.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2526405034.jpg","https://img1.doubanio.com/view/photo/sqxs/public/p2525085328.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2527761121.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2526399863.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2520710295.jpg"],"id":"25882296"},{"movieName":"西虹市首富的全部图片","stagePhotos":["https://img3.doubanio.com/view/photo/sqxs/public/p2528872274.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2528872270.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2528872261.jpg","https://img1.doubanio.com/view/photo/sqxs/public/p2528872258.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2528872250.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2528872246.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2528872241.jpg","https://img1.doubanio.com/view/photo/sqxs/public/p2528872238.jpg","https://img1.doubanio.com/view/photo/sqxs/public/p2528872237.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2528872233.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2528872230.jpg","https://img1.doubanio.com/view/photo/sqxs/public/p2528872228.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2528872226.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2528872221.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2528872216.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2528872214.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2528872206.jpg","https://img1.doubanio.com/view/photo/sqxs/public/p2528872199.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2528872190.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2528847031.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2528847026.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2528847021.jpg","https://img1.doubanio.com/view/photo/sqxs/public/p2528847017.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2528847014.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2528847013.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2522724894.jpg","https://img1.doubanio.com/view/photo/sqxs/public/p2520081427.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2527053783.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2524713151.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2528482285.jpg","https://img1.doubanio.com/view/photo/sqxs/public/p2527053847.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2527053791.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2527053841.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2526146046.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2527053842.jpg","https://img1.doubanio.com/view/photo/sqxs/public/p2527053838.jpg","https://img1.doubanio.com/view/photo/sqxs/public/p2527053829.jpg","https://img1.doubanio.com/view/photo/sqxs/public/p2527053827.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2527053822.jpg","https://img3.doubanio.com/f/shire/0e1ad843c96c088061deb614851822692426c700/pics/morepic.png","https://img3.doubanio.com/view/photo/sqxs/public/p2525046210.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2526022674.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2528742465.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2526022695.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2526022633.jpg"],"id":"27605698"},{"movieName":"萌学园：寻找盘古的全部图片","stagePhotos":["https://img3.doubanio.com/view/photo/sqxs/public/p2528846503.jpg","https://img1.doubanio.com/view/photo/sqxs/public/p2528846498.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2528846492.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2528091870.jpg","https://img1.doubanio.com/view/photo/sqxs/public/p2528091858.jpg","https://img1.doubanio.com/view/photo/sqxs/public/p2528091838.jpg","https://img1.doubanio.com/view/photo/sqxs/public/p2528091829.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2528091820.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2528481665.jpg","https://img1.doubanio.com/view/photo/sqxs/public/p2528481658.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2528481650.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2528481625.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2351198115.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2528103085.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2528846506.jpg"],"id":"26754880"},{"movieName":"文朝荣的全部图片","stagePhotos":["https://img1.doubanio.com/view/photo/sqxs/public/p2526268069.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2526268064.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2526268035.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2526268034.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2526268032.jpg","https://img1.doubanio.com/view/photo/sqxs/public/p2526268029.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2526268022.jpg","https://img1.doubanio.com/view/photo/sqxs/public/p2526268019.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2526268016.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2526268010.jpg","https://img1.doubanio.com/view/photo/sqxs/public/p2526267279.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2526267276.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2526267274.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2526267273.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2526267270.jpg","https://img1.doubanio.com/view/photo/sqxs/public/p2526267267.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2526267265.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2526267261.jpg","https://img1.doubanio.com/view/photo/sqxs/public/p2526267259.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2526267255.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2526266973.jpg","https://img1.doubanio.com/view/photo/sqxs/public/p2526266968.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2526266964.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2526266962.jpg","https://img1.doubanio.com/view/photo/sqxs/public/p2526266958.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2526266952.jpg","https://img1.doubanio.com/view/photo/sqxs/public/p2526266938.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2526266913.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2526266904.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2526266894.jpg","https://img1.doubanio.com/view/photo/sqxs/public/p2526267569.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2526267495.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2526267481.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2526267430.jpg","https://img1.doubanio.com/view/photo/sqxs/public/p2526267417.jpg","https://img1.doubanio.com/view/photo/sqxs/public/p2526267398.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2526267386.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2526267380.jpg","https://img1.doubanio.com/view/photo/sqxs/public/p2526267328.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2526266362.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2526266295.jpg"],"id":"30252429"}]
 
 /***/ },
 /* 12 */
 /***/ function(module, exports) {
 
-module.exports = [{"trailerArray":[{"trailerMP4":"http://vt1.doubanio.com/201807131351/ba21eb5b6bdb259b3dc355b0e3f8d763/view/movie/M/402330378.mp4","trailerTitle":"小悟空\n    预告片：终极版 (中文字幕)","trailerDate":"2018-07-06","trailerPoster":"https://img1.doubanio.com/img/trailer/medium/2527165369.jpg?1530867333","trailerId":"b9a2b270866011e890bd731ab430f780"},{"trailerMP4":"http://vt1.doubanio.com/201807131351/1449877425c68b05919f13d7ff046368/view/movie/M/402330436.mp4","trailerTitle":"小悟空\n    先行版 (中文字幕)","trailerDate":"2018-07-09","trailerPoster":"https://img3.doubanio.com/img/trailer/medium/2527466865.jpg?1531127965","trailerId":"b99df780866011e890bd731ab430f780"},{"trailerMP4":"http://vt1.doubanio.com/201807131351/91010616508e36f8377d04475358243f/view/movie/M/402330661.mp4","trailerTitle":"小悟空\n    片段1 (中文字幕)","trailerDate":"2018-07-13","trailerPoster":"https://img3.doubanio.com/img/trailer/medium/2527813610.jpg?1531456758","trailerId":"b99d0d20866011e890bd731ab430f780"},{"trailerMP4":"http://vt1.doubanio.com/201807131351/19662c4c183b43cb727d04b50ac5fa4c/view/movie/M/402330523.mp4","trailerTitle":"小悟空\n    片段2 (中文字幕)","trailerDate":"2018-07-11","trailerPoster":"https://img3.doubanio.com/img/trailer/medium/2527640782.jpg?1531295366","trailerId":"b9a04170866011e890bd731ab430f780"}],"id":"30227725","trailerTitle":"小悟空 视频"},{"trailerArray":[{"trailerMP4":"http://vt1.doubanio.com/201807131351/dbd000a6a3f93c115841b0dc3aa9f4eb/view/movie/M/402330654.mp4","trailerTitle":"八只鸡\n    预告片1：温情版 (中文字幕)","trailerDate":"2018-07-13","trailerPoster":"https://img3.doubanio.com/img/trailer/medium/2527812922.jpg?1531457156","trailerId":"baf54a20866011e890bd731ab430f780"},{"trailerMP4":"http://vt1.doubanio.com/201807131351/bd1c41b072e7efc8fdc80185e36665e2/view/movie/M/402330051.mp4","trailerTitle":"八只鸡\n    预告片2：残酷童年版 (中文字幕)","trailerDate":"2018-06-28","trailerPoster":"https://img3.doubanio.com/img/trailer/medium/2526427410.jpg?","trailerId":"bafbd9d0866011e890bd731ab430f780"}],"id":"30252555","trailerTitle":"八只鸡 视频"},{"trailerArray":[{"trailerMP4":"http://vt1.doubanio.com/201807131351/ff727643d46af7e2abf5f871846bb28f/view/movie/M/402330464.mp4","trailerTitle":"摩天营救\n    中国预告片1：终极版 (中文字幕)","trailerDate":"2018-07-10","trailerPoster":"https://img1.doubanio.com/img/trailer/medium/2527544359.jpg?1531203302","trailerId":"bc8c64e0866011e890bd731ab430f780"},{"trailerMP4":"http://vt1.doubanio.com/201807131351/c2cc896d9a3388a2a7fd34d2569f1032/view/movie/M/402330438.mp4","trailerTitle":"摩天营救\n    中国预告片2：赴汤蹈火版 (中文字幕)","trailerDate":"2018-07-09","trailerPoster":"https://img3.doubanio.com/img/trailer/medium/2527466982.jpg?1531127783","trailerId":"bca2d310866011e890bd731ab430f780"},{"trailerMP4":"http://vt1.doubanio.com/201807131351/cce72489ca060889481a84f3298d4050/view/movie/M/402330219.mp4","trailerTitle":"摩天营救\n    台湾预告片3 (中文字幕)","trailerDate":"2018-07-03","trailerPoster":"https://img3.doubanio.com/img/trailer/medium/2526895711.jpg?1530607580","trailerId":"bcab3780866011e890bd731ab430f780"},{"trailerMP4":"http://vt1.doubanio.com/201807131351/f7a31f4880876d4519a73a1e51deac5e/view/movie/M/402330019.mp4","trailerTitle":"摩天营救\n    台湾预告片4 (中文字幕)","trailerDate":"2018-06-28","trailerPoster":"https://img1.doubanio.com/img/trailer/medium/2526382108.jpg?1530611584","trailerId":"bc8dc470866011e890bd731ab430f780"},{"trailerMP4":"http://vt1.doubanio.com/201807131351/627ff9c015a95cf57864c5ea953ebaf2/view/movie/M/402320978.mp4","trailerTitle":"摩天营救\n    中国预告片5：定档版 (中文字幕)","trailerDate":"2018-06-27","trailerPoster":"https://img3.doubanio.com/img/trailer/medium/2526313250.jpg?1530076834","trailerId":"bcac9710866011e890bd731ab430f780"},{"trailerMP4":"http://vt1.doubanio.com/201807131351/f126d09e8609c931a3d03103bba35f20/view/movie/M/402320339.mp4","trailerTitle":"摩天营救\n    台湾预告片6 (中文字幕)","trailerDate":"2018-06-13","trailerPoster":"https://img3.doubanio.com/img/trailer/medium/2524750333.jpg?1528958544","trailerId":"bca7dc20866011e890bd731ab430f780"},{"trailerMP4":"http://vt1.doubanio.com/201807131351/2cc343d86019e475b91c282b8ab71463/view/movie/M/402310885.mp4","trailerTitle":"摩天营救\n    台湾预告片7 (中文字幕)","trailerDate":"2018-06-04","trailerPoster":"https://img3.doubanio.com/img/trailer/medium/2523980900.jpg?","trailerId":"bc867170866011e890bd731ab430f780"},{"trailerMP4":"http://vt1.doubanio.com/201807131351/2e6ec532996be75777d5f35d45359a1d/view/movie/M/402310474.mp4","trailerTitle":"摩天营救\n    香港预告片8 (中文字幕)","trailerDate":"2018-05-24","trailerPoster":"https://img3.doubanio.com/img/trailer/medium/2522972990.jpg?","trailerId":"bca914a0866011e890bd731ab430f780"},{"trailerMP4":"http://vt1.doubanio.com/201807131351/2fc050b5128fd07f5aed2311e73e6b0d/view/movie/M/402310427.mp4","trailerTitle":"摩天营救\n    台湾预告片9 (中文字幕)","trailerDate":"2018-05-24","trailerPoster":"https://img3.doubanio.com/img/trailer/medium/2522930690.jpg?","trailerId":"bcad8170866011e890bd731ab430f780"},{"trailerMP4":"http://vt1.doubanio.com/201807131351/70de3986d2731028ea5d24ef4d976d51/view/movie/M/402310426.mp4","trailerTitle":"摩天营救\n    香港预告片10 (中文字幕)","trailerDate":"2018-05-24","trailerPoster":"https://img3.doubanio.com/img/trailer/medium/2522930576.jpg?","trailerId":"bc884630866011e890bd731ab430f780"},{"trailerMP4":"http://vt1.doubanio.com/201807131351/5e6846ca09753520f2feb2258c38ad29/view/movie/M/302270160.mp4","trailerTitle":"摩天营救\n    中国预告片11 (中文字幕)","trailerDate":"2018-02-05","trailerPoster":"https://img3.doubanio.com/img/trailer/medium/2512722254.jpg?","trailerId":"bcb34dd0866011e890bd731ab430f780"},{"trailerMP4":"http://vt1.doubanio.com/201807131351/16408f3c8d50fcae137595574947067d/view/movie/M/402330113.mp4","trailerTitle":"摩天营救\n    电视版1 (中文字幕)","trailerDate":"2018-06-29","trailerPoster":"https://img1.doubanio.com/img/trailer/medium/2526510949.jpg?1530517860","trailerId":"bc831610866011e890bd731ab430f780"},{"trailerMP4":"http://vt1.doubanio.com/201807131351/c8a3b573d4ce320eee170eab436d5954/view/movie/M/402320696.mp4","trailerTitle":"摩天营救\n    电视版2 (中文字幕)","trailerDate":"2018-06-21","trailerPoster":"https://img3.doubanio.com/img/trailer/medium/2525740613.jpg?1529554835","trailerId":"bc8eaed0866011e890bd731ab430f780"},{"trailerMP4":"http://vt1.doubanio.com/201807131351/5fbcea5bdb8deaad589ca5e11f0ad015/view/movie/M/402320471.mp4","trailerTitle":"摩天营救\n    电视版3 (中文字幕)","trailerDate":"2018-06-15","trailerPoster":"https://img3.doubanio.com/img/trailer/medium/2525015715.jpg?1529047084","trailerId":"bc856000866011e890bd731ab430f780"},{"trailerMP4":"http://vt1.doubanio.com/201807131351/56be10035560eb6366c98425f094faeb/view/movie/M/302270127.mp4","trailerTitle":"摩天营救\n    电视版4：超级碗版","trailerDate":"2018-02-05","trailerPoster":"https://img3.doubanio.com/img/trailer/medium/2512712482.jpg?","trailerId":"bca3bd70866011e890bd731ab430f780"},{"trailerMP4":"http://vt1.doubanio.com/201807131351/a255615e832a0c4a26288d0ffc3b9968/view/movie/M/402330149.mp4","trailerTitle":"摩天营救\n    其它预告片1","trailerDate":"2018-06-30","trailerPoster":"https://img3.doubanio.com/img/trailer/medium/2526564593.jpg?1530515167","trailerId":"bc976160866011e890bd731ab430f780"},{"trailerMP4":"http://vt1.doubanio.com/201807131351/01b9c83b7f8412bbcba802059621b8dc/view/movie/M/402320871.mp4","trailerTitle":"摩天营救\n    其它预告片2 (中文字幕)","trailerDate":"2018-06-25","trailerPoster":"https://img3.doubanio.com/img/trailer/medium/2526163516.jpg?1529989460","trailerId":"bca6a3a0866011e890bd731ab430f780"},{"trailerMP4":"http://vt1.doubanio.com/201807131351/c4c57934009f729cf00b6b78131b0b41/view/movie/M/402330657.mp4","trailerTitle":"摩天营救\n    花絮1：制作特辑 (中文字幕)","trailerDate":"2018-07-13","trailerPoster":"https://img3.doubanio.com/img/trailer/medium/2527813412.jpg?1531457069","trailerId":"bca4a7d0866011e890bd731ab430f780"},{"trailerMP4":"http://vt1.doubanio.com/201807131351/5ee58f44d23e6acc8204020e4414de49/view/movie/M/402330522.mp4","trailerTitle":"摩天营救\n    花絮2：内芙·坎贝尔特辑 (中文字幕)","trailerDate":"2018-07-11","trailerPoster":"https://img1.doubanio.com/img/trailer/medium/2527640678.jpg?1531295705","trailerId":"bc956590866011e890bd731ab430f780"},{"trailerMP4":"http://vt1.doubanio.com/201807131351/25ae249de66a66f362642f6556f43dce/view/movie/M/402330435.mp4","trailerTitle":"摩天营救\n    花絮3：昆凌特辑 (中文字幕)","trailerDate":"2018-07-09","trailerPoster":"https://img3.doubanio.com/img/trailer/medium/2527466733.jpg?1531127997","trailerId":"bd0369a0866011e890bd731ab430f780"},{"trailerMP4":"http://vt1.doubanio.com/201807131351/21cd47221dae50a677b4ce969c053dd7/view/movie/M/402330360.mp4","trailerTitle":"摩天营救\n    花絮4：英雄逆袭特辑 (中文字幕)","trailerDate":"2018-07-06","trailerPoster":"https://img3.doubanio.com/img/trailer/medium/2527141796.jpg?1530855477","trailerId":"bc9df110866011e890bd731ab430f780"},{"trailerMP4":"http://vt1.doubanio.com/201807131351/465b5068f4108ffd616d9deb11cb6c47/view/movie/M/402330282.mp4","trailerTitle":"摩天营救\n    花絮5：珍珠塔特辑 (中文字幕)","trailerDate":"2018-07-04","trailerPoster":"https://img1.doubanio.com/img/trailer/medium/2526986549.jpg?1530699121","trailerId":"bc98c0f0866011e890bd731ab430f780"},{"trailerMP4":"http://vt1.doubanio.com/201807131351/e848c809d2915e3aa9c94a186587ab05/view/movie/M/402330163.mp4","trailerTitle":"摩天营救\n    花絮6 (中文字幕)","trailerDate":"2018-07-01","trailerPoster":"https://img3.doubanio.com/img/trailer/medium/2526690711.jpg?","trailerId":"bc92f490866011e890bd731ab430f780"},{"trailerMP4":"http://vt1.doubanio.com/201807131351/72b4f4b27d76ef82b9af8d2ed11789d5/view/movie/M/402330101.mp4","trailerTitle":"摩天营救\n    花絮7 (中文字幕)","trailerDate":"2018-06-29","trailerPoster":"https://img3.doubanio.com/img/trailer/medium/2526492715.jpg?1530260796","trailerId":"bca1e8b0866011e890bd731ab430f780"},{"trailerMP4":"http://vt1.doubanio.com/201807131351/8a059b05f05e56af25e82b88361de313/view/movie/M/402310760.mp4","trailerTitle":"摩天营救\n    花絮8：儿童节特辑 (中文字幕)","trailerDate":"2018-06-01","trailerPoster":"https://img3.doubanio.com/img/trailer/medium/2523696406.jpg?","trailerId":"bc9c6a70866011e890bd731ab430f780"},{"trailerMP4":"http://vt1.doubanio.com/201807131351/d03bd51f71da22dc8bcf1abbef804b29/view/movie/M/402330535.mp4","trailerTitle":"摩天营救\n    其它花絮1 (中文字幕)","trailerDate":"2018-07-11","trailerPoster":"https://img1.doubanio.com/img/trailer/medium/2527648927.jpg?1531298883","trailerId":"bc9f77b0866011e890bd731ab430f780"},{"trailerMP4":"http://vt1.doubanio.com/201807131351/b6eb64b73d3a32082fc0724a73d95928/view/movie/M/402330505.mp4","trailerTitle":"摩天营救\n    其它花絮2 (中文字幕)","trailerDate":"2018-07-11","trailerPoster":"https://img3.doubanio.com/img/trailer/medium/2527602883.jpg?1531301035","trailerId":"bc8a4200866011e890bd731ab430f780"},{"trailerMP4":"http://vt1.doubanio.com/201807131351/7ecfbbc5fd5d4970f00251153bbbc7ac/view/movie/M/402330324.mp4","trailerTitle":"摩天营救\n    其它花絮3：北京首映礼特辑 (中文字幕)","trailerDate":"2018-07-05","trailerPoster":"https://img3.doubanio.com/img/trailer/medium/2527054623.jpg?1530769444","trailerId":"bc90f8c0866011e890bd731ab430f780"}],"id":"26804147","trailerTitle":"摩天营救 视频"},{"trailerArray":[{"trailerMP4":"http://vt1.doubanio.com/201807131351/f196610aa9164c395f97446be2d82a4e/view/movie/M/402330434.mp4","trailerTitle":"北方一片苍茫\n    预告片1：终极版 (中文字幕)","trailerDate":"2018-07-09","trailerPoster":"https://img1.doubanio.com/img/trailer/medium/2527466658.jpg?1531128076","trailerId":"be58e780866011e890bd731ab430f780"},{"trailerMP4":"http://vt1.doubanio.com/201807131351/041b1ba14c978b6afefd27174166b1c2/view/movie/M/402300359.mp4","trailerTitle":"北方一片苍茫\n    预告片2：鹿特丹版","trailerDate":"2018-04-28","trailerPoster":"https://img3.doubanio.com/img/trailer/medium/2520568176.jpg?","trailerId":"be553e00866011e890bd731ab430f780"},{"trailerMP4":"http://vt1.doubanio.com/201807131351/2395f5a56b7162e4a62ae86c1b87587f/view/movie/M/302260937.mp4","trailerTitle":"北方一片苍茫\n    预告片3：国际版","trailerDate":"2018-01-31","trailerPoster":"https://img3.doubanio.com/img/trailer/medium/2512265734.jpg?","trailerId":"be5e8cd0866011e890bd731ab430f780"}],"id":"27079318","trailerTitle":"北方一片苍茫 视频"},{"trailerArray":[{"trailerMP4":"http://vt1.doubanio.com/201807131351/9193c6404ecd4950321fbfcc74ba1240/view/movie/M/302230574.mp4","trailerTitle":"淘气大侦探\n    台湾预告片 (中文字幕)","trailerDate":"2017-11-08","trailerPoster":"https://img3.doubanio.com/img/trailer/medium/2504375164.jpg?","trailerId":"bfc03fb0866011e890bd731ab430f780"},{"trailerMP4":"http://vt1.doubanio.com/201807131351/73dd74a27764ac1635e8d5f6e853681b/view/movie/M/402320837.mp4","trailerTitle":"淘气大侦探\n    中国先行版 (中文字幕)","trailerDate":"2018-06-25","trailerPoster":"https://img3.doubanio.com/img/trailer/medium/2526136936.jpg?1529910534","trailerId":"bfbb5db0866011e890bd731ab430f780"},{"trailerMP4":"http://vt1.doubanio.com/201807131351/5581a285ce7fea011a3f03841ab1bd0d/view/movie/M/302270921.mp4","trailerTitle":"淘气大侦探\n    电视版1","trailerDate":"2018-02-28","trailerPoster":"https://img1.doubanio.com/img/trailer/medium/2514894909.jpg?","trailerId":"bfdb8fe0866011e890bd731ab430f780"},{"trailerMP4":"http://vt1.doubanio.com/201807131351/f0d0feb837465bb024d585965ea96531/view/movie/M/302270922.mp4","trailerTitle":"淘气大侦探\n    电视版2","trailerDate":"2018-02-28","trailerPoster":"https://img1.doubanio.com/img/trailer/medium/2514894958.jpg?","trailerId":"bfb62d90866011e890bd731ab430f780"},{"trailerMP4":"http://vt1.doubanio.com/201807131351/a013542c7004cbf37fa1deeebc3a085a/view/movie/M/302280762.mp4","trailerTitle":"淘气大侦探\n    片段","trailerDate":"2018-03-17","trailerPoster":"https://img1.doubanio.com/img/trailer/medium/2516505468.jpg?","trailerId":"bfbf7c60866011e890bd731ab430f780"},{"trailerMP4":"http://vt1.doubanio.com/201807131351/28c18461aa12adc41b979e660b958e6d/view/movie/M/302280312.mp4","trailerTitle":"淘气大侦探\n    花絮：动画制作 (中文字幕)","trailerDate":"2018-03-08","trailerPoster":"https://img3.doubanio.com/img/trailer/medium/2515703990.jpg?","trailerId":"bfba7350866011e890bd731ab430f780"}],"id":"26660063","trailerTitle":"淘气大侦探 视频"},{"trailerArray":[{"trailerMP4":"http://vt1.doubanio.com/201807131351/530c2e9b15b00334f49e098819842482/view/movie/M/301720324.mp4","trailerTitle":"玛雅蜜蜂历险记\n    预告片1","trailerDate":"2015-03-05","trailerPoster":"https://img3.doubanio.com/img/trailer/medium/2230990335.jpg?","trailerId":"c1329460866011e890bd731ab430f780"},{"trailerMP4":"http://vt1.doubanio.com/201807131351/716e42394c65725974cd56f1210f6dfb/view/movie/M/301620001.mp4","trailerTitle":"玛雅蜜蜂历险记\n    德国预告片2","trailerDate":"2014-08-29","trailerPoster":"https://img3.doubanio.com/img/trailer/medium/2198023743.jpg?","trailerId":"c13664f0866011e890bd731ab430f780"}],"id":"25881500","trailerTitle":"玛雅蜜蜂历险记 视频"},{"trailerArray":[{"trailerMP4":"http://vt1.doubanio.com/201807131351/dd9f830229bfb666bda3065823af5e2f/view/movie/M/402330040.mp4","trailerTitle":"汪星卧底\n    中国预告片1：定档版 (中文字幕)","trailerDate":"2018-06-28","trailerPoster":"https://img1.doubanio.com/img/trailer/medium/2526407588.jpg?1530170199","trailerId":"c28d9080866011e890bd731ab430f780"},{"trailerMP4":"http://vt1.doubanio.com/201807131351/99f9ca5af20dca153548e95fcad87d6d/view/movie/M/302280324.mp4","trailerTitle":"汪星卧底\n    预告片2","trailerDate":"2018-03-09","trailerPoster":"https://img3.doubanio.com/img/trailer/medium/2515743422.jpg?","trailerId":"c297c9b0866011e890bd731ab430f780"},{"trailerMP4":"http://vt1.doubanio.com/201807131351/6c0188b2420caf727bb04b47acd0de9f/view/movie/M/302260112.mp4","trailerTitle":"汪星卧底\n    预告片3","trailerDate":"2018-01-13","trailerPoster":"https://img1.doubanio.com/img/trailer/medium/2510465859.jpg?","trailerId":"c28e2cc0866011e890bd731ab430f780"},{"trailerMP4":"http://vt1.doubanio.com/201807131351/dc4fbfa9bca7e1f9b2aaadd4508a43af/view/movie/M/402330285.mp4","trailerTitle":"汪星卧底\n    其它花絮：采访特辑 (中文字幕)","trailerDate":"2018-07-04","trailerPoster":"https://img1.doubanio.com/img/trailer/medium/2526986777.jpg?1530699005","trailerId":"c2888770866011e890bd731ab430f780"}],"id":"26930056","trailerTitle":"汪星卧底 视频"},{"trailerArray":[{"trailerMP4":"http://vt1.doubanio.com/201807131351/4cee39a93cfe6ff6917a133ced8ed7e6/view/movie/M/402330466.mp4","trailerTitle":"兄弟班\n    预告片1：终极版 (中文字幕)","trailerDate":"2018-07-10","trailerPoster":"https://img3.doubanio.com/img/trailer/medium/2527544581.jpg?1531203245","trailerId":"c3eece30866011e890bd731ab430f780"},{"trailerMP4":"http://vt1.doubanio.com/201807131351/73560ff9e44efa469bb751655a59c944/view/movie/M/402320918.mp4","trailerTitle":"兄弟班\n    预告片2：前朋友版 (中文字幕)","trailerDate":"2018-06-26","trailerPoster":"https://img3.doubanio.com/img/trailer/medium/2526216606.jpg?1529987939","trailerId":"c3efb890866011e890bd731ab430f780"},{"trailerMP4":"http://vt1.doubanio.com/201807131351/d0f61e51926890a5fc7b1cd78f0570d2/view/movie/M/402320602.mp4","trailerTitle":"兄弟班\n    预告片3 (中文字幕)","trailerDate":"2018-06-19","trailerPoster":"https://img3.doubanio.com/img/trailer/medium/2525526202.jpg?1529993717","trailerId":"c3e77b30866011e890bd731ab430f780"},{"trailerMP4":"http://vt1.doubanio.com/201807131351/191b14d292510a3ea0e7ae2ee0f312fa/view/movie/M/402320317.mp4","trailerTitle":"兄弟班\n    内地预告片4 (中文字幕)","trailerDate":"2018-06-12","trailerPoster":"https://img3.doubanio.com/img/trailer/medium/2524715061.jpg?","trailerId":"c3f33b00866011e890bd731ab430f780"},{"trailerMP4":"http://vt1.doubanio.com/201807131351/f57047281c4633d584094d653d7e61a3/view/movie/M/402330366.mp4","trailerTitle":"兄弟班\n    MV：推广曲《千载不变》 (中文字幕)","trailerDate":"2018-07-06","trailerPoster":"https://img3.doubanio.com/img/trailer/medium/2527142402.jpg?1530853640","trailerId":"c3f3fe50866011e890bd731ab430f780"}],"id":"26988003","trailerTitle":"兄弟班 视频"},{"trailerArray":[{"trailerMP4":"http://vt1.doubanio.com/201807131351/33294c904c633721dcffe918798ff006/view/movie/M/302280258.mp4","trailerTitle":"午夜幽灵\n    先行版 (中文字幕)","trailerDate":"2018-03-07","trailerPoster":"https://img3.doubanio.com/img/trailer/medium/2515614481.jpg?","trailerId":"c549ca50866011e890bd731ab430f780"}],"id":"30128986","trailerTitle":"午夜幽灵 视频"},{"trailerArray":[],"id":"30262110","trailerTitle":"闺蜜的战争 视频"},{"trailerArray":[],"id":"27158277","trailerTitle":"产科男生 视频"},{"trailerArray":[{"trailerMP4":"http://vt1.doubanio.com/201807131351/9d4264b73e8603ba69b8e1f4be549e64/view/movie/M/402310755.mp4","trailerTitle":"神奇马戏团之动物饼干\n    中国预告片1：魔力版 (中文字幕)","trailerDate":"2018-06-01","trailerPoster":"https://img3.doubanio.com/img/trailer/medium/2523696073.jpg?","trailerId":"c90e7370866011e890bd731ab430f780"},{"trailerMP4":"http://vt1.doubanio.com/201807131351/4e0a687b2818e5cbeb40d0418e3baa7d/view/movie/M/402300450.mp4","trailerTitle":"神奇马戏团之动物饼干\n    预告片2：定档版 (中文字幕)","trailerDate":"2018-05-03","trailerPoster":"https://img3.doubanio.com/img/trailer/medium/2521045753.jpg?","trailerId":"c90a54c0866011e890bd731ab430f780"},{"trailerMP4":"http://vt1.doubanio.com/201807131351/51950fcf465de4909ef47d564872bf52/view/movie/M/402330524.mp4","trailerTitle":"神奇马戏团之动物饼干\n    花絮：配音特辑 (中文字幕)","trailerDate":"2018-07-11","trailerPoster":"https://img3.doubanio.com/img/trailer/medium/2527641056.jpg?1531292460","trailerId":"c90599d0866011e890bd731ab430f780"},{"trailerMP4":"http://vt1.doubanio.com/201807131351/cca3e37e1b3e48f4e8eb87fb81b878b7/view/movie/M/402330662.mp4","trailerTitle":"神奇马戏团之动物饼干\n    MV1：周笔畅献唱中文主题曲《闪亮的魔法》 (中文字幕)","trailerDate":"2018-07-13","trailerPoster":"https://img3.doubanio.com/img/trailer/medium/2527814211.jpg?1531456833","trailerId":"c90c9eb0866011e890bd731ab430f780"},{"trailerMP4":"http://vt1.doubanio.com/201807131351/b8d83ce05e72d01afe77ca679130e2c3/view/movie/M/402320680.mp4","trailerTitle":"神奇马戏团之动物饼干\n    MV2：宣传曲《嗷嗷嗷》 (中文字幕)","trailerDate":"2018-06-21","trailerPoster":"https://img3.doubanio.com/img/trailer/medium/2525717146.jpg?1529902562","trailerId":"c90831e0866011e890bd731ab430f780"}],"id":"26253783","trailerTitle":"神奇马戏团之动物饼干 视频"},{"trailerArray":[{"trailerMP4":"http://vt1.doubanio.com/201807131351/ec6feb26813a5fd1f62aede56a8bf19d/view/movie/M/402330325.mp4","trailerTitle":"狄仁杰之四大天王\n    预告片1：背水一战版 (中文字幕)","trailerDate":"2018-07-05","trailerPoster":"https://img3.doubanio.com/img/trailer/medium/2527054753.jpg?","trailerId":"ca8c87f0866011e890bd731ab430f780"},{"trailerMP4":"http://vt1.doubanio.com/201807131351/fe06833df792b7ceb9cf0022dbc191af/view/movie/M/402320838.mp4","trailerTitle":"狄仁杰之四大天王\n    预告片2：天王现身版 (中文字幕)","trailerDate":"2018-06-25","trailerPoster":"https://img3.doubanio.com/img/trailer/medium/2526137676.jpg?1529911031","trailerId":"ca7d6cc0866011e890bd731ab430f780"},{"trailerMP4":"http://vt1.doubanio.com/201807131351/205b387b262a00fdee686c403ccef43f/view/movie/M/302210792.mp4","trailerTitle":"狄仁杰之四大天王\n    预告片3：真相不白版 (中文字幕)","trailerDate":"2017-09-22","trailerPoster":"https://img3.doubanio.com/img/trailer/medium/2499767152.jpg?","trailerId":"cad79ab0866011e890bd731ab430f780"},{"trailerMP4":"http://vt1.doubanio.com/201807131351/587ec732e618ff30edd3b303124f0a5b/view/movie/M/402300245.mp4","trailerTitle":"狄仁杰之四大天王\n    先行版 (中文字幕)","trailerDate":"2018-04-25","trailerPoster":"https://img1.doubanio.com/img/trailer/medium/2520334127.jpg?","trailerId":"ca897ab0866011e890bd731ab430f780"},{"trailerMP4":"http://vt1.doubanio.com/201807131351/ecac20b5d1288c7b924d9a2c95d2dcba/view/movie/M/402320616.mp4","trailerTitle":"狄仁杰之四大天王\n    其它预告片：大唐神器亢龙锏 (中文字幕)","trailerDate":"2018-06-20","trailerPoster":"https://img1.doubanio.com/img/trailer/medium/2525590378.jpg?","trailerId":"ca79ea50866011e890bd731ab430f780"},{"trailerMP4":"http://vt1.doubanio.com/201807131351/5be99a3447c6e5e72a6d52f72db094a7/view/movie/M/402330597.mp4","trailerTitle":"狄仁杰之四大天王\n    花絮1 (中文字幕)","trailerDate":"2018-07-12","trailerPoster":"https://img1.doubanio.com/img/trailer/medium/2527752127.jpg?1531392242","trailerId":"ca6e5190866011e890bd731ab430f780"},{"trailerMP4":"http://vt1.doubanio.com/201807131351/784cf78c787de3b8d8b97c54f0e470a8/view/movie/M/402330527.mp4","trailerTitle":"狄仁杰之四大天王\n    花絮2：九亿少女的梦特辑 (中文字幕)","trailerDate":"2018-07-11","trailerPoster":"https://img3.doubanio.com/img/trailer/medium/2527641751.jpg?1531291872","trailerId":"ca6fd830866011e890bd731ab430f780"},{"trailerMP4":"http://vt1.doubanio.com/201807131351/a7f933a03bb33e09245a959682e5d3b8/view/movie/M/402330362.mp4","trailerTitle":"狄仁杰之四大天王\n    花絮3：争气朋克少女特辑 (中文字幕)","trailerDate":"2018-07-06","trailerPoster":"https://img3.doubanio.com/img/trailer/medium/2527141912.jpg?","trailerId":"ca755670866011e890bd731ab430f780"},{"trailerMP4":"http://vt1.doubanio.com/201807131351/eda2a55ed1449ba71b659cd9acf81b14/view/movie/M/402330067.mp4","trailerTitle":"狄仁杰之四大天王\n    花絮4 (中文字幕)","trailerDate":"2018-06-28","trailerPoster":"https://img1.doubanio.com/img/trailer/medium/2526441668.jpg?","trailerId":"ca772b30866011e890bd731ab430f780"},{"trailerMP4":"http://vt1.doubanio.com/201807131351/815c6ee74608f0d530408fd04c896465/view/movie/M/402320984.mp4","trailerTitle":"狄仁杰之四大天王\n    花絮5：武则天特辑 (中文字幕)","trailerDate":"2018-06-27","trailerPoster":"https://img3.doubanio.com/img/trailer/medium/2526314013.jpg?","trailerId":"ca72e570866011e890bd731ab430f780"},{"trailerMP4":"http://vt1.doubanio.com/201807131351/a06555a9b2ca70b3169cc5ad3935e3fc/view/movie/M/402310450.mp4","trailerTitle":"狄仁杰之四大天王\n    花絮6：神探回归特辑 (中文字幕)","trailerDate":"2018-05-24","trailerPoster":"https://img3.doubanio.com/img/trailer/medium/2522954430.jpg?","trailerId":"ca811640866011e890bd731ab430f780"},{"trailerMP4":"http://vt1.doubanio.com/201807131351/5c22f8c4331f2b71f790ea0713048d97/view/movie/M/402320624.mp4","trailerTitle":"狄仁杰之四大天王\n    其它花絮： IMAX推荐特辑 (中文字幕)","trailerDate":"2018-06-20","trailerPoster":"https://img3.doubanio.com/img/trailer/medium/2525591834.jpg?","trailerId":"ca7185e0866011e890bd731ab430f780"}],"id":"25882296","trailerTitle":"狄仁杰之四大天王 视频"},{"trailerArray":[{"trailerMP4":"http://vt1.doubanio.com/201807131351/d3fea5ce8eb9120c5f93ee3279edb759/view/movie/M/402330361.mp4","trailerTitle":"西虹市首富\n    预告片1：百变首富版 (中文字幕)","trailerDate":"2018-07-06","trailerPoster":"https://img1.doubanio.com/img/trailer/medium/2527141847.jpg?","trailerId":"cc424e40866011e890bd731ab430f780"},{"trailerMP4":"http://vt1.doubanio.com/201807131351/307da36d7260a9d5d4ad43b6f7940403/view/movie/M/402320859.mp4","trailerTitle":"西虹市首富\n    预告片2：主创推荐版 (中文字幕)","trailerDate":"2018-06-25","trailerPoster":"https://img3.doubanio.com/img/trailer/medium/2526149462.jpg?1529918217","trailerId":"cc453470866011e890bd731ab430f780"},{"trailerMP4":"http://vt1.doubanio.com/201807131351/19cbf12b0dffbb7e2087102a920bcf06/view/movie/M/402320030.mp4","trailerTitle":"西虹市首富\n    预告片3：特笑版 (中文字幕)","trailerDate":"2018-06-06","trailerPoster":"https://img1.doubanio.com/img/trailer/medium/2524221309.jpg?","trailerId":"cc5a9130866011e890bd731ab430f780"},{"trailerMP4":"http://vt1.doubanio.com/201807131351/9cdcde4a7b4da4f76aa79f1a8ad302eb/view/movie/M/402310173.mp4","trailerTitle":"西虹市首富\n    预告片4：特笑大片","trailerDate":"2018-05-18","trailerPoster":"https://img3.doubanio.com/img/trailer/medium/2522456574.jpg?","trailerId":"cc586e50866011e890bd731ab430f780"},{"trailerMP4":"http://vt1.doubanio.com/201807131351/3f3449e8d5d14c970e510daa4dd2af8e/view/movie/M/402330327.mp4","trailerTitle":"西虹市首富\n    其它预告片 (中文字幕)","trailerDate":"2018-07-05","trailerPoster":"https://img3.doubanio.com/img/trailer/medium/2527062942.jpg?1530774020","trailerId":"cc4338a0866011e890bd731ab430f780"},{"trailerMP4":"http://vt1.doubanio.com/201807131351/5188c570694893f1dd9d599553b04f4c/view/movie/M/402320506.mp4","trailerTitle":"西虹市首富\n    花絮：魔音特辑 (中文字幕)","trailerDate":"2018-06-15","trailerPoster":"https://img1.doubanio.com/img/trailer/medium/2525046609.jpg?","trailerId":"cc442300866011e890bd731ab430f780"}],"id":"27605698","trailerTitle":"西虹市首富 视频"},{"trailerArray":[{"trailerMP4":"http://vt1.doubanio.com/201807131351/a896ed448ca394fceeecf9a3f2728b36/view/movie/M/402310757.mp4","trailerTitle":"昨日青空\n    预告片1 (中文字幕)","trailerDate":"2018-06-01","trailerPoster":"https://img3.doubanio.com/img/trailer/medium/2523696213.jpg?","trailerId":"cdc3be20866011e890bd731ab430f780"},{"trailerMP4":"http://vt1.doubanio.com/201807131351/0746a5e42af6442906b595098ed7517c/view/movie/M/302200018.mp4","trailerTitle":"昨日青空\n    预告片2 (中文字幕)","trailerDate":"2017-08-03","trailerPoster":"https://img3.doubanio.com/img/trailer/medium/2494953073.jpg?","trailerId":"cdbc4410866011e890bd731ab430f780"},{"trailerMP4":"http://vt1.doubanio.com/201807131351/523d21711d63a0b21d842d03f4272afc/view/movie/M/402330179.mp4","trailerTitle":"昨日青空\n    MV1：青春告白曲《来不及勇敢》 (中文字幕)","trailerDate":"2018-07-02","trailerPoster":"https://img3.doubanio.com/img/trailer/medium/2526778622.jpg?1530511790","trailerId":"cdb42dc0866011e890bd731ab430f780"},{"trailerMP4":"http://vt1.doubanio.com/201807131351/059c77958ab6d12f3b4d69c73c7e09b3/view/movie/M/402330106.mp4","trailerTitle":"昨日青空\n    MV2：毕业曲《再见昨天》 (中文字幕)","trailerDate":"2018-06-29","trailerPoster":"https://img3.doubanio.com/img/trailer/medium/2526493695.jpg?1530257976","trailerId":"cdb6ece0866011e890bd731ab430f780"},{"trailerMP4":"http://vt1.doubanio.com/201807131351/298ddff9223cfdf3d746355e5c058bb7/view/movie/M/402310929.mp4","trailerTitle":"昨日青空\n    MV3：青春毕业曲《再见昨天》 (中文字幕)","trailerDate":"2018-06-05","trailerPoster":"https://img1.doubanio.com/img/trailer/medium/2524048767.jpg?","trailerId":"cdaf4bc0866011e890bd731ab430f780"}],"id":"26290410","trailerTitle":"昨日青空 视频"}]
+module.exports = [{"trailerArray":[],"id":"30210203","trailerTitle":"女校怪谈 视频"},{"trailerArray":[{"trailerMP4":"http://vt1.doubanio.com/201807251705/b1cd0554be91ead7e5df821fd04735be/view/movie/M/402330791.mp4","trailerTitle":"狄仁杰之四大天王\n    预告片1：终极版 (中文字幕)","trailerDate":"2018-07-17","trailerPoster":"https://img3.doubanio.com/img/trailer/medium/2528211904.jpg?","trailerId":"dc9b09208fe911e891767ba38a035dd9"},{"trailerMP4":"http://vt1.doubanio.com/201807251705/9673016ce441f2d6dcfd56f876b00326/view/movie/M/402330325.mp4","trailerTitle":"狄仁杰之四大天王\n    预告片2：背水一战版 (中文字幕)","trailerDate":"2018-07-05","trailerPoster":"https://img3.doubanio.com/img/trailer/medium/2527054753.jpg?","trailerId":"dca67ad08fe911e891767ba38a035dd9"},{"trailerMP4":"http://vt1.doubanio.com/201807251705/8df87a83dc282b7173d73684822fabcb/view/movie/M/402320838.mp4","trailerTitle":"狄仁杰之四大天王\n    预告片3：天王现身版 (中文字幕)","trailerDate":"2018-06-25","trailerPoster":"https://img3.doubanio.com/img/trailer/medium/2526137676.jpg?","trailerId":"dca060508fe911e891767ba38a035dd9"},{"trailerMP4":"http://vt1.doubanio.com/201807251705/dc04856366c55415932276bfe179055b/view/movie/M/302210792.mp4","trailerTitle":"狄仁杰之四大天王\n    预告片4：真相不白版 (中文字幕)","trailerDate":"2017-09-22","trailerPoster":"https://img3.doubanio.com/img/trailer/medium/2499767152.jpg?","trailerId":"dcada6c08fe911e891767ba38a035dd9"},{"trailerMP4":"http://vt1.doubanio.com/201807251705/8dada97ca199004defe39d11c40e209d/view/movie/M/402300245.mp4","trailerTitle":"狄仁杰之四大天王\n    先行版 (中文字幕)","trailerDate":"2018-04-25","trailerPoster":"https://img1.doubanio.com/img/trailer/medium/2520334127.jpg?","trailerId":"dc975fa08fe911e891767ba38a035dd9"},{"trailerMP4":"http://vt1.doubanio.com/201807251705/e3357a1d12bc5b1b156a15797d627cb2/view/movie/M/402330976.mp4","trailerTitle":"狄仁杰之四大天王\n    其它预告片1 (中文字幕)","trailerDate":"2018-07-20","trailerPoster":"https://img3.doubanio.com/img/trailer/medium/2528487325.jpg?","trailerId":"dc565f008fe911e891767ba38a035dd9"},{"trailerMP4":"http://vt1.doubanio.com/201807251705/feb813a0658bc2c0992383ca820380e7/view/movie/M/402330737.mp4","trailerTitle":"狄仁杰之四大天王\n    其它预告片2 (中文字幕)","trailerDate":"2018-07-16","trailerPoster":"https://img3.doubanio.com/img/trailer/medium/2528093112.jpg?","trailerId":"dc49b4d08fe911e891767ba38a035dd9"},{"trailerMP4":"http://vt1.doubanio.com/201807251705/8b2b3b4b72d7fc584085d4b3fbd7d487/view/movie/M/402320616.mp4","trailerTitle":"狄仁杰之四大天王\n    其它预告片3：大唐神器亢龙锏 (中文字幕)","trailerDate":"2018-06-20","trailerPoster":"https://img1.doubanio.com/img/trailer/medium/2525590378.jpg?","trailerId":"dc4e21a08fe911e891767ba38a035dd9"},{"trailerMP4":"http://vt1.doubanio.com/201807251705/b377463b329f87fe1c5efe347416f47f/view/movie/M/402330781.mp4","trailerTitle":"狄仁杰之四大天王\n    花絮1：容易受伤的男人特辑 (中文字幕)","trailerDate":"2018-07-17","trailerPoster":"https://img3.doubanio.com/img/trailer/medium/2528185600.jpg?","trailerId":"dc54ff708fe911e891767ba38a035dd9"},{"trailerMP4":"http://vt1.doubanio.com/201807251705/d8f8a8b80a5fd8dab9a62c81e7546f8b/view/movie/M/402330597.mp4","trailerTitle":"狄仁杰之四大天王\n    花絮2 (中文字幕)","trailerDate":"2018-07-12","trailerPoster":"https://img1.doubanio.com/img/trailer/medium/2527752127.jpg?","trailerId":"dc648fd08fe911e891767ba38a035dd9"},{"trailerMP4":"http://vt1.doubanio.com/201807251705/059ba680306ef4d5a6f0f0c8154c4ff3/view/movie/M/402330527.mp4","trailerTitle":"狄仁杰之四大天王\n    花絮3：九亿少女的梦特辑 (中文字幕)","trailerDate":"2018-07-11","trailerPoster":"https://img3.doubanio.com/img/trailer/medium/2527641751.jpg?","trailerId":"dc4c25d08fe911e891767ba38a035dd9"},{"trailerMP4":"http://vt1.doubanio.com/201807251705/070acf4ca5ee203cabae8744d0a1940c/view/movie/M/402330362.mp4","trailerTitle":"狄仁杰之四大天王\n    花絮4：争气朋克少女特辑 (中文字幕)","trailerDate":"2018-07-06","trailerPoster":"https://img3.doubanio.com/img/trailer/medium/2527141912.jpg?","trailerId":"dc91e1608fe911e891767ba38a035dd9"},{"trailerMP4":"http://vt1.doubanio.com/201807251705/d13a3c633a89103770475d43447a9d5b/view/movie/M/402330067.mp4","trailerTitle":"狄仁杰之四大天王\n    花絮5 (中文字幕)","trailerDate":"2018-06-28","trailerPoster":"https://img1.doubanio.com/img/trailer/medium/2526441668.jpg?","trailerId":"dc517d008fe911e891767ba38a035dd9"},{"trailerMP4":"http://vt1.doubanio.com/201807251705/7d3f7b0cc0b175710ed3138073b3d326/view/movie/M/402320984.mp4","trailerTitle":"狄仁杰之四大天王\n    花絮6：武则天特辑 (中文字幕)","trailerDate":"2018-06-27","trailerPoster":"https://img3.doubanio.com/img/trailer/medium/2526314013.jpg?","trailerId":"dc80a3508fe911e891767ba38a035dd9"},{"trailerMP4":"http://vt1.doubanio.com/201807251705/990a6cffe61c75014577ae85db79589d/view/movie/M/402310450.mp4","trailerTitle":"狄仁杰之四大天王\n    花絮7：神探回归特辑 (中文字幕)","trailerDate":"2018-05-24","trailerPoster":"https://img3.doubanio.com/img/trailer/medium/2522954430.jpg?","trailerId":"dc866fb08fe911e891767ba38a035dd9"},{"trailerMP4":"http://vt1.doubanio.com/201807251705/53ed7bc5a85e4a2a9ec95085d82f52c3/view/movie/M/402320624.mp4","trailerTitle":"狄仁杰之四大天王\n    其它花絮： IMAX推荐特辑 (中文字幕)","trailerDate":"2018-06-20","trailerPoster":"https://img3.doubanio.com/img/trailer/medium/2525591834.jpg?","trailerId":"dc4f81308fe911e891767ba38a035dd9"}],"id":"25882296","trailerTitle":"狄仁杰之四大天王 视频"},{"trailerArray":[{"trailerMP4":"http://vt1.doubanio.com/201807251705/d590bc5647a9cf351df02aac4db56258/view/movie/M/402330361.mp4","trailerTitle":"西虹市首富\n    预告片1：百变首富版 (中文字幕)","trailerDate":"2018-07-06","trailerPoster":"https://img1.doubanio.com/img/trailer/medium/2527141847.jpg?","trailerId":"de16aca08fe911e891767ba38a035dd9"},{"trailerMP4":"http://vt1.doubanio.com/201807251705/3115fe45f4f11dfb40d8f1f7e3210c3b/view/movie/M/402320859.mp4","trailerTitle":"西虹市首富\n    预告片2：主创推荐版 (中文字幕)","trailerDate":"2018-06-25","trailerPoster":"https://img3.doubanio.com/img/trailer/medium/2526149462.jpg?","trailerId":"de185a508fe911e891767ba38a035dd9"},{"trailerMP4":"http://vt1.doubanio.com/201807251705/623a7939ec5f21f073f31f3743e8376e/view/movie/M/402320030.mp4","trailerTitle":"西虹市首富\n    预告片3：特笑版 (中文字幕)","trailerDate":"2018-06-06","trailerPoster":"https://img1.doubanio.com/img/trailer/medium/2524221309.jpg?","trailerId":"de21f7408fe911e891767ba38a035dd9"},{"trailerMP4":"http://vt1.doubanio.com/201807251705/d0b6392de7bf43f138d5ced7a843edb0/view/movie/M/402310173.mp4","trailerTitle":"西虹市首富\n    预告片4：特笑大片","trailerDate":"2018-05-18","trailerPoster":"https://img3.doubanio.com/img/trailer/medium/2522456574.jpg?","trailerId":"de13ed808fe911e891767ba38a035dd9"},{"trailerMP4":"http://vt1.doubanio.com/201807251705/f374454bc1ada68b6f4d8008e270ef97/view/movie/M/402330327.mp4","trailerTitle":"西虹市首富\n    其它预告片 (中文字幕)","trailerDate":"2018-07-05","trailerPoster":"https://img3.doubanio.com/img/trailer/medium/2527062942.jpg?","trailerId":"de08f1008fe911e891767ba38a035dd9"},{"trailerMP4":"http://vt1.doubanio.com/201807251705/6eefb4a44c00d2b3ece68934f8c03b1b/view/movie/M/402320506.mp4","trailerTitle":"西虹市首富\n    花絮：魔音特辑 (中文字幕)","trailerDate":"2018-06-15","trailerPoster":"https://img1.doubanio.com/img/trailer/medium/2525046609.jpg?","trailerId":"de1266e08fe911e891767ba38a035dd9"},{"trailerMP4":"http://vt1.doubanio.com/201807251705/97bc3ff329e8c5ccf5c62fdab08618ca/view/movie/M/402340143.mp4","trailerTitle":"西虹市首富\n    MV：推广曲《彩虹下面》 (中文字幕)","trailerDate":"2018-07-24","trailerPoster":"https://img3.doubanio.com/img/trailer/medium/2528850093.jpg?","trailerId":"de5a6c608fe911e891767ba38a035dd9"}],"id":"27605698","trailerTitle":"西虹市首富 视频"},{"trailerArray":[{"trailerMP4":"http://vt1.doubanio.com/201807251705/d1cc859283361a95c30a453bd4134e06/view/movie/M/402340138.mp4","trailerTitle":"萌学园：寻找盘古\n    预告片：终极版 (中文字幕)","trailerDate":"2018-07-24","trailerPoster":"https://img3.doubanio.com/img/trailer/medium/2528849466.jpg?","trailerId":"dfb4a5308fe911e891767ba38a035dd9"},{"trailerMP4":"http://vt1.doubanio.com/201807251705/5a89595b3c250e65cb242b3681d22e24/view/movie/M/402330739.mp4","trailerTitle":"萌学园：寻找盘古\n    先行版 (中文字幕)","trailerDate":"2018-07-16","trailerPoster":"https://img3.doubanio.com/img/trailer/medium/2528093465.jpg?","trailerId":"dfb1bf008fe911e891767ba38a035dd9"},{"trailerMP4":"http://vt1.doubanio.com/201807251705/fe16759a58f4457053f9c38a2acd8d48/view/movie/M/402330974.mp4","trailerTitle":"萌学园：寻找盘古\n    花絮：制作特辑 (中文字幕)","trailerDate":"2018-07-20","trailerPoster":"https://img3.doubanio.com/img/trailer/medium/2528486736.jpg?","trailerId":"dfb2a9608fe911e891767ba38a035dd9"}],"id":"26754880","trailerTitle":"萌学园：寻找盘古 视频"},{"trailerArray":[],"id":"30252429","trailerTitle":"文朝荣 视频"}]
 
 /***/ },
 /* 13 */
 /***/ function(module, exports) {
 
-module.exports = [{"url":"https://movie.douban.com/subject/30227725/","title":"小悟空","like":"160"},{"url":"https://movie.douban.com/subject/30252555/","title":"八只鸡","like":"424"},{"url":"https://movie.douban.com/subject/26804147/","title":"摩天营救","like":"5850"},{"url":"https://movie.douban.com/subject/27079318/","title":"北方一片苍茫","like":"3219"},{"url":"https://movie.douban.com/subject/26660063/","title":"淘气大侦探","like":"923"},{"url":"https://movie.douban.com/subject/25881500/","title":"玛雅蜜蜂历险记","like":"665"},{"url":"https://movie.douban.com/subject/26930056/","title":"汪星卧底","like":"368"},{"url":"https://movie.douban.com/subject/26988003/","title":"兄弟班","like":"360"},{"url":"https://movie.douban.com/subject/30128986/","title":"午夜幽灵","like":"300"},{"url":"https://movie.douban.com/subject/30262110/","title":"闺蜜的战争","like":"27"},{"url":"https://movie.douban.com/subject/27158277/","title":"产科男生","like":"24"},{"url":"https://movie.douban.com/subject/26253783/","title":"神奇马戏团之动物饼干","like":"2554"},{"url":"https://movie.douban.com/subject/25882296/","title":"狄仁杰之四大天王","like":"28448"},{"url":"https://movie.douban.com/subject/27605698/","title":"西虹市首富","like":"17320"},{"url":"https://movie.douban.com/subject/26290410/","title":"昨日青空","like":"13171"},{"url":"https://movie.douban.com/subject/30263334/","title":"解剖室灵异事件之男生宿舍","like":"54"},{"url":"https://movie.douban.com/subject/30146756/","title":"风语咒","like":"4947"},{"url":"https://movie.douban.com/subject/26754880/","title":"萌学园：寻找盘古","like":"2490"},{"url":"https://movie.douban.com/subject/27615564/","title":"的士速递5","like":"1737"},{"url":"https://movie.douban.com/subject/26767512/","title":"解码游戏","like":"840"},{"url":"https://movie.douban.com/subject/30208005/","title":"神秘世界历险记4","like":"105"},{"url":"https://movie.douban.com/subject/30156898/","title":"肆式青春","like":"2857"},{"url":"https://movie.douban.com/subject/26985127/","title":"一出好戏","like":"23629"},{"url":"https://movie.douban.com/subject/24852545/","title":"爱情公寓","like":"13306"},{"url":"https://movie.douban.com/subject/26426194/","title":"巨齿鲨","like":"4901"},{"url":"https://movie.douban.com/subject/26290398/","title":"美食大冒险之英雄烩","like":"276"},{"url":"https://movie.douban.com/subject/30125089/","title":"勇者闯魔城","like":"114"},{"url":"https://movie.douban.com/subject/26331700/","title":"大轰炸","like":"5512"},{"url":"https://movie.douban.com/subject/30122633/","title":"快把我哥带走","like":"4317"},{"url":"https://movie.douban.com/subject/26871669/","title":"如影随心","like":"3892"},{"url":"https://movie.douban.com/subject/27200988/","title":"未来机器城","like":"847"},{"url":"https://movie.douban.com/subject/30254589/","title":"最后的棒棒","like":"754"},{"url":"https://movie.douban.com/subject/27201353/","title":"大师兄","like":"567"},{"url":"https://movie.douban.com/subject/26311974/","title":"下一站：前任","like":"182"},{"url":"https://movie.douban.com/subject/30176525/","title":"深海历险记","like":"115"},{"url":"https://movie.douban.com/subject/30246086/","title":"他是一只狗","like":"81"},{"url":"https://movie.douban.com/subject/24743257/","title":"冷恋时代","like":"46"},{"url":"https://movie.douban.com/subject/27119292/","title":"大三儿","like":"1319"},{"url":"https://movie.douban.com/subject/26996640/","title":"反贪风暴3","like":"3248"},{"url":"https://movie.douban.com/subject/26881698/","title":"七袋米","like":"505"},{"url":"https://movie.douban.com/subject/30199575/","title":"让我怎么相信你","like":"250"},{"url":"https://movie.douban.com/subject/26954268/","title":"道高一丈","like":"222"},{"url":"https://movie.douban.com/subject/26730542/","title":"有五个姐姐的我就注定要单身了","like":"113"},{"url":"https://movie.douban.com/subject/27107604/","title":"天下第一镖局","like":"58"},{"url":"https://movie.douban.com/subject/30237381/","title":"惊慌失色之诡寓","like":"35"},{"url":"https://movie.douban.com/subject/30236775/","title":"旅行吧！井底之蛙","like":"77"},{"url":"https://movie.douban.com/subject/27622447/","title":"小偷家族","like":"56539"},{"url":"https://movie.douban.com/subject/26636712/","title":"蚁人2：黄蜂女现身","like":"41451"},{"url":"https://movie.douban.com/subject/26756049/","title":"我，花样女王","like":"39229"},{"url":"https://movie.douban.com/subject/26336252/","title":"碟中谍6：全面瓦解","like":"28461"},{"url":"https://movie.douban.com/subject/26916229/","title":"镰仓物语","like":"25278"},{"url":"https://movie.douban.com/subject/4864908/","title":"影","like":"23817"},{"url":"https://movie.douban.com/subject/26627736/","title":"边境杀手2：边境战士","like":"9137"},{"url":"https://movie.douban.com/subject/27140071/","title":"找到你","like":"5902"},{"url":"https://movie.douban.com/subject/26930565/","title":"营救汪星人","like":"5895"},{"url":"https://movie.douban.com/subject/26630714/","title":"精灵旅社3：疯狂假期","like":"3559"},{"url":"https://movie.douban.com/subject/26882457/","title":"断片之险途夺宝","like":"3441"},{"url":"https://movie.douban.com/subject/26309969/","title":"新乌龙院之笑闹江湖","like":"2463"},{"url":"https://movie.douban.com/subject/26816090/","title":"沉默的证人","like":"2455"},{"url":"https://movie.douban.com/subject/26790960/","title":"墨多多谜境冒险","like":"2400"},{"url":"https://movie.douban.com/subject/26425062/","title":"武林怪兽","like":"2068"},{"url":"https://movie.douban.com/subject/26792540/","title":"真相漩涡","like":"1861"},{"url":"https://movie.douban.com/subject/26728641/","title":"苏丹","like":"1745"},{"url":"https://movie.douban.com/subject/26929835/","title":"跨越8年的新娘","like":"1696"},{"url":"https://movie.douban.com/subject/27195119/","title":"李宗伟：败者为王","like":"541"},{"url":"https://movie.douban.com/subject/27662353/","title":"忠犬大营救","like":"297"},{"url":"https://movie.douban.com/subject/27192660/","title":"黑脸大包公之西夏风云","like":"193"},{"url":"https://movie.douban.com/subject/30176069/","title":"阿里巴巴三根金发","like":"64"},{"url":"https://movie.douban.com/subject/27661975/","title":"幸福魔咒","like":"62"},{"url":"https://movie.douban.com/subject/30263969/","title":"纯真年代","like":"25"},{"url":"https://movie.douban.com/subject/30259493/","title":"黑暗深处之惊魂夜","like":"24"},{"url":"https://movie.douban.com/subject/30215191/","title":"恩师","like":"58"},{"url":"https://movie.douban.com/subject/27191430/","title":"勇敢往事","like":"27"},{"url":"https://movie.douban.com/subject/26972258/","title":"江湖儿女","like":"21723"},{"url":"https://movie.douban.com/subject/26263417/","title":"一生有你","like":"745"},{"url":"https://movie.douban.com/subject/30227727/","title":"禹神传之寻找神力","like":"21"},{"url":"https://movie.douban.com/subject/27092785/","title":"李茶的姑妈","like":"2676"},{"url":"https://movie.douban.com/subject/26425063/","title":"无双","like":"1799"},{"url":"https://movie.douban.com/subject/26744597/","title":"云南虫谷","like":"1531"},{"url":"https://movie.douban.com/subject/27149818/","title":"胖子行动队","like":"806"},{"url":"https://movie.douban.com/subject/26911450/","title":"山2","like":"18869"},{"url":"https://movie.douban.com/subject/27198855/","title":"护垫侠","like":"6809"},{"url":"https://movie.douban.com/subject/27135473/","title":"阳台上","like":"6354"},{"url":"https://movie.douban.com/subject/26715965/","title":"苦行僧的非凡旅程","like":"836"},{"url":"https://movie.douban.com/subject/30142649/","title":"大闹西游","like":"575"},{"url":"https://movie.douban.com/subject/30269510/","title":"相亲时代","like":"5"},{"url":"https://movie.douban.com/subject/26935283/","title":"阴阳师","like":"6488"},{"url":"https://movie.douban.com/subject/30208004/","title":"阿凡提之奇缘历险","like":"99"},{"url":"https://movie.douban.com/subject/27620911/","title":"灵魂的救赎","like":"32"},{"url":"https://movie.douban.com/subject/27008394/","title":"功夫联盟","like":"922"},{"url":"https://movie.douban.com/subject/27663881/","title":"燃点","like":"568"},{"url":"https://movie.douban.com/subject/27107609/","title":"过往的梦","like":"37"},{"url":"https://movie.douban.com/subject/27199577/","title":"银魂2","like":"4650"},{"url":"https://movie.douban.com/subject/26961483/","title":"碟仙实录","like":"349"},{"url":"https://movie.douban.com/subject/27155276/","title":"素人特工","like":"441"},{"url":"https://movie.douban.com/subject/27179414/","title":"人间·喜剧","like":"1663"},{"url":"https://movie.douban.com/subject/1652592/","title":"阿丽塔：战斗天使","like":"11751"},{"url":"https://movie.douban.com/subject/30217371/","title":"动物特工局","like":"648"},{"url":"https://movie.douban.com/subject/25986662/","title":"疯狂的外星人","like":"16727"},{"url":"https://movie.douban.com/subject/27065898/","title":"神探蒲松龄之兰若仙踪","like":"1212"},{"url":"https://movie.douban.com/subject/26277338/","title":"八仙之各显神通","like":"944"},{"url":"https://movie.douban.com/subject/30187577/","title":"误入江湖","like":"463"},{"url":"https://movie.douban.com/subject/30170448/","title":"迦百农","like":"3429"},{"url":"https://movie.douban.com/subject/24743117/","title":"画皮Ⅲ","like":"5946"},{"url":"https://movie.douban.com/subject/30226052/","title":"八仙过海","like":"22"},{"url":"https://movie.douban.com/subject/26986120/","title":"摸金校尉之九幽将军","like":"13486"},{"url":"https://movie.douban.com/subject/30264504/","title":"异界","like":"9"},{"url":"https://movie.douban.com/subject/27619748/","title":"唐人街探案3","like":"8813"},{"url":"https://movie.douban.com/subject/26986136/","title":"黑色假面","like":"1676"}]
+module.exports = [{"url":"https://movie.douban.com/subject/30210203/","title":"女校怪谈","like":"138"},{"url":"https://movie.douban.com/subject/25882296/","title":"狄仁杰之四大天王","like":"47741"},{"url":"https://movie.douban.com/subject/27605698/","title":"西虹市首富","like":"42151"},{"url":"https://movie.douban.com/subject/26754880/","title":"萌学园：寻找盘古","like":"2623"},{"url":"https://movie.douban.com/subject/30252429/","title":"文朝荣","like":"26"}]
 
 /***/ },
 /* 14 */
@@ -523,7 +521,7 @@ var _this = this;
 function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { step("next", value); }, function (err) { step("throw", err); }); } } return step("next"); }); }; }
 
 var movieFile = __webpack_require__(27);
-var axios = __webpack_require__(30);
+var axios = __webpack_require__(31);
 var doubanAPI = 'http://api.douban.com/v2/movie/';
 var request = __webpack_require__(5);
 var qiniuFn = __webpack_require__(28);
@@ -630,7 +628,7 @@ var fetchFilms = function () {
             options = {
               method: 'GET',
               // uri: `${doubanAPI}coming_soon?count=100`
-              uri: doubanAPI + 'coming_soon?count=10'
+              uri: doubanAPI + 'coming_soon?count=5'
               // 代理地址
             };
             random = Math.floor(Math.random() * proxy.length);
@@ -879,19 +877,19 @@ var fetchGenre = function fetchGenre(genre, filmId) {
 
 // 读取本地爬取电影详细信息添加到数据空中
 var crawlerDetail = function () {
-  var _ref6 = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_E_filmGo_filmGoAdmin_node_modules_babel_runtime_regenerator___default.a.mark(function _callee9(ctx, next) {
-    var filmDetail, filmTrailer, filmTrailerDetail;
-    return __WEBPACK_IMPORTED_MODULE_0_E_filmGo_filmGoAdmin_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee9$(_context9) {
+  var _ref6 = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_E_filmGo_filmGoAdmin_node_modules_babel_runtime_regenerator___default.a.mark(function _callee10(ctx, next) {
+    var filmDetail, filmStagePhotos, filmTrailerDetail;
+    return __WEBPACK_IMPORTED_MODULE_0_E_filmGo_filmGoAdmin_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee10$(_context10) {
       while (1) {
-        switch (_context9.prev = _context9.next) {
+        switch (_context10.prev = _context10.next) {
           case 0:
             filmDetail = __webpack_require__(10);
-            filmTrailer = __webpack_require__(11);
+            filmStagePhotos = __webpack_require__(11);
             filmTrailerDetail = __webpack_require__(12);
 
             // 添加爬取的上映日期、播放时长、电影封面
 
-            _context9.next = 5;
+            _context10.next = 5;
             return new Promise(function () {
               var _ref7 = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_E_filmGo_filmGoAdmin_node_modules_babel_runtime_regenerator___default.a.mark(function _callee7(resolve, reject) {
                 var i, film, j, k, item, l, _item;
@@ -900,22 +898,23 @@ var crawlerDetail = function () {
                   while (1) {
                     switch (_context7.prev = _context7.next) {
                       case 0:
+                        _context7.prev = 0;
                         i = 0;
 
-                      case 1:
+                      case 2:
                         if (!(i < filmDetail.length)) {
-                          _context7.next = 16;
+                          _context7.next = 17;
                           break;
                         }
 
-                        _context7.next = 4;
+                        _context7.next = 5;
                         return Film.findOne({ id: filmDetail[i].id }).exec();
 
-                      case 4:
+                      case 5:
                         film = _context7.sent;
 
                         if (!film) {
-                          _context7.next = 13;
+                          _context7.next = 14;
                           break;
                         }
 
@@ -944,24 +943,34 @@ var crawlerDetail = function () {
                           }
                         }
 
-                        _context7.next = 13;
+                        _context7.next = 14;
                         return film.save();
 
-                      case 13:
+                      case 14:
                         i++;
-                        _context7.next = 1;
+                        _context7.next = 2;
                         break;
 
-                      case 16:
+                      case 17:
+                        _context7.next = 22;
+                        break;
+
+                      case 19:
+                        _context7.prev = 19;
+                        _context7.t0 = _context7['catch'](0);
+
+                        console.log(_context7.t0);
+
+                      case 22:
                         console.log('\u7535\u5F71\u7F3A\u5931\u4E0A\u6620\u65E5\u671F\u3001\u64AD\u653E\u65F6\u957F\u3001\u7535\u5F71\u5C01\u9762\u4FE1\u606F\u8865\u5145\u5B8C\u6BD5');
                         return _context7.abrupt('return', resolve());
 
-                      case 18:
+                      case 24:
                       case 'end':
                         return _context7.stop();
                     }
                   }
-                }, _callee7, _this);
+                }, _callee7, _this, [[0, 19]]);
               }));
 
               return function (_x8, _x9) {
@@ -970,7 +979,7 @@ var crawlerDetail = function () {
             }());
 
           case 5:
-            _context9.next = 7;
+            _context10.next = 7;
             return new Promise(function () {
               var _ref8 = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_E_filmGo_filmGoAdmin_node_modules_babel_runtime_regenerator___default.a.mark(function _callee8(resolve, reject) {
                 var i, film, j;
@@ -981,43 +990,39 @@ var crawlerDetail = function () {
                         i = 0;
 
                       case 1:
-                        if (!(i < filmTrailerDetail.length)) {
-                          _context8.next = 9;
+                        if (!(i < filmStagePhotos.length)) {
+                          _context8.next = 12;
                           break;
                         }
 
                         _context8.next = 4;
-                        return Film.findOne({ id: filmTrailerDetail[i].id }).exec();
+                        return Film.findOne({ id: filmStagePhotos[i].id }).exec();
 
                       case 4:
                         film = _context8.sent;
 
-
-                        if (film) {
-                          for (j = 0; j < filmTrailerDetail[i].trailerArray.length; j++) {
-                            film.trailerArray.push({
-                              trailerMP4: filmTrailerDetail[i].trailerArray[j].trailerId + '\u89C6\u9891',
-                              trailerTitle: '' + filmTrailerDetail[i].trailerArray[j].trailerTitle,
-                              trailerDate: '' + filmTrailerDetail[i].trailerArray[j].trailerDate,
-                              trailerPoster: filmTrailerDetail[i].trailerArray[j].trailerId + '\u5C01\u9762\u56FE',
-                              trailerId: filmTrailerDetail[i].trailerArray[j].trailerId
-                            });
-                          }
-
-                          film.save();
+                        if (!film) {
+                          _context8.next = 9;
+                          break;
                         }
 
-                      case 6:
+                        for (j = 0; j < filmStagePhotos[i].stagePhotos.length; j++) {
+                          film.filmStagePhotos.push('' + filmStagePhotos[i].id + j + 'stagePhotoImg.jpg');
+                        }
+                        _context8.next = 9;
+                        return film.save();
+
+                      case 9:
                         i++;
                         _context8.next = 1;
                         break;
 
-                      case 9:
+                      case 12:
 
-                        console.log('\u7535\u5F71\u9884\u544A\u7247\u8BE6\u60C5\u8865\u5145\u5B8C\u6BD5');
+                        console.log('\u7535\u5F71\u5267\u7167\u8865\u5145\u5B8C\u6BD5');
                         return _context8.abrupt('return', resolve());
 
-                      case 11:
+                      case 14:
                       case 'end':
                         return _context8.stop();
                     }
@@ -1031,11 +1036,78 @@ var crawlerDetail = function () {
             }());
 
           case 7:
+            _context10.next = 9;
+            return new Promise(function () {
+              var _ref9 = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_E_filmGo_filmGoAdmin_node_modules_babel_runtime_regenerator___default.a.mark(function _callee9(resolve, reject) {
+                var i, film, j;
+                return __WEBPACK_IMPORTED_MODULE_0_E_filmGo_filmGoAdmin_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee9$(_context9) {
+                  while (1) {
+                    switch (_context9.prev = _context9.next) {
+                      case 0:
+                        i = 0;
+
+                      case 1:
+                        if (!(i < filmTrailerDetail.length)) {
+                          _context9.next = 12;
+                          break;
+                        }
+
+                        _context9.next = 4;
+                        return Film.findOne({ id: filmTrailerDetail[i].id }).exec();
+
+                      case 4:
+                        film = _context9.sent;
+
+                        if (!film) {
+                          _context9.next = 9;
+                          break;
+                        }
+
+                        try {
+                          for (j = 0; j < filmTrailerDetail[i].trailerArray.length; j++) {
+                            film.trailerArray.push({
+                              trailerMP4: filmTrailerDetail[i].trailerArray[j].trailerId + '\u89C6\u9891',
+                              trailerTitle: '' + filmTrailerDetail[i].trailerArray[j].trailerTitle,
+                              trailerDate: '' + filmTrailerDetail[i].trailerArray[j].trailerDate,
+                              trailerPoster: filmTrailerDetail[i].trailerArray[j].trailerId + '\u5C01\u9762\u56FE',
+                              trailerId: filmTrailerDetail[i].trailerArray[j].trailerId
+                            });
+                          }
+                        } catch (e) {
+                          console.log(e);
+                        }
+                        _context9.next = 9;
+                        return film.save();
+
+                      case 9:
+                        i++;
+                        _context9.next = 1;
+                        break;
+
+                      case 12:
+
+                        console.log('\u7535\u5F71\u9884\u544A\u7247\u8BE6\u60C5\u8865\u5145\u5B8C\u6BD5');
+                        return _context9.abrupt('return', resolve());
+
+                      case 14:
+                      case 'end':
+                        return _context9.stop();
+                    }
+                  }
+                }, _callee9, _this);
+              }));
+
+              return function (_x12, _x13) {
+                return _ref9.apply(this, arguments);
+              };
+            }());
+
+          case 9:
           case 'end':
-            return _context9.stop();
+            return _context10.stop();
         }
       }
-    }, _callee9, _this);
+    }, _callee10, _this);
   }));
 
   return function crawlerDetail(_x6, _x7) {
@@ -1044,16 +1116,18 @@ var crawlerDetail = function () {
 }();
 
 var uploadQiniuFile = function () {
-  var _ref9 = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_E_filmGo_filmGoAdmin_node_modules_babel_runtime_regenerator___default.a.mark(function _callee10() {
-    var filmDetail, filmTrailerDetail, i, j, _i, _j;
+  var _ref10 = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_E_filmGo_filmGoAdmin_node_modules_babel_runtime_regenerator___default.a.mark(function _callee11() {
+    var filmDetail, filmStagePhotos, filmTrailerDetail, i, j, _i, _j, _i2, _j2;
 
-    return __WEBPACK_IMPORTED_MODULE_0_E_filmGo_filmGoAdmin_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee10$(_context10) {
+    return __WEBPACK_IMPORTED_MODULE_0_E_filmGo_filmGoAdmin_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee11$(_context11) {
       while (1) {
-        switch (_context10.prev = _context10.next) {
+        switch (_context11.prev = _context11.next) {
           case 0:
-            filmDetail = __webpack_require__(10);
-            filmTrailerDetail = __webpack_require__(12);
+            filmDetail = __webpack_require__(10); // 电影封面、演职人员照片
 
+            filmStagePhotos = __webpack_require__(11); // 剧照
+
+            filmTrailerDetail = __webpack_require__(12); // 预告片
 
             for (i = 0; i < filmDetail.length; i++) {
               // 上传电影封面照
@@ -1064,59 +1138,140 @@ var uploadQiniuFile = function () {
               }
             }
 
-            for (_i = 0; _i < filmTrailerDetail.length; _i++) {
-              for (_j = 0; _j < filmTrailerDetail[_i].trailerArray.length; _j++) {
-                qiniuFn.uploadQiniuFile(filmTrailerDetail[_i].trailerArray[_j].trailerPoster, filmTrailerDetail[_i].trailerArray[_j].trailerId + '\u5C01\u9762\u56FE');
-                qiniuFn.uploadQiniuFile(filmTrailerDetail[_i].trailerArray[_j].trailerMP4, filmTrailerDetail[_i].trailerArray[_j].trailerId + '\u89C6\u9891');
-              }
-            }
-
-          case 4:
-          case 'end':
-            return _context10.stop();
-        }
-      }
-    }, _callee10, _this);
-  }));
-
-  return function uploadQiniuFile() {
-    return _ref9.apply(this, arguments);
-  };
-}();
-
-/* 定时更新内容 */
-var updateMovie = function () {
-  var _ref10 = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_E_filmGo_filmGoAdmin_node_modules_babel_runtime_regenerator___default.a.mark(function _callee11() {
-    return __WEBPACK_IMPORTED_MODULE_0_E_filmGo_filmGoAdmin_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee11$(_context11) {
-      while (1) {
-        switch (_context11.prev = _context11.next) {
-          case 0:
-            console.time("sort");
-            _context11.next = 3;
-            return movieFile.runMovieDetail();
-
-          case 3:
-            _context11.next = 5;
-            return movieFile.runMovieTrailer();
+            _i = 0;
 
           case 5:
-            _context11.next = 7;
-            return movieFile.runMovieTrailerDetail();
+            if (!(_i < filmStagePhotos.length)) {
+              _context11.next = 24;
+              break;
+            }
 
-          case 7:
-            _context11.next = 9;
-            return movieFile.runMoviePhotos();
+            _context11.prev = 6;
+            _j = 0;
 
-          case 9:
+          case 8:
+            if (!(_j < filmStagePhotos[_i].stagePhotos.length)) {
+              _context11.next = 16;
+              break;
+            }
+
             _context11.next = 11;
-            return fetchFilms();
+            return qiniuFn.uploadQiniuFile(filmStagePhotos[_i].stagePhotos[_j], '' + filmStagePhotos[_i].id + _j + 'stagePhotoImg.jpg');
 
           case 11:
             _context11.next = 13;
+            return qiniuFn.uploadQiniuFile(filmStagePhotos[_i].stagePhotos[_j].replace(/sqxs/, 'l'), '' + filmStagePhotos[_i].id + _j + 'stagePhotoImgBig.jpg');
+
+          case 13:
+            _j++;
+            _context11.next = 8;
+            break;
+
+          case 16:
+            _context11.next = 21;
+            break;
+
+          case 18:
+            _context11.prev = 18;
+            _context11.t0 = _context11['catch'](6);
+
+            console.log(_context11.t0);
+
+          case 21:
+            _i++;
+            _context11.next = 5;
+            break;
+
+          case 24:
+            _i2 = 0;
+
+          case 25:
+            if (!(_i2 < filmTrailerDetail.length)) {
+              _context11.next = 44;
+              break;
+            }
+
+            _context11.prev = 26;
+            _j2 = 0;
+
+          case 28:
+            if (!(_j2 < filmTrailerDetail[_i2].trailerArray.length)) {
+              _context11.next = 36;
+              break;
+            }
+
+            _context11.next = 31;
+            return qiniuFn.uploadQiniuFile(filmTrailerDetail[_i2].trailerArray[_j2].trailerPoster, filmTrailerDetail[_i2].trailerArray[_j2].trailerId + '\u5C01\u9762\u56FE');
+
+          case 31:
+            _context11.next = 33;
+            return qiniuFn.uploadQiniuFile(filmTrailerDetail[_i2].trailerArray[_j2].trailerMP4, filmTrailerDetail[_i2].trailerArray[_j2].trailerId + '\u89C6\u9891');
+
+          case 33:
+            _j2++;
+            _context11.next = 28;
+            break;
+
+          case 36:
+            _context11.next = 41;
+            break;
+
+          case 38:
+            _context11.prev = 38;
+            _context11.t1 = _context11['catch'](26);
+
+            console.log(_context11.t1);
+
+          case 41:
+            _i2++;
+            _context11.next = 25;
+            break;
+
+          case 44:
+          case 'end':
+            return _context11.stop();
+        }
+      }
+    }, _callee11, _this, [[6, 18], [26, 38]]);
+  }));
+
+  return function uploadQiniuFile() {
+    return _ref10.apply(this, arguments);
+  };
+}();
+/* 定时更新内容 */
+var updateMovie = function () {
+  var _ref11 = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_E_filmGo_filmGoAdmin_node_modules_babel_runtime_regenerator___default.a.mark(function _callee12() {
+    return __WEBPACK_IMPORTED_MODULE_0_E_filmGo_filmGoAdmin_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee12$(_context12) {
+      while (1) {
+        switch (_context12.prev = _context12.next) {
+          case 0:
+            console.time("sort");
+            _context12.next = 3;
+            return movieFile.runMovieDetail();
+
+          case 3:
+            _context12.next = 5;
+            return movieFile.runMovieTrailer();
+
+          case 5:
+            _context12.next = 7;
+            return movieFile.runMovieTrailerDetail();
+
+          case 7:
+            _context12.next = 9;
+            return movieFile.runMoviePhotos();
+
+          case 9:
+            _context12.next = 11;
+            return fetchFilms();
+
+          case 11:
+            _context12.next = 13;
             return crawlerDetail();
 
           case 13:
-            _context11.next = 15;
+            _context12.next = 15;
             return uploadQiniuFile();
 
           case 15:
@@ -1124,14 +1279,14 @@ var updateMovie = function () {
 
           case 16:
           case 'end':
-            return _context11.stop();
+            return _context12.stop();
         }
       }
-    }, _callee11, _this);
+    }, _callee12, _this);
   }));
 
   return function updateMovie() {
-    return _ref10.apply(this, arguments);
+    return _ref11.apply(this, arguments);
   };
 }();
 module.exports = updateMovie;
@@ -1163,7 +1318,7 @@ var models = resolve(__dirname, '../database/schema');
 fs.readdirSync(models).filter(function (file) {
   return ~file.search(/^[^\.].*js$/);
 }).forEach(function (file) {
-  __webpack_require__(29)("./" + file);
+  __webpack_require__(30)("./" + file);
   // require(resolve(models,file))
 });
 
@@ -1236,10 +1391,10 @@ module.exports = database;
 "use strict";
 /* WEBPACK VAR INJECTION */(function(__dirname) {
 
-var nodemailer = __webpack_require__(37);
+var nodemailer = __webpack_require__(38);
 var fs = __webpack_require__(4);
 var path = __webpack_require__(14);
-var ejs = __webpack_require__(34);
+var ejs = __webpack_require__(35);
 
 var transporter = nodemailer.createTransport({
   // host: 'smtp.ethereal.email',
@@ -1288,7 +1443,7 @@ var _this = this;
 
 function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { step("next", value); }, function (err) { step("throw", err); }); } } return step("next"); }); }; }
 
-var router = __webpack_require__(35)();
+var router = __webpack_require__(36)();
 
 var Film = __webpack_require__(2);
 var Genre = __webpack_require__(3);
@@ -1395,7 +1550,7 @@ router.get('/api/film/poster/id', function () {
               ctx.error(10000, errMsg);
             }
             _context3.next = 4;
-            return Film.findOne({ id: filmId }, 'title releaseDate trailerArray like').exec();
+            return Film.findOne({ id: filmId }, 'title releaseDate trailerArray like id').exec();
 
           case 4:
             film = _context3.sent;
@@ -1483,13 +1638,13 @@ var _this = this;
 
 function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { step("next", value); }, function (err) { step("throw", err); }); } } return step("next"); }); }; }
 
-var rp = __webpack_require__(40);
-var cheerio = __webpack_require__(32); // Node.js版本的jquery
+var rp = __webpack_require__(41);
+var cheerio = __webpack_require__(33); // Node.js版本的jquery
 var fs = __webpack_require__(4);
 // const iconv = require('iconv-lite') // 文件编码转换
 var request = __webpack_require__(5);
 // const proxyIP = require('../middleware/request')
-var uuid = __webpack_require__(36);
+var uuid = __webpack_require__(37);
 
 var sleep = function () {
   var _ref = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_E_filmGo_filmGoAdmin_node_modules_babel_runtime_regenerator___default.a.mark(function _callee(time) {
@@ -1743,11 +1898,13 @@ var runMovieDetail = function () {
           case 16:
 
             $('.article tbody tr').each(function (index) {
-              comingMoviesLink.push({
-                url: $(this).find("a").attr('href'),
-                title: $(this).find("a").html().trim(),
-                like: $(this).find("td").eq(4).html().trim().match(/^[0-9]*/)[0]
-              });
+              if (index < 5) {
+                comingMoviesLink.push({
+                  url: $(this).find("a").attr('href'),
+                  title: $(this).find("a").html().trim(),
+                  like: $(this).find("td").eq(4).html().trim().match(/^[0-9]*/)[0]
+                });
+              }
             });
 
             console.log('\u603B\u5171\u722C\u53D6\u4E86 ' + comingMoviesLink.length + ' \u4E2A\u7535\u5F71 url');
@@ -1759,7 +1916,7 @@ var runMovieDetail = function () {
             i = 0;
 
           case 20:
-            if (!(i < 10)) {
+            if (!(i < 5)) {
               _context4.next = 32;
               break;
             }
@@ -1959,13 +2116,10 @@ var runMovieTrailer = function () {
             comingMoviesLink = __webpack_require__(13); // 全部电影的 url
 
             Trailer = [];
-
-            // for(let i = 0; i < comingMoviesLink.length ; i++) {
-
             i = 0;
 
           case 3:
-            if (!(i < 10)) {
+            if (!(i < comingMoviesLink.length)) {
               _context7.next = 15;
               break;
             }
@@ -2277,20 +2431,21 @@ var runMovieTrailerDetail = function () {
       while (1) {
         switch (_context13.prev = _context13.next) {
           case 0:
-            comingTrailerLink = __webpack_require__(11);
+            comingTrailerLink = __webpack_require__(29);
             Trailer = [];
+            _context13.prev = 2;
             i = 0;
 
-          case 3:
+          case 4:
             if (!(i < comingTrailerLink.length)) {
-              _context13.next = 15;
+              _context13.next = 16;
               break;
             }
 
-            _context13.next = 6;
+            _context13.next = 7;
             return getMovieTrailerDetail(comingTrailerLink[i]);
 
-          case 6:
+          case 7:
             trailer = _context13.sent;
 
             Trailer.push(trailer);
@@ -2298,23 +2453,33 @@ var runMovieTrailerDetail = function () {
             console.log('\u8FD9\u662F\u7B2C' + (i + 1) + '\u4E2A\u7535\u5F71\u7684\u9884\u544A\u8BE6\u7EC6\u4FE1\u606F, \u300A' + trailer.trailerTitle + '\u300B');
 
             fs.writeFileSync('./comingMovieTrailerDetail.json', JSON.stringify(Trailer, null, 2), 'utf8');
-            _context13.next = 12;
+            _context13.next = 13;
             return sleep(2);
 
-          case 12:
+          case 13:
             i++;
-            _context13.next = 3;
+            _context13.next = 4;
             break;
 
-          case 15:
+          case 16:
+            _context13.next = 21;
+            break;
+
+          case 18:
+            _context13.prev = 18;
+            _context13.t0 = _context13['catch'](2);
+
+            console.log(_context13.t0);
+
+          case 21:
             console.log('\u7535\u5F71\u9884\u544A\u8BE6\u7EC6\u5168\u90E8\u722C\u53D6\u6210\u529F, \u5171\u8BA1' + comingTrailerLink.length);
 
-          case 16:
+          case 22:
           case 'end':
             return _context13.stop();
         }
       }
-    }, _callee13, _this);
+    }, _callee13, _this, [[2, 18]]);
   }));
 
   return function runMovieTrailerDetail() {
@@ -2474,13 +2639,10 @@ var runMoviePhotos = function () {
           case 0:
             comingMoviesLink = __webpack_require__(13);
             stagePhotos = [];
-
-            // for(let i = 0; i < comingMoviesLink.length ; i++) {
-
             i = 0;
 
           case 3:
-            if (!(i < 10)) {
+            if (!(i < comingMoviesLink.length)) {
               _context16.next = 13;
               break;
             }
@@ -2523,9 +2685,9 @@ module.exports = { runMovieDetail: runMovieDetail, runMovieTrailer: runMovieTrai
 /* 28 */
 /***/ function(module, exports, __webpack_require__) {
 
-var qiniu = __webpack_require__(38);
+var qiniu = __webpack_require__(39);
 var request = __webpack_require__(5);
-var crypto = __webpack_require__(33);
+var crypto = __webpack_require__(34);
 
 var accessKey = 'LIWJTwQKsmsTvBrNLD0k-nu62diiEFKw34NfWj9P';
 var secretKey = 'R88bNThcj1GjiIY7D8BOANGUzCRJ6bTaC6DVE2t1';
@@ -2636,6 +2798,12 @@ module.exports = { uploadQiniuFile: uploadQiniuFile };
 
 /***/ },
 /* 29 */
+/***/ function(module, exports) {
+
+module.exports = [{"movieName":"女校怪谈 视频","trailerUri":[],"trailerPoster":[],"id":"30210203"},{"movieName":"狄仁杰之四大天王 视频","trailerUri":["https://movie.douban.com/trailer/233791/#content","https://movie.douban.com/trailer/233325/#content","https://movie.douban.com/trailer/232838/#content","https://movie.douban.com/trailer/221792/#content","https://movie.douban.com/trailer/230245/#content","https://movie.douban.com/trailer/233976/#content","https://movie.douban.com/trailer/233737/#content","https://movie.douban.com/trailer/232616/#content","https://movie.douban.com/trailer/233781/#content","https://movie.douban.com/trailer/233597/#content","https://movie.douban.com/trailer/233527/#content","https://movie.douban.com/trailer/233362/#content","https://movie.douban.com/trailer/233067/#content","https://movie.douban.com/trailer/232984/#content","https://movie.douban.com/trailer/231450/#content","https://movie.douban.com/trailer/232624/#content"],"trailerPoster":["https://img3.doubanio.com/img/trailer/medium/2528211904.jpg?","https://img3.doubanio.com/img/trailer/medium/2527054753.jpg?","https://img3.doubanio.com/img/trailer/medium/2526137676.jpg?","https://img3.doubanio.com/img/trailer/medium/2499767152.jpg?","https://img1.doubanio.com/img/trailer/medium/2520334127.jpg?","https://img3.doubanio.com/img/trailer/medium/2528487325.jpg?","https://img3.doubanio.com/img/trailer/medium/2528093112.jpg?","https://img1.doubanio.com/img/trailer/medium/2525590378.jpg?","https://img3.doubanio.com/img/trailer/medium/2528185600.jpg?","https://img1.doubanio.com/img/trailer/medium/2527752127.jpg?","https://img3.doubanio.com/img/trailer/medium/2527641751.jpg?","https://img3.doubanio.com/img/trailer/medium/2527141912.jpg?","https://img1.doubanio.com/img/trailer/medium/2526441668.jpg?","https://img3.doubanio.com/img/trailer/medium/2526314013.jpg?","https://img3.doubanio.com/img/trailer/medium/2522954430.jpg?","https://img3.doubanio.com/img/trailer/medium/2525591834.jpg?"],"id":"25882296"},{"movieName":"西虹市首富 视频","trailerUri":["https://movie.douban.com/trailer/233361/#content","https://movie.douban.com/trailer/232859/#content","https://movie.douban.com/trailer/232030/#content","https://movie.douban.com/trailer/231173/#content","https://movie.douban.com/trailer/233327/#content","https://movie.douban.com/trailer/232506/#content","https://movie.douban.com/trailer/234143/#content"],"trailerPoster":["https://img1.doubanio.com/img/trailer/medium/2527141847.jpg?","https://img3.doubanio.com/img/trailer/medium/2526149462.jpg?","https://img1.doubanio.com/img/trailer/medium/2524221309.jpg?","https://img3.doubanio.com/img/trailer/medium/2522456574.jpg?","https://img3.doubanio.com/img/trailer/medium/2527062942.jpg?","https://img1.doubanio.com/img/trailer/medium/2525046609.jpg?","https://img3.doubanio.com/img/trailer/medium/2528850093.jpg?"],"id":"27605698"},{"movieName":"萌学园：寻找盘古 视频","trailerUri":["https://movie.douban.com/trailer/234138/#content","https://movie.douban.com/trailer/233739/#content","https://movie.douban.com/trailer/233974/#content"],"trailerPoster":["https://img3.doubanio.com/img/trailer/medium/2528849466.jpg?","https://img3.doubanio.com/img/trailer/medium/2528093465.jpg?","https://img3.doubanio.com/img/trailer/medium/2528486736.jpg?"],"id":"26754880"},{"movieName":"文朝荣 视频","trailerUri":[],"trailerPoster":[],"id":"30252429"}]
+
+/***/ },
+/* 30 */
 /***/ function(module, exports, __webpack_require__) {
 
 var map = {
@@ -2666,77 +2834,77 @@ webpackContext.keys = function webpackContextKeys() {
 };
 webpackContext.resolve = webpackContextResolve;
 module.exports = webpackContext;
-webpackContext.id = 29;
+webpackContext.id = 30;
 
-
-/***/ },
-/* 30 */
-/***/ function(module, exports) {
-
-module.exports = require("axios");
 
 /***/ },
 /* 31 */
 /***/ function(module, exports) {
 
-module.exports = require("bcryptjs");
+module.exports = require("axios");
 
 /***/ },
 /* 32 */
 /***/ function(module, exports) {
 
-module.exports = require("cheerio");
+module.exports = require("bcryptjs");
 
 /***/ },
 /* 33 */
 /***/ function(module, exports) {
 
-module.exports = require("crypto");
+module.exports = require("cheerio");
 
 /***/ },
 /* 34 */
 /***/ function(module, exports) {
 
-module.exports = require("ejs");
+module.exports = require("crypto");
 
 /***/ },
 /* 35 */
 /***/ function(module, exports) {
 
-module.exports = require("koa-router");
+module.exports = require("ejs");
 
 /***/ },
 /* 36 */
 /***/ function(module, exports) {
 
-module.exports = require("node-uuid");
+module.exports = require("koa-router");
 
 /***/ },
 /* 37 */
 /***/ function(module, exports) {
 
-module.exports = require("nodemailer");
+module.exports = require("node-uuid");
 
 /***/ },
 /* 38 */
 /***/ function(module, exports) {
 
-module.exports = require("qiniu");
+module.exports = require("nodemailer");
 
 /***/ },
 /* 39 */
 /***/ function(module, exports) {
 
-module.exports = require("regenerator-runtime");
+module.exports = require("qiniu");
 
 /***/ },
 /* 40 */
 /***/ function(module, exports) {
 
-module.exports = require("request-promise");
+module.exports = require("regenerator-runtime");
 
 /***/ },
 /* 41 */
+/***/ function(module, exports) {
+
+module.exports = require("request-promise");
+
+/***/ },
+/* 42 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2827,15 +2995,9 @@ var start = function () {
             scheduleRecurrenceRule = function scheduleRecurrenceRule() {
 
               var rule = new __WEBPACK_IMPORTED_MODULE_3_node_schedule___default.a.RecurrenceRule();
-              // rule.dayOfWeek = 2;
-              // rule.month = 3;
-              // rule.dayOfMonth = 1;
-              // rule.hour = 1;
-              // rule.minute = 42;
-              // rule.second = 0;
-              rule.hour = 1;
-              rule.minute = 1;
-              rule.second = 1;
+              rule.hour = 16;
+              rule.minute = 50;
+              rule.second = 0;
 
               __WEBPACK_IMPORTED_MODULE_3_node_schedule___default.a.scheduleJob(rule, function () {
                 nodemailer();
@@ -2843,9 +3005,8 @@ var start = function () {
                 crawler();
               });
             };
-            // crawler()
 
-
+            crawler();
             scheduleRecurrenceRule();
             // routes
             app.use(filmApi.routes(), filmApi.allowedMethods());
@@ -2887,7 +3048,7 @@ var start = function () {
             app.listen(port, host);
             console.log('Server listening on ' + host + ':' + port); // eslint-disable-line no-console
 
-          case 22:
+          case 23:
           case 'end':
             return _context2.stop();
         }

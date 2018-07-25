@@ -129,11 +129,13 @@ const runMovieDetail = async ({restartCount = 0} = {}) => {
   }
 
   $('.article tbody tr').each(function (index) {
+    if (index < 5) {
       comingMoviesLink.push({
         url: $(this).find("a").attr('href'),
         title: $(this).find("a").html().trim(),
         like: $(this).find("td").eq(4).html().trim().match(/^[0-9]*/)[0]
       })
+    }
   })
 
   console.log(`总共爬取了 ${comingMoviesLink.length} 个电影 url`)
@@ -142,7 +144,8 @@ const runMovieDetail = async ({restartCount = 0} = {}) => {
 
   // 爬取豆瓣即将上映电影的poster、上映日期、片长
   // for(let i = 0; i < comingMoviesLink.length; i++) {
-  for(let i = 0; i < 10; i++) {
+  for(let i = 0; i < 5; i++) {
+  // for(let i = 0; i < 10; i++) {
     const movie = await getComingMovie({movieUrl: comingMoviesLink[i]})
     comingMovies.push(movie)
     console.log(`这是第${i+1}个电影，《${movie.movieName}》`)
@@ -223,8 +226,8 @@ const runMovieTrailer = async () => {
   let comingMoviesLink = require('../../comingMovieUri') // 全部电影的 url
   let Trailer = []
 
-  // for(let i = 0; i < comingMoviesLink.length ; i++) {
-  for(let i = 0; i < 10 ; i++) {
+  for(let i = 0; i < comingMoviesLink.length ; i++) {
+  // for(let i = 0; i < 10 ; i++) {
     const trailer = await getMovieTrailer({movieUrl: comingMoviesLink[i]})
     Trailer.push(trailer)
     console.log(`这是第${i+1}个电影的预告片列表, ${trailer.movieName}`)
@@ -353,14 +356,18 @@ const runMovieTrailerDetail = async () => {
   let comingTrailerLink = require('../../comingMovieTrailer')
   let Trailer = []
 
-  for(let i = 0; i < comingTrailerLink.length ; i++) {
-    const trailer = await getMovieTrailerDetail(comingTrailerLink[i])
-    Trailer.push(trailer)
+  try {
+    for(let i = 0; i < comingTrailerLink.length ; i++) {
+      const trailer = await getMovieTrailerDetail(comingTrailerLink[i])
+      Trailer.push(trailer)
 
-    console.log(`这是第${i+1}个电影的预告详细信息, 《${trailer.trailerTitle}》`)
+      console.log(`这是第${i+1}个电影的预告详细信息, 《${trailer.trailerTitle}》`)
 
-    fs.writeFileSync('./comingMovieTrailerDetail.json', JSON.stringify(Trailer, null, 2), 'utf8')
-    await sleep(2) // 间歇 2s
+      fs.writeFileSync('./comingMovieTrailerDetail.json', JSON.stringify(Trailer, null, 2), 'utf8')
+      await sleep(2) // 间歇 2s
+    }
+  } catch (e) {
+    console.log(e)
   }
   console.log(`电影预告详细全部爬取成功, 共计${comingTrailerLink.length}`)
 }
@@ -428,8 +435,8 @@ const runMoviePhotos = async () => {
   let comingMoviesLink = require('../../comingMovieUri')
   let stagePhotos = []
 
-  // for(let i = 0; i < comingMoviesLink.length ; i++) {
-  for(let i = 0; i < 10 ; i++) {
+  for(let i = 0; i < comingMoviesLink.length ; i++) {
+  // for(let i = 0; i < 10 ; i++) {
     const photo = await getMoviePhotos({movieUrl: comingMoviesLink[i]})
     stagePhotos.push(photo)
 

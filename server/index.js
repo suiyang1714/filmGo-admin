@@ -67,15 +67,9 @@ async function start () {
   const scheduleRecurrenceRule = () => {
 
     let rule = new schedule.RecurrenceRule();
-    // rule.dayOfWeek = 2;
-    // rule.month = 3;
-    // rule.dayOfMonth = 1;
-    // rule.hour = 1;
-    // rule.minute = 42;
-    // rule.second = 0;
-    rule.hour = 1
-    rule.minute = 1
-    rule.second = 1
+    rule.hour = 19
+    rule.minute = 0
+    rule.second = 0
 
     schedule.scheduleJob(rule, function(){
       nodemailer()
@@ -84,7 +78,6 @@ async function start () {
     });
 
   }
-  // crawler()
   scheduleRecurrenceRule()
   // routes
   app.use(filmApi.routes(), filmApi.allowedMethods())
