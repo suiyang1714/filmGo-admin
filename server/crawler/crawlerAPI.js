@@ -4,7 +4,8 @@ const fs = require('fs')
 // const iconv = require('iconv-lite') // 文件编码转换
 const request = require("request")
 // const proxyIP = require('../middleware/request')
-const uuid = require('node-uuid');
+const uuid = require('node-uuid')
+const nodemailer = require('../middleware/nodemail')
 
 const sleep = async time => await new Promise( resolve => {
     setTimeout( () => {
@@ -45,6 +46,7 @@ const getComingMovie = async ({movieUrl, restartCount = 0} = {}) => {
         if (error) throw error;
          $ = cheerio.load(body,{decodeEntities: false})
       } catch (e) {
+        nodemailer(e)
         console.log(`爬取《${movieUrl.title}》失败，准备重新开始爬取\n错误日志${e}\n重启次数为${restartCount}`)
         // console.error(e);
       }
@@ -129,13 +131,11 @@ const runMovieDetail = async ({restartCount = 0} = {}) => {
   }
 
   $('.article tbody tr').each(function (index) {
-    if (index < 5) {
-      comingMoviesLink.push({
-        url: $(this).find("a").attr('href'),
-        title: $(this).find("a").html().trim(),
-        like: $(this).find("td").eq(4).html().trim().match(/^[0-9]*/)[0]
-      })
-    }
+    comingMoviesLink.push({
+      url: $(this).find("a").attr('href'),
+      title: $(this).find("a").html().trim(),
+      like: $(this).find("td").eq(4).html().trim().match(/^[0-9]*/)[0]
+    })
   })
 
   console.log(`总共爬取了 ${comingMoviesLink.length} 个电影 url`)
@@ -143,9 +143,8 @@ const runMovieDetail = async ({restartCount = 0} = {}) => {
   fs.writeFileSync('./comingMovieUri.json', JSON.stringify(comingMoviesLink, null, 2), 'utf8')
 
   // 爬取豆瓣即将上映电影的poster、上映日期、片长
-  // for(let i = 0; i < comingMoviesLink.length; i++) {
-  for(let i = 0; i < 5; i++) {
-  // for(let i = 0; i < 10; i++) {
+  for(let i = 0; i < comingMoviesLink.length; i++) {
+  // for(let i = 0; i < 5; i++) {
     const movie = await getComingMovie({movieUrl: comingMoviesLink[i]})
     comingMovies.push(movie)
     console.log(`这是第${i+1}个电影，《${movie.movieName}》`)
@@ -184,6 +183,7 @@ const getMovieTrailer = async ({movieUrl, restartCount = 0} = {}) => {
         $ = cheerio.load(body, {decodeEntities: false})
 
       } catch (e) {
+        nodemailer(e)
         console.log(`爬取《${movieUrl.title}》失败，准备重新开始爬取\n错误日志${e}\n重启次数为${restartCount}`)
         console.error(e);
       }
@@ -227,7 +227,6 @@ const runMovieTrailer = async () => {
   let Trailer = []
 
   for(let i = 0; i < comingMoviesLink.length ; i++) {
-  // for(let i = 0; i < 10 ; i++) {
     const trailer = await getMovieTrailer({movieUrl: comingMoviesLink[i]})
     Trailer.push(trailer)
     console.log(`这是第${i+1}个电影的预告片列表, ${trailer.movieName}`)
@@ -262,6 +261,7 @@ const toRequest = async ({trailerUrl, trailerPoster, restartCount = 1} = {}) => 
         $ = cheerio.load(body,{decodeEntities: false})
 
       } catch (e) {
+        nodemailer(e)
         console.log(`爬取《${trailerUrl}》失败，准备重新开始爬取\n错误日志${e}\n重启次数为${restartCount}`)
         // console.error(e);
       }
@@ -320,6 +320,7 @@ const getMovieTrailerDetail = async (trailer) => {
             $ = cheerio.load(body,{decodeEntities: false})
 
           } catch (e) {
+            nodemailer(e)
             console.log(`爬取《${trailer.movieName}》失败，准备重新开始爬取\n错误日志${e}`)
             // console.error(e);
           }
@@ -367,6 +368,7 @@ const runMovieTrailerDetail = async () => {
       await sleep(2) // 间歇 2s
     }
   } catch (e) {
+    nodemailer(e)
     console.log(e)
   }
   console.log(`电影预告详细全部爬取成功, 共计${comingTrailerLink.length}`)
@@ -398,6 +400,7 @@ const getMoviePhotos = async ({ movieUrl, restartCount = 0} = {}) => {
 
       } catch (e) {
         console.log(`爬取《${movieUrl.title}》失败，准备重新开始爬取\n错误日志${e}`)
+        nodemailer(e)
         // console.error(e);
       }
       if ($) {

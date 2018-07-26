@@ -3,6 +3,7 @@ const axios = require('axios')
 const doubanAPI = 'http://api.douban.com/v2/movie/'
 const request = require('request')
 const qiniuFn = require('../middleware/qiniu')
+const nodemailer = require('../middleware/nodemail')
 
 const proxy = ['180.76.188.115','180.76.138.181','180.76.239.106','180.76.166.103','180.76.181.205','180.76.234.215','180.76.106.163','180.76.184.179','180.76.244.38','180.76.113.79','180.76.169.176','180.76.169.122','180.76.106.208','180.76.178.83','180.76.147.196','180.76.112.206',
   '180.76.233.125','180.76.186.99','180.76.51.74','180.76.234.146','180.76.153.183','180.76.155.233','180.76.57.252','180.76.120.42','180.76.103.107','180.76.58.216','180.76.112.24','180.76.108.218','180.76.98.218','180.76.168.148','180.76.109.38','180.76.249.53',
@@ -43,6 +44,7 @@ const fetchSingleFilm = async (filmId) => {
         console.log(`单个电影 API 请求失败，准备重新请求ing`)
         fetchSingleFilm(filmId)
         // console.log(e)
+        nodemailer(e)
       }
     })
   })
@@ -73,6 +75,7 @@ const fetchFilms = async () => {
     console.log(`即将上映电影列表API，请求失败，准备重新请求ing`)
     fetchFilms()
     // console.log(e)
+    nodemailer(e)
   }
 
   for(let i = 0 ; i < films.subjects.length ; i++) {
@@ -204,6 +207,7 @@ const crawlerDetail = async (ctx, next) => {
       }
     } catch (e) {
       console.log(e)
+      nodemailer(e)
     }
     console.log(`电影缺失上映日期、播放时长、电影封面信息补充完毕`)
     return resolve()
@@ -248,6 +252,7 @@ const crawlerDetail = async (ctx, next) => {
           }
         } catch (e) {
           console.log(e)
+          nodemailer(e)
         }
         await film.save()
       }
@@ -280,6 +285,7 @@ const uploadQiniuFile = async () => {
         await qiniuFn.uploadQiniuFile(filmStagePhotos[i].stagePhotos[j].replace(/sqxs/, 'l'), `${filmStagePhotos[i].id}${j}stagePhotoImgBig.jpg`) // 大图
       }
     } catch (e) {
+      nodemailer(e)
       console.log(e)
     }
   }
@@ -292,6 +298,7 @@ const uploadQiniuFile = async () => {
         await qiniuFn.uploadQiniuFile(filmTrailerDetail[i].trailerArray[j].trailerMP4, `${filmTrailerDetail[i].trailerArray[j].trailerId}视频`)
       }
     } catch (e) {
+      nodemailer(e)
       console.log(e)
     }
   }

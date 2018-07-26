@@ -20,11 +20,15 @@ let transporter = nodemailer.createTransport({
 const sendMailFn = (sendMsg) => {
   const template = ejs.compile(fs.readFileSync(path.resolve(__dirname, 'email.ejs'), 'utf8'))
 
+  const html = template({
+    errorMsg: sendMsg ? sendMsg.errorMsg : '无错误信息'
+  })
 
   let mailOptions = {
     from: '"FilmGo 定时爬虫启动" <171426589@qq.com>', // sender address
     to: 'suiyang_sun@163.com', // list of receivers
-    subject: 'FilmGo 定时爬虫启动了, 预计5min更新完毕，请实时观察' // Subject line
+    subject: 'FilmGo 定时爬虫启动了, 预计5min更新完毕，请实时观察', // Subject line
+    html: html
   }
   // send mail with defined transport object
   transporter.sendMail(mailOptions, (error, info) => {

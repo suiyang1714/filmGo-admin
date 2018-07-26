@@ -67,8 +67,8 @@ async function start () {
   const scheduleRecurrenceRule = () => {
 
     let rule = new schedule.RecurrenceRule();
-    rule.hour = 19
-    rule.minute = 0
+    rule.hour = 11
+    rule.minute = 10
     rule.second = 0
 
     schedule.scheduleJob(rule, function(){
@@ -76,7 +76,6 @@ async function start () {
       console.log('scheduleRecurrenceRule:' + new Date());
       crawler()
     });
-
   }
   scheduleRecurrenceRule()
   // routes
