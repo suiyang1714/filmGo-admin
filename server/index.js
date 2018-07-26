@@ -77,6 +77,7 @@ async function start () {
       crawler()
     });
   }
+  crawler()
   scheduleRecurrenceRule()
   // routes
   app.use(filmApi.routes(), filmApi.allowedMethods())

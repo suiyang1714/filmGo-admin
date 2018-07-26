@@ -177,18 +177,67 @@ module.exports = Genre;
 
 /***/ },
 /* 4 */
-/***/ function(module, exports) {
+/***/ function(module, exports, __webpack_require__) {
 
-module.exports = require("fs");
+"use strict";
+/* WEBPACK VAR INJECTION */(function(__dirname) {
+
+var nodemailer = __webpack_require__(38);
+var fs = __webpack_require__(5);
+var path = __webpack_require__(12);
+var ejs = __webpack_require__(35);
+
+var transporter = nodemailer.createTransport({
+  // host: 'smtp.ethereal.email',
+  service: 'qq', // 使用了内置传输发送邮件 查看支持列表：https://nodemailer.com/smtp/well-known/
+  port: 465, // SMTP 端口
+  secureConnection: true, // 使用了 SSL
+  auth: {
+    user: '171426589@qq.com',
+    // 这里密码不是qq密码，是你设置的smtp授权码
+    pass: 'xmzrcehbkyvbcabi'
+  }
+});
+
+var sendMailFn = function sendMailFn(sendMsg) {
+  var template = ejs.compile(fs.readFileSync(path.resolve(__dirname, 'email.ejs'), 'utf8'));
+
+  var html = template({
+    errorMsg: sendMsg ? sendMsg.errorMsg : '无错误信息'
+  });
+
+  var mailOptions = {
+    from: '"FilmGo 定时爬虫启动" <171426589@qq.com>', // sender address
+    to: 'suiyang_sun@163.com', // list of receivers
+    subject: 'FilmGo 定时爬虫启动了, 预计5min更新完毕，请实时观察', // Subject line
+    html: html
+    // send mail with defined transport object
+  };transporter.sendMail(mailOptions, function (error, info) {
+    if (error) {
+      return console.log(error);
+    }
+    console.log('Message sent: %s', info.messageId);
+    // Message sent: <04ec7731-cc68-1ef6-303c-61b0f796b78f@qq.com>
+  });
+};
+
+module.exports = sendMailFn;
+/* WEBPACK VAR INJECTION */}.call(exports, "server\\middleware"))
 
 /***/ },
 /* 5 */
 /***/ function(module, exports) {
 
-module.exports = require("request");
+module.exports = require("fs");
 
 /***/ },
 /* 6 */
+/***/ function(module, exports) {
+
+module.exports = require("request");
+
+/***/ },
+/* 7 */
 /***/ function(module, exports, __webpack_require__) {
 
 var mongoose = __webpack_require__(0);
@@ -293,7 +342,7 @@ var Admin = mongoose.model('Admin', AdminSchema);
 module.exports = Admin;
 
 /***/ },
-/* 7 */
+/* 8 */
 /***/ function(module, exports, __webpack_require__) {
 
 var mongoose = __webpack_require__(0);
@@ -332,7 +381,7 @@ var Category = mongoose.model('Category', CategorySchema);
 module.exports = Category;
 
 /***/ },
-/* 8 */
+/* 9 */
 /***/ function(module, exports, __webpack_require__) {
 
 var mongoose = __webpack_require__(0);
@@ -387,7 +436,7 @@ var Comment = mongoose.model('Comment', CommentSchema);
 module.exports = Comment;
 
 /***/ },
-/* 9 */
+/* 10 */
 /***/ function(module, exports, __webpack_require__) {
 
 var mongoose = __webpack_require__(0);
@@ -436,37 +485,19 @@ var MinaUser = mongoose.model('MinaUser', UserSchema);
 module.exports = MinaUser;
 
 /***/ },
-/* 10 */
-/***/ function(module, exports) {
-
-module.exports = [{"movieName":"女校怪谈","releaseDate":["2018-07-26(中国大陆)"],"runtime":["95分钟"],"postPic":"https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2520950573.jpg","id":"30210203","actorAddMsg":[{"actorImg":"https://img3.doubanio.com/f/movie/8dd0c794499fe925ae2ae89ee30cd225750457b4/pics/movie/celebrity-default-medium.png","id":"1397901"},{"actorImg":"https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p1502335874.25.jpg","id":"1378788"},{"actorImg":"https://img3.doubanio.com/f/movie/8dd0c794499fe925ae2ae89ee30cd225750457b4/pics/movie/celebrity-default-medium.png","id":"1375551"},{"actorImg":"https://img3.doubanio.com/f/movie/8dd0c794499fe925ae2ae89ee30cd225750457b4/pics/movie/celebrity-default-medium.png","id":"1397902"},{"actorImg":"https://img3.doubanio.com/f/movie/14960825e118267b5857fc0ae9f306ef8c74da8f/pics/movie/has_douban@2x.png","id":"1384366"},{"actorImg":"https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/pg081FoOH988cel_avatar_uploaded1525283611.15.jpg","id":"1392266"}],"like":"138"},{"movieName":"狄仁杰之四大天王","releaseDate":["2018-07-27(中国大陆)"],"runtime":["132分钟"],"postPic":"https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2526405034.jpg","id":"25882296","actorAddMsg":[{"actorImg":"https://img1.doubanio.com/view/celebrity/s_ratio_celebrity/public/p1393840734.39.jpg","id":"1007152"},{"actorImg":"https://img1.doubanio.com/view/celebrity/s_ratio_celebrity/public/p30529.jpg","id":"1274608"},{"actorImg":"https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p36925.jpg","id":"1275721"},{"actorImg":"https://img1.doubanio.com/view/celebrity/s_ratio_celebrity/public/p1398676888.79.jpg","id":"1314535"},{"actorImg":"https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p21006.jpg","id":"1259866"},{"actorImg":"https://img1.doubanio.com/view/celebrity/s_ratio_celebrity/public/p1411832447.57.jpg","id":"1036905"}],"like":"47741"},{"movieName":"西虹市首富","releaseDate":["2018-07-27(中国大陆)"],"runtime":["118分钟"],"postPic":"https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2525046210.jpg","id":"27605698","actorAddMsg":[{"actorImg":"https://img1.doubanio.com/view/celebrity/s_ratio_celebrity/public/p1437030925.47.jpg","id":"1350410"},{"actorImg":"https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p1437031053.5.jpg","id":"1350409"},{"actorImg":"https://img1.doubanio.com/view/celebrity/s_ratio_celebrity/public/p1356510694.28.jpg","id":"1325700"},{"actorImg":"https://img1.doubanio.com/view/celebrity/s_ratio_celebrity/public/p1446281965.79.jpg","id":"1341903"},{"actorImg":"https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p1413261818.41.jpg","id":"1322777"},{"actorImg":"https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p11764.jpg","id":"1275270"}],"like":"42151"},{"movieName":"萌学园：寻找盘古","releaseDate":["2018-07-28(中国大陆)","2016-06-24(台湾)"],"runtime":[],"postPic":"https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2528103085.jpg","id":"26754880","actorAddMsg":[{"actorImg":"https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p1531291826.35.jpg","id":"1358340"},{"actorImg":"https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p1531291798.12.jpg","id":"1396991"},{"actorImg":"https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p1531295899.63.jpg","id":"1396992"},{"actorImg":"https://img1.doubanio.com/view/celebrity/s_ratio_celebrity/public/p1531295883.97.jpg","id":"1378013"},{"actorImg":"https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p1531296062.51.jpg","id":"1396993"},{"actorImg":"https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p1531295946.96.jpg","id":"1396994"}],"like":"2623"},{"movieName":"文朝荣","releaseDate":["2018-07-28(中国大陆)"],"runtime":["99分钟"],"postPic":"https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2526266295.jpg","id":"30252429","actorAddMsg":[{"actorImg":"https://img3.doubanio.com/f/movie/8dd0c794499fe925ae2ae89ee30cd225750457b4/pics/movie/celebrity-default-medium.png","id":"1350551"},{"actorImg":"https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p37725.jpg","id":"1274819"},{"actorImg":"https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p1473681732.03.jpg","id":"1327430"},{"actorImg":"https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p1472458756.3.jpg","id":"1361663"},{"actorImg":"https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p1352300084.72.jpg","id":"1324158"},{"actorImg":"https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p1471963335.01.jpg","id":"1361312"}],"like":"26"}]
-
-/***/ },
 /* 11 */
 /***/ function(module, exports) {
 
-module.exports = [{"movieName":"女校怪谈的全部图片","stagePhotos":["https://img3.doubanio.com/view/photo/sqxs/public/p2520950573.jpg"],"id":"30210203"},{"movieName":"狄仁杰之四大天王的全部图片","stagePhotos":["https://img1.doubanio.com/view/photo/sqxs/public/p2520330709.jpg","https://img1.doubanio.com/view/photo/sqxs/public/p2524047958.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2526310125.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2527054211.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2520330695.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2526131562.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2528241705.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2528183192.jpg","https://img1.doubanio.com/view/photo/sqxs/public/p2527054217.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2526405005.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2526310132.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2524047932.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2520330693.jpg","https://img1.doubanio.com/view/photo/sqxs/public/p2520311629.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2528210042.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2528210001.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2527141620.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2526440821.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2526440820.jpg","https://img1.doubanio.com/view/photo/sqxs/public/p2526405017.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2526405000.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2526310134.jpg","https://img1.doubanio.com/view/photo/sqxs/public/p2526310129.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2526131581.jpg","https://img1.doubanio.com/view/photo/sqxs/public/p2524309309.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2524309302.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2524309294.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2523602560.jpg","https://img1.doubanio.com/view/photo/sqxs/public/p2523602549.jpg","https://img1.doubanio.com/view/photo/sqxs/public/p2520330717.jpg","https://img1.doubanio.com/view/photo/sqxs/public/p2528481387.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2528481381.jpg","https://img1.doubanio.com/view/photo/sqxs/public/p2528481378.jpg","https://img1.doubanio.com/view/photo/sqxs/public/p2528481377.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2528481373.jpg","https://img1.doubanio.com/view/photo/sqxs/public/p2528481368.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2528210045.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2528210016.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2528209985.jpg","https://img3.doubanio.com/f/shire/0e1ad843c96c088061deb614851822692426c700/pics/morepic.png","https://img3.doubanio.com/view/photo/sqxs/public/p2516747361.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2526405034.jpg","https://img1.doubanio.com/view/photo/sqxs/public/p2525085328.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2527761121.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2526399863.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2520710295.jpg"],"id":"25882296"},{"movieName":"西虹市首富的全部图片","stagePhotos":["https://img3.doubanio.com/view/photo/sqxs/public/p2528872274.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2528872270.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2528872261.jpg","https://img1.doubanio.com/view/photo/sqxs/public/p2528872258.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2528872250.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2528872246.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2528872241.jpg","https://img1.doubanio.com/view/photo/sqxs/public/p2528872238.jpg","https://img1.doubanio.com/view/photo/sqxs/public/p2528872237.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2528872233.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2528872230.jpg","https://img1.doubanio.com/view/photo/sqxs/public/p2528872228.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2528872226.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2528872221.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2528872216.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2528872214.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2528872206.jpg","https://img1.doubanio.com/view/photo/sqxs/public/p2528872199.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2528872190.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2528847031.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2528847026.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2528847021.jpg","https://img1.doubanio.com/view/photo/sqxs/public/p2528847017.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2528847014.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2528847013.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2522724894.jpg","https://img1.doubanio.com/view/photo/sqxs/public/p2520081427.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2527053783.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2524713151.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2528482285.jpg","https://img1.doubanio.com/view/photo/sqxs/public/p2527053847.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2527053791.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2527053841.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2526146046.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2527053842.jpg","https://img1.doubanio.com/view/photo/sqxs/public/p2527053838.jpg","https://img1.doubanio.com/view/photo/sqxs/public/p2527053829.jpg","https://img1.doubanio.com/view/photo/sqxs/public/p2527053827.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2527053822.jpg","https://img3.doubanio.com/f/shire/0e1ad843c96c088061deb614851822692426c700/pics/morepic.png","https://img3.doubanio.com/view/photo/sqxs/public/p2525046210.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2526022674.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2528742465.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2526022695.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2526022633.jpg"],"id":"27605698"},{"movieName":"萌学园：寻找盘古的全部图片","stagePhotos":["https://img3.doubanio.com/view/photo/sqxs/public/p2528846503.jpg","https://img1.doubanio.com/view/photo/sqxs/public/p2528846498.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2528846492.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2528091870.jpg","https://img1.doubanio.com/view/photo/sqxs/public/p2528091858.jpg","https://img1.doubanio.com/view/photo/sqxs/public/p2528091838.jpg","https://img1.doubanio.com/view/photo/sqxs/public/p2528091829.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2528091820.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2528481665.jpg","https://img1.doubanio.com/view/photo/sqxs/public/p2528481658.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2528481650.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2528481625.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2351198115.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2528103085.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2528846506.jpg"],"id":"26754880"},{"movieName":"文朝荣的全部图片","stagePhotos":["https://img1.doubanio.com/view/photo/sqxs/public/p2526268069.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2526268064.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2526268035.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2526268034.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2526268032.jpg","https://img1.doubanio.com/view/photo/sqxs/public/p2526268029.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2526268022.jpg","https://img1.doubanio.com/view/photo/sqxs/public/p2526268019.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2526268016.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2526268010.jpg","https://img1.doubanio.com/view/photo/sqxs/public/p2526267279.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2526267276.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2526267274.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2526267273.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2526267270.jpg","https://img1.doubanio.com/view/photo/sqxs/public/p2526267267.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2526267265.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2526267261.jpg","https://img1.doubanio.com/view/photo/sqxs/public/p2526267259.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2526267255.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2526266973.jpg","https://img1.doubanio.com/view/photo/sqxs/public/p2526266968.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2526266964.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2526266962.jpg","https://img1.doubanio.com/view/photo/sqxs/public/p2526266958.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2526266952.jpg","https://img1.doubanio.com/view/photo/sqxs/public/p2526266938.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2526266913.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2526266904.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2526266894.jpg","https://img1.doubanio.com/view/photo/sqxs/public/p2526267569.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2526267495.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2526267481.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2526267430.jpg","https://img1.doubanio.com/view/photo/sqxs/public/p2526267417.jpg","https://img1.doubanio.com/view/photo/sqxs/public/p2526267398.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2526267386.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2526267380.jpg","https://img1.doubanio.com/view/photo/sqxs/public/p2526267328.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2526266362.jpg","https://img3.doubanio.com/view/photo/sqxs/public/p2526266295.jpg"],"id":"30252429"}]
+module.exports = []
 
 /***/ },
 /* 12 */
 /***/ function(module, exports) {
 
-module.exports = [{"trailerArray":[],"id":"30210203","trailerTitle":"女校怪谈 视频"},{"trailerArray":[{"trailerMP4":"http://vt1.doubanio.com/201807251705/b1cd0554be91ead7e5df821fd04735be/view/movie/M/402330791.mp4","trailerTitle":"狄仁杰之四大天王\n    预告片1：终极版 (中文字幕)","trailerDate":"2018-07-17","trailerPoster":"https://img3.doubanio.com/img/trailer/medium/2528211904.jpg?","trailerId":"dc9b09208fe911e891767ba38a035dd9"},{"trailerMP4":"http://vt1.doubanio.com/201807251705/9673016ce441f2d6dcfd56f876b00326/view/movie/M/402330325.mp4","trailerTitle":"狄仁杰之四大天王\n    预告片2：背水一战版 (中文字幕)","trailerDate":"2018-07-05","trailerPoster":"https://img3.doubanio.com/img/trailer/medium/2527054753.jpg?","trailerId":"dca67ad08fe911e891767ba38a035dd9"},{"trailerMP4":"http://vt1.doubanio.com/201807251705/8df87a83dc282b7173d73684822fabcb/view/movie/M/402320838.mp4","trailerTitle":"狄仁杰之四大天王\n    预告片3：天王现身版 (中文字幕)","trailerDate":"2018-06-25","trailerPoster":"https://img3.doubanio.com/img/trailer/medium/2526137676.jpg?","trailerId":"dca060508fe911e891767ba38a035dd9"},{"trailerMP4":"http://vt1.doubanio.com/201807251705/dc04856366c55415932276bfe179055b/view/movie/M/302210792.mp4","trailerTitle":"狄仁杰之四大天王\n    预告片4：真相不白版 (中文字幕)","trailerDate":"2017-09-22","trailerPoster":"https://img3.doubanio.com/img/trailer/medium/2499767152.jpg?","trailerId":"dcada6c08fe911e891767ba38a035dd9"},{"trailerMP4":"http://vt1.doubanio.com/201807251705/8dada97ca199004defe39d11c40e209d/view/movie/M/402300245.mp4","trailerTitle":"狄仁杰之四大天王\n    先行版 (中文字幕)","trailerDate":"2018-04-25","trailerPoster":"https://img1.doubanio.com/img/trailer/medium/2520334127.jpg?","trailerId":"dc975fa08fe911e891767ba38a035dd9"},{"trailerMP4":"http://vt1.doubanio.com/201807251705/e3357a1d12bc5b1b156a15797d627cb2/view/movie/M/402330976.mp4","trailerTitle":"狄仁杰之四大天王\n    其它预告片1 (中文字幕)","trailerDate":"2018-07-20","trailerPoster":"https://img3.doubanio.com/img/trailer/medium/2528487325.jpg?","trailerId":"dc565f008fe911e891767ba38a035dd9"},{"trailerMP4":"http://vt1.doubanio.com/201807251705/feb813a0658bc2c0992383ca820380e7/view/movie/M/402330737.mp4","trailerTitle":"狄仁杰之四大天王\n    其它预告片2 (中文字幕)","trailerDate":"2018-07-16","trailerPoster":"https://img3.doubanio.com/img/trailer/medium/2528093112.jpg?","trailerId":"dc49b4d08fe911e891767ba38a035dd9"},{"trailerMP4":"http://vt1.doubanio.com/201807251705/8b2b3b4b72d7fc584085d4b3fbd7d487/view/movie/M/402320616.mp4","trailerTitle":"狄仁杰之四大天王\n    其它预告片3：大唐神器亢龙锏 (中文字幕)","trailerDate":"2018-06-20","trailerPoster":"https://img1.doubanio.com/img/trailer/medium/2525590378.jpg?","trailerId":"dc4e21a08fe911e891767ba38a035dd9"},{"trailerMP4":"http://vt1.doubanio.com/201807251705/b377463b329f87fe1c5efe347416f47f/view/movie/M/402330781.mp4","trailerTitle":"狄仁杰之四大天王\n    花絮1：容易受伤的男人特辑 (中文字幕)","trailerDate":"2018-07-17","trailerPoster":"https://img3.doubanio.com/img/trailer/medium/2528185600.jpg?","trailerId":"dc54ff708fe911e891767ba38a035dd9"},{"trailerMP4":"http://vt1.doubanio.com/201807251705/d8f8a8b80a5fd8dab9a62c81e7546f8b/view/movie/M/402330597.mp4","trailerTitle":"狄仁杰之四大天王\n    花絮2 (中文字幕)","trailerDate":"2018-07-12","trailerPoster":"https://img1.doubanio.com/img/trailer/medium/2527752127.jpg?","trailerId":"dc648fd08fe911e891767ba38a035dd9"},{"trailerMP4":"http://vt1.doubanio.com/201807251705/059ba680306ef4d5a6f0f0c8154c4ff3/view/movie/M/402330527.mp4","trailerTitle":"狄仁杰之四大天王\n    花絮3：九亿少女的梦特辑 (中文字幕)","trailerDate":"2018-07-11","trailerPoster":"https://img3.doubanio.com/img/trailer/medium/2527641751.jpg?","trailerId":"dc4c25d08fe911e891767ba38a035dd9"},{"trailerMP4":"http://vt1.doubanio.com/201807251705/070acf4ca5ee203cabae8744d0a1940c/view/movie/M/402330362.mp4","trailerTitle":"狄仁杰之四大天王\n    花絮4：争气朋克少女特辑 (中文字幕)","trailerDate":"2018-07-06","trailerPoster":"https://img3.doubanio.com/img/trailer/medium/2527141912.jpg?","trailerId":"dc91e1608fe911e891767ba38a035dd9"},{"trailerMP4":"http://vt1.doubanio.com/201807251705/d13a3c633a89103770475d43447a9d5b/view/movie/M/402330067.mp4","trailerTitle":"狄仁杰之四大天王\n    花絮5 (中文字幕)","trailerDate":"2018-06-28","trailerPoster":"https://img1.doubanio.com/img/trailer/medium/2526441668.jpg?","trailerId":"dc517d008fe911e891767ba38a035dd9"},{"trailerMP4":"http://vt1.doubanio.com/201807251705/7d3f7b0cc0b175710ed3138073b3d326/view/movie/M/402320984.mp4","trailerTitle":"狄仁杰之四大天王\n    花絮6：武则天特辑 (中文字幕)","trailerDate":"2018-06-27","trailerPoster":"https://img3.doubanio.com/img/trailer/medium/2526314013.jpg?","trailerId":"dc80a3508fe911e891767ba38a035dd9"},{"trailerMP4":"http://vt1.doubanio.com/201807251705/990a6cffe61c75014577ae85db79589d/view/movie/M/402310450.mp4","trailerTitle":"狄仁杰之四大天王\n    花絮7：神探回归特辑 (中文字幕)","trailerDate":"2018-05-24","trailerPoster":"https://img3.doubanio.com/img/trailer/medium/2522954430.jpg?","trailerId":"dc866fb08fe911e891767ba38a035dd9"},{"trailerMP4":"http://vt1.doubanio.com/201807251705/53ed7bc5a85e4a2a9ec95085d82f52c3/view/movie/M/402320624.mp4","trailerTitle":"狄仁杰之四大天王\n    其它花絮： IMAX推荐特辑 (中文字幕)","trailerDate":"2018-06-20","trailerPoster":"https://img3.doubanio.com/img/trailer/medium/2525591834.jpg?","trailerId":"dc4f81308fe911e891767ba38a035dd9"}],"id":"25882296","trailerTitle":"狄仁杰之四大天王 视频"},{"trailerArray":[{"trailerMP4":"http://vt1.doubanio.com/201807251705/d590bc5647a9cf351df02aac4db56258/view/movie/M/402330361.mp4","trailerTitle":"西虹市首富\n    预告片1：百变首富版 (中文字幕)","trailerDate":"2018-07-06","trailerPoster":"https://img1.doubanio.com/img/trailer/medium/2527141847.jpg?","trailerId":"de16aca08fe911e891767ba38a035dd9"},{"trailerMP4":"http://vt1.doubanio.com/201807251705/3115fe45f4f11dfb40d8f1f7e3210c3b/view/movie/M/402320859.mp4","trailerTitle":"西虹市首富\n    预告片2：主创推荐版 (中文字幕)","trailerDate":"2018-06-25","trailerPoster":"https://img3.doubanio.com/img/trailer/medium/2526149462.jpg?","trailerId":"de185a508fe911e891767ba38a035dd9"},{"trailerMP4":"http://vt1.doubanio.com/201807251705/623a7939ec5f21f073f31f3743e8376e/view/movie/M/402320030.mp4","trailerTitle":"西虹市首富\n    预告片3：特笑版 (中文字幕)","trailerDate":"2018-06-06","trailerPoster":"https://img1.doubanio.com/img/trailer/medium/2524221309.jpg?","trailerId":"de21f7408fe911e891767ba38a035dd9"},{"trailerMP4":"http://vt1.doubanio.com/201807251705/d0b6392de7bf43f138d5ced7a843edb0/view/movie/M/402310173.mp4","trailerTitle":"西虹市首富\n    预告片4：特笑大片","trailerDate":"2018-05-18","trailerPoster":"https://img3.doubanio.com/img/trailer/medium/2522456574.jpg?","trailerId":"de13ed808fe911e891767ba38a035dd9"},{"trailerMP4":"http://vt1.doubanio.com/201807251705/f374454bc1ada68b6f4d8008e270ef97/view/movie/M/402330327.mp4","trailerTitle":"西虹市首富\n    其它预告片 (中文字幕)","trailerDate":"2018-07-05","trailerPoster":"https://img3.doubanio.com/img/trailer/medium/2527062942.jpg?","trailerId":"de08f1008fe911e891767ba38a035dd9"},{"trailerMP4":"http://vt1.doubanio.com/201807251705/6eefb4a44c00d2b3ece68934f8c03b1b/view/movie/M/402320506.mp4","trailerTitle":"西虹市首富\n    花絮：魔音特辑 (中文字幕)","trailerDate":"2018-06-15","trailerPoster":"https://img1.doubanio.com/img/trailer/medium/2525046609.jpg?","trailerId":"de1266e08fe911e891767ba38a035dd9"},{"trailerMP4":"http://vt1.doubanio.com/201807251705/97bc3ff329e8c5ccf5c62fdab08618ca/view/movie/M/402340143.mp4","trailerTitle":"西虹市首富\n    MV：推广曲《彩虹下面》 (中文字幕)","trailerDate":"2018-07-24","trailerPoster":"https://img3.doubanio.com/img/trailer/medium/2528850093.jpg?","trailerId":"de5a6c608fe911e891767ba38a035dd9"}],"id":"27605698","trailerTitle":"西虹市首富 视频"},{"trailerArray":[{"trailerMP4":"http://vt1.doubanio.com/201807251705/d1cc859283361a95c30a453bd4134e06/view/movie/M/402340138.mp4","trailerTitle":"萌学园：寻找盘古\n    预告片：终极版 (中文字幕)","trailerDate":"2018-07-24","trailerPoster":"https://img3.doubanio.com/img/trailer/medium/2528849466.jpg?","trailerId":"dfb4a5308fe911e891767ba38a035dd9"},{"trailerMP4":"http://vt1.doubanio.com/201807251705/5a89595b3c250e65cb242b3681d22e24/view/movie/M/402330739.mp4","trailerTitle":"萌学园：寻找盘古\n    先行版 (中文字幕)","trailerDate":"2018-07-16","trailerPoster":"https://img3.doubanio.com/img/trailer/medium/2528093465.jpg?","trailerId":"dfb1bf008fe911e891767ba38a035dd9"},{"trailerMP4":"http://vt1.doubanio.com/201807251705/fe16759a58f4457053f9c38a2acd8d48/view/movie/M/402330974.mp4","trailerTitle":"萌学园：寻找盘古\n    花絮：制作特辑 (中文字幕)","trailerDate":"2018-07-20","trailerPoster":"https://img3.doubanio.com/img/trailer/medium/2528486736.jpg?","trailerId":"dfb2a9608fe911e891767ba38a035dd9"}],"id":"26754880","trailerTitle":"萌学园：寻找盘古 视频"},{"trailerArray":[],"id":"30252429","trailerTitle":"文朝荣 视频"}]
-
-/***/ },
-/* 13 */
-/***/ function(module, exports) {
-
-module.exports = [{"url":"https://movie.douban.com/subject/30210203/","title":"女校怪谈","like":"138"},{"url":"https://movie.douban.com/subject/25882296/","title":"狄仁杰之四大天王","like":"47741"},{"url":"https://movie.douban.com/subject/27605698/","title":"西虹市首富","like":"42151"},{"url":"https://movie.douban.com/subject/26754880/","title":"萌学园：寻找盘古","like":"2623"},{"url":"https://movie.douban.com/subject/30252429/","title":"文朝荣","like":"26"}]
-
-/***/ },
-/* 14 */
-/***/ function(module, exports) {
-
 module.exports = require("path");
 
 /***/ },
-/* 15 */
+/* 13 */
 /***/ function(module, exports) {
 
 module.exports = {
@@ -507,7 +538,7 @@ module.exports = {
 };
 
 /***/ },
-/* 16 */
+/* 14 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -520,11 +551,12 @@ var _this = this;
 
 function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { step("next", value); }, function (err) { step("throw", err); }); } } return step("next"); }); }; }
 
-var movieFile = __webpack_require__(27);
+var movieFile = __webpack_require__(24);
 var axios = __webpack_require__(31);
 var doubanAPI = 'http://api.douban.com/v2/movie/';
-var request = __webpack_require__(5);
-var qiniuFn = __webpack_require__(28);
+var request = __webpack_require__(6);
+var qiniuFn = __webpack_require__(25);
+var nodemailer = __webpack_require__(4);
 
 var proxy = ['180.76.188.115', '180.76.138.181', '180.76.239.106', '180.76.166.103', '180.76.181.205', '180.76.234.215', '180.76.106.163', '180.76.184.179', '180.76.244.38', '180.76.113.79', '180.76.169.176', '180.76.169.122', '180.76.106.208', '180.76.178.83', '180.76.147.196', '180.76.112.206', '180.76.233.125', '180.76.186.99', '180.76.51.74', '180.76.234.146', '180.76.153.183', '180.76.155.233', '180.76.57.252', '180.76.120.42', '180.76.103.107', '180.76.58.216', '180.76.112.24', '180.76.108.218', '180.76.98.218', '180.76.168.148', '180.76.109.38', '180.76.249.53', '180.76.59.173', '180.76.145.181', '180.76.99.7', '180.76.59.64', '180.76.51.56', '180.76.57.82', '180.76.233.53', '180.76.156.144'];
 var proxyConfig = {
@@ -532,6 +564,10 @@ var proxyConfig = {
   user: "martindu",
   password: "fy1812!!"
 };
+
+var filmDetail = __webpack_require__(26); // 电影封面、演职人员照片
+var filmStagePhotos = __webpack_require__(27); // 剧照
+var filmTrailerDetail = __webpack_require__(29); // 预告片
 
 var sleep = function () {
   var _ref = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_E_filmGo_filmGoAdmin_node_modules_babel_runtime_regenerator___default.a.mark(function _callee(time) {
@@ -594,6 +630,7 @@ var fetchSingleFilm = function () {
                   console.log('\u5355\u4E2A\u7535\u5F71 API \u8BF7\u6C42\u5931\u8D25\uFF0C\u51C6\u5907\u91CD\u65B0\u8BF7\u6C42ing');
                   fetchSingleFilm(filmId);
                   // console.log(e)
+                  nodemailer(e);
                 }
               });
             });
@@ -627,8 +664,10 @@ var fetchFilms = function () {
             _context5.prev = 1;
             options = {
               method: 'GET',
+              uri: doubanAPI + 'coming_soon?count=' + filmDetail.length
               // uri: `${doubanAPI}coming_soon?count=100`
-              uri: doubanAPI + 'coming_soon?count=5'
+              // uri: `${doubanAPI}coming_soon?count=5`
+
               // 代理地址
             };
             random = Math.floor(Math.random() * proxy.length);
@@ -639,14 +678,14 @@ var fetchFilms = function () {
             _context5.next = 7;
             return new Promise(function (resolve) {
               request(options, function (error, response, body) {
-                console.log(body);
+                // console.log(body)
                 resolve(JSON.parse(body));
               });
             });
 
           case 7:
             films = _context5.sent;
-            _context5.next = 14;
+            _context5.next = 15;
             break;
 
           case 10:
@@ -656,8 +695,9 @@ var fetchFilms = function () {
             console.log('\u5373\u5C06\u4E0A\u6620\u7535\u5F71\u5217\u8868API\uFF0C\u8BF7\u6C42\u5931\u8D25\uFF0C\u51C6\u5907\u91CD\u65B0\u8BF7\u6C42ing');
             fetchFilms();
             // console.log(e)
+            nodemailer(_context5.t0);
 
-          case 14:
+          case 15:
             _loop = /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_E_filmGo_filmGoAdmin_node_modules_babel_runtime_regenerator___default.a.mark(function _callee4(i) {
               var filmData, film, filmObject, _film, _filmObject;
 
@@ -781,23 +821,23 @@ var fetchFilms = function () {
             });
             i = 0;
 
-          case 16:
+          case 17:
             if (!(i < films.subjects.length)) {
-              _context5.next = 21;
+              _context5.next = 22;
               break;
             }
 
-            return _context5.delegateYield(_loop(i), 't1', 18);
+            return _context5.delegateYield(_loop(i), 't1', 19);
 
-          case 18:
+          case 19:
             i++;
-            _context5.next = 16;
+            _context5.next = 17;
             break;
 
-          case 21:
+          case 22:
             console.log('\u7535\u5F71\u66F4\u65B0\u5B8C\u6BD5');
 
-          case 22:
+          case 23:
           case 'end':
             return _context5.stop();
         }
@@ -878,18 +918,11 @@ var fetchGenre = function fetchGenre(genre, filmId) {
 // 读取本地爬取电影详细信息添加到数据空中
 var crawlerDetail = function () {
   var _ref6 = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_E_filmGo_filmGoAdmin_node_modules_babel_runtime_regenerator___default.a.mark(function _callee10(ctx, next) {
-    var filmDetail, filmStagePhotos, filmTrailerDetail;
     return __WEBPACK_IMPORTED_MODULE_0_E_filmGo_filmGoAdmin_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee10$(_context10) {
       while (1) {
         switch (_context10.prev = _context10.next) {
           case 0:
-            filmDetail = __webpack_require__(10);
-            filmStagePhotos = __webpack_require__(11);
-            filmTrailerDetail = __webpack_require__(12);
-
-            // 添加爬取的上映日期、播放时长、电影封面
-
-            _context10.next = 5;
+            _context10.next = 2;
             return new Promise(function () {
               var _ref7 = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_E_filmGo_filmGoAdmin_node_modules_babel_runtime_regenerator___default.a.mark(function _callee7(resolve, reject) {
                 var i, film, j, k, item, l, _item;
@@ -952,7 +985,7 @@ var crawlerDetail = function () {
                         break;
 
                       case 17:
-                        _context7.next = 22;
+                        _context7.next = 23;
                         break;
 
                       case 19:
@@ -960,12 +993,13 @@ var crawlerDetail = function () {
                         _context7.t0 = _context7['catch'](0);
 
                         console.log(_context7.t0);
+                        nodemailer(_context7.t0);
 
-                      case 22:
+                      case 23:
                         console.log('\u7535\u5F71\u7F3A\u5931\u4E0A\u6620\u65E5\u671F\u3001\u64AD\u653E\u65F6\u957F\u3001\u7535\u5F71\u5C01\u9762\u4FE1\u606F\u8865\u5145\u5B8C\u6BD5');
                         return _context7.abrupt('return', resolve());
 
-                      case 24:
+                      case 25:
                       case 'end':
                         return _context7.stop();
                     }
@@ -978,8 +1012,8 @@ var crawlerDetail = function () {
               };
             }());
 
-          case 5:
-            _context10.next = 7;
+          case 2:
+            _context10.next = 4;
             return new Promise(function () {
               var _ref8 = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_E_filmGo_filmGoAdmin_node_modules_babel_runtime_regenerator___default.a.mark(function _callee8(resolve, reject) {
                 var i, film, j;
@@ -1035,8 +1069,8 @@ var crawlerDetail = function () {
               };
             }());
 
-          case 7:
-            _context10.next = 9;
+          case 4:
+            _context10.next = 6;
             return new Promise(function () {
               var _ref9 = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_E_filmGo_filmGoAdmin_node_modules_babel_runtime_regenerator___default.a.mark(function _callee9(resolve, reject) {
                 var i, film, j;
@@ -1075,6 +1109,7 @@ var crawlerDetail = function () {
                           }
                         } catch (e) {
                           console.log(e);
+                          nodemailer(e);
                         }
                         _context9.next = 9;
                         return film.save();
@@ -1102,7 +1137,7 @@ var crawlerDetail = function () {
               };
             }());
 
-          case 9:
+          case 6:
           case 'end':
             return _context10.stop();
         }
@@ -1117,18 +1152,12 @@ var crawlerDetail = function () {
 
 var uploadQiniuFile = function () {
   var _ref10 = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_E_filmGo_filmGoAdmin_node_modules_babel_runtime_regenerator___default.a.mark(function _callee11() {
-    var filmDetail, filmStagePhotos, filmTrailerDetail, i, j, _i, _j, _i2, _j2;
+    var i, j, _i, _j, _i2, _j2;
 
     return __WEBPACK_IMPORTED_MODULE_0_E_filmGo_filmGoAdmin_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee11$(_context11) {
       while (1) {
         switch (_context11.prev = _context11.next) {
           case 0:
-            filmDetail = __webpack_require__(10); // 电影封面、演职人员照片
-
-            filmStagePhotos = __webpack_require__(11); // 剧照
-
-            filmTrailerDetail = __webpack_require__(12); // 预告片
-
             for (i = 0; i < filmDetail.length; i++) {
               // 上传电影封面照
               qiniuFn.uploadQiniuFile(filmDetail[i].postPic, filmDetail[i].movieName + '\u5C01\u9762\u56FE');
@@ -1140,99 +1169,101 @@ var uploadQiniuFile = function () {
 
             _i = 0;
 
-          case 5:
+          case 2:
             if (!(_i < filmStagePhotos.length)) {
-              _context11.next = 24;
+              _context11.next = 22;
               break;
             }
 
-            _context11.prev = 6;
+            _context11.prev = 3;
             _j = 0;
 
-          case 8:
+          case 5:
             if (!(_j < filmStagePhotos[_i].stagePhotos.length)) {
-              _context11.next = 16;
+              _context11.next = 13;
               break;
             }
 
-            _context11.next = 11;
+            _context11.next = 8;
             return qiniuFn.uploadQiniuFile(filmStagePhotos[_i].stagePhotos[_j], '' + filmStagePhotos[_i].id + _j + 'stagePhotoImg.jpg');
 
-          case 11:
-            _context11.next = 13;
+          case 8:
+            _context11.next = 10;
             return qiniuFn.uploadQiniuFile(filmStagePhotos[_i].stagePhotos[_j].replace(/sqxs/, 'l'), '' + filmStagePhotos[_i].id + _j + 'stagePhotoImgBig.jpg');
 
-          case 13:
+          case 10:
             _j++;
-            _context11.next = 8;
-            break;
-
-          case 16:
-            _context11.next = 21;
-            break;
-
-          case 18:
-            _context11.prev = 18;
-            _context11.t0 = _context11['catch'](6);
-
-            console.log(_context11.t0);
-
-          case 21:
-            _i++;
             _context11.next = 5;
             break;
 
-          case 24:
+          case 13:
+            _context11.next = 19;
+            break;
+
+          case 15:
+            _context11.prev = 15;
+            _context11.t0 = _context11['catch'](3);
+
+            nodemailer(_context11.t0);
+            console.log(_context11.t0);
+
+          case 19:
+            _i++;
+            _context11.next = 2;
+            break;
+
+          case 22:
             _i2 = 0;
 
-          case 25:
+          case 23:
             if (!(_i2 < filmTrailerDetail.length)) {
-              _context11.next = 44;
+              _context11.next = 43;
               break;
             }
 
-            _context11.prev = 26;
+            _context11.prev = 24;
             _j2 = 0;
 
-          case 28:
+          case 26:
             if (!(_j2 < filmTrailerDetail[_i2].trailerArray.length)) {
-              _context11.next = 36;
+              _context11.next = 34;
               break;
             }
 
+            _context11.next = 29;
+            return qiniuFn.uploadQiniuFile(filmTrailerDetail[_i2].trailerArray[_j2].trailerPoster, '' + filmTrailerDetail[_i2].trailerArray[_j2].trailerId + _j2 + '\u5C01\u9762\u56FE');
+
+          case 29:
             _context11.next = 31;
-            return qiniuFn.uploadQiniuFile(filmTrailerDetail[_i2].trailerArray[_j2].trailerPoster, filmTrailerDetail[_i2].trailerArray[_j2].trailerId + '\u5C01\u9762\u56FE');
+            return qiniuFn.uploadQiniuFile(filmTrailerDetail[_i2].trailerArray[_j2].trailerMP4, '' + filmTrailerDetail[_i2].trailerArray[_j2].trailerId + _j2 + '\u89C6\u9891');
 
           case 31:
-            _context11.next = 33;
-            return qiniuFn.uploadQiniuFile(filmTrailerDetail[_i2].trailerArray[_j2].trailerMP4, filmTrailerDetail[_i2].trailerArray[_j2].trailerId + '\u89C6\u9891');
-
-          case 33:
             _j2++;
-            _context11.next = 28;
+            _context11.next = 26;
+            break;
+
+          case 34:
+            _context11.next = 40;
             break;
 
           case 36:
-            _context11.next = 41;
-            break;
+            _context11.prev = 36;
+            _context11.t1 = _context11['catch'](24);
 
-          case 38:
-            _context11.prev = 38;
-            _context11.t1 = _context11['catch'](26);
-
+            nodemailer(_context11.t1);
             console.log(_context11.t1);
 
-          case 41:
+          case 40:
             _i2++;
-            _context11.next = 25;
+            _context11.next = 23;
             break;
 
-          case 44:
+          case 43:
           case 'end':
             return _context11.stop();
         }
       }
-    }, _callee11, _this, [[6, 18], [26, 38]]);
+    }, _callee11, _this, [[3, 15], [24, 36]]);
   }));
 
   return function uploadQiniuFile() {
@@ -1292,7 +1323,7 @@ var updateMovie = function () {
 module.exports = updateMovie;
 
 /***/ },
-/* 17 */
+/* 15 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1305,10 +1336,10 @@ var _this = this;
 
 function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { step("next", value); }, function (err) { step("throw", err); }); } } return step("next"); }); }; }
 
-var fs = __webpack_require__(4);
-var resolve = __webpack_require__(14).resolve;
+var fs = __webpack_require__(5);
+var resolve = __webpack_require__(12).resolve;
 var mongoose = __webpack_require__(0);
-var config = __webpack_require__(26);
+var config = __webpack_require__(23);
 
 /*const models = resolve(__dirname, './schema')
 fs.readdirSync(models)
@@ -1385,52 +1416,7 @@ module.exports = database;
 /* WEBPACK VAR INJECTION */}.call(exports, "server\\database"))
 
 /***/ },
-/* 18 */
-/***/ function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(__dirname) {
-
-var nodemailer = __webpack_require__(38);
-var fs = __webpack_require__(4);
-var path = __webpack_require__(14);
-var ejs = __webpack_require__(35);
-
-var transporter = nodemailer.createTransport({
-  // host: 'smtp.ethereal.email',
-  service: 'qq', // 使用了内置传输发送邮件 查看支持列表：https://nodemailer.com/smtp/well-known/
-  port: 465, // SMTP 端口
-  secureConnection: true, // 使用了 SSL
-  auth: {
-    user: '171426589@qq.com',
-    // 这里密码不是qq密码，是你设置的smtp授权码
-    pass: 'xmzrcehbkyvbcabi'
-  }
-});
-
-var sendMailFn = function sendMailFn(sendMsg) {
-  var template = ejs.compile(fs.readFileSync(path.resolve(__dirname, 'email.ejs'), 'utf8'));
-
-  var mailOptions = {
-    from: '"FilmGo 定时爬虫启动" <171426589@qq.com>', // sender address
-    to: 'suiyang_sun@163.com', // list of receivers
-    subject: 'FilmGo 定时爬虫启动了, 预计5min更新完毕，请实时观察' // Subject line
-
-    // send mail with defined transport object
-  };transporter.sendMail(mailOptions, function (error, info) {
-    if (error) {
-      return console.log(error);
-    }
-    console.log('Message sent: %s', info.messageId);
-    // Message sent: <04ec7731-cc68-1ef6-303c-61b0f796b78f@qq.com>
-  });
-};
-
-module.exports = sendMailFn;
-/* WEBPACK VAR INJECTION */}.call(exports, "server\\middleware"))
-
-/***/ },
-/* 19 */
+/* 16 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1577,43 +1563,43 @@ router.get('/api/film/poster/id', function () {
 module.exports = router;
 
 /***/ },
-/* 20 */
+/* 17 */
 /***/ function(module, exports) {
 
 module.exports = require("koa");
 
 /***/ },
-/* 21 */
+/* 18 */
 /***/ function(module, exports) {
 
 module.exports = require("koa-bodyparser");
 
 /***/ },
-/* 22 */
+/* 19 */
 /***/ function(module, exports) {
 
 module.exports = require("koa-session");
 
 /***/ },
-/* 23 */
+/* 20 */
 /***/ function(module, exports) {
 
 module.exports = require("koa2-cors");
 
 /***/ },
-/* 24 */
+/* 21 */
 /***/ function(module, exports) {
 
 module.exports = require("node-schedule");
 
 /***/ },
-/* 25 */
+/* 22 */
 /***/ function(module, exports) {
 
 module.exports = require("nuxt");
 
 /***/ },
-/* 26 */
+/* 23 */
 /***/ function(module, exports) {
 
 var config = {
@@ -1623,7 +1609,7 @@ var config = {
 module.exports = config;
 
 /***/ },
-/* 27 */
+/* 24 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1640,11 +1626,12 @@ function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, a
 
 var rp = __webpack_require__(41);
 var cheerio = __webpack_require__(33); // Node.js版本的jquery
-var fs = __webpack_require__(4);
+var fs = __webpack_require__(5);
 // const iconv = require('iconv-lite') // 文件编码转换
-var request = __webpack_require__(5);
+var request = __webpack_require__(6);
 // const proxyIP = require('../middleware/request')
 var uuid = __webpack_require__(37);
+var nodemailer = __webpack_require__(4);
 
 var sleep = function () {
   var _ref = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_E_filmGo_filmGoAdmin_node_modules_babel_runtime_regenerator___default.a.mark(function _callee(time) {
@@ -1732,19 +1719,20 @@ var proxyConfig = {
 
                         case 4:
                           $ = cheerio.load(body, { decodeEntities: false });
-                          _context2.next = 10;
+                          _context2.next = 11;
                           break;
 
                         case 7:
                           _context2.prev = 7;
                           _context2.t0 = _context2['catch'](1);
 
+                          nodemailer(_context2.t0);
                           console.log('\u722C\u53D6\u300A' + movieUrl.title + '\u300B\u5931\u8D25\uFF0C\u51C6\u5907\u91CD\u65B0\u5F00\u59CB\u722C\u53D6\n\u9519\u8BEF\u65E5\u5FD7' + _context2.t0 + '\n\u91CD\u542F\u6B21\u6570\u4E3A' + restartCount);
                           // console.error(e);
 
-                        case 10:
+                        case 11:
                           if (!$) {
-                            _context2.next = 21;
+                            _context2.next = 22;
                             break;
                           }
 
@@ -1783,10 +1771,10 @@ var proxyConfig = {
 
 
                           resolve(movie);
-                          _context2.next = 33;
+                          _context2.next = 34;
                           break;
 
-                        case 21:
+                        case 22:
                           /*
                           *  需要限制重启次数，目前只能重启 4 次
                           *  超过 4 次将发送邮件通知
@@ -1794,29 +1782,29 @@ var proxyConfig = {
                           restartCount++;
 
                           if (!(restartCount < 5)) {
-                            _context2.next = 31;
+                            _context2.next = 32;
                             break;
                           }
 
-                          _context2.next = 25;
+                          _context2.next = 26;
                           return sleep(2);
 
-                        case 25:
-                          _context2.next = 27;
+                        case 26:
+                          _context2.next = 28;
                           return getComingMovie({ movieUrl: movieUrl, restartCount: restartCount });
 
-                        case 27:
+                        case 28:
                           _movie = _context2.sent;
 
                           resolve(_movie);
-                          _context2.next = 33;
+                          _context2.next = 34;
                           break;
 
-                        case 31:
+                        case 32:
                           console.log('\u76EE\u524D\u91CD\u542F\u6B21\u6570\u4E3A' + restartCount + ', \u91CD\u590D\u6B21\u6570\u8FC7\u591A\uFF0C\u4E0D\u53EF\u6297\u62D2\u56E0\u7D20\uFF0C\u5C06\u53D1\u8D77\u90AE\u4EF6\u901A\u77E5');
                           resolve('\u722C\u53D6\u5931\u8D25\uFF0C\u91CD\u542F\u6B21\u6570\u4E3A' + restartCount);
 
-                        case 33:
+                        case 34:
                         case 'end':
                           return _context2.stop();
                       }
@@ -1898,13 +1886,11 @@ var runMovieDetail = function () {
           case 16:
 
             $('.article tbody tr').each(function (index) {
-              if (index < 5) {
-                comingMoviesLink.push({
-                  url: $(this).find("a").attr('href'),
-                  title: $(this).find("a").html().trim(),
-                  like: $(this).find("td").eq(4).html().trim().match(/^[0-9]*/)[0]
-                });
-              }
+              comingMoviesLink.push({
+                url: $(this).find("a").attr('href'),
+                title: $(this).find("a").html().trim(),
+                like: $(this).find("td").eq(4).html().trim().match(/^[0-9]*/)[0]
+              });
             });
 
             console.log('\u603B\u5171\u722C\u53D6\u4E86 ' + comingMoviesLink.length + ' \u4E2A\u7535\u5F71 url');
@@ -1912,11 +1898,10 @@ var runMovieDetail = function () {
             fs.writeFileSync('./comingMovieUri.json', JSON.stringify(comingMoviesLink, null, 2), 'utf8');
 
             // 爬取豆瓣即将上映电影的poster、上映日期、片长
-            // for(let i = 0; i < comingMoviesLink.length; i++) {
             i = 0;
 
           case 20:
-            if (!(i < 5)) {
+            if (!(i < comingMoviesLink.length)) {
               _context4.next = 32;
               break;
             }
@@ -2010,19 +1995,20 @@ var getMovieTrailer = function () {
                         case 4:
                           $ = cheerio.load(body, { decodeEntities: false });
 
-                          _context5.next = 11;
+                          _context5.next = 12;
                           break;
 
                         case 7:
                           _context5.prev = 7;
                           _context5.t0 = _context5['catch'](1);
 
+                          nodemailer(_context5.t0);
                           console.log('\u722C\u53D6\u300A' + movieUrl.title + '\u300B\u5931\u8D25\uFF0C\u51C6\u5907\u91CD\u65B0\u5F00\u59CB\u722C\u53D6\n\u9519\u8BEF\u65E5\u5FD7' + _context5.t0 + '\n\u91CD\u542F\u6B21\u6570\u4E3A' + restartCount);
                           console.error(_context5.t0);
 
-                        case 11:
+                        case 12:
                           if (!$) {
-                            _context5.next = 19;
+                            _context5.next = 20;
                             break;
                           }
 
@@ -2041,10 +2027,10 @@ var getMovieTrailer = function () {
                           };
 
                           resolve(trailer);
-                          _context5.next = 31;
+                          _context5.next = 32;
                           break;
 
-                        case 19:
+                        case 20:
                           /*
                           *  需要限制重启次数，目前只能重启 4 次
                           *  超过 4 次将发送邮件通知
@@ -2052,29 +2038,29 @@ var getMovieTrailer = function () {
                           restartCount++;
 
                           if (!(restartCount < 5)) {
-                            _context5.next = 29;
+                            _context5.next = 30;
                             break;
                           }
 
-                          _context5.next = 23;
+                          _context5.next = 24;
                           return sleep(2);
 
-                        case 23:
-                          _context5.next = 25;
+                        case 24:
+                          _context5.next = 26;
                           return getMovieTrailer({ movieUrl: movieUrl, restartCount: restartCount });
 
-                        case 25:
+                        case 26:
                           _trailer = _context5.sent;
 
                           resolve(_trailer);
-                          _context5.next = 31;
+                          _context5.next = 32;
                           break;
 
-                        case 29:
+                        case 30:
                           console.log('\u76EE\u524D\u91CD\u542F\u6B21\u6570\u4E3A' + restartCount + ', \u91CD\u590D\u6B21\u6570\u8FC7\u591A\uFF0C\u4E0D\u53EF\u6297\u62D2\u56E0\u7D20\uFF0C\u5C06\u53D1\u8D77\u90AE\u4EF6\u901A\u77E5');
                           resolve('\u722C\u53D6\u5931\u8D25\uFF0C\u91CD\u542F\u6B21\u6570\u4E3A' + restartCount);
 
-                        case 31:
+                        case 32:
                         case 'end':
                           return _context5.stop();
                       }
@@ -2113,42 +2099,41 @@ var runMovieTrailer = function () {
       while (1) {
         switch (_context7.prev = _context7.next) {
           case 0:
-            comingMoviesLink = __webpack_require__(13); // 全部电影的 url
+            comingMoviesLink = __webpack_require__(11); // 全部电影的 url
 
             Trailer = [];
+
+            console.log(comingMoviesLink.length);
             i = 0;
 
-          case 3:
+          case 4:
             if (!(i < comingMoviesLink.length)) {
-              _context7.next = 15;
+              _context7.next = 16;
               break;
             }
 
-            _context7.next = 6;
+            _context7.next = 7;
             return getMovieTrailer({ movieUrl: comingMoviesLink[i] });
 
-          case 6:
+          case 7:
             trailer = _context7.sent;
 
             Trailer.push(trailer);
             console.log('\u8FD9\u662F\u7B2C' + (i + 1) + '\u4E2A\u7535\u5F71\u7684\u9884\u544A\u7247\u5217\u8868, ' + trailer.movieName);
 
-            _context7.next = 11;
+            fs.writeFileSync('./comingMovieTrailer.json', JSON.stringify(Trailer, null, 2), 'utf8');
+            _context7.next = 13;
             return sleep(2);
 
-          case 11:
-            // 间歇 2s
-            fs.writeFileSync('./comingMovieTrailer.json', JSON.stringify(Trailer, null, 2), 'utf8');
-
-          case 12:
+          case 13:
             i++;
-            _context7.next = 3;
+            _context7.next = 4;
             break;
 
-          case 15:
+          case 16:
             console.log('\u7535\u5F71\u9884\u544A\u7247\u5217\u8868\u5168\u90E8\u722C\u53D6\u6210\u529F, \u5171\u8BA1' + comingMoviesLink.length);
 
-          case 16:
+          case 17:
           case 'end':
             return _context7.stop();
         }
@@ -2205,6 +2190,7 @@ var toRequest = function () {
                           try {
                             $ = cheerio.load(body, { decodeEntities: false });
                           } catch (e) {
+                            nodemailer(e);
                             console.log('\u722C\u53D6\u300A' + trailerUrl + '\u300B\u5931\u8D25\uFF0C\u51C6\u5907\u91CD\u65B0\u5F00\u59CB\u722C\u53D6\n\u9519\u8BEF\u65E5\u5FD7' + e + '\n\u91CD\u542F\u6B21\u6570\u4E3A' + restartCount);
                             // console.error(e);
                           }
@@ -2339,6 +2325,7 @@ var getMovieTrailerDetail = function () {
                                       try {
                                         $ = cheerio.load(body, { decodeEntities: false });
                                       } catch (e) {
+                                        nodemailer(e);
                                         console.log('\u722C\u53D6\u300A' + trailer.movieName + '\u300B\u5931\u8D25\uFF0C\u51C6\u5907\u91CD\u65B0\u5F00\u59CB\u722C\u53D6\n\u9519\u8BEF\u65E5\u5FD7' + e);
                                         // console.error(e);
                                       }
@@ -2353,7 +2340,8 @@ var getMovieTrailerDetail = function () {
                                         trailerTitle: $('h1').text(),
                                         trailerDate: $('.trailer-info>span').html(),
                                         trailerPoster: trailer.trailerPoster[index],
-                                        trailerId: uuid.v1().replace(/-/g, "")
+                                        // trailerId: uuid.v1().replace(/-/g, "")
+                                        trailerId: trailer.id
                                       });
                                       _context10.next = 12;
                                       break;
@@ -2431,7 +2419,7 @@ var runMovieTrailerDetail = function () {
       while (1) {
         switch (_context13.prev = _context13.next) {
           case 0:
-            comingTrailerLink = __webpack_require__(29);
+            comingTrailerLink = __webpack_require__(28);
             Trailer = [];
             _context13.prev = 2;
             i = 0;
@@ -2462,19 +2450,20 @@ var runMovieTrailerDetail = function () {
             break;
 
           case 16:
-            _context13.next = 21;
+            _context13.next = 22;
             break;
 
           case 18:
             _context13.prev = 18;
             _context13.t0 = _context13['catch'](2);
 
+            nodemailer(_context13.t0);
             console.log(_context13.t0);
 
-          case 21:
+          case 22:
             console.log('\u7535\u5F71\u9884\u544A\u8BE6\u7EC6\u5168\u90E8\u722C\u53D6\u6210\u529F, \u5171\u8BA1' + comingTrailerLink.length);
 
-          case 22:
+          case 23:
           case 'end':
             return _context13.stop();
         }
@@ -2538,7 +2527,7 @@ var getMoviePhotos = function () {
                         case 4:
                           $ = cheerio.load(body, { decodeEntities: false });
 
-                          _context14.next = 10;
+                          _context14.next = 11;
                           break;
 
                         case 7:
@@ -2546,11 +2535,12 @@ var getMoviePhotos = function () {
                           _context14.t0 = _context14['catch'](1);
 
                           console.log('\u722C\u53D6\u300A' + movieUrl.title + '\u300B\u5931\u8D25\uFF0C\u51C6\u5907\u91CD\u65B0\u5F00\u59CB\u722C\u53D6\n\u9519\u8BEF\u65E5\u5FD7' + _context14.t0);
+                          nodemailer(_context14.t0);
                           // console.error(e);
 
-                        case 10:
+                        case 11:
                           if (!$) {
-                            _context14.next = 16;
+                            _context14.next = 17;
                             break;
                           }
 
@@ -2565,10 +2555,10 @@ var getMoviePhotos = function () {
                             stagePhotos: stagePhotos,
                             id: movieUrl.url.match(/\/subject\/(\S*)\//)[1]
                           });
-                          _context14.next = 28;
+                          _context14.next = 29;
                           break;
 
-                        case 16:
+                        case 17:
                           /*
                           *  需要限制重启次数，目前只能重启 4 次
                           *  超过 4 次将发送邮件通知
@@ -2576,29 +2566,29 @@ var getMoviePhotos = function () {
                           restartCount++;
 
                           if (!(restartCount < 5)) {
-                            _context14.next = 26;
+                            _context14.next = 27;
                             break;
                           }
 
-                          _context14.next = 20;
+                          _context14.next = 21;
                           return sleep(2);
 
-                        case 20:
-                          _context14.next = 22;
+                        case 21:
+                          _context14.next = 23;
                           return getMoviePhotos({ movieUrl: movieUrl, restartCount: restartCount });
 
-                        case 22:
+                        case 23:
                           photo = _context14.sent;
 
                           resolve(photo);
-                          _context14.next = 28;
+                          _context14.next = 29;
                           break;
 
-                        case 26:
+                        case 27:
                           console.log('\u76EE\u524D\u91CD\u542F\u6B21\u6570\u4E3A' + (restartCount - 1) + ', \u91CD\u590D\u6B21\u6570\u8FC7\u591A\uFF0C\u4E0D\u53EF\u6297\u62D2\u56E0\u7D20\uFF0C\u5C06\u53D1\u8D77\u90AE\u4EF6\u901A\u77E5');
                           resolve('\u722C\u53D6\u5931\u8D25\uFF0C\u91CD\u542F\u6B21\u6570\u4E3A' + (restartCount - 1));
 
-                        case 28:
+                        case 29:
                         case 'end':
                           return _context14.stop();
                       }
@@ -2637,7 +2627,7 @@ var runMoviePhotos = function () {
       while (1) {
         switch (_context16.prev = _context16.next) {
           case 0:
-            comingMoviesLink = __webpack_require__(13);
+            comingMoviesLink = __webpack_require__(11);
             stagePhotos = [];
             i = 0;
 
@@ -2682,11 +2672,11 @@ var runMoviePhotos = function () {
 module.exports = { runMovieDetail: runMovieDetail, runMovieTrailer: runMovieTrailer, runMovieTrailerDetail: runMovieTrailerDetail, runMoviePhotos: runMoviePhotos };
 
 /***/ },
-/* 28 */
+/* 25 */
 /***/ function(module, exports, __webpack_require__) {
 
 var qiniu = __webpack_require__(39);
-var request = __webpack_require__(5);
+var request = __webpack_require__(6);
 var crypto = __webpack_require__(34);
 
 var accessKey = 'LIWJTwQKsmsTvBrNLD0k-nu62diiEFKw34NfWj9P';
@@ -2797,28 +2787,46 @@ var uploadQiniuFile = function uploadQiniuFile(fileUrl, fileName) {
 module.exports = { uploadQiniuFile: uploadQiniuFile };
 
 /***/ },
+/* 26 */
+/***/ function(module, exports) {
+
+module.exports = []
+
+/***/ },
+/* 27 */
+/***/ function(module, exports) {
+
+module.exports = []
+
+/***/ },
+/* 28 */
+/***/ function(module, exports) {
+
+module.exports = []
+
+/***/ },
 /* 29 */
 /***/ function(module, exports) {
 
-module.exports = [{"movieName":"女校怪谈 视频","trailerUri":[],"trailerPoster":[],"id":"30210203"},{"movieName":"狄仁杰之四大天王 视频","trailerUri":["https://movie.douban.com/trailer/233791/#content","https://movie.douban.com/trailer/233325/#content","https://movie.douban.com/trailer/232838/#content","https://movie.douban.com/trailer/221792/#content","https://movie.douban.com/trailer/230245/#content","https://movie.douban.com/trailer/233976/#content","https://movie.douban.com/trailer/233737/#content","https://movie.douban.com/trailer/232616/#content","https://movie.douban.com/trailer/233781/#content","https://movie.douban.com/trailer/233597/#content","https://movie.douban.com/trailer/233527/#content","https://movie.douban.com/trailer/233362/#content","https://movie.douban.com/trailer/233067/#content","https://movie.douban.com/trailer/232984/#content","https://movie.douban.com/trailer/231450/#content","https://movie.douban.com/trailer/232624/#content"],"trailerPoster":["https://img3.doubanio.com/img/trailer/medium/2528211904.jpg?","https://img3.doubanio.com/img/trailer/medium/2527054753.jpg?","https://img3.doubanio.com/img/trailer/medium/2526137676.jpg?","https://img3.doubanio.com/img/trailer/medium/2499767152.jpg?","https://img1.doubanio.com/img/trailer/medium/2520334127.jpg?","https://img3.doubanio.com/img/trailer/medium/2528487325.jpg?","https://img3.doubanio.com/img/trailer/medium/2528093112.jpg?","https://img1.doubanio.com/img/trailer/medium/2525590378.jpg?","https://img3.doubanio.com/img/trailer/medium/2528185600.jpg?","https://img1.doubanio.com/img/trailer/medium/2527752127.jpg?","https://img3.doubanio.com/img/trailer/medium/2527641751.jpg?","https://img3.doubanio.com/img/trailer/medium/2527141912.jpg?","https://img1.doubanio.com/img/trailer/medium/2526441668.jpg?","https://img3.doubanio.com/img/trailer/medium/2526314013.jpg?","https://img3.doubanio.com/img/trailer/medium/2522954430.jpg?","https://img3.doubanio.com/img/trailer/medium/2525591834.jpg?"],"id":"25882296"},{"movieName":"西虹市首富 视频","trailerUri":["https://movie.douban.com/trailer/233361/#content","https://movie.douban.com/trailer/232859/#content","https://movie.douban.com/trailer/232030/#content","https://movie.douban.com/trailer/231173/#content","https://movie.douban.com/trailer/233327/#content","https://movie.douban.com/trailer/232506/#content","https://movie.douban.com/trailer/234143/#content"],"trailerPoster":["https://img1.doubanio.com/img/trailer/medium/2527141847.jpg?","https://img3.doubanio.com/img/trailer/medium/2526149462.jpg?","https://img1.doubanio.com/img/trailer/medium/2524221309.jpg?","https://img3.doubanio.com/img/trailer/medium/2522456574.jpg?","https://img3.doubanio.com/img/trailer/medium/2527062942.jpg?","https://img1.doubanio.com/img/trailer/medium/2525046609.jpg?","https://img3.doubanio.com/img/trailer/medium/2528850093.jpg?"],"id":"27605698"},{"movieName":"萌学园：寻找盘古 视频","trailerUri":["https://movie.douban.com/trailer/234138/#content","https://movie.douban.com/trailer/233739/#content","https://movie.douban.com/trailer/233974/#content"],"trailerPoster":["https://img3.doubanio.com/img/trailer/medium/2528849466.jpg?","https://img3.doubanio.com/img/trailer/medium/2528093465.jpg?","https://img3.doubanio.com/img/trailer/medium/2528486736.jpg?"],"id":"26754880"},{"movieName":"文朝荣 视频","trailerUri":[],"trailerPoster":[],"id":"30252429"}]
+module.exports = []
 
 /***/ },
 /* 30 */
 /***/ function(module, exports, __webpack_require__) {
 
 var map = {
-	"./admin": 6,
-	"./admin.js": 6,
-	"./category": 7,
-	"./category.js": 7,
-	"./comment": 8,
-	"./comment.js": 8,
+	"./admin": 7,
+	"./admin.js": 7,
+	"./category": 8,
+	"./category.js": 8,
+	"./comment": 9,
+	"./comment.js": 9,
 	"./flim": 2,
 	"./flim.js": 2,
 	"./genre": 3,
 	"./genre.js": 3,
-	"./user": 9,
-	"./user.js": 9
+	"./user": 10,
+	"./user.js": 10
 };
 function webpackContext(req) {
 	return __webpack_require__(webpackContextResolve(req));
@@ -2911,15 +2919,15 @@ module.exports = require("request-promise");
 Object.defineProperty(exports, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_E_filmGo_filmGoAdmin_node_modules_babel_runtime_regenerator__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_E_filmGo_filmGoAdmin_node_modules_babel_runtime_regenerator___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_E_filmGo_filmGoAdmin_node_modules_babel_runtime_regenerator__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_koa__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_koa__ = __webpack_require__(17);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_koa___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_koa__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_nuxt__ = __webpack_require__(25);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_nuxt__ = __webpack_require__(22);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_nuxt___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_nuxt__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_node_schedule__ = __webpack_require__(24);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_node_schedule__ = __webpack_require__(21);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_node_schedule___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_node_schedule__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_koa_session__ = __webpack_require__(22);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_koa_session__ = __webpack_require__(19);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_koa_session___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_koa_session__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_koa2_cors__ = __webpack_require__(23);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_koa2_cors__ = __webpack_require__(20);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_koa2_cors___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_koa2_cors__);
 
 
@@ -2938,7 +2946,7 @@ var start = function () {
 
             // Import and Set Nuxt.js options
 
-            config = __webpack_require__(15);
+            config = __webpack_require__(13);
 
             config.dev = !(app.env === 'production');
 
@@ -2995,8 +3003,8 @@ var start = function () {
             scheduleRecurrenceRule = function scheduleRecurrenceRule() {
 
               var rule = new __WEBPACK_IMPORTED_MODULE_3_node_schedule___default.a.RecurrenceRule();
-              rule.hour = 16;
-              rule.minute = 50;
+              rule.hour = 15;
+              rule.minute = 15;
               rule.second = 0;
 
               __WEBPACK_IMPORTED_MODULE_3_node_schedule___default.a.scheduleJob(rule, function () {
@@ -3072,12 +3080,12 @@ function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, a
 
 
 
-var filmApi = __webpack_require__(19);
-var mongodb = __webpack_require__(17);
-var bodyParser = __webpack_require__(21);
+var filmApi = __webpack_require__(16);
+var mongodb = __webpack_require__(15);
+var bodyParser = __webpack_require__(18);
 
-var crawler = __webpack_require__(16);
-var nodemailer = __webpack_require__(18);
+var crawler = __webpack_require__(14);
+var nodemailer = __webpack_require__(4);
 
 start();
 
