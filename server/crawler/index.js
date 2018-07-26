@@ -306,13 +306,13 @@ const uploadQiniuFile = async () => {
 /* 定时更新内容 */
 const updateMovie = async () => {
   console.time("sort");
-  await movieFile.runMovieDetail()
-  await movieFile.runMovieTrailer()
-  await movieFile.runMovieTrailerDetail()
-  await movieFile.runMoviePhotos()
+  // await movieFile.runMovieDetail()
+  // await movieFile.runMovieTrailer()
+  // await movieFile.runMovieTrailerDetail()
+  // await movieFile.runMoviePhotos()
   await fetchFilms()
   await crawlerDetail()
-  await uploadQiniuFile()
+  // await uploadQiniuFile()
   console.timeEnd("sort");
 }
 module.exports = updateMovie
