@@ -67,7 +67,7 @@ const fetchFilms = async () => {
 
     films = await new Promise(resolve => {
       request(options, (error, response, body) => {
-        console.log(body)
+        // console.log(body)
         resolve(JSON.parse(body))
       })
     })
@@ -294,8 +294,8 @@ const uploadQiniuFile = async () => {
   for(let i = 0 ; i < filmTrailerDetail.length ; i++) {
     try {
       for (let j = 0; j < filmTrailerDetail[i].trailerArray.length; j++) {
-        await qiniuFn.uploadQiniuFile(filmTrailerDetail[i].trailerArray[j].trailerPoster, `${filmTrailerDetail[i].trailerArray[j].trailerId}封面图`)
-        await qiniuFn.uploadQiniuFile(filmTrailerDetail[i].trailerArray[j].trailerMP4, `${filmTrailerDetail[i].trailerArray[j].trailerId}视频`)
+        await qiniuFn.uploadQiniuFile(filmTrailerDetail[i].trailerArray[j].trailerPoster, `${filmTrailerDetail[i].trailerArray[j].trailerId}${j}封面图`)
+        await qiniuFn.uploadQiniuFile(filmTrailerDetail[i].trailerArray[j].trailerMP4, `${filmTrailerDetail[i].trailerArray[j].trailerId}${j}视频`)
       }
     } catch (e) {
       nodemailer(e)
@@ -306,13 +306,13 @@ const uploadQiniuFile = async () => {
 /* 定时更新内容 */
 const updateMovie = async () => {
   console.time("sort");
-  // await movieFile.runMovieDetail()
-  // await movieFile.runMovieTrailer()
-  // await movieFile.runMovieTrailerDetail()
-  // await movieFile.runMoviePhotos()
+  await movieFile.runMovieDetail()
+  await movieFile.runMovieTrailer()
+  await movieFile.runMovieTrailerDetail()
+  await movieFile.runMoviePhotos()
   await fetchFilms()
   await crawlerDetail()
-  // await uploadQiniuFile()
+  await uploadQiniuFile()
   console.timeEnd("sort");
 }
 module.exports = updateMovie

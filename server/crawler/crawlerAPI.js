@@ -331,7 +331,8 @@ const getMovieTrailerDetail = async (trailer) => {
               trailerTitle: $('h1').text(),
               trailerDate: $('.trailer-info>span').html(),
               trailerPoster: trailer.trailerPoster[index],
-              trailerId: uuid.v1().replace(/-/g, "")
+              // trailerId: uuid.v1().replace(/-/g, "")
+              trailerId: trailer.id
             })
           } else {
             /*
