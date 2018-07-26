@@ -57,8 +57,8 @@ const fetchFilms = async () => {
   try {
     const options = {
       method: 'GET',
-      // uri: `${doubanAPI}coming_soon?count=100`
-      uri: `${doubanAPI}coming_soon?count=5`
+      uri: `${doubanAPI}coming_soon?count=100`
+      // uri: `${doubanAPI}coming_soon?count=5`
     }
     // 代理地址
     const random = Math.floor(Math.random() * proxy.length)
