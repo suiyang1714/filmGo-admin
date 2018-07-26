@@ -223,7 +223,7 @@ const getMovieTrailer = async ({movieUrl, restartCount = 0} = {}) => {
   return movieMsg
 }
 const runMovieTrailer = async () => {
-  let comingMoviesLink = require('../../comingMovieUri') // 全部电影的 url
+  let comingMoviesLink = require('../../comingMovieUri.json') // 全部电影的 url
   let Trailer = []
   console.log(comingMoviesLink.length)
   for(let i = 0; i < comingMoviesLink.length ; i++) {
@@ -355,7 +355,7 @@ const getMovieTrailerDetail = async (trailer) => {
   }
 }
 const runMovieTrailerDetail = async () => {
-  let comingTrailerLink = require('../../comingMovieTrailer')
+  let comingTrailerLink = require('../../comingMovieTrailer.json')
   let Trailer = []
 
   try {
@@ -436,7 +436,7 @@ const getMoviePhotos = async ({ movieUrl, restartCount = 0} = {}) => {
   return movieMsg
 }
 const runMoviePhotos = async () => {
-  let comingMoviesLink = require('../../comingMovieUri')
+  let comingMoviesLink = require('../../comingMovieUri.json')
   let stagePhotos = []
 
   for(let i = 0; i < comingMoviesLink.length ; i++) {
