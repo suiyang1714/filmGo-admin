@@ -225,14 +225,14 @@ const getMovieTrailer = async ({movieUrl, restartCount = 0} = {}) => {
 const runMovieTrailer = async () => {
   let comingMoviesLink = require('../../comingMovieUri') // 全部电影的 url
   let Trailer = []
-
+  console.log(comingMoviesLink.length)
   for(let i = 0; i < comingMoviesLink.length ; i++) {
     const trailer = await getMovieTrailer({movieUrl: comingMoviesLink[i]})
     Trailer.push(trailer)
     console.log(`这是第${i+1}个电影的预告片列表, ${trailer.movieName}`)
 
-    await sleep(2) // 间歇 2s
     fs.writeFileSync('./comingMovieTrailer.json', JSON.stringify(Trailer, null, 2), 'utf8')
+    await sleep(2) // 间歇 2s
   }
   console.log(`电影预告片列表全部爬取成功, 共计${comingMoviesLink.length}`)
 }

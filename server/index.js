@@ -67,8 +67,8 @@ async function start () {
   const scheduleRecurrenceRule = () => {
 
     let rule = new schedule.RecurrenceRule();
-    rule.hour = 14
-    rule.minute = 55
+    rule.hour = 15
+    rule.minute = 15
     rule.second = 0
 
     schedule.scheduleJob(rule, function(){

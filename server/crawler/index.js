@@ -14,6 +14,10 @@ const proxyConfig = {
   password: "fy1812!!"
 }
 
+const filmDetail = require('../../comingMovie.json')  // 电影封面、演职人员照片
+const filmStagePhotos = require('../../comingMovieStagePhotos.json') // 剧照
+const filmTrailerDetail = require('../../comingMovieTrailerDetail.json') // 预告片
+
 const sleep = async time => await new Promise( resolve => {
   setTimeout( () => {
     return resolve(console.log(`等待${time}s`))
@@ -57,7 +61,8 @@ const fetchFilms = async () => {
   try {
     const options = {
       method: 'GET',
-      uri: `${doubanAPI}coming_soon?count=100`
+      uri: `${doubanAPI}coming_soon?count=${filmDetail.length}`
+      // uri: `${doubanAPI}coming_soon?count=100`
       // uri: `${doubanAPI}coming_soon?count=5`
     }
     // 代理地址
@@ -166,10 +171,6 @@ const fetchGenre = (genre, filmId) => {
 
 // 读取本地爬取电影详细信息添加到数据空中
 const crawlerDetail = async (ctx, next) => {
-  const filmDetail = require('../../comingMovie.json')
-  const filmStagePhotos = require('../../comingMovieStagePhotos.json')
-  const filmTrailerDetail = require('../../comingMovieTrailerDetail.json')
-
   // 添加爬取的上映日期、播放时长、电影封面
   await new Promise(async (resolve, reject) => {
     try {
@@ -264,10 +265,6 @@ const crawlerDetail = async (ctx, next) => {
 }
 
 const uploadQiniuFile = async () => {
-  const filmDetail = require('../../comingMovie.json')  // 电影封面、演职人员照片
-  const filmStagePhotos = require('../../comingMovieStagePhotos.json') // 剧照
-  const filmTrailerDetail = require('../../comingMovieTrailerDetail.json') // 预告片
-
   for(let i = 0 ; i < filmDetail.length ; i++) {
     // 上传电影封面照
     qiniuFn.uploadQiniuFile(filmDetail[i].postPic, `${filmDetail[i].movieName}封面图`)
@@ -306,13 +303,13 @@ const uploadQiniuFile = async () => {
 /* 定时更新内容 */
 const updateMovie = async () => {
   console.time("sort");
-  await movieFile.runMovieDetail()
+  // await movieFile.runMovieDetail()
   await movieFile.runMovieTrailer()
   await movieFile.runMovieTrailerDetail()
   await movieFile.runMoviePhotos()
-  await fetchFilms()
+  // await fetchFilms()
   await crawlerDetail()
-  await uploadQiniuFile()
+  // await uploadQiniuFile()
   console.timeEnd("sort");
 }
 module.exports = updateMovie
